@@ -2,7 +2,7 @@
 
 **Dag 16 (forts.) – Ankomst:**
 - Hundkälken lämnades hos [[Keegan Valryn]] (uthyrare). Rekommenderades till _The Northern Light_.
-- Mötte [[Trovus]] (vit drakfödd, berusad) utanför _The Hook Line and Sinker_. Informerade om:
+- Mötte [[Trovus]] (vit drakfödd, berusad) utanför _The Hook, Line and Sinker_. Informerade om:
   - Mord på [[Bronn Bearhammer]] och försvinnandet av hustrun [[Eevie]] (ej dvärg-glasmästare som Hildur sagt – felaktig information).
   - Osynliga tjuvar – bl.a. stulit den magiska lyktan från _The Northern Light_.
   - [[The Burning Hammers]] (3 äventyrare) lämnade orten för 4–5 dagar sedan, ej hörda av.
@@ -11,7 +11,7 @@
 **Dag 17 – Utredning:**
 - [[Borc the Orc]] hörde högt skratt (Tasha's Hideous Laughter) söderifrån under nattpasset, väckte [[Zahir]]. Spårade fotavtryck till _Snow Fox Hideout_.
 - Besökte [[Foxes in the Snow]]: inbrottsförsök stoppat av hennes fälla natten innan, tjuven (manlig röst) flydde. Inget stulet. Erbjöd sina ugglor för att spåra.
-- Fotspår förde söderut längs sjön [[Coc Dinneshare]] och försvann i dimman utanför byn.
+- Fotspår förde söderut längs sjön [[Lac Dinneshere]] och försvann i dimman utanför byn.
 - Brottsplatsen vid _Snowy Baubles_ (Bronns hem) undersöktes med [[Trovus]]:
   - [[Bronn Bearhammer]] mördad i sömnen, strupen uppskuren. Vit hårlock (skägg?) vid kroppen.
   - Järnkista med trasigt lås – dyrbara ädelstenar (~20 gp) kvar. Saknad scrimshaw-dekoration.
@@ -21,7 +21,7 @@
   - Hjälpte Bronn & Eevie handla med dvärgar i [[Dvärgadalen]] (~8–10 tim med hundkälke).
   - Tror mördaren kom utifrån byn. Hennes egna pärlor stulna av tjuvarna.
 - [[Keegan Valryn]] försvunnen med hundkälke under dagen – troligen söker [[Garret]] och The Burning Hammers.
-- _The Hook Line and Sinker_: Träffade [[Glenn]] (halvalv, krogägare, säljer dyr ost, importerar öl från dvärgarna). Något verkar inte riktigt stämma med honom.
+- _The Hook, Line and Sinker_: Träffade [[Glenn]] (halvalv, krogägare, säljer dyr ost, importerar öl från dvärgarna). Något verkar inte riktigt stämma med honom.
 - Konfronterade [[Trovus]] om hans inkompetens – han hade inga svar.
 - Nattpasset lugnt.
 
