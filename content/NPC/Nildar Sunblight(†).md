@@ -1,3 +1,5 @@
+**Fraktion:** [[Sunblight-familjen]]
+
 Grå-hyddad dvärg, äldre och bättre rustad än sina underlydande. Ledde fästningen vid [[Kelvins Cairn]]. Hävdade att hela Icewind Dale tillhör Sunblight-familjen.
 
 - **Brott:** Skickade dvärgar att mörda [[Bronn Bearhammer(†)]], kidnappa [[Eevie]] och stjäla från [[Caer Konig]]. Infekterade fångar med svamp (alkemisk process).

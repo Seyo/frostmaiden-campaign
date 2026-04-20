@@ -1,3 +1,5 @@
+**Fraktion:** [[Ten-Towns]] (Caer Konig)
+
 [[Bronn Bearhammer(†)]]s fru. Försvann samma natt han mördades – troligen kidnappad av [[Nildar Sunblight(†)]]s dvärgar.
 
 - I fästningens celblock hittades en varelse med blont hår, liten bygel och vit nattlinne – möjligen Eevie, men infekterad med svamp.

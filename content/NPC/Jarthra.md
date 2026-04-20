@@ -1,3 +1,5 @@
+**Fraktion:** [[Ten-Towns]] (Caer Konig)
+
 Alv med mörkt hår i enkel fläta, guide, driver _Frozen Expeditions_ i [[Caer Konig]]. Hjälpte [[Bronn Bearhammer(†)]] och [[Eevie]] med handel i [[Dvärgadalen]] (~8–10 tim med hundkälke).
 
 - Guidade [[Zahirs gäng]] till [[Kelvins Cairn]] för 17 gp.

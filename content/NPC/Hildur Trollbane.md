@@ -1,3 +1,5 @@
+**Fraktion:** [[Ten-Towns]] (Bryn Shander)
+
 Dvärk med ärr i ansiktet, vän till [[Torg]]. Mötte gruppen på en taverna i [[Bryn Shander]] (Dag 10–15).
 
 - Gav gruppen uppdraget att utreda morden i Ten-Towns.

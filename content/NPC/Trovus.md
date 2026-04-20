@@ -1,3 +1,5 @@
+**Fraktion:** [[Ten-Towns]] (Caer Konig)
+
 Vit drakfödd, självutnämnd nattväktare i [[Caer Konig]]. Berusad och inkompetent – verkar göra mer skada än nytta. Bakgrund okänd; vill inte prata om varifrån han kommer.
 
 - Presenterade gruppen för [[Cori]] och [[Allie]] på _The Northern Light_.

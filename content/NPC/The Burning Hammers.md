@@ -1,3 +1,5 @@
+**Fraktion:** Oberoende
+
 Grupp av tre äventyrare som kom till [[Caer Konig]] för att utreda mordet på [[Bronn Bearhammer(†)]] och [[Eevie]]s försvinnande. Såg ut som genomsnittliga äventyrare.
 
 - Bodde en natt på _The Hook Line and Sinker_ ([[Glenn]]).

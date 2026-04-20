@@ -1,3 +1,5 @@
+**Fraktion:** [[Zahirs gäng]]
+
 Goliath barbar, uppvuxen bland jättar på Moonshine Isle som döpte om honom till "Borc the Orc".
 
 - Ansvarig för gruppens kassa.
