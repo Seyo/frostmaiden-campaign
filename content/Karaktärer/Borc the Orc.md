@@ -1,4 +1,7 @@
-Borc är en goliath som fick smeknamnet Borc the Orc från ung ålder från giants.
-Fixade ett hem till [[Zahirs gäng]] innan de tillsammans bar sig norrut.
+Goliath barbar, uppvuxen bland jättar på Moonshine Isle som döpte om honom till "Borc the Orc".
 
-Hans vänner försvann under en expediton i norr och han vill ta reda på vad som hände.
+- Ansvarig för gruppens kassa.
+- Har jättemagi (kan teleportera sig korta sträckor). Teleporterade rakt in i spikfällan i [[Nildar Sunblight(†)]]s fästning – nästintill dog.
+- Stark nog att dra upp tunga dubbeldörrar.
+- Fixade husrum till [[Zahirs gäng]] innan resan norrut.
+- Vänner försvann under en expedition i norr – vill ta reda på vad som hände.

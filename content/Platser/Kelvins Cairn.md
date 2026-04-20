@@ -1,0 +1,3 @@
+- **Typ:** Enorm bergstopp, dominerar horisonten norr om [[Caer Konig]].
+- **Fästningen (östra sidan):** [[Nildar Sunblight(†)]]s bas, 5 miles (~5 tim) från Caer Konig. Innehöll celler med svampinfekterade fångar, ett alkemistlaboratorium och en separat bunker med grå-dvärgsvakter. Besegrad av [[Zahirs gäng]] Dag 18.
+- En vattenström rinner ut ur fästningen – kan delvis fungera som damm för ett vattenreserv inuti berget.

@@ -1,5 +1,6 @@
-Orc Rogue, avkastad skepp i Fireshear, stampar in i taverna i Fireshear och letar efter en orc, hör [[Nasher]] och [[Zahir]] snacka om att röra sig norrut och tränger sig på. [[Borc the Orc]] letar roomies som också söker sig norrut.
+Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] snacka om att röra sig norrut och trängde sig på. [[Borc the Orc]] letade ressällskap norrut.
 
-Utmärkt Survival och Perception skills och ganska vass med en karta.
-
-Klantade sig under första long rest när han blev lite girig och desperat och försöka tjäna lite guld på att stjäla lite saker, gick inte så bra så Zahir fick betala halva bötern.
+- Utmärkt Survival och Perception. Duktig navigator men tappade kursen mot [[Kelvins Cairn]] (~2 extra timmar, Dag 18).
+- Spanade in bunkern vid fästningen – identifierade grå-dvärgsvakten och kopplade ihop den vita skägglocket med [[Bronn Bearhammer(†)]]s brottsplats.
+- Fällde [[Nildar Sunblight(†)]] med pilar.
+- Klantade sig under första long rest (stöldförsök, böter 25 gp, hade bara 11 gp). [[Zahir]] betalade halva.

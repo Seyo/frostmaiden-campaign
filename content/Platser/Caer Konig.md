@@ -1,3 +1,5 @@
-- **Info:** Liten bosättning (ca 150 pers), känd för ruiner av ett gammalt slott.
-- **Rykten:** Osynliga tjuvar härjar här. En glasmästare (dvärg) mördad nyligen.
-- **Värdshus:** _The Northern Light_.
+- **Info:** Liten bosättning (~150 pers) vid sjön [[Coc Dinneshare]] (ej frusen trots kyla). Ruiner av ett gammalt slott och befästningar. Vapen: vit fisk på blå botten. [[Kelvins Cairn]] dominerar horisonten. Norrsken dansar varje kväll vid exakt samma tid – troligen magisk natur.
+- **Värdshus:** _The Northern Light_ ([[Cori]] & [[Allie]]). _The Hook Line and Sinker_ ([[Glenn]], halvalv).
+- **Butiker/platser:** _Snow Fox Hideout_ (alkemist, [[Foxes in the Snow]]). _Snowy Baubles_ ([[Bronn Bearhammer(†)]]s hem/smedja, brottsplats). [[Keegan Valryn]]s hundkälkeuthyrning.
+- **Löst:** Mord på [[Bronn Bearhammer(†)]], försvinnandet av [[Eevie]] och tjuverierna orkestrerades av [[Nildar Sunblight(†)]]s dvärgar från fästningen vid [[Kelvins Cairn]]. **Obs:** Offret var en mänsklig barbar, inte en dvärg-glasmästare som ryktena sa.
+- **Olöst:** [[The Burning Hammers]] (3 äventyrare) och guiden [[Garret]] fortfarande saknade.

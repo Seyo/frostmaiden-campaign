@@ -1,0 +1,4 @@
+- **Typ:** Isolerat dvärgsamhälle, ~8–10 timmars resa med hundkälke från [[Caer Konig]].
+- **Karaktär:** Dvärgarna är mycket isolerade och oberoende, ogillar främlingar. Handlar i ädelstenar.
+- **Kontakt:** [[Jarthra]] (guide, _Frozen Expeditions_) hjälpte [[Bronn Bearhammer(†)]] handla med dvärgarna regelbundet.
+- [[Glenn]] på _The Hook Line and Sinker_ i Caer Konig importerar öl härifrån.

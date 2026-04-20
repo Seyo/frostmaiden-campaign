@@ -1,0 +1,3 @@
+- **Typ:** Hamnstad söder om Icewind Dale. Inte särskilt vänlig mot äventyrare.
+- **Karaktär:** Gruppen rekryterades här och fick höra rykten om vad som händer norröver.
+- **Torgs Imports:** Köpmannen [[Aubril(†)]] var anställd här och hyrde in gruppen.
