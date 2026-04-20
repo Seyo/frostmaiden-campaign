@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "febf884a4dd3bc06",
+    "type": "split",
+    "children": [
+      {
+        "id": "92c9165abb20df6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48ea6020369f7b17",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Karaktärer/Sork the Shadow.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sork the Shadow"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "27435029d70ed882",
+    "type": "split",
+    "children": [
+      {
+        "id": "65c6a222d05327c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa7eaeaa5a4dd424",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3cd5e513e028af12",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "18ebc5b842a3c3d7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0b2cc118220ce454",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b36f97e0ebc1962",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23276c73851ec00f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Karaktärer/Sork the Shadow.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Sork the Shadow"
+            }
+          },
+          {
+            "id": "d28823ead59106a9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Karaktärer/Sork the Shadow.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Sork the Shadow"
+            }
+          },
+          {
+            "id": "a07b500f0ebccbc5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "94b597c5fb4caa42",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Karaktärer/Sork the Shadow.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Sork the Shadow"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "aa7eaeaa5a4dd424",
+  "lastOpenFiles": [
+    "quartz/i18n/index.ts",
+    "quartz/i18n/locales/th-TH.ts",
+    "quartz/i18n/locales/pl-PL.ts",
+    "quartz/i18n/locales/tr-TR.ts",
+    "quartz/i18n/locales/en-GB.ts",
+    "quartz/i18n/locales/nb-NO.ts",
+    "quartz/i18n/locales/ja-JP.ts",
+    "quartz/i18n/locales/lt-LT.ts",
+    "quartz/i18n/locales/de-DE.ts",
+    "quartz/i18n/locales/nl-NL.ts",
+    "quartz/i18n/locales/zh-TW.ts",
+    "quartz/static/og-image.png",
+    "quartz/static/icon.png",
+    "CLAUDE.md",
+    "Karaktärer/Borc the Orc.md",
+    "Uppdrag & rykten/Aurils Rime (Världsinfo).md",
+    "Uppdrag & rykten/Morden i Ten-Towns.md",
+    "Rime of the Frostmaiden.md",
+    "Karaktärer/Nasher.md",
+    "Karaktärer/Sork the Shadow.md",
+    "Karaktärer/Zahir.md",
+    "Karaktärer/Zahirs gäng.md",
+    "NPC/Torg.md",
+    "NPC/Hildur Trollbane.md",
+    "NPC/Aubril(†).md",
+    "Platser/Bryn Shander.md",
+    "Händelser/Sorks fuckup.md",
+    "Untitled.canvas",
+    "Platser/Caer Konig.md",
+    "Sessions/Session_01_Vägen_till_Caer_Konig.md",
+    "NPC/Trovus.md",
+    "Platsnamn.md",
+    "Platser/Fireshear.md",
+    "Mötet.md",
+    "Untitled.md",
+    "Untitled 1.md"
+  ]
+}

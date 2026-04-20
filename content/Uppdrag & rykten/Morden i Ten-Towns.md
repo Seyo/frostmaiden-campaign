@@ -1,0 +1,3 @@
+- **Offer:** En halfling (East Haven), en människa (Targos), en dvärg (Caer Konig).
+- **Modus Operandi:** Isdolk genom hjärtat.
+- **Teori:** Kan vara kopplat till Auril eller en kult.

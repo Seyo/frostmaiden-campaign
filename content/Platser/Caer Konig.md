@@ -1,0 +1,3 @@
+- **Info:** Liten bosättning (ca 150 pers), känd för ruiner av ett gammalt slott.
+- **Rykten:** Osynliga tjuvar härjar här. En glasmästare (dvärg) mördad nyligen.
+- **Värdshus:** _The Northern Light_.

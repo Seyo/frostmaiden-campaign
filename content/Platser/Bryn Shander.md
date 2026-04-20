@@ -1,0 +1,7 @@
+- **Typ:** Största staden i Ten-Towns, fylld av flyktingar.
+- **Viktiga platser:**
+    - _The Hooked Knucklehead:_ Värdshus där gruppen vilade en vecka.
+    - _House of the Triad:_ Tempel (rekommenderat för Nasher).
+    - _Reindils Emporium:_ Exklusiv utrustning, drivs av en halv-alv.
+    - _Council Hall:_ Plats för sheriffen.
+- Hela [[Zahirs gäng]] är med på offerlistan

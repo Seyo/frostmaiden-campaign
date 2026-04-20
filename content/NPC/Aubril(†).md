@@ -1,0 +1,1 @@
+Er förste uppdragsgivare. Dog under vargattacken

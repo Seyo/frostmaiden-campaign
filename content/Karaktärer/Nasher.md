@@ -1,0 +1,1 @@
+Elf paladin, hög charisma och moraliskt överlägsen

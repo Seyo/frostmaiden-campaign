@@ -1,0 +1,3 @@
+- **Gudinnan Auril:** Rider över himlen på en vit häst vid midnatt.
+- **Förbannelsen:** Blockerar solen och förstör ljusmagi (besvärjelsen _Light_ fungerar inte för att belysa omgivningen).
+- **Offer:** Städerna ger mat eller låter bli att tända eld i spisen för att blidka henne

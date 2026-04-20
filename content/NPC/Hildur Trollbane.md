@@ -1,0 +1,1 @@
+Dvärg med ärr i ansiktet. Gav gruppen uppdraget att utreda morden.

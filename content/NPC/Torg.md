@@ -1,0 +1,1 @@
+Ägare av _Torgs Imports and Goods_. Betalade ut halva lönen trots Aubrils död.

@@ -1,0 +1,7 @@
+- **Resan:** Startade i [[Fireshear]]. Rekryterade [[Zahir]] (halfling), [[Sork the Shadow]] (orc) och [[Borc the Orc]] (half-giant).
+- **Händelseförlopp:**
+    - Hyrda av [[Aubril(†)]] (Torgs Imports) för 75 gp.
+    - [[Aubril(†)]] dödad av vargar vid gränsen till Icewind Dale. [[Nasher]] föll i strid men överlevde.
+    - Ankomst till [[Bryn Shander]] (Dag 8). Återlämnade [[Aubril(†)]]s kropp till [[Torg]].
+    - Möte med [[Hildur Trollbane]]; accepterade uppdraget att undersöka morden.
+    - Resa till [[Caer Konig]]; förlorade två hundar i en hagelstorm. Ankomst till [[Caer Konig]] (Dag 16).

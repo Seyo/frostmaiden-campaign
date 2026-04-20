@@ -1,0 +1,4 @@
+- [[Zahir]] halfling warlock
+- [[Nasher]] elf paladin
+- [[Sork the Shadow]]orc rogue
+- [[Borc the Orc]] goliath barab
