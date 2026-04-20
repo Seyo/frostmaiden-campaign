@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "sv-SE",
-    baseUrl: "emiln.github.io/frostmaiden-campaign",
+    baseUrl: "seyo.github.io/frostmaiden-campaign",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
