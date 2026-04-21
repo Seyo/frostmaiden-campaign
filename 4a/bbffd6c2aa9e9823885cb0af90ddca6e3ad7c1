@@ -1,0 +1,23 @@
+content/Karaktärer/Zahir.md
+  290154937bb7f6fc 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "4abbffd6c2aa9e9823885cb0af90ddca6e3ad7c1",
+  "prompts": {
+    "290154937bb7f6fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1badeb73-4b45-421e-ad00-cba56478b139",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Seyo",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
