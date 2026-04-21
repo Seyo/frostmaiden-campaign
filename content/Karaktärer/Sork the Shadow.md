@@ -1,5 +1,11 @@
 **Fraktion:** [[Zahirs gäng]]
 
+<div class="portrait-right">
+
+![[sork.png]]
+
+</div>
+
 Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] snacka om att röra sig norrut och trängde sig på. [[Borc the Orc]] letade ressällskap norrut.
 
 - Utmärkt Survival och Perception. Duktig navigator men tappade kursen mot [[Kelvins Cairn]] (~2 extra timmar, Dag 18).
