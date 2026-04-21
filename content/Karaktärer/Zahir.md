@@ -6,7 +6,7 @@
 
 </div>
 
-Halfling warlock, från Calimport i södra Faerûn. Vass tunga, hög karisma, moraliskt tvivelaktig. Flyr från något i Calimport.
+Halfling warlock, från Calimport i södra Faerûn. Vass tunga, hög karisma, moraliskt tvivelaktig. Flyr från något i Calimport. Har extraordinärt mycket tur.
 
 - Kör "föreställningar" för sin "besättning" i städer – oklart exakt vad.
 - Besvärjelse: Tasha's Hideous Laughter (besegrade [[Nildar Sunblight(†)]]).
