@@ -23,6 +23,8 @@ Sökte sig sedan till Waterdeep och arbetade som livvakt åt adelsmannen **Lord 
 
 Konfrontationen gjorde Sork till en jagad man av stadsvakten och tvingade honom under jorden i Waterdeeps slum. Det är det "dåliga läget i Waterdeep" som [[Nasher]] noterat att Sork inte vill prata om.
 
+Flydde hals över huvud på ett handelsfartyg norrut för att undkomma galgen. Hamnade i [[Fireshear]] av ren slump och desperation – en plats där ingen känner till hans ansikte eller hans förflutna. Det var där han stötte på [[Nasher]] och [[Zahir]].
+
 ## Personlighet
 
 Totalt värdelös i sociala situationer – men kan inte hålla tyst och fliker in ändå, oftast vid fel tillfälle. Trivs bäst ute i vildmarken eller när han spanar och undersöker saker, det är där han känner sig värdefull och i sitt esse.
