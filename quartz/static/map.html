@@ -77,7 +77,7 @@
     map.on('click', function(e) {
       var px = Math.round(e.latlng.lng);
       var py = Math.round(H - e.latlng.lat);
-      var text = px + ', ' + py;
+      var text = 'Lägg till markör på Icewind Dale-kartan vid px: ' + px + ', py: ' + py + ' — ';
       coordsEl.textContent = 'px: ' + px + ', py: ' + py + ' — kopierat!';
       navigator.clipboard.writeText(text).catch(function() {
         coordsEl.textContent = 'px: ' + px + ', py: ' + py + ' (kopiera manuellt)';
@@ -113,7 +113,8 @@
       { name: "Dougan's Hole",  url: null,                        px: 2112, py: 2767, icon: town,     desc: 'Söder vid Redwaters' },
       { name: "Kelvin's Cairn",      url: '../Platser/Kelvins-Cairn', px: 2756, py: 1719, icon: mountain,    desc: 'Enormt berg norr om Ten-Towns' },
       { name: 'Sunblights fästning', url: null,                       px: 2832, py: 1739, icon: icon('⚔️'), desc: 'Nildar Sunblights fästning — besegrad av Zahirs gäng dag 18' },
-      { name: 'Dwarven Valley', url: '../Platser/Dvärgadalen',   px: 2548, py: 1895, icon: dwarf,    desc: 'Dvärgkoloni i bergets skugga' },
+      { name: 'Dwarven Valley', url: '../Platser/Dvärgadalen',   px: 2548, py: 1895, icon: dwarf,       desc: 'Dvärgkoloni i bergets skugga' },
+      { name: 'Aubrils öde',   url: null,                       px: 1640, py: 3183, icon: icon('🐺'), desc: 'Dag 7 — vargarna dödade Aubril under natten. Sork navigerade fel, gruppen tvingades övernatta på samma plats igen.' },
     ];
 
     locations.forEach(function (loc) {
