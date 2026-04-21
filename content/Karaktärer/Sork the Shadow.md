@@ -13,6 +13,10 @@ Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] sn
 - Fällde [[Nildar Sunblight(†)]] med pilar.
 - Klantade sig under första long rest (stöldförsök, böter 25 gp, hade bara 11 gp). [[Zahir]] betalade halva.
 
+## Personlighet
+
+Totalt värdelös i sociala situationer – men kan inte hålla tyst och fliker in ändå, oftast vid fel tillfälle. Trivs bäst ute i vildmarken eller när han spanar och undersöker saker, det är där han känner sig värdefull och i sitt esse.
+
 ## Moralisk kod
 
 Blir lätt upphetsad när värdesaker hittas. Efter incidenten i [[Bryn Shander]] har han dock satt upp en regel för sig själv: **stjäl bara från dem som inte längre behöver det.**
