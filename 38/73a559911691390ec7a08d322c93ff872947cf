@@ -1,0 +1,23 @@
+content/index.md
+  290154937bb7f6fc 3-23,27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "3873a559911691390ec7a08d322c93ff872947cf",
+  "prompts": {
+    "290154937bb7f6fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1badeb73-4b45-421e-ad00-cba56478b139",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Seyo",
+      "messages": [],
+      "total_additions": 22,
+      "total_deletions": 4,
+      "accepted_lines": 32,
+      "overriden_lines": 0
+    }
+  }
+}
