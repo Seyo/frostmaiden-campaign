@@ -13,6 +13,12 @@ Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] sn
 - Fällde [[Nildar Sunblight(†)]] med pilar.
 - Klantade sig under första long rest (stöldförsök, böter 25 gp, hade bara 11 gp). [[Zahir]] betalade halva.
 
+## Bakgrund
+
+Växte upp i skuggan av en barack i Neverwinter. Som barn hjälpte han mänskliga soldater med matlagning och städning – på nätterna, när lägret tystnat, "lekte" han i smyg med träningsutrustningen. Med åren utvecklade han en naturlig fallenhet för strid och imponerande styrka.
+
+Hans talang gick inte obemärkt förbi. Han blev inbjuden att ta värvning – den enda orken i en enhet av människor. Tjänstgjorde i flera år med stora framgångar och steg i graderna tillsammans med män han betraktade som sina bröder.
+
 ## Personlighet
 
 Totalt värdelös i sociala situationer – men kan inte hålla tyst och fliker in ändå, oftast vid fel tillfälle. Trivs bäst ute i vildmarken eller när han spanar och undersöker saker, det är där han känner sig värdefull och i sitt esse.
