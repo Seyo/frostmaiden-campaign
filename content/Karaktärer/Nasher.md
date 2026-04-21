@@ -1,5 +1,7 @@
 **Fraktion:** [[Zahirs gäng]]
 
+![[nasher.png]]
+
 Alv paladin, Tyrs orden (Hämndeed – visa ingen nåd mot de onda). Från Neverwinter. Hög karisma och stark moralkompass. Talar dvarviska. Har kläppkrok och kastspjut.
 
 - Föll i strid under vargattacken (Dag 6) och igen mot [[Nildar Sunblight(†)]] (Dag 18).
