@@ -1,5 +1,11 @@
 **Fraktion:** [[Zahirs gäng]]
 
+<div class="portrait-right">
+
+![[zahir.png]]
+
+</div>
+
 Halfling warlock, från Calimport i södra Faerûn. Vass tunga, hög karisma, moraliskt tvivelaktig. Flyr från något i Calimport.
 
 - Kör "föreställningar" för sin "besättning" i städer – oklart exakt vad.
