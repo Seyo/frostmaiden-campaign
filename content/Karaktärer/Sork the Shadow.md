@@ -19,6 +19,10 @@ Växte upp i skuggan av en barack i Neverwinter. Som barn hjälpte han mänsklig
 
 Hans talang gick inte obemärkt förbi. Han blev inbjuden att ta värvning – den enda orken i en enhet av människor. Tjänstgjorde i flera år med stora framgångar och steg i graderna tillsammans med män han betraktade som sina bröder.
 
+Sökte sig sedan till Waterdeep och arbetade som livvakt åt adelsmannen **Lord Cassalanter**. Det dröjde inte länge innan Sork insåg att adelsmannen var djupt korrupt. När han bevittnade hur Lord Cassalanter misshandlade sitt tjänstefolk brände det till – inför öppen ridå satte Sork en dolk mot adelsmannens strupe. Han utdelade aldrig det dödande hugget, men meddelandet var glasklart.
+
+Konfrontationen gjorde Sork till en jagad man av stadsvakten och tvingade honom under jorden i Waterdeeps slum. Det är det "dåliga läget i Waterdeep" som [[Nasher]] noterat att Sork inte vill prata om.
+
 ## Personlighet
 
 Totalt värdelös i sociala situationer – men kan inte hålla tyst och fliker in ändå, oftast vid fel tillfälle. Trivs bäst ute i vildmarken eller när han spanar och undersöker saker, det är där han känner sig värdefull och i sitt esse.
