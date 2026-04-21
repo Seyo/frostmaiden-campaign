@@ -1,0 +1,23 @@
+content/Händelser/Dödsloggen.md
+  290154937bb7f6fc 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "a630ae7c25dd7ee7b721acf690e6b5501c751457",
+  "prompts": {
+    "290154937bb7f6fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1badeb73-4b45-421e-ad00-cba56478b139",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Seyo",
+      "messages": [],
+      "total_additions": 35,
+      "total_deletions": 0,
+      "accepted_lines": 43,
+      "overriden_lines": 0
+    }
+  }
+}
