@@ -1,3 +1,115 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// ── Parchment / Frozen Ice theme for Rime of the Frostmaiden ──────────────────
+
+// Body sizing — Garamond reads better slightly larger
+:root {
+  --font-size-base: 1.05rem;
+}
+
+body {
+  font-size: var(--font-size-base);
+  letter-spacing: 0.01em;
+}
+
+// ── Light mode: aged parchment ────────────────────────────────────────────────
+:root[saved-theme="light"],
+:root:not([saved-theme="dark"]) {
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(180, 130, 60, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(150, 100, 40, 0.06) 0%, transparent 60%);
+}
+
+// ── Dark mode: frozen night ────────────────────────────────────────────────────
+:root[saved-theme="dark"] {
+  background-image:
+    radial-gradient(ellipse at 15% 15%, rgba(40, 90, 140, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 85%, rgba(20, 60, 100, 0.10) 0%, transparent 55%);
+}
+
+// ── Page title (site name in sidebar) ─────────────────────────────────────────
+#quartz-body .page-title {
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+// ── Article headings ───────────────────────────────────────────────────────────
+h1, h2, h3 {
+  font-family: var(--headerFont);
+  letter-spacing: 0.04em;
+}
+
+h1 { font-size: 1.9rem; }
+h2 {
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.2em;
+}
+
+// ── Horizontal rules: ornamental divider ──────────────────────────────────────
+hr {
+  border: none;
+  text-align: center;
+  overflow: visible;
+  margin: 2rem 0;
+  color: var(--gray);
+
+  &::after {
+    content: "⸻ ✦ ⸻";
+    letter-spacing: 0.3em;
+    font-size: 0.85rem;
+  }
+}
+
+// ── Blockquotes: scroll-like callout ──────────────────────────────────────────
+blockquote {
+  border-left: 3px solid var(--secondary);
+  background: var(--highlight);
+  border-radius: 0 4px 4px 0;
+  padding: 0.6em 1em;
+  font-style: italic;
+}
+
+// ── Tables ────────────────────────────────────────────────────────────────────
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    font-family: var(--headerFont);
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    background: var(--highlight);
+  }
+
+  th, td {
+    border: 1px solid var(--lightgray);
+    padding: 0.4em 0.8em;
+  }
+
+  tr:nth-child(even) td {
+    background: var(--highlight);
+  }
+}
+
+// ── Links ─────────────────────────────────────────────────────────────────────
+a {
+  text-underline-offset: 3px;
+}
+
+// ── Explorer (sidebar file tree) ──────────────────────────────────────────────
+.explorer .folder-title,
+.explorer button.folder-button {
+  font-family: var(--headerFont);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+// ── Graph view ────────────────────────────────────────────────────────────────
+.graph {
+  border-radius: 6px;
+  border: 1px solid var(--lightgray);
+}
