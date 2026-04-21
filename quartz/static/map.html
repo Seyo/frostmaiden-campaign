@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; background: #0c1824; }
+    #map { height: 100%; width: 100%; }
+
+    .leaflet-popup-content-wrapper {
+      background: #0c1824;
+      border: 1px solid #4a6878;
+      color: #e0f0fa;
+      font-family: 'EB Garamond', Georgia, serif;
+      border-radius: 2px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    }
+    .leaflet-popup-tip { background: #0c1824; }
+    .leaflet-popup-close-button { color: #7ab8d4 !important; }
+    .leaflet-popup-content a {
+      color: #7ab8d4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .leaflet-popup-content a:hover { text-decoration: underline; }
+    .popup-desc {
+      font-size: 0.85em;
+      margin-top: 3px;
+      color: #b8d0e0;
+    }
+    .map-icon {
+      font-size: 22px;
+      line-height: 1;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      cursor: pointer;
+    }
+
+    #coords {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(12,24,36,0.85);
+      color: #7ab8d4;
+      font-family: monospace;
+      font-size: 12px;
+      padding: 6px 10px;
+      border: 1px solid #4a6878;
+      border-radius: 3px;
+      pointer-events: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="coords">Klicka på kartan för px/py</div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var W = 6000, H = 4215;
+
+    var map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: -3,
+      maxZoom: 1,
+      zoomControl: true,
+      attributionControl: false,
+      maxBounds: [[-H * 0.05, -W * 0.05], [H * 1.05, W * 1.05]]
+    });
+
+    L.imageOverlay('../Kartor/icewind-dale.webp', [[0, 0], [H, W]]).addTo(map);
+    map.fitBounds([[0, 0], [H, W]], { padding: [16, 16] });
+
+    // Show pixel coords on click to make it easy to reposition markers
+    var coordsEl = document.getElementById('coords');
+    map.on('click', function(e) {
+      var px = Math.round(e.latlng.lng);
+      var py = Math.round(H - e.latlng.lat);
+      var text = px + ', ' + py;
+      coordsEl.textContent = 'px: ' + px + ', py: ' + py + ' — kopierat!';
+      navigator.clipboard.writeText(text).catch(function() {
+        coordsEl.textContent = 'px: ' + px + ', py: ' + py + ' (kopiera manuellt)';
+      });
+    });
+
+    function icon(emoji) {
+      return L.divIcon({
+        html: '<div class="map-icon">' + emoji + '</div>',
+        className: '',
+        iconSize: [26, 26],
+        iconAnchor: [13, 13],
+        popupAnchor: [0, -16]
+      });
+    }
+
+    var town     = icon('🏘️');
+    var mountain = icon('⛰️');
+    var dwarf    = icon('⚒️');
+
+    // px/py = pixel coords on the 6000x4215 image (top-left origin).
+    // Leaflet CRS.Simple has y increasing upward, so lat = H - py.
+    var locations = [
+      { name: 'Bryn Shander',   url: '../Platser/Bryn-Shander',  px: 1946, py: 2391, icon: town,     desc: 'Störst av Ten-Towns, handelsknutpunkten' },
+      { name: 'Targos',         url: null,                        px: 1758, py: 2261, icon: town,     desc: 'Näst störst av Ten-Towns' },
+      { name: 'Bremen',         url: null,                        px: 1670, py: 2159, icon: town,     desc: 'Västerst av Ten-Towns' },
+      { name: 'Lonelywood',     url: null,                        px: 2084, py: 1847, icon: town,     desc: 'Norr om Maer Dualdon, isolerat' },
+      { name: 'Termalaine',     url: null,                        px: 2200, py: 1935, icon: town,     desc: 'Norra Maer Dualdon' },
+      { name: 'Easthaven',      url: null,                        px: 2806, py: 2507, icon: town,     desc: 'Östligast av Ten-Towns' },
+      { name: 'Caer-Dineval',   url: null,                        px: 2830, py: 2173, icon: town,     desc: 'Östra Lac Dinneshere' },
+      { name: 'Caer-Konig',     url: '../Platser/Caer-Konig',    px: 2990, py: 1955, icon: town,     desc: 'Vid Lac Dinneshere i öster' },
+      { name: 'Good Mead',      url: null,                        px: 2348, py: 2643, icon: town,     desc: 'Känd för sin mjöd, vid Redwaters' },
+      { name: "Dougan's Hole",  url: null,                        px: 2112, py: 2767, icon: town,     desc: 'Söder vid Redwaters' },
+      { name: "Kelvin's Cairn",      url: '../Platser/Kelvins-Cairn', px: 2756, py: 1719, icon: mountain,    desc: 'Enormt berg norr om Ten-Towns' },
+      { name: 'Sunblights fästning', url: null,                       px: 2832, py: 1739, icon: icon('⚔️'), desc: 'Nildar Sunblights fästning — besegrad av Zahirs gäng dag 18' },
+      { name: 'Dwarven Valley', url: '../Platser/Dvärgadalen',   px: 2548, py: 1895, icon: dwarf,    desc: 'Dvärgkoloni i bergets skugga' },
+    ];
+
+    locations.forEach(function (loc) {
+      var title = loc.url
+        ? '<b><a href="' + loc.url + '" target="_parent">' + loc.name + '</a></b>'
+        : '<b>' + loc.name + '</b>';
+      var popup = title + '<div class="popup-desc">' + loc.desc + '</div>';
+      L.marker([H - loc.py, loc.px], { icon: loc.icon, title: loc.name })
+        .bindPopup(popup)
+        .addTo(map);
+    });
+  </script>
+</body>
+</html>
