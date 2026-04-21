@@ -113,3 +113,30 @@ a {
   border-radius: 6px;
   border: 1px solid var(--lightgray);
 }
+
+// ── Character portraits: float right, text wraps around ───────────────────────
+.portrait-right {
+  float: right;
+  width: 45%;
+  margin: 0 0 1.2em 1.8em;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
+}
+
+// Contain floats inside article
+article.popover-hint {
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .portrait-right {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.2em 0;
+  }
+}
