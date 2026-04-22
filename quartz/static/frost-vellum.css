@@ -244,6 +244,12 @@ html, body {
 .night .inklink { color: var(--ink); background-image: linear-gradient(to right, var(--ink-faded), var(--ink-faded)); }
 .night .inklink:hover { color: var(--rime); background-image: linear-gradient(to right, var(--rime), var(--rime)); }
 
+/* ─── MAP PIN TYPE COLOURS ─── */
+.map-pin[data-type="mountain"] .pin-dot { background: var(--frost-deep); box-shadow: 0 0 0 1px var(--frost-mid), 0 0 14px rgba(86,123,146,0.5); }
+.map-pin[data-type="faction"]  .pin-dot { background: var(--moss);       box-shadow: 0 0 0 1px var(--moss),      0 0 10px rgba(74,90,63,0.4); }
+.map-pin[data-type="fortress"] .pin-dot,
+.map-pin[data-type="event"]    .pin-dot { background: var(--wax);        box-shadow: 0 0 0 1px var(--wax),       0 0 14px rgba(107,42,42,0.5); }
+
 @media (prefers-reduced-motion: reduce) {
   .snow span { animation: none; opacity: 0; }
   .scroll-cue-line { animation: none; }

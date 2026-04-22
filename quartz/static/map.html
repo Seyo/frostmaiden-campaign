@@ -1,131 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icewind Dale — Karta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+DW+Pica+SC&family=EB+Garamond:ital,wght@0,400;1,400&family=Cormorant+Unicase:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./frost-vellum.css">
+  <link rel="stylesheet" href="./page.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; background: #0c1824; }
-    #map { height: 100%; width: 100%; }
-
-    .leaflet-popup-content-wrapper {
-      background: #0c1824;
-      border: 1px solid #4a6878;
-      color: #e0f0fa;
-      font-family: 'EB Garamond', Georgia, serif;
-      border-radius: 2px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    html, body { height: 100%; overflow: hidden; margin: 0; }
+    body { background: var(--vellum); }
+    #map-root {
+      width: 100%; height: 100%;
+      display: flex; align-items: stretch;
     }
-    .leaflet-popup-tip { background: #0c1824; }
-    .leaflet-popup-close-button { color: #7ab8d4 !important; }
-    .leaflet-popup-content a {
-      color: #7ab8d4;
-      font-weight: bold;
-      text-decoration: none;
+    /* Override page.css map-frame for fullscreen iframe use */
+    .map-frame {
+      flex: 1; display: flex; flex-direction: column;
+      padding: 0; border: none; box-shadow: none; background: transparent;
     }
-    .leaflet-popup-content a:hover { text-decoration: underline; }
-    .popup-desc {
-      font-size: 0.85em;
-      margin-top: 3px;
-      color: #b8d0e0;
+    .map-frame-inner { flex: 1; min-height: 0; }
+    .map-wrap { width: 100%; height: 100%; aspect-ratio: unset; }
+    #map-wrap { user-select: none; }
+    #map-wrap.can-pan { cursor: grab; }
+    #map-wrap.panning  { cursor: grabbing; }
+    #map-coords {
+      position: fixed; bottom: 10px; left: 10px;
+      font-family: monospace; font-size: 0.72rem;
+      color: var(--ink-faded);
+      background: rgba(232, 224, 207, 0.92);
+      padding: 4px 10px; border: 1px solid var(--vellum-edge);
+      pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 100;
     }
-    .map-icon {
-      font-size: 22px;
-      line-height: 1;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-      cursor: pointer;
-    }
-
-    #coords {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(12,24,36,0.85);
-      color: #7ab8d4;
-      font-family: monospace;
-      font-size: 12px;
-      padding: 6px 10px;
-      border: 1px solid #4a6878;
-      border-radius: 3px;
-      pointer-events: none;
-      z-index: 1000;
-    }
+    .night #map-coords { background: rgba(23, 30, 43, 0.92); border-color: var(--vellum-stain); }
   </style>
 </head>
 <body>
-  <div id="map"></div>
-  <div id="coords">Klicka på kartan för px/py</div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    var W = 6000, H = 4215;
+<div id="map-root" class="parchment">
+  <div class="map-frame">
+    <div class="map-frame-inner">
+      <div class="map-wrap" id="map-wrap">
+        <div id="map-zoom" style="position:absolute;inset:0;transform-origin:0 0;">
+          <img class="map-img" src="./assets/maps/icewind-dale.webp" alt="Karta över Icewind Dale" draggable="false">
+          <div class="map-tint" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div id="map-tooltip-layer" style="position:absolute;inset:0;pointer-events:none;"></div>
+    </div>
+  </div>
+  <div id="map-coords">px: — py: —</div>
+</div>
 
-    var map = L.map('map', {
-      crs: L.CRS.Simple,
-      minZoom: -3,
-      maxZoom: 1,
-      zoomControl: true,
-      attributionControl: false,
-      maxBounds: [[-H * 0.05, -W * 0.05], [H * 1.05, W * 1.05]]
-    });
+<script src="./map-data.js"></script>
+<script>
+// ─── THEME ───────────────────────────────────────────────────────────────────
+(function () {
+  var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  if (t === 'dark') {
+    document.documentElement.classList.add('night');
+    document.getElementById('map-root').classList.add('night');
+  }
+})();
 
-    L.imageOverlay('../Kartor/icewind-dale.webp', [[0, 0], [H, W]]).addTo(map);
-    map.fitBounds([[0, 0], [H, W]], { padding: [16, 16] });
+// ─── ZOOM / PAN ───────────────────────────────────────────────────────────────
+var WIKI   = '../';
+var wrap   = document.getElementById('map-wrap');
+var zoomEl = document.getElementById('map-zoom');
+var portal = document.getElementById('map-tooltip-layer');
+var s = 1, tx = 0, ty = 0;
+var dragging = false, dragX, dragY;
 
-    // Show pixel coords on click to make it easy to reposition markers
-    var coordsEl = document.getElementById('coords');
-    map.on('click', function(e) {
-      var px = Math.round(e.latlng.lng);
-      var py = Math.round(H - e.latlng.lat);
-      var text = 'Lägg till markör på Icewind Dale-kartan vid px: ' + px + ', py: ' + py + ' — ';
-      coordsEl.textContent = 'px: ' + px + ', py: ' + py + ' — kopierat!';
-      navigator.clipboard.writeText(text).catch(function() {
-        coordsEl.textContent = 'px: ' + px + ', py: ' + py + ' (kopiera manuellt)';
-      });
-    });
+function clamp() {
+  var W = wrap.offsetWidth, H = wrap.offsetHeight;
+  tx = Math.min(0, Math.max(tx, W * (1 - s)));
+  ty = Math.min(0, Math.max(ty, H * (1 - s)));
+}
+function applyTransform() {
+  zoomEl.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
+  wrap.classList.toggle('can-pan', s > 1);
+  renderTooltip();
+}
+wrap.addEventListener('wheel', function (e) {
+  e.preventDefault();
+  var r = wrap.getBoundingClientRect();
+  var mx = e.clientX - r.left, my = e.clientY - r.top;
+  var ns = Math.min(5, Math.max(1, s * (e.deltaY < 0 ? 1.15 : 1 / 1.15)));
+  tx = mx - (mx - tx) * (ns / s);
+  ty = my - (my - ty) * (ns / s);
+  s = ns; clamp(); applyTransform();
+}, { passive: false });
+wrap.addEventListener('mousedown', function (e) {
+  if (s <= 1) return;
+  if (e.target.closest && e.target.closest('.map-pin')) return;
+  dragging = true; dragX = e.clientX; dragY = e.clientY;
+  wrap.classList.add('panning'); e.preventDefault();
+});
+document.addEventListener('mousemove', function (e) {
+  if (!dragging) return;
+  tx += e.clientX - dragX; ty += e.clientY - dragY;
+  dragX = e.clientX; dragY = e.clientY;
+  clamp(); applyTransform();
+});
+document.addEventListener('mouseup', function () {
+  if (dragging) { dragging = false; wrap.classList.remove('panning'); }
+});
+wrap.addEventListener('dblclick', function (e) {
+  if (e.target.closest && e.target.closest('.map-pin')) return;
+  s = 1; tx = 0; ty = 0; applyTransform();
+});
 
-    function icon(emoji) {
-      return L.divIcon({
-        html: '<div class="map-icon">' + emoji + '</div>',
-        className: '',
-        iconSize: [26, 26],
-        iconAnchor: [13, 13],
-        popupAnchor: [0, -16]
-      });
-    }
+// ─── TOOLTIP ─────────────────────────────────────────────────────────────────
+var pinned = null, hovered = null;
 
-    var town     = icon('🏘️');
-    var mountain = icon('⛰️');
-    var dwarf    = icon('⚒️');
+function renderTooltip() {
+  var old = portal.querySelector('.map-tooltip');
+  if (old) old.remove();
+  var shown = pinned || hovered;
+  if (!shown) {
+    zoomEl.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
+    return;
+  }
+  var pin = MAP_PINS.find(function (p) { return p.id === shown; });
+  if (!pin) return;
+  var btn = zoomEl.querySelector('[data-pin="' + pin.id + '"]');
+  zoomEl.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
+  if (btn) btn.classList.add('is-active');
+  var pr = portal.getBoundingClientRect();
+  var br = btn ? btn.getBoundingClientRect() : null;
+  var cx = br ? (br.left + br.width  / 2 - pr.left) : (pin.x / 100 * pr.width);
+  var cy = br ? (br.top  + br.height / 2 - pr.top)  : (pin.y / 100 * pr.height);
+  var flipX = cx / pr.width  > 0.6  ? '-100%' : '0%';
+  var flipY = cy / pr.height > 0.55 ? '-100%' : '0%';
+  var tt = document.createElement('div');
+  tt.className = 'map-tooltip';
+  tt.setAttribute('role', 'dialog');
+  tt.style.cssText = 'position:absolute;left:' + cx + 'px;top:' + cy + 'px;pointer-events:auto;';
+  tt.style.setProperty('--flip-x', flipX);
+  tt.style.setProperty('--flip-y', flipY);
+  tt.innerHTML =
+    '<div class="tooltip-corner tl"></div><div class="tooltip-corner tr"></div>' +
+    '<div class="tooltip-corner bl"></div><div class="tooltip-corner br"></div>' +
+    '<div class="tt-label">Plats</div>' +
+    '<div class="tt-title">' + pin.name + '</div>' +
+    '<p class="tt-blurb">' + pin.blurb + '</p>' +
+    '<a class="tt-link" href="' + WIKI + pin.slug + '" target="_parent">Öppna i wikin <span aria-hidden="true">→</span></a>';
+  portal.appendChild(tt);
+}
 
-    // px/py = pixel coords on the 6000x4215 image (top-left origin).
-    // Leaflet CRS.Simple has y increasing upward, so lat = H - py.
-    var locations = [
-      { name: 'Bryn Shander',   url: '../Platser/Bryn-Shander',  px: 1946, py: 2391, icon: town,     desc: 'Störst av Ten-Towns, handelsknutpunkten' },
-      { name: 'Targos',         url: null,                        px: 1758, py: 2261, icon: town,     desc: 'Näst störst av Ten-Towns' },
-      { name: 'Bremen',         url: null,                        px: 1670, py: 2159, icon: town,     desc: 'Västerst av Ten-Towns' },
-      { name: 'Lonelywood',     url: null,                        px: 2084, py: 1847, icon: town,     desc: 'Norr om Maer Dualdon, isolerat' },
-      { name: 'Termalaine',     url: null,                        px: 2200, py: 1935, icon: town,     desc: 'Norra Maer Dualdon' },
-      { name: 'Easthaven',      url: null,                        px: 2806, py: 2507, icon: town,     desc: 'Östligast av Ten-Towns' },
-      { name: 'Caer-Dineval',   url: null,                        px: 2830, py: 2173, icon: town,     desc: 'Östra Lac Dinneshere' },
-      { name: 'Caer-Konig',     url: '../Platser/Caer-Konig',    px: 2990, py: 1955, icon: town,     desc: 'Vid Lac Dinneshere i öster' },
-      { name: 'Good Mead',      url: null,                        px: 2348, py: 2643, icon: town,     desc: 'Känd för sin mjöd, vid Redwaters' },
-      { name: "Dougan's Hole",  url: null,                        px: 2112, py: 2767, icon: town,     desc: 'Söder vid Redwaters' },
-      { name: "Kelvin's Cairn",      url: '../Platser/Kelvins-Cairn', px: 2756, py: 1719, icon: mountain,    desc: 'Enormt berg norr om Ten-Towns' },
-      { name: 'Sunblights fästning', url: null,                       px: 2832, py: 1739, icon: icon('⚔️'), desc: 'Nildar Sunblights fästning — besegrad av Zahirs gäng dag 18' },
-      { name: 'Dwarven Valley', url: '../Platser/Dvärgadalen',   px: 2548, py: 1895, icon: dwarf,       desc: 'Dvärgkoloni i bergets skugga' },
-      { name: 'Aubrils öde',   url: null,                       px: 1640, py: 3183, icon: icon('🐺'), desc: 'Dag 7 — vargarna dödade Aubril under natten. Sork navigerade fel, gruppen tvingades övernatta på samma plats igen.' },
-    ];
+// ─── PINS ────────────────────────────────────────────────────────────────────
+MAP_PINS.forEach(function (p) {
+  var btn = document.createElement('button');
+  btn.className = 'map-pin';
+  btn.setAttribute('data-pin', p.id);
+  btn.setAttribute('data-type', p.type || 'town');
+  btn.setAttribute('aria-label', p.name);
+  btn.style.left = p.x + '%';
+  btn.style.top  = p.y + '%';
+  btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span><span class="pin-label">' + p.name + '</span>';
+  btn.addEventListener('mouseenter', function () { hovered = p.id; if (!pinned) renderTooltip(); });
+  btn.addEventListener('mouseleave', function () { hovered = null;  if (!pinned) renderTooltip(); });
+  btn.addEventListener('click', function (e) { e.stopPropagation(); pinned = (pinned === p.id) ? null : p.id; renderTooltip(); });
+  zoomEl.appendChild(btn);
+});
 
-    locations.forEach(function (loc) {
-      var title = loc.url
-        ? '<b><a href="' + loc.url + '" target="_parent">' + loc.name + '</a></b>'
-        : '<b>' + loc.name + '</b>';
-      var popup = title + '<div class="popup-desc">' + loc.desc + '</div>';
-      L.marker([H - loc.py, loc.px], { icon: loc.icon, title: loc.name })
-        .bindPopup(popup)
-        .addTo(map);
-    });
-  </script>
+// ─── COORD PICKER ────────────────────────────────────────────────────────────
+var isMapBg = function (t) {
+  return t === wrap || t === zoomEl || t.classList.contains('map-img') || t.classList.contains('map-tint');
+};
+var coordsEl = document.getElementById('map-coords');
+wrap.addEventListener('click', function (e) {
+  if (!isMapBg(e.target)) return;
+  pinned = null; hovered = null; renderTooltip();
+  var r  = wrap.getBoundingClientRect();
+  var ix = (e.clientX - r.left - tx) / s;
+  var iy = (e.clientY - r.top  - ty) / s;
+  var px = Math.round(ix / r.width  * 6000);
+  var py = Math.round(iy / r.height * 4215);
+  var text = 'px: ' + px + ', py: ' + py;
+  coordsEl.textContent = text + ' — kopierat!';
+  coordsEl.style.opacity = '1';
+  navigator.clipboard.writeText(text).catch(function () { coordsEl.textContent = text + ' (kopiera manuellt)'; });
+  clearTimeout(coordsEl._t);
+  coordsEl._t = setTimeout(function () { coordsEl.style.opacity = '0'; }, 3000);
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') { pinned = null; hovered = null; renderTooltip(); }
+});
+</script>
 </body>
 </html>
