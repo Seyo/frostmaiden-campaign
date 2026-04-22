@@ -34,16 +34,32 @@ There are no build/test/lint commands. To preview locally: `npx quartz build --s
 - Portraits embedded with float wrapper: `<div class="portrait-right">![[image.png]]</div>`
 - Faction listed at top of each NPC/character file: `**Fraktion:** [[Faction Name]]`
 
+## Data vs Layout — quartz/static/
+
+Campaign data lives in dedicated JS files so HTML files only contain layout and rendering logic. **Never hardcode events, pins, or character data directly in HTML.** When adding new content, only the data file needs changing — both consumers pick it up automatically.
+
+| Data file | Global variable(s) | Consumed by |
+|---|---|---|
+| `quartz/static/map-data.js` | `MAP_PINS` | `landing.html`, `map.html` |
+| `quartz/static/timeline-data.js` | `TIMELINE_SESSIONS`, `TIMELINE_EVENTS` | `landing.html`, `timeline.html` |
+
+**To add a map pin:** push to `MAP_PINS` in `map-data.js`.  
+**To add a timeline event:** push to `TIMELINE_EVENTS` in `timeline-data.js` (keep chronological order; `landing.html` reverses automatically).  
+**To add a session:** push to `TIMELINE_SESSIONS` in `timeline-data.js`.
+
+In `desc` fields, HTML is allowed. Use `../Platser/...` or `../NPC/...` for wiki links — both `/static/` pages resolve `../` to the wiki root. `timeline.html` automatically adds `target="_parent"` since it runs inside an iframe.
+
 ## Landing Page (quartz/static/landing.html)
 
 Quartz does **not** auto-generate `landing.html` — it is hand-maintained. When content changes, keep the landing page in sync:
 
 - **`status-card` (Senast i kampanjen):** Update the quote, `status-open-questions`, and campaign day when a new session is added or a cliffhanger changes.
 - **`CHARACTERS` array:** Keep each character's `blurb` current (HP status, key events, etc.).
-- **`MAP_PINS` array:** Add new pins or update `blurb` text when new locations are discovered or events happen there.
+- **`MAP_PINS` array:** Edit `map-data.js`, not `landing.html`.
+- **`TIMELINE_EVENTS`/`TIMELINE_SESSIONS`:** Edit `timeline-data.js`, not `landing.html`.
 - **`WIKI_SECTIONS` array:** Update `count` and `items` when new notes are added to a section.
 
-Always update `landing.html` alongside the relevant content files, then push both together.
+Always update data files and `landing.html` alongside the relevant content files, then push together.
 
 ## Quartz / Tech
 

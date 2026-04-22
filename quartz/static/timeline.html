@@ -27,129 +27,6 @@
       margin-bottom: 2.5rem;
     }
 
-    /* ── Layout ── */
-    .timeline {
-      position: relative;
-      max-width: 680px;
-      margin: 0 auto;
-      padding-left: 72px;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 52px;
-      top: 0; bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, transparent, #2d4a5e 4%, #2d4a5e 96%, transparent);
-    }
-
-    /* ── Session separator ── */
-    .session-header {
-      position: relative;
-      margin: 2.2rem 0 1.4rem -52px;
-      padding-left: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      color: #7ab8d4;
-      font-family: 'Cinzel', serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-    .session-header::before,
-    .session-header::after {
-      content: '';
-      height: 1px;
-      background: #2d4a5e;
-    }
-    .session-header::before { flex: 0 0 36px; }
-    .session-header::after  { flex: 1; }
-
-    /* ── Event ── */
-    .event {
-      position: relative;
-      margin-bottom: 1rem;
-    }
-
-    /* Dot on the line */
-    .event::before {
-      content: '';
-      position: absolute;
-      left: -22px;
-      top: 1.05rem;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #2d4a5e;
-      border: 2px solid #0c1824;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-
-    .event-card {
-      background: #111f2e;
-      border-left: 3px solid #2d4a5e;
-      border-radius: 0 3px 3px 0;
-      padding: 0.65rem 1rem;
-    }
-
-    .event-header {
-      display: flex;
-      align-items: baseline;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-    }
-
-    .event-day {
-      font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
-      color: #4a8099;
-      letter-spacing: 0.06em;
-      white-space: nowrap;
-    }
-
-    .event-icon { font-size: 0.9rem; }
-
-    .event-title {
-      font-size: 0.95rem;
-      font-weight: bold;
-      color: #e0f0fa;
-      line-height: 1.3;
-    }
-
-    .event-desc {
-      font-size: 0.88rem;
-      color: #7a9db0;
-      line-height: 1.55;
-      margin-top: 0.3rem;
-    }
-
-    .event-desc a {
-      color: #7ab8d4;
-      text-decoration: none;
-    }
-    .event-desc a:hover { text-decoration: underline; }
-
-    .event-desc em { color: #a0c8dc; font-style: italic; }
-
-    /* ── Color types ── */
-    .type-death  .event-card { border-left-color: #c0392b; }
-    .type-death::before      { background: #c0392b; }
-
-    .type-combat .event-card { border-left-color: #e67e22; }
-    .type-combat::before     { background: #e67e22; }
-
-    .type-travel .event-card { border-left-color: #2980b9; }
-    .type-travel::before     { background: #2980b9; }
-
-    .type-invest .event-card { border-left-color: #27ae60; }
-    .type-invest::before     { background: #27ae60; }
-
-    .type-social .event-card { border-left-color: #8e44ad; }
-    .type-social::before     { background: #8e44ad; }
-
     /* ── Legend ── */
     .legend {
       display: flex;
@@ -166,21 +43,84 @@
       font-size: 0.75rem;
       color: #4a8099;
     }
-    .legend-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Layout ── */
+    .timeline {
+      position: relative;
+      max-width: 680px;
+      margin: 0 auto;
+      padding-left: 72px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 52px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, #2d4a5e 4%, #2d4a5e 96%, transparent);
     }
 
-    .session-header a {
-      color: inherit;
-      text-decoration: none;
+    /* ── Session separator ── */
+    .session-header {
+      position: relative;
+      margin: 2.2rem 0 1.4rem -52px;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #7ab8d4;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
     }
-    .session-header a:hover {
-      color: #a0d4e8;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .session-header::before,
+    .session-header::after { content: ''; height: 1px; background: #2d4a5e; }
+    .session-header::before { flex: 0 0 36px; }
+    .session-header::after  { flex: 1; }
+    .session-header a { color: inherit; text-decoration: none; }
+    .session-header a:hover { color: #a0d4e8; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ── Event ── */
+    .event { position: relative; margin-bottom: 1rem; }
+    .event::before {
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: 1.05rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #2d4a5e;
+      border: 2px solid #0c1824;
+      transform: translateX(-50%);
+      z-index: 1;
     }
+    .event-card {
+      background: #111f2e;
+      border-left: 3px solid #2d4a5e;
+      border-radius: 0 3px 3px 0;
+      padding: 0.65rem 1rem;
+    }
+    .event-header { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+    .event-day { font-family: 'Cinzel', serif; font-size: 0.7rem; color: #4a8099; letter-spacing: 0.06em; white-space: nowrap; }
+    .event-icon { font-size: 0.9rem; }
+    .event-title { font-size: 0.95rem; font-weight: bold; color: #e0f0fa; line-height: 1.3; }
+    .event-desc { font-size: 0.88rem; color: #7a9db0; line-height: 1.55; margin-top: 0.3rem; }
+    .event-desc a { color: #7ab8d4; text-decoration: none; }
+    .event-desc a:hover { text-decoration: underline; }
+    .event-desc em { color: #a0c8dc; font-style: italic; }
+
+    /* ── Type colours ── */
+    .type-death  .event-card { border-left-color: #c0392b; }
+    .type-death::before      { background: #c0392b; }
+    .type-combat .event-card { border-left-color: #e67e22; }
+    .type-combat::before     { background: #e67e22; }
+    .type-travel .event-card { border-left-color: #2980b9; }
+    .type-travel::before     { background: #2980b9; }
+    .type-invest .event-card { border-left-color: #27ae60; }
+    .type-invest::before     { background: #27ae60; }
+    .type-social .event-card { border-left-color: #8e44ad; }
+    .type-social::before     { background: #8e44ad; }
   </style>
 </head>
 <body>
@@ -195,115 +135,39 @@
     <div class="legend-item"><div class="legend-dot" style="background:#c0392b"></div>Dödsfall</div>
   </div>
 
-  <div class="timeline">
+  <div class="timeline" id="timeline"></div>
 
-    <div class="session-header">
-      <a href="../Sessions/Session-01---Vägen-till-Caer-Konig" target="_parent">Session 1 &mdash; Dag 1–16 &mdash; Vägen till Caer Konig</a>
-    </div>
+  <script src="timeline-data.js"></script>
+  <script>
+    function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+    function withParent(html) { return html.replace(/<a /g, '<a target="_parent" '); }
 
-    <div class="event type-social">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 1</span>
-          <span class="event-icon">👥</span>
-          <span class="event-title">Zahirs gäng träffas i Fireshear</span>
-        </div>
-        <div class="event-desc">Sork, Nasher, Zahir och Borc möts i <a href="../Platser/Fireshear" target="_parent">Fireshear</a>.</div>
-      </div>
-    </div>
+    var container = document.getElementById('timeline');
+    var groups = {};
+    TIMELINE_SESSIONS.forEach(function(s) { groups[s.id] = []; });
+    TIMELINE_EVENTS.forEach(function(e) { if (groups[e.session]) groups[e.session].push(e); });
 
-    <div class="event type-social">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 2–5</span>
-          <span class="event-icon">👥</span>
-          <span class="event-title">Aubril anlitar sällskapet</span>
-        </div>
-        <div class="event-desc">Köpmannen Aubril (Torgs Imports) hyr gruppen för 75 gp att eskortera honom och lasten till <a href="../Platser/Bryn-Shander" target="_parent">Bryn Shander</a>. Rykten om osynliga tjuvar och seriemördare med isdolk.</div>
-      </div>
-    </div>
+    TIMELINE_SESSIONS.forEach(function(session) {
+      var hdr = document.createElement('div');
+      hdr.className = 'session-header';
+      hdr.innerHTML = '<a href="../' + session.slug + '" target="_parent">' + esc(session.label) + '</a>';
+      container.appendChild(hdr);
 
-    <div class="event type-combat">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 6</span>
-          <span class="event-icon">⚔️</span>
-          <span class="event-title">Gränsen till Icewind Dale</span>
-        </div>
-        <div class="event-desc">Magiskt mörker faller vid gränsen — ljusbesvärjelser slutar fungera. Vargattack under natten. Nasher faller men överlever.</div>
-      </div>
-    </div>
-
-    <div class="event type-death">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 7</span>
-          <span class="event-icon">🐺</span>
-          <span class="event-title">Aubril dödad av vargar</span>
-        </div>
-        <div class="event-desc">Gruppen vaknar och finner Aubril söndertrasad av vargar. Zahir vill spränga kroppen med magi — Nasher sätter stopp. Sork navigerar fel; gruppen tvingas dubbelbacka och övernatta på samma plats igen.</div>
-      </div>
-    </div>
-
-    <div class="event type-travel">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 8</span>
-          <span class="event-icon">🏘️</span>
-          <span class="event-title">Ankomst till Bryn Shander</span>
-        </div>
-        <div class="event-desc">Sällskapet når <a href="../Platser/Bryn-Shander" target="_parent">Bryn Shander</a> sent på kvällen. Aubrils kvarlåtenskaper levereras till Torg — Zahir förhandlar fram halva betalningen trots dödsfall.</div>
-      </div>
-    </div>
-
-    <div class="event type-invest">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 10–15</span>
-          <span class="event-icon">🔍</span>
-          <span class="event-title">Vila och rykten i Bryn Shander</span>
-        </div>
-        <div class="event-desc">Gruppen håller till på The Hooked Knucklehead. Möter Hildur Trollbane. Mordutredning: minst 22 offer i Ten-Towns — isdolk rakt genom hjärtat på varje offer.</div>
-      </div>
-    </div>
-
-    <div class="event type-travel">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 16</span>
-          <span class="event-icon">🏘️</span>
-          <span class="event-title">Ankomst till Caer Konig</span>
-        </div>
-        <div class="event-desc">Hundslädsfärd norrut. Hagelstorm längs vägen — 2 hundar dör. Stopp i Caer Dineval. Sen ankomst till <a href="../Platser/Caer-Konig" target="_parent">Caer Konig</a>. Möter Trovus. Bronn Bearhammers mord avslöjas — hustrun Eevie saknas.</div>
-      </div>
-    </div>
-
-    <div class="session-header">
-      <a href="../Sessions/Session-02---Caer-Konig" target="_parent">Session 2 &mdash; Dag 16–18 &mdash; Caer Konig &amp; Kelvins Cairn</a>
-    </div>
-
-    <div class="event type-invest">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 17</span>
-          <span class="event-icon">🔍</span>
-          <span class="event-title">Utredning i Caer Konig</span>
-        </div>
-        <div class="event-desc">Spårar fotspår från Snow Fox Hideout längs Lac Dinneshere. Undersöker Snowy Baubles — Bronns hem och smedja. Möter Jarthra som guide upp mot berget. Keegan Valryn försvinner under jakt efter The Burning Hammers.</div>
-      </div>
-    </div>
-
-    <div class="event type-combat">
-      <div class="event-card">
-        <div class="event-header">
-          <span class="event-day">Dag 18</span>
-          <span class="event-icon">⚔️</span>
-          <span class="event-title">Sunblights fästning — Nildar besegrad</span>
-        </div>
-        <div class="event-desc">Expedition till fästningen vid <a href="../Platser/Kelvins-Cairn" target="_parent">Kelvins Cairn</a>. Nildar Sunblight besegrad — Zahir med Tasha's Hideous Laughter, Sork med pilar. Sista ord: <em>"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns."</em> Nashers misstag: dödade den svampinfekterade varelsen i cellen — möjligen Eevie.</div>
-      </div>
-    </div>
-
-  </div>
+      groups[session.id].forEach(function(ev) {
+        var item = document.createElement('div');
+        item.className = 'event type-' + ev.type;
+        item.innerHTML =
+          '<div class="event-card">' +
+            '<div class="event-header">' +
+              '<span class="event-day">' + ev.day + '</span>' +
+              '<span class="event-icon">' + ev.icon + '</span>' +
+              '<span class="event-title">' + ev.title + '</span>' +
+            '</div>' +
+            '<div class="event-desc">' + withParent(ev.desc) + '</div>' +
+          '</div>';
+        container.appendChild(item);
+      });
+    });
+  </script>
 </body>
 </html>
