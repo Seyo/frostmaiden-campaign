@@ -16,7 +16,6 @@
       width: 100%; height: 100%;
       display: flex; align-items: stretch;
     }
-    /* Override page.css map-frame for fullscreen iframe use */
     .map-frame {
       flex: 1; display: flex; flex-direction: column;
       padding: 0; border: none; box-shadow: none; background: transparent;
@@ -26,15 +25,125 @@
     #map-wrap { user-select: none; }
     #map-wrap.can-pan { cursor: grab; }
     #map-wrap.panning  { cursor: grabbing; }
-    #map-coords {
-      position: fixed; bottom: 10px; left: 10px;
-      font-family: monospace; font-size: 0.72rem;
-      color: var(--ink-faded);
-      background: rgba(232, 224, 207, 0.92);
-      padding: 4px 10px; border: 1px solid var(--vellum-edge);
-      pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 100;
+
+    /* ─── Shift-hint ─── */
+    #shift-hint {
+      position: fixed; bottom: 10px; right: 10px;
+      font-family: var(--font-label); text-transform: uppercase;
+      letter-spacing: 0.15em; font-size: 0.62rem;
+      color: var(--ink-ghost); pointer-events: none; z-index: 50;
+      transition: opacity 0.3s;
     }
-    .night #map-coords { background: rgba(23, 30, 43, 0.92); border-color: var(--vellum-stain); }
+    #shift-hint.hidden { opacity: 0; }
+
+    /* ─── Pin creator panel ─── */
+    #pin-creator {
+      position: fixed; top: 0; right: 0; bottom: 0;
+      width: 260px;
+      transform: translateX(100%);
+      transition: transform 0.22s ease;
+      z-index: 200;
+    }
+    #pin-creator.open { transform: translateX(0); }
+
+    .pc-inner {
+      position: relative; height: 100%;
+      background: var(--vellum-warm);
+      border-left: 1px solid var(--vellum-edge);
+      box-shadow: -6px 0 28px rgba(0,0,0,0.22);
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .night .pc-inner {
+      background: #1a2232;
+      border-color: rgba(140,197,223,0.25);
+      box-shadow: -6px 0 28px rgba(0,0,0,0.55);
+    }
+
+    .pc-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid var(--vellum-edge);
+      flex-shrink: 0;
+    }
+    .night .pc-head { border-color: rgba(140,197,223,0.15); }
+    .pc-title {
+      font-family: var(--font-label); text-transform: uppercase;
+      letter-spacing: 0.22em; font-size: 0.72rem; color: var(--ink-soft);
+    }
+    .pc-close {
+      background: none; border: none; cursor: pointer; padding: 2px 4px;
+      color: var(--ink-faded); font-size: 0.9rem; line-height: 1;
+    }
+    .pc-close:hover { color: var(--ink); }
+
+    .pc-body {
+      flex: 1; overflow-y: auto; padding: 14px 16px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+
+    .pc-coords {
+      font-family: monospace; font-size: 0.65rem; color: var(--ink-faded);
+      background: rgba(139,105,40,0.1); padding: 5px 8px;
+      border: 1px solid var(--vellum-edge); border-radius: 2px;
+    }
+    .night .pc-coords { background: rgba(140,197,223,0.07); border-color: rgba(140,197,223,0.15); }
+
+    .pc-field { display: flex; flex-direction: column; gap: 4px; }
+    .pc-field.row { flex-direction: row; align-items: center; gap: 8px; }
+    .pc-lbl {
+      font-family: var(--font-label); text-transform: uppercase;
+      letter-spacing: 0.18em; font-size: 0.64rem; color: var(--ink-faded);
+    }
+    .pc-field.row .pc-lbl { margin: 0; }
+
+    .pc-field input[type="text"],
+    .pc-field textarea,
+    .pc-field select {
+      width: 100%; box-sizing: border-box;
+      font-family: var(--font-body); font-size: 0.88rem;
+      color: var(--ink); background: var(--vellum);
+      border: 1px solid var(--vellum-edge); border-radius: 2px;
+      padding: 5px 8px; outline: none; resize: vertical;
+    }
+    .night .pc-field input[type="text"],
+    .night .pc-field textarea,
+    .night .pc-field select {
+      background: #0e1620; border-color: rgba(140,197,223,0.2); color: var(--ink);
+    }
+    .pc-field input:focus,
+    .pc-field textarea:focus,
+    .pc-field select:focus { border-color: var(--frost-deep); }
+    .night .pc-field input:focus,
+    .night .pc-field textarea:focus,
+    .night .pc-field select:focus { border-color: var(--rime); }
+
+    .pc-foot {
+      padding: 12px 16px; border-top: 1px solid var(--vellum-edge);
+      flex-shrink: 0; display: flex; flex-direction: column; gap: 6px;
+    }
+    .night .pc-foot { border-color: rgba(140,197,223,0.15); }
+
+    .pc-copy-btn {
+      width: 100%; padding: 9px 12px;
+      font-family: var(--font-label); text-transform: uppercase;
+      letter-spacing: 0.2em; font-size: 0.72rem;
+      color: var(--vellum); background: var(--ink);
+      border: none; cursor: pointer; transition: background 0.18s;
+    }
+    .pc-copy-btn:hover { background: var(--frost-deep); }
+    .night .pc-copy-btn { background: var(--rime); color: #0e1620; }
+    .night .pc-copy-btn:hover { background: var(--frost-mid); }
+
+    .pc-feedback {
+      text-align: center;
+      font-family: var(--font-label); text-transform: uppercase;
+      letter-spacing: 0.18em; font-size: 0.65rem;
+      color: var(--frost-deep); opacity: 0; transition: opacity 0.2s;
+      min-height: 1em;
+    }
+    .night .pc-feedback { color: var(--rime); }
+    .pc-feedback.show { opacity: 1; }
   </style>
 </head>
 <body>
@@ -50,7 +159,55 @@
       <div id="map-tooltip-layer" style="position:absolute;inset:0;pointer-events:none;"></div>
     </div>
   </div>
-  <div id="map-coords">px: — py: —</div>
+  <div id="shift-hint">⇧ Klick — ny pin</div>
+</div>
+
+<!-- ─── Pin Creator Panel ─── -->
+<div id="pin-creator" role="dialog" aria-label="Skapa ny kartpunkt">
+  <div class="pc-inner">
+    <div class="pc-head">
+      <span class="pc-title">Ny kartpunkt</span>
+      <button class="pc-close" id="pc-close" aria-label="Stäng">✕</button>
+    </div>
+    <div class="pc-body">
+      <div class="pc-coords" id="pc-coords">x: — y: —</div>
+
+      <div class="pc-field">
+        <label class="pc-lbl" for="pc-name">Namn</label>
+        <input type="text" id="pc-name" placeholder="T.ex. Targos">
+      </div>
+
+      <div class="pc-field">
+        <label class="pc-lbl" for="pc-blurb">Beskrivning</label>
+        <textarea id="pc-blurb" rows="4" placeholder="Vad hände här? Vad är viktigt att veta?"></textarea>
+      </div>
+
+      <div class="pc-field">
+        <label class="pc-lbl" for="pc-type">Typ</label>
+        <select id="pc-type">
+          <option value="town">Stad (town)</option>
+          <option value="mountain">Berg (mountain)</option>
+          <option value="faction">Fraktion (faction)</option>
+          <option value="fortress">Fästning (fortress)</option>
+          <option value="event">Händelse (event)</option>
+        </select>
+      </div>
+
+      <div class="pc-field">
+        <label class="pc-lbl" for="pc-slug">Wiki-slug (valfritt)</label>
+        <input type="text" id="pc-slug" placeholder="Platser/Bryn-Shander">
+      </div>
+
+      <div class="pc-field row">
+        <input type="checkbox" id="pc-label">
+        <label class="pc-lbl" for="pc-label">Visa textetikett på kartan</label>
+      </div>
+    </div>
+    <div class="pc-foot">
+      <button class="pc-copy-btn" id="pc-copy-btn">Kopiera prompt</button>
+      <div class="pc-feedback" id="pc-feedback">Kopierat till urklipp!</div>
+    </div>
+  </div>
 </div>
 
 <script src="./map-data.js"></script>
@@ -61,6 +218,7 @@
   if (t === 'dark') {
     document.documentElement.classList.add('night');
     document.getElementById('map-root').classList.add('night');
+    document.getElementById('pin-creator').classList.add('night');
   }
 })();
 
@@ -165,28 +323,126 @@ MAP_PINS.forEach(function (p) {
   zoomEl.appendChild(btn);
 });
 
-// ─── COORD PICKER ────────────────────────────────────────────────────────────
+// ─── PIN CREATOR ─────────────────────────────────────────────────────────────
+var creator    = document.getElementById('pin-creator');
+var coordsEl   = document.getElementById('pc-coords');
+var nameEl     = document.getElementById('pc-name');
+var blurbEl    = document.getElementById('pc-blurb');
+var typeEl     = document.getElementById('pc-type');
+var slugEl     = document.getElementById('pc-slug');
+var labelEl    = document.getElementById('pc-label');
+var feedbackEl = document.getElementById('pc-feedback');
+var shiftHint  = document.getElementById('shift-hint');
+var currentCoords = { x: 0, y: 0, px: 0, py: 0 };
+
+function toId(name) {
+  return name.toLowerCase()
+    .replace(/å/g,'a').replace(/ä/g,'a').replace(/ö/g,'o')
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+
+function openCreator(x, y, px, py) {
+  currentCoords = { x: x, y: y, px: px, py: py };
+  coordsEl.textContent = 'x: ' + x.toFixed(1) + '%  y: ' + y.toFixed(1) + '%   (px ' + px + ' / py ' + py + ')';
+  creator.classList.add('open');
+  shiftHint.classList.add('hidden');
+  nameEl.focus();
+}
+
+function closeCreator() {
+  creator.classList.remove('open');
+  shiftHint.classList.remove('hidden');
+}
+
+// Auto-suggest slug from name
+var slugUserEdited = false;
+nameEl.addEventListener('input', function () {
+  if (!slugUserEdited) {
+    slugEl.value = 'Platser/' + this.value.trim().replace(/ /g, '-');
+  }
+});
+slugEl.addEventListener('input', function () {
+  slugUserEdited = !!this.value;
+});
+
+function generatePrompt() {
+  var name   = nameEl.value.trim() || 'Okänd plats';
+  var blurb  = blurbEl.value.trim().replace(/"/g, '\\"');
+  var type   = typeEl.value;
+  var slug   = slugEl.value.trim() || 'Platser/' + name.replace(/ /g, '-');
+  var hasLbl = labelEl.checked;
+  var id     = toId(name);
+  var x      = currentCoords.x.toFixed(1);
+  var y      = currentCoords.y.toFixed(1);
+
+  var obj = '{ id: "' + id + '", type: "' + type + '", name: "' + name + '"' +
+            ', x: ' + x + ', y: ' + y +
+            ', slug: "' + slug + '"' +
+            ', blurb: "' + blurb + '"' +
+            (hasLbl ? ', label: true' : '') + ' }';
+
+  return [
+    'Du hjälper till med ett Quartz v4-baserat Obsidian-valv för en D&D-kampanj (Rime of the Frostmaiden, på svenska).',
+    'Valvet publiceras till GitHub Pages från repot Seyo/frostmaiden-campaign.',
+    '',
+    'Öppna filen `quartz/static/map-data.js` och lägg till följande post i MAP_PINS-arrayen:',
+    '',
+    obj,
+    '',
+    'Placera pinnen i en lämplig position i arrayen (gruppera gärna med liknande typ eller geografisk placering).',
+    'Committa och pusha sedan ändringen.',
+  ].join('\n');
+}
+
+document.getElementById('pc-copy-btn').addEventListener('click', function () {
+  var prompt = generatePrompt();
+  navigator.clipboard.writeText(prompt).then(function () {
+    feedbackEl.classList.add('show');
+    setTimeout(function () { feedbackEl.classList.remove('show'); }, 2200);
+  }).catch(function () {
+    feedbackEl.textContent = 'Kopiera manuellt (clipboard ej tillgänglig)';
+    feedbackEl.classList.add('show');
+    setTimeout(function () { feedbackEl.classList.remove('show'); feedbackEl.textContent = 'Kopierat till urklipp!'; }, 3000);
+  });
+});
+
+document.getElementById('pc-close').addEventListener('click', closeCreator);
+
+// ─── CLICK HANDLERS ──────────────────────────────────────────────────────────
 var isMapBg = function (t) {
   return t === wrap || t === zoomEl || t.classList.contains('map-img') || t.classList.contains('map-tint');
 };
-var coordsEl = document.getElementById('map-coords');
+
 wrap.addEventListener('click', function (e) {
   if (!isMapBg(e.target)) return;
   pinned = null; hovered = null; renderTooltip();
+
+  if (!e.shiftKey) { closeCreator(); return; }
+
   var r  = wrap.getBoundingClientRect();
   var ix = (e.clientX - r.left - tx) / s;
   var iy = (e.clientY - r.top  - ty) / s;
   var px = Math.round(ix / r.width  * 6000);
   var py = Math.round(iy / r.height * 4215);
-  var text = 'px: ' + px + ', py: ' + py;
-  coordsEl.textContent = text + ' — kopierat!';
-  coordsEl.style.opacity = '1';
-  navigator.clipboard.writeText(text).catch(function () { coordsEl.textContent = text + ' (kopiera manuellt)'; });
-  clearTimeout(coordsEl._t);
-  coordsEl._t = setTimeout(function () { coordsEl.style.opacity = '0'; }, 3000);
+  var xPct = parseFloat((ix / r.width  * 100).toFixed(1));
+  var yPct = parseFloat((iy / r.height * 100).toFixed(1));
+
+  // Reset form for new point
+  nameEl.value  = '';
+  blurbEl.value = '';
+  typeEl.value  = 'town';
+  slugEl.value  = '';
+  labelEl.checked  = false;
+  slugUserEdited   = false;
+
+  openCreator(xPct, yPct, px, py);
 });
+
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') { pinned = null; hovered = null; renderTooltip(); }
+  if (e.key === 'Escape') {
+    if (creator.classList.contains('open')) { closeCreator(); return; }
+    pinned = null; hovered = null; renderTooltip();
+  }
 });
 </script>
 </body>
