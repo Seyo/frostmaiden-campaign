@@ -513,6 +513,37 @@
   border-top: 1px solid var(--ink-faded);
 }
 
+/* ─── MOBILE ─── */
+@media (max-width: 720px) {
+  /* Topbar — hide nav links, keep brand mark + theme toggle */
+  .topbar { padding: 16px 24px; gap: 12px; }
+  .brand span { display: none; }
+  .topnav a { display: none; }
+
+  /* Hero */
+  .hero { padding: 88px 0 56px; min-height: unset; }
+  .hero-inner { gap: 28px; }
+  .hero-sub { font-size: 1.05rem; }
+  .hero-map-cta { display: none; }
+
+  /* Status card — stack day number + body vertically */
+  .status-card { grid-template-columns: 1fr; padding: 22px 20px 20px; gap: 14px; }
+  .status-head { flex-direction: row; align-items: baseline; gap: 14px; }
+  .status-day { font-size: 3rem; }
+  .status-open-questions li { font-size: 0.9rem; }
+
+  /* Hide map on mobile */
+  #karta { display: none; }
+
+  /* Sections */
+  .section { padding: 64px 0; }
+  .section-head-block { gap: 16px; }
+
+  /* Decorative elements not useful at small size */
+  .floating-compass { display: none; }
+  .scroll-cue { display: none; }
+}
+
 /* ─── FOOTER ─── */
 .footer {
   padding: 60px 0 40px;
