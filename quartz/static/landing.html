@@ -417,7 +417,7 @@ window.addEventListener('scroll', function () {
     btn.setAttribute('aria-label', p.name);
     btn.style.left = p.x + '%';
     btn.style.top  = p.y + '%';
-    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span><span class="pin-label">' + p.name + '</span>';
+    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + p.name + '</span>' : '');
 
     btn.addEventListener('mouseenter', function () {
       hovered = p.id;

@@ -158,7 +158,7 @@ MAP_PINS.forEach(function (p) {
   btn.setAttribute('aria-label', p.name);
   btn.style.left = p.x + '%';
   btn.style.top  = p.y + '%';
-  btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span><span class="pin-label">' + p.name + '</span>';
+  btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + p.name + '</span>' : '');
   btn.addEventListener('mouseenter', function () { hovered = p.id; if (!pinned) renderTooltip(); });
   btn.addEventListener('mouseleave', function () { hovered = null;  if (!pinned) renderTooltip(); });
   btn.addEventListener('click', function (e) { e.stopPropagation(); pinned = (pinned === p.id) ? null : p.id; renderTooltip(); });

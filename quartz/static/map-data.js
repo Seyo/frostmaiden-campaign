@@ -12,7 +12,7 @@ var MAP_PINS = [
   { id: "good-mead",           type: "town",     name: "Good Mead",           x: 39.1, y: 62.7, slug: "Platser/Ten-Towns",            blurb: "Vid Redwaters. Mjödbryggare i Ten-Towns." },
   { id: "dougans-hole",        type: "town",     name: "Dougan's Hole",       x: 35.2, y: 65.6, slug: "Platser/Ten-Towns",            blurb: "Minsta samhället vid Redwaters. Avsides." },
   { id: "kelvins-cairn",       type: "mountain", name: "Kelvins Cairn",       x: 45.9, y: 40.8, slug: "Platser/Kelvins-Cairn",        blurb: "Enormt berg norr om Caer Konig. Nildar Sunblights fästning vid östra foten. Dvärgadalen i dess skugga." },
-  { id: "sunblights-fastning", type: "fortress", name: "Sunblights fästning", x: 47.2, y: 41.2, slug: "Platser/Kelvins-Cairn",        blurb: "Nildar Sunblights fästning vid östra foten av Kelvins Cairn — besegrad av Zahirs gäng dag 18." },
+  { id: "sunblights-fastning", type: "fortress", name: "Sunblights fästning", x: 47.2, y: 41.2, slug: "Platser/Kelvins-Cairn",        blurb: "Nildar Sunblights fästning vid östra foten av Kelvins Cairn — besegrad av Zahirs gäng dag 18.", label: true },
   { id: "dvargadalen",         type: "faction",  name: "Dvärgadalen",         x: 42.5, y: 44.9, slug: "Platser/D%C3%A4rgadalen",      blurb: "Dvärgkoloni i Kelvins Cairns skugga. Potentiella bundsförvanter." },
-  { id: "aubrils-ode",         type: "event",    name: "Aubrils öde",         x: 27.3, y: 75.5, slug: "H%C3%A4ndelser/D%C3%B6dsloggen", blurb: "Dag 7 — vargarna dödade Aubril under natten. Sork navigerade fel, gruppen tvingades övernatta på samma plats igen." },
+  { id: "aubrils-ode",         type: "event",    name: "Aubrils öde",         x: 27.3, y: 75.5, slug: "H%C3%A4ndelser/D%C3%B6dsloggen", blurb: "Dag 7 — vargarna dödade Aubril under natten. Sork navigerade fel, gruppen tvingades övernatta på samma plats igen.", label: true },
 ];
