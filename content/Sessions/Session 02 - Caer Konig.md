@@ -36,7 +36,7 @@
   - **Västra korridoren (celblock):** 4 celler med humanoidvarelser täckta av svamp. En möjlig [[Eevie]] (blont hår, liten, vit nattlinne). [[Nasher]] öppnade cellen – varelsen attackerade – [[Nasher]] högg ned den i självförsvar. Oklart om det var Eevie.
   - Dvärg försökte öppna alla celler som alarm löstes – [[Borc the Orc]] teleporterade och stoppade honom.
   - **Norra korridoren:** Äldre, bättre rustad dvärg vid spak – [[Nildar Sunblight(†)]]. Talade dvarviska. Hävdade att Icewind Dale tillhör Sunblight-familjen. Erbjöd fred i 15 år om gruppen lämnade.
-    - [[Nasher]] vägrade. Strid: [[Sork the Shadow]] prickade med pil. [[Borc the Orc]] teleporterade rakt in i spikfällan (Nildar drog spaken) – nästintill dog. [[Nasher]] slogs medvetslös av ett dimmigt ämne (flaska). [[Zahir]] besegrade [[Nildar Sunblight(†)]] med besvärjelse; [[Sork the Shadow]] fyllde honom med pilar.
+    - [[Nasher]] vägrade. Strid: [[Sork the Shadow]] prickade med pil. [[Borc the Orc]] teleporterade rakt in i spikfällan (Nildar drog spaken) – gick ned till 0 hp, stabiliserades av [[Zahir]]. Medvetslös i slutet av sessionen. [[Nasher]] slogs medvetslös av ett dimmigt ämne (flaska). [[Zahir]] besegrade [[Nildar Sunblight(†)]] med besvärjelse; [[Sork the Shadow]] fyllde honom med pilar.
     - **Dödsord:** *"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns."*
 - I Nildars gemak: mynt, magisk lykta (stulen från _The Northern Light_), alkemistlaboratorium.
 - Stulna varor återfanns i övervåningen, inkl. [[Jarthra]]s pärlor.

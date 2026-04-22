@@ -47,7 +47,7 @@
 
   <!-- TOP BAR -->
   <div class="topbar">
-    <a class="brand" href="./">
+    <a class="brand" href="./landing.html">
       <div class="brand-mark">❄</div>
       <span>Frostmaiden · Kampanjkrönika</span>
     </a>
@@ -100,6 +100,7 @@
           </blockquote>
           <div class="status-attr">— Nildar Sunblight, dödsord</div>
           <ul class="status-open-questions">
+            <li>⚠ Borc är medvetslös — stabiliserad av Zahir, men ej uppvaknad.</li>
             <li>Var varelsen i cellen verkligen Eevie?</li>
             <li>Vad har hänt med Keegan Valryn och The Burning Hammers?</li>
             <li>Jarthras pärlor är ännu inte återlämnade…</li>
@@ -240,7 +241,7 @@ const CHARACTERS = [
     slug: "Karakt%C3%A4rer/Sork-the-Shadow" },
   { id: "borc", name: "Borc the Orc", role: "Goliath Barbar",
     portrait: "./assets/portraits/borc.png",
-    blurb: "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — teleporterade nästan ihjäl sig i spikfällan.",
+    blurb: "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i spikfällan, stabiliserades av Zahir. Medvetslös.",
     slug: "Karakt%C3%A4rer/Borc-the-Orc" },
 ];
 
@@ -491,11 +492,17 @@ function toggleTheme() {
   var root = document.getElementById('page-root');
   var btn  = document.getElementById('theme-btn');
   root.classList.toggle('night');
+  // Also on <html> so body { color: var(--ink) } resolves the night variable
+  document.documentElement.classList.toggle('night');
   var isNight = root.classList.contains('night');
   btn.textContent = isNight ? '☀ Dag' : '☽ Natt';
   document.getElementById('footer-variant').textContent =
     isNight ? 'Nattbok · Nordens mörka timmar' : 'Frost-vellum · Dagkrönika';
+  localStorage.setItem('frostmaiden-theme', isNight ? 'night' : 'day');
 }
+(function () {
+  if (localStorage.getItem('frostmaiden-theme') === 'night') toggleTheme();
+})();
 </script>
 
 </body>
