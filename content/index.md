@@ -2,7 +2,7 @@
 
 ## Senast i kampanjen — Dag 18
 
-[[Zahirs gäng]] har just besegrad [[Nildar Sunblight(†)]] i hans fästning vid [[Kelvins Cairn]]. Magiska lyktan stulna från _The Northern Light_ återfanns. [[Jarthra]]s pärlor återlämnades. Men frågorna är fler än svaren:
+[[Zahirs gäng]] har just besegrad [[Nildar Sunblight(†)]] i hans fästning vid [[Kelvins Cairn]]. Magiska lyktan stulna från _The Northern Light_ återfanns. [[Jarthra]]s pärlor återfanns i fästningen — men hon har läger ~400 meter bort och pärlorna är ännu inte återlämnade. Men frågorna är fler än svaren:
 
 - Var [[Nashers misstag|varelsen i cellen]] verkligen [[Eevie]]?
 - Vad har hänt med [[Keegan Valryn]] och [[The Burning Hammers]]?
