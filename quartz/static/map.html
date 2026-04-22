@@ -173,29 +173,8 @@
       <div class="pc-coords" id="pc-coords">x: — y: —</div>
 
       <div class="pc-field">
-        <label class="pc-lbl" for="pc-name">Namn</label>
-        <input type="text" id="pc-name" placeholder="T.ex. Targos">
-      </div>
-
-      <div class="pc-field">
-        <label class="pc-lbl" for="pc-blurb">Beskrivning</label>
-        <textarea id="pc-blurb" rows="4" placeholder="Vad hände här? Vad är viktigt att veta?"></textarea>
-      </div>
-
-      <div class="pc-field">
-        <label class="pc-lbl" for="pc-type">Typ</label>
-        <select id="pc-type">
-          <option value="town">Stad (town)</option>
-          <option value="mountain">Berg (mountain)</option>
-          <option value="faction">Fraktion (faction)</option>
-          <option value="fortress">Fästning (fortress)</option>
-          <option value="event">Händelse (event)</option>
-        </select>
-      </div>
-
-      <div class="pc-field">
-        <label class="pc-lbl" for="pc-slug">Wiki-slug (valfritt)</label>
-        <input type="text" id="pc-slug" placeholder="Platser/Bryn-Shander">
+        <label class="pc-lbl" for="pc-blurb">Vad hände här?</label>
+        <textarea id="pc-blurb" rows="5" placeholder="Beskriv platsen eller händelsen kortfattat…"></textarea>
       </div>
 
       <div class="pc-field row">
@@ -326,27 +305,18 @@ MAP_PINS.forEach(function (p) {
 // ─── PIN CREATOR ─────────────────────────────────────────────────────────────
 var creator    = document.getElementById('pin-creator');
 var coordsEl   = document.getElementById('pc-coords');
-var nameEl     = document.getElementById('pc-name');
 var blurbEl    = document.getElementById('pc-blurb');
-var typeEl     = document.getElementById('pc-type');
-var slugEl     = document.getElementById('pc-slug');
 var labelEl    = document.getElementById('pc-label');
 var feedbackEl = document.getElementById('pc-feedback');
 var shiftHint  = document.getElementById('shift-hint');
 var currentCoords = { x: 0, y: 0, px: 0, py: 0 };
-
-function toId(name) {
-  return name.toLowerCase()
-    .replace(/å/g,'a').replace(/ä/g,'a').replace(/ö/g,'o')
-    .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-}
 
 function openCreator(x, y, px, py) {
   currentCoords = { x: x, y: y, px: px, py: py };
   coordsEl.textContent = 'x: ' + x.toFixed(1) + '%  y: ' + y.toFixed(1) + '%   (px ' + px + ' / py ' + py + ')';
   creator.classList.add('open');
   shiftHint.classList.add('hidden');
-  nameEl.focus();
+  blurbEl.focus();
 }
 
 function closeCreator() {
@@ -354,43 +324,28 @@ function closeCreator() {
   shiftHint.classList.remove('hidden');
 }
 
-// Auto-suggest slug from name
-var slugUserEdited = false;
-nameEl.addEventListener('input', function () {
-  if (!slugUserEdited) {
-    slugEl.value = 'Platser/' + this.value.trim().replace(/ /g, '-');
-  }
-});
-slugEl.addEventListener('input', function () {
-  slugUserEdited = !!this.value;
-});
-
 function generatePrompt() {
-  var name   = nameEl.value.trim() || 'Okänd plats';
-  var blurb  = blurbEl.value.trim().replace(/"/g, '\\"');
-  var type   = typeEl.value;
-  var slug   = slugEl.value.trim() || 'Platser/' + name.replace(/ /g, '-');
+  var blurb  = blurbEl.value.trim();
   var hasLbl = labelEl.checked;
-  var id     = toId(name);
   var x      = currentCoords.x.toFixed(1);
   var y      = currentCoords.y.toFixed(1);
-
-  var obj = '{ id: "' + id + '", type: "' + type + '", name: "' + name + '"' +
-            ', x: ' + x + ', y: ' + y +
-            ', slug: "' + slug + '"' +
-            ', blurb: "' + blurb + '"' +
-            (hasLbl ? ', label: true' : '') + ' }';
 
   return [
     'Du hjälper till med ett Quartz v4-baserat Obsidian-valv för en D&D-kampanj (Rime of the Frostmaiden, på svenska).',
     'Valvet publiceras till GitHub Pages från repot Seyo/frostmaiden-campaign.',
     '',
-    'Öppna filen `quartz/static/map-data.js` och lägg till följande post i MAP_PINS-arrayen:',
+    'Lägg till en ny kartpunkt i `quartz/static/map-data.js` vid koordinaterna x: ' + x + '%, y: ' + y + '%.',
     '',
-    obj,
+    'Beskrivning av platsen/händelsen:',
+    blurb || '(ingen beskrivning angiven)',
     '',
-    'Placera pinnen i en lämplig position i arrayen (gruppera gärna med liknande typ eller geografisk placering).',
-    'Committa och pusha sedan ändringen.',
+    (hasLbl ? 'Pinnen ska ha en synlig textetikett på kartan (label: true).' : 'Pinnen ska inte ha textetikett (utelämna label-fältet).'),
+    '',
+    'Gör följande:',
+    '1. Läs igenom content/-mappen för att hitta relevant wiki-sida och bestämma lämpligt namn, typ (town/mountain/faction/fortress/event) och slug.',
+    '2. Generera ett id i kebab-case från namnet (svenska tecken → a/o).',
+    '3. Lägg till pinnen i MAP_PINS-arrayen på en lämplig plats (gruppera med liknande typ).',
+    '4. Committa och pusha.',
   ].join('\n');
 }
 
@@ -427,13 +382,8 @@ wrap.addEventListener('click', function (e) {
   var xPct = parseFloat((ix / r.width  * 100).toFixed(1));
   var yPct = parseFloat((iy / r.height * 100).toFixed(1));
 
-  // Reset form for new point
-  nameEl.value  = '';
-  blurbEl.value = '';
-  typeEl.value  = 'town';
-  slugEl.value  = '';
+  blurbEl.value    = '';
   labelEl.checked  = false;
-  slugUserEdited   = false;
 
   openCreator(xPct, yPct, px, py);
 });

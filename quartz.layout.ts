@@ -8,6 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      "← Kampanjsidan": "https://seyo.github.io/frostmaiden-campaign/static/landing.html",
       GitHub: "https://github.com/Seyo/frostmaiden-campaign",
     },
   }),
