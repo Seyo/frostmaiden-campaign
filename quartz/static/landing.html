@@ -498,10 +498,10 @@ function toggleTheme() {
   btn.textContent = isNight ? '☀ Dag' : '☽ Natt';
   document.getElementById('footer-variant').textContent =
     isNight ? 'Nattbok · Nordens mörka timmar' : 'Frost-vellum · Dagkrönika';
-  localStorage.setItem('frostmaiden-theme', isNight ? 'night' : 'day');
+  localStorage.setItem('theme', isNight ? 'dark' : 'light');
 }
 (function () {
-  if (localStorage.getItem('frostmaiden-theme') === 'night') toggleTheme();
+  if ((localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark') toggleTheme();
 })();
 </script>
 
