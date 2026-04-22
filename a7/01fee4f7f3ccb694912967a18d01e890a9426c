@@ -1,0 +1,29 @@
+quartz/static/landing.html
+  290154937bb7f6fc 314,331,581-614
+quartz/static/timeline.html
+  290154937bb7f6fc 30-47,78,81-82,85,91,104-105,107-109,113,138-171
+quartz/static/timeline-data.js
+  290154937bb7f6fc 1-68
+CLAUDE.md
+  290154937bb7f6fc 37-51,58-59,62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "a701fee4f7f3ccb694912967a18d01e890a9426c",
+  "prompts": {
+    "290154937bb7f6fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1badeb73-4b45-421e-ad00-cba56478b139",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Seyo",
+      "messages": [],
+      "total_additions": 186,
+      "total_deletions": 312,
+      "accepted_lines": 411,
+      "overriden_lines": 3
+    }
+  }
+}
