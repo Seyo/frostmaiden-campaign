@@ -15,5 +15,5 @@ var MAP_PINS = [
   { id: "sunblights-fastning", type: "fortress", name: "Sunblights fästning", x: 47.2, y: 41.2, slug: "Platser/Kelvins-Cairn",        blurb: "Nildar Sunblights fästning vid östra foten av Kelvins Cairn — besegrad av Zahirs gäng dag 18.", label: true },
   { id: "dvargadalen",         type: "faction",  name: "Dvärgadalen",         x: 42.5, y: 44.9, slug: "Platser/D%C3%A4rgadalen",      blurb: "Dvärgkoloni i Kelvins Cairns skugga. Potentiella bundsförvanter." },
   { id: "aubrils-ode",         type: "event",    name: "Aubrils öde",         x: 27.3, y: 75.5, slug: "H%C3%A4ndelser/D%C3%B6dsloggen", blurb: "Dag 7 — vargarna dödade Aubril under natten. Sork navigerade fel, gruppen tvingades övernatta på samma plats igen.", label: true },
-  { id: "hagelstormen",        type: "event",    name: "Hagelstormen",        x: 40.0, y: 57.7, slug: "Platser/Hagelstormen",         blurb: "" },
+  { id: "hagelstormen",        type: "event",    name: "Hagelstormen",        x: 40.0, y: 57.7, slug: "Sessions/Session-01---V%C3%A4gen-till-Caer-Konig", blurb: "Dag 16 — under hundslädsfärden mot Caer Konig bröt en våldsam hagelstorm ut. Två hundar dog. Gruppen nådde Caer Konig sent på kvällen." },
 ];
