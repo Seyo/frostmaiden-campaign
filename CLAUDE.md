@@ -34,6 +34,17 @@ There are no build/test/lint commands. To preview locally: `npx quartz build --s
 - Portraits embedded with float wrapper: `<div class="portrait-right">![[image.png]]</div>`
 - Faction listed at top of each NPC/character file: `**Fraktion:** [[Faction Name]]`
 
+## Landing Page (quartz/static/landing.html)
+
+Quartz does **not** auto-generate `landing.html` — it is hand-maintained. When content changes, keep the landing page in sync:
+
+- **`status-card` (Senast i kampanjen):** Update the quote, `status-open-questions`, and campaign day when a new session is added or a cliffhanger changes.
+- **`CHARACTERS` array:** Keep each character's `blurb` current (HP status, key events, etc.).
+- **`MAP_PINS` array:** Add new pins or update `blurb` text when new locations are discovered or events happen there.
+- **`WIKI_SECTIONS` array:** Update `count` and `items` when new notes are added to a section.
+
+Always update `landing.html` alongside the relevant content files, then push both together.
+
 ## Quartz / Tech
 
 - Config: `quartz.config.ts` — colors, fonts (Cinzel headers, EB Garamond body), locale
