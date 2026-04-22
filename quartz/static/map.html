@@ -10,18 +10,10 @@
   <link rel="stylesheet" href="./frost-vellum.css">
   <link rel="stylesheet" href="./page.css">
   <style>
-    html, body { height: 100%; overflow: hidden; margin: 0; }
-    body { background: var(--vellum); }
-    #map-root {
-      width: 100%; height: 100%;
-      display: flex; align-items: stretch;
-    }
-    .map-frame {
-      flex: 1; display: flex; flex-direction: column;
-      padding: 0; border: none; box-shadow: none; background: transparent;
-    }
-    .map-frame-inner { flex: 1; min-height: 0; }
-    .map-wrap { width: 100%; height: 100%; aspect-ratio: unset; }
+    html, body { margin: 0; overflow: hidden; background: var(--vellum); }
+    #map-root { width: 100%; }
+    .map-frame { width: 100%; padding: 0; border: none; box-shadow: none; background: transparent; }
+    /* aspect-ratio: 6000/4215 from page.css — do NOT override, pins rely on it */
     #map-wrap { user-select: none; }
     #map-wrap.can-pan { cursor: grab; }
     #map-wrap.panning  { cursor: grabbing; }
