@@ -139,10 +139,8 @@
         </div>
         <div class="map-legend">
           <span>❄ 14 markörer kartlagda</span>
-          <span>Klicka på kartan för px/py-koordinater</span>
           <span>Skala: ~20 miles</span>
         </div>
-        <div id="map-coords" style="position:absolute;bottom:30px;left:30px;font-family:monospace;font-size:0.72rem;color:var(--ink-faded);background:rgba(232,224,207,0.9);padding:4px 10px;border:1px solid var(--vellum-edge);pointer-events:none;opacity:0;transition:opacity 0.2s;z-index:6;">px: — py: —</div>
       </div>
     </div>
   </section>
@@ -436,7 +434,7 @@ window.addEventListener('scroll', function () {
     zoomEl.appendChild(btn);
   });
 
-  // ── Click on map background: coords + close pinned ──
+  // ── Click on map background: close pinned tooltip ──
   var isMapBg = function (t) {
     return t === wrap || t === zoomEl ||
            t.classList.contains('map-img') || t.classList.contains('map-tint');
@@ -444,21 +442,6 @@ window.addEventListener('scroll', function () {
   wrap.addEventListener('click', function (e) {
     if (!isMapBg(e.target)) return;
     pinned = null; hovered = null; renderTooltip();
-
-    var r  = wrap.getBoundingClientRect();
-    var ix = (e.clientX - r.left - tx) / s;
-    var iy = (e.clientY - r.top  - ty) / s;
-    var px = Math.round(ix / r.width  * 6000);
-    var py = Math.round(iy / r.height * 4215);
-    var coordsEl = document.getElementById('map-coords');
-    var text = 'px: ' + px + ', py: ' + py;
-    coordsEl.textContent = text + ' — kopierat!';
-    coordsEl.style.opacity = '1';
-    navigator.clipboard.writeText(text).catch(function () {
-      coordsEl.textContent = text + ' (kopiera manuellt)';
-    });
-    clearTimeout(coordsEl._t);
-    coordsEl._t = setTimeout(function () { coordsEl.style.opacity = '0'; }, 3000);
   });
 
   document.addEventListener('keydown', function (e) {
