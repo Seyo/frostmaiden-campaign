@@ -1,0 +1,23 @@
+quartz/components/PageTitle.tsx
+  290154937bb7f6fc 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "50cb3f4ad799af1e221b08fefe41e9cf1ee324d6",
+  "prompts": {
+    "290154937bb7f6fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1badeb73-4b45-421e-ad00-cba56478b139",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Seyo",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 229,
+      "overriden_lines": 0
+    }
+  }
+}
