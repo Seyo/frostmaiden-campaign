@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frostmaiden · Kampanjkrönika</title>
+  <meta name="description" content="En levande krönika över Zahirs gäng i Icewind Dale — Rime of the Frostmaiden.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+DW+Pica+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Unicase:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./frost-vellum.css">
+  <link rel="stylesheet" href="./page.css">
+</head>
+<body>
+
+<div class="page parchment parchment-edge" id="page-root">
+
+  <!-- Fixed overlays (inside page-root for CSS var inheritance) -->
+  <div class="frost-creep" aria-hidden="true"></div>
+  <div class="floating-compass" id="compass" aria-hidden="true">
+    <svg width="72" height="72" viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="52" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+      <circle cx="60" cy="60" r="42" stroke="currentColor" stroke-width="0.4" opacity="0.35"/>
+      <path d="M60 8 L66 56 L60 60 L54 56 Z" fill="currentColor" opacity="0.9"/>
+      <path d="M60 112 L66 64 L60 60 L54 64 Z" fill="currentColor" opacity="0.55"/>
+      <path d="M8 60 L56 66 L60 60 L56 54 Z" fill="currentColor" opacity="0.55"/>
+      <path d="M112 60 L64 66 L60 60 L64 54 Z" fill="currentColor" opacity="0.55"/>
+      <path d="M23 23 L54 54 L60 60 L54 66 L23 97 Z" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.3"/>
+      <g font-family="var(--font-display)" font-size="10" fill="currentColor" text-anchor="middle">
+        <text x="60" y="6" dominant-baseline="hanging">N</text>
+        <text x="60" y="119">S</text>
+        <text x="4" y="63">V</text>
+        <text x="116" y="63">Ö</text>
+      </g>
+      <circle cx="60" cy="60" r="3" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <a class="brand" href="./">
+      <div class="brand-mark">❄</div>
+      <span>Frostmaiden · Kampanjkrönika</span>
+    </a>
+    <nav class="topnav">
+      <a href="#karta">Kartan</a>
+      <a href="#parti">Partiet</a>
+      <a href="#wiki">Wiki</a>
+      <a href="../Sessions">Sessioner</a>
+      <button id="theme-btn" onclick="toggleTheme()" aria-label="Byt tema">☽ Natt</button>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-map-bg" aria-hidden="true">
+      <img src="./assets/maps/icewind-dale.webp" alt="">
+    </div>
+    <div class="snow" id="snow" aria-hidden="true"></div>
+    <div class="frost-overlay" style="--frost-strength: 0.5" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="hero-kicker">
+          <span class="tick"></span>
+          <span>En kampanjkrönika från Icewind Dale</span>
+        </div>
+        <h1 class="hero-title">
+          Rime of the<br>
+          <em>Frostmaiden</em>
+        </h1>
+        <p class="hero-sub">
+          En levande krönika över Zahirs gäng — deras bedrifter och bakslag i
+          Aurils frusna vidder. Uppdateras efter varje session.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#karta">Utforska kartan</a>
+          <a class="btn ghost" href="#wiki">Öppna wikin</a>
+        </div>
+      </div>
+
+      <aside class="status-card" aria-label="Kampanjstatus">
+        <div class="status-head">
+          <div class="status-day" aria-label="Dag 18">18</div>
+          <div class="status-day-label">Kampanjdag</div>
+        </div>
+        <div class="status-body">
+          <div class="label">Senast i kampanjen</div>
+          <blockquote class="status-quote">
+            "Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns."
+          </blockquote>
+          <div class="status-attr">— Nildar Sunblight, dödsord</div>
+          <ul class="status-open-questions">
+            <li>Var varelsen i cellen verkligen Eevie?</li>
+            <li>Vad har hänt med Keegan Valryn och The Burning Hammers?</li>
+            <li>Jarthras pärlor är ännu inte återlämnade…</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Rulla ned till kartan</span>
+      <div class="scroll-cue-line"></div>
+    </div>
+  </header>
+
+  <!-- MAP SECTION -->
+  <section class="section" id="karta">
+    <div class="container">
+      <div class="section-head-block">
+        <div>
+          <div class="label">Kap. I · Topografi</div>
+          <h2>Icewind Dale</h2>
+        </div>
+        <p>
+          Gruppen befinner sig i norr, söder om Sea of Moving Ice.
+          Aurils förbannelse har släckt solen. Klicka på en nål för att läsa mer om platsen i wikin.
+        </p>
+      </div>
+
+      <div class="map-frame">
+        <div class="map-frame-inner">
+          <div class="map-wrap" id="map-wrap">
+            <img class="map-img" src="./assets/maps/icewind-dale.webp"
+                 alt="Karta över Icewind Dale" draggable="false">
+            <div class="map-tint" aria-hidden="true"></div>
+            <!-- Map pins injected by JS -->
+          </div>
+        </div>
+        <div class="map-legend">
+          <span>❄ 11 platser kartlagda</span>
+          <span>Klicka — läs mer · Hovra — visa namn</span>
+          <span>Skala: ~20 miles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="rule-ornament" aria-hidden="true"><span class="glyph">✦</span></div>
+  </div>
+
+  <!-- PARTY SECTION -->
+  <section class="section" id="parti">
+    <div class="container">
+      <div class="section-head-block">
+        <div>
+          <div class="label">Kap. II · Zahirs gäng</div>
+          <h2>Partiet</h2>
+        </div>
+        <p>
+          Fyra själar bundna av tillfällighet och nödvändighet —
+          en paladin, en warlock, en rogue och en barbar.
+        </p>
+      </div>
+      <div class="party-grid" id="party-grid"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="rule-ornament" aria-hidden="true"><span class="glyph">❋</span></div>
+  </div>
+
+  <!-- WIKI INDEX SECTION -->
+  <section class="section" id="wiki">
+    <div class="container">
+      <div class="section-head-block">
+        <div>
+          <div class="label">Kap. III · Krönika</div>
+          <h2>Wikin</h2>
+        </div>
+        <p>
+          Hela kampanjens dokumentation: platser, NPC:er, fraktioner,
+          uppdrag och händelser. Klicka en sektion för att öppna kapitlet.
+        </p>
+      </div>
+      <div class="sections-grid" id="sections-grid"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <footer class="footer">
+      <span>Frostmaiden · 2026</span>
+      <span id="footer-variant">Frost-vellum · Dagkrönika</span>
+      <a class="inklink" href="https://seyo.github.io/frostmaiden-campaign/">
+        seyo.github.io/frostmaiden-campaign
+      </a>
+    </footer>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+const WIKI = "../";
+
+const MAP_PINS = [
+  { id: "bryn-shander",  name: "Bryn Shander",  x: 29.5, y: 52.0,
+    blurb: "Största staden i Ten-Towns. Flyktingar, tempel till Triaden, sheriffen. Gruppen vilade på The Hooked Knucklehead.",
+    slug: "Platser/Bryn-Shander" },
+  { id: "caer-konig",    name: "Caer Konig",    x: 47.8, y: 42.5,
+    blurb: "Liten bosättning vid Lac Dinneshere. Norrsken varje kväll. Mordet på Bronn Bearhammer. The Northern Light.",
+    slug: "Platser/Caer-Konig" },
+  { id: "caer-dineval",  name: "Caer Dineval",  x: 43.0, y: 46.8,
+    blurb: "Vid Lac Dinneshere. Gruppen passerade under hundkälkeresan, betalade böter, köpte isyxor.",
+    slug: "Platser/Caer-Dineval" },
+  { id: "kelvins-cairn", name: "Kelvins Cairn", x: 42.0, y: 33.0,
+    blurb: "Enormt berg norr om Caer Konig. Nildar Sunblights fästning i östra foten — nyss besegrad. Dvärgadalen i dess skugga.",
+    slug: "Platser/Kelvins-Cairn" },
+  { id: "easthaven",     name: "Easthaven",     x: 42.5, y: 58.5,
+    blurb: "På The Eastway, vid södra Lac Dinneshere. Halfling-jägare mördad med isdolk.",
+    slug: "Platser/Easthaven" },
+  { id: "termalaine",    name: "Termalaine",    x: 29.5, y: 43.5,
+    blurb: "Vid Maer Dualdon. En av de tio bosättningarna i Ten-Towns.",
+    slug: "Platser/Ten-Towns" },
+  { id: "lonelywood",    name: "Lonelywood",    x: 29.5, y: 35.0,
+    blurb: "Nordligast vid Maer Dualdon. Omgiven av den karga skogen.",
+    slug: "Platser/Ten-Towns" },
+  { id: "targos",        name: "Targos",        x: 26.5, y: 49.5,
+    blurb: "Handelsstad vid Maer Dualdon. Skeppsbyggare nyligen mördad med isdolk.",
+    slug: "Platser/Ten-Towns" },
+  { id: "good-mead",     name: "Good Mead",     x: 34.5, y: 58.5,
+    blurb: "Vid Redwaters. Mjödbryggare i Ten-Towns.",
+    slug: "Platser/Ten-Towns" },
+  { id: "dougans-hole",  name: "Dougan's Hole", x: 31.5, y: 62.5,
+    blurb: "Minsta samhället vid Redwaters. Avsides.",
+    slug: "Platser/Ten-Towns" },
+  { id: "bremen",        name: "Bremen",        x: 21.5, y: 46.0,
+    blurb: "Fiskesamhälle vid Maer Dualdon, strax väster om Targos.",
+    slug: "Platser/Ten-Towns" },
+];
+
+const CHARACTERS = [
+  { id: "zahir", name: "Zahir", role: "Halfling Warlock",
+    portrait: "./assets/portraits/zahir.png",
+    blurb: "Från Calimport. Hög karisma, vass tunga, moraliskt tvivelaktig. Besegrade Nildar med Tasha's Hideous Laughter.",
+    slug: "Karakt%C3%A4rer/Zahir" },
+  { id: "nasher", name: "Nasher", role: "Alv Paladin · Tyrs orden",
+    portrait: "./assets/portraits/nasher.png",
+    blurb: "Justiciar av Tyr från Neverwinter. Föll två gånger i strid. Bär på skulden för Eevie-varelsen i cellen.",
+    slug: "Karakt%C3%A4rer/Nasher" },
+  { id: "sork", name: "Sork the Shadow", role: "Ork Rogue",
+    portrait: "./assets/portraits/sork.png",
+    blurb: "Avhoppare från Waterdeep via Fireshear. Spanare och bågskytt. Stjäl bara från dem som inte längre behöver det.",
+    slug: "Karakt%C3%A4rer/Sork-the-Shadow" },
+  { id: "borc", name: "Borc the Orc", role: "Goliath Barbar",
+    portrait: "./assets/portraits/borc.png",
+    blurb: "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — teleporterade nästan ihjäl sig i spikfällan.",
+    slug: "Karakt%C3%A4rer/Borc-the-Orc" },
+];
+
+const WIKI_SECTIONS = [
+  { title: "NPC:er",              subtitle: "Levande, döda och försvunna",    count: 13, slug: "NPC",
+    items: ["Jarthra","Trovus","Glenn","Foxes in the Snow","Keegan Valryn","Hildur Trollbane","Torg","Cori & Allie","Eevie (?)","Bronn Bearhammer (†)","Aubril (†)","Nildar Sunblight (†)","Garret (saknad)"] },
+  { title: "Platser",             subtitle: "Städer, ruiner och fästningar",  count: 7,  slug: "Platser",
+    items: ["Icewind Dale","Bryn Shander","Caer Konig","Easthaven","Fireshear","Kelvins Cairn","Dvärgadalen"] },
+  { title: "Fraktioner",          subtitle: "Bundsförvanter, fiender, stammar", count: 5, slug: "Fraktioner",
+    items: ["Zahirs gäng","Tribe of the Owl","Dvärgarna i Dvärgadalen","Ten-Towns","The Burning Hammers"] },
+  { title: "Uppdrag & rykten",    subtitle: "Aktiva trådar i kampanjen",      count: 4,  slug: "Uppdrag%20%26%20rykten",
+    items: ["Morden i Ten-Towns","Sunblight-familjen","Aurils Rime (världsinfo)","Quest tracker"] },
+  { title: "Sessioner",           subtitle: "Dag för dag, session för session", count: 2, slug: "Sessions",
+    items: ["Session 01 — Vägen till Caer Konig","Session 02 — Caer Konig: Fästningen vid Kelvins Cairn"] },
+  { title: "Händelser & tidslinje", subtitle: "18 dagar av bedrifter och misstag", count: 4, slug: "H%C3%A4ndelser",
+    items: ["Tidslinje","Nashers misstag","Sorks fuckup","Dödsloggen"] },
+];
+
+// ─── SNOW ─────────────────────────────────────────────────
+(function () {
+  var container = document.getElementById('snow');
+  var frag = document.createDocumentFragment();
+  for (var i = 0; i < 60; i++) {
+    var size = 1.5 + Math.random() * 3.5;
+    var el = document.createElement('span');
+    el.style.cssText =
+      'left:' + (Math.random() * 100) + '%;' +
+      'width:' + size + 'px;height:' + size + 'px;' +
+      'animation-duration:' + (10 + Math.random() * 18) + 's;' +
+      'animation-delay:' + (-Math.random() * 20) + 's;' +
+      '--drift:' + ((Math.random() - 0.5) * 220) + 'px;' +
+      'opacity:' + (0.4 + Math.random() * 0.5);
+    frag.appendChild(el);
+  }
+  container.appendChild(frag);
+})();
+
+// ─── SCROLL ───────────────────────────────────────────────
+window.addEventListener('scroll', function () {
+  var root = document.documentElement;
+  var h = root.scrollHeight - root.clientHeight;
+  var p = h > 0 ? Math.min(1, root.scrollTop / h) : 0;
+  document.getElementById('page-root').style.setProperty('--scroll-frost', Math.min(0.55, p * 0.9));
+  document.getElementById('compass').style.setProperty('--compass-rot', (p * 140) + 'deg');
+}, { passive: true });
+
+// ─── PARTY CARDS ──────────────────────────────────────────
+(function () {
+  var grid = document.getElementById('party-grid');
+  CHARACTERS.forEach(function (c) {
+    var a = document.createElement('a');
+    a.className = 'char-card';
+    a.href = WIKI + c.slug;
+    a.innerHTML =
+      '<div class="char-portrait">' +
+        '<img src="' + c.portrait + '" alt="' + c.name + '" loading="lazy">' +
+        '<div class="char-frost" aria-hidden="true"></div>' +
+      '</div>' +
+      '<div class="char-meta">' +
+        '<div class="label">' + c.role + '</div>' +
+        '<div class="char-name display">' + c.name + '</div>' +
+        '<p class="char-blurb">' + c.blurb + '</p>' +
+        '<div class="char-more">Läs mer <span aria-hidden="true">→</span></div>' +
+      '</div>';
+    grid.appendChild(a);
+  });
+})();
+
+// ─── WIKI SECTION CARDS ───────────────────────────────────
+(function () {
+  var grid = document.getElementById('sections-grid');
+  WIKI_SECTIONS.forEach(function (s) {
+    var items = s.items.slice(0, 5).map(function (it) { return '<li>' + it + '</li>'; }).join('');
+    if (s.items.length > 5) items += '<li class="muted">+ ' + (s.items.length - 5) + ' fler</li>';
+    var a = document.createElement('a');
+    a.className = 'section-card';
+    a.href = WIKI + s.slug;
+    a.innerHTML =
+      '<div class="section-head">' +
+        '<div class="label">' + s.subtitle + '</div>' +
+        '<div class="section-count">' + s.count + '</div>' +
+      '</div>' +
+      '<div class="section-title display">' + s.title + '</div>' +
+      '<ul class="section-list">' + items + '</ul>' +
+      '<div class="section-foot"><span>Öppna kapitel</span><span aria-hidden="true">→</span></div>';
+    grid.appendChild(a);
+  });
+})();
+
+// ─── MAP PINS ─────────────────────────────────────────────
+(function () {
+  var wrap = document.getElementById('map-wrap');
+  var pinned = null;
+
+  function closeTooltip() {
+    var tt = wrap.querySelector('.map-tooltip');
+    if (tt) tt.remove();
+    wrap.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
+    pinned = null;
+  }
+
+  function openTooltip(pin, btn) {
+    closeTooltip();
+    pinned = pin.id;
+    btn.classList.add('is-active');
+
+    var flipX = pin.x > 60 ? '-100%' : '0%';
+    var flipY = pin.y > 55 ? '-100%' : '0%';
+
+    var tt = document.createElement('div');
+    tt.className = 'map-tooltip';
+    tt.setAttribute('role', 'dialog');
+    tt.style.left = pin.x + '%';
+    tt.style.top  = pin.y + '%';
+    tt.style.setProperty('--flip-x', flipX);
+    tt.style.setProperty('--flip-y', flipY);
+    tt.innerHTML =
+      '<div class="tooltip-corner tl"></div><div class="tooltip-corner tr"></div>' +
+      '<div class="tooltip-corner bl"></div><div class="tooltip-corner br"></div>' +
+      '<div class="tt-label">Plats</div>' +
+      '<div class="tt-title">' + pin.name + '</div>' +
+      '<p class="tt-blurb">' + pin.blurb + '</p>' +
+      '<a class="tt-link" href="' + WIKI + pin.slug + '">Öppna i wikin <span aria-hidden="true">→</span></a>';
+    wrap.appendChild(tt);
+  }
+
+  MAP_PINS.forEach(function (p) {
+    var btn = document.createElement('button');
+    btn.className = 'map-pin';
+    btn.setAttribute('aria-label', p.name);
+    btn.style.left = p.x + '%';
+    btn.style.top  = p.y + '%';
+    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span><span class="pin-label">' + p.name + '</span>';
+
+    btn.addEventListener('mouseenter', function () {
+      if (!pinned) { btn.classList.add('is-active'); openTooltip(p, btn); }
+    });
+    btn.addEventListener('mouseleave', function () {
+      if (pinned !== p.id) { btn.classList.remove('is-active'); if (!pinned) { var tt = wrap.querySelector('.map-tooltip'); if (tt) tt.remove(); } }
+    });
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (pinned === p.id) { closeTooltip(); } else { openTooltip(p, btn); }
+    });
+
+    wrap.appendChild(btn);
+  });
+
+  wrap.addEventListener('click', function (e) {
+    if (e.target === wrap || e.target.classList.contains('map-img') || e.target.classList.contains('map-tint')) {
+      closeTooltip();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && pinned) closeTooltip();
+  });
+})();
+
+// ─── THEME TOGGLE ─────────────────────────────────────────
+function toggleTheme() {
+  var root = document.getElementById('page-root');
+  var btn  = document.getElementById('theme-btn');
+  root.classList.toggle('night');
+  var isNight = root.classList.contains('night');
+  btn.textContent = isNight ? '☀ Dag' : '☽ Natt';
+  document.getElementById('footer-variant').textContent =
+    isNight ? 'Nattbok · Nordens mörka timmar' : 'Frost-vellum · Dagkrönika';
+}
+</script>
+
+</body>
+</html>
