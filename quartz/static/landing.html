@@ -14,6 +14,106 @@
     #map-wrap { user-select: none; }
     #map-wrap.can-pan { cursor: grab; }
     #map-wrap.panning  { cursor: grabbing; }
+
+    /* ─── TIMELINE ─── */
+    .tl-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.1rem;
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+      padding-left: 52px;
+    }
+    .tl-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-label);
+      font-size: 0.72em;
+      letter-spacing: 0.1em;
+      color: var(--ink-ghost);
+    }
+    .tl-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .timeline-v {
+      position: relative;
+      max-width: 680px;
+      margin: 0 auto;
+      padding-left: 52px;
+    }
+    .timeline-v::before {
+      content: '';
+      position: absolute;
+      left: 36px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, var(--vellum-edge) 4%, var(--vellum-edge) 96%, transparent);
+    }
+    .tl-session {
+      position: relative;
+      margin: 1.8rem 0 1.1rem -36px;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--rime);
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .tl-session::before,
+    .tl-session::after { content: ''; height: 1px; background: var(--vellum-edge); }
+    .tl-session::before { flex: 0 0 24px; }
+    .tl-session::after  { flex: 1; }
+    .tl-session a { color: inherit; text-decoration: none; }
+    .tl-session a:hover { color: var(--frost-mid); text-decoration: underline; text-underline-offset: 3px; }
+    .tl-event {
+      position: relative;
+      margin-bottom: 0.8rem;
+    }
+    .tl-event::before {
+      content: '';
+      position: absolute;
+      left: -16px;
+      top: 1rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--vellum-edge);
+      border: 2px solid var(--vellum);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .tl-card {
+      background: var(--vellum-warm);
+      border-left: 3px solid var(--vellum-edge);
+      border-radius: 0 3px 3px 0;
+      padding: 0.6rem 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .tl-header { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+    .tl-day {
+      font-family: var(--font-label);
+      font-size: 0.68rem;
+      color: var(--ink-ghost);
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .tl-icon { font-size: 0.88rem; }
+    .tl-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .tl-desc  { font-size: 0.86rem; color: var(--ink-faded); line-height: 1.55; margin-top: 0.3rem; }
+    .tl-desc a { color: var(--rime); text-decoration: none; }
+    .tl-desc a:hover { text-decoration: underline; }
+    .tl-desc em { color: var(--frost-mid); font-style: italic; }
+
+    .tl-death  .tl-card { border-left-color: #c0392b; }
+    .tl-death::before   { background: #c0392b; }
+    .tl-combat .tl-card { border-left-color: #d4762a; }
+    .tl-combat::before  { background: #d4762a; }
+    .tl-travel .tl-card { border-left-color: #2980b9; }
+    .tl-travel::before  { background: #2980b9; }
+    .tl-invest .tl-card { border-left-color: #27ae60; }
+    .tl-invest::before  { background: #27ae60; }
+    .tl-social .tl-card { border-left-color: #8e44ad; }
+    .tl-social::before  { background: #8e44ad; }
   </style>
 </head>
 <body>
@@ -51,6 +151,7 @@
       <a href="#karta">Kartan</a>
       <a href="#parti">Partiet</a>
       <a href="#wiki">Wiki</a>
+      <a href="#tidslinje">Tidslinje</a>
       <a href="../Sessions">Sessioner</a>
       <button id="theme-btn" onclick="toggleTheme()" aria-label="Byt tema">☽ Natt</button>
     </nav>
@@ -184,6 +285,142 @@
         </p>
       </div>
       <div class="sections-grid" id="sections-grid"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="rule-ornament" aria-hidden="true"><span class="glyph">✧</span></div>
+  </div>
+
+  <!-- TIMELINE SECTION -->
+  <section class="section" id="tidslinje">
+    <div class="container">
+      <div class="section-head-block">
+        <div>
+          <div class="label">Kap. IV · Bedrifter</div>
+          <h2>Tidslinje</h2>
+        </div>
+        <p>Kampanjens händelser dag för dag — senaste händelsen högst upp.</p>
+      </div>
+
+      <div class="tl-legend">
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#8e44ad"></div>Socialt</div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#2980b9"></div>Resa</div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#27ae60"></div>Utredning</div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#d4762a"></div>Strid</div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#c0392b"></div>Dödsfall</div>
+      </div>
+
+      <div class="timeline-v">
+
+        <div class="tl-session">
+          <a href="../Sessions/Session-02---Caer-Konig">Session 2 &mdash; Dag 16–18 &mdash; Caer Konig &amp; Kelvins Cairn</a>
+        </div>
+
+        <div class="tl-event tl-combat">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 18</span>
+              <span class="tl-icon">⚔️</span>
+              <span class="tl-title">Sunblights fästning — Nildar besegrad</span>
+            </div>
+            <div class="tl-desc">Expedition till fästningen vid <a href="../Platser/Kelvins-Cairn">Kelvins Cairn</a>. Nildar Sunblight besegrad — Zahir med Tasha's Hideous Laughter, Sork med pilar. Sista ord: <em>"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns."</em> Nashers misstag: dödade den svampinfekterade varelsen i cellen — möjligen Eevie.</div>
+          </div>
+        </div>
+
+        <div class="tl-event tl-invest">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 17</span>
+              <span class="tl-icon">🔍</span>
+              <span class="tl-title">Utredning i Caer Konig</span>
+            </div>
+            <div class="tl-desc">Spårar fotspår från Snow Fox Hideout längs Lac Dinneshere. Undersöker Snowy Baubles — Bronns hem och smedja. Möter Jarthra som guide upp mot berget. Keegan Valryn försvinner under jakt efter The Burning Hammers.</div>
+          </div>
+        </div>
+
+        <div class="tl-session">
+          <a href="../Sessions/Session-01---Vägen-till-Caer-Konig">Session 1 &mdash; Dag 1–16 &mdash; Vägen till Caer Konig</a>
+        </div>
+
+        <div class="tl-event tl-travel">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 16</span>
+              <span class="tl-icon">🏘️</span>
+              <span class="tl-title">Ankomst till Caer Konig</span>
+            </div>
+            <div class="tl-desc">Hundslädsfärd norrut. Hagelstorm längs vägen — 2 hundar dör. Stopp i Caer Dineval. Sen ankomst till <a href="../Platser/Caer-Konig">Caer Konig</a>. Möter Trovus. Bronn Bearhammers mord avslöjas — hustrun Eevie saknas.</div>
+          </div>
+        </div>
+
+        <div class="tl-event tl-invest">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 10–15</span>
+              <span class="tl-icon">🔍</span>
+              <span class="tl-title">Vila och rykten i Bryn Shander</span>
+            </div>
+            <div class="tl-desc">Gruppen håller till på The Hooked Knucklehead. Möter Hildur Trollbane. Mordutredning: minst 22 offer i Ten-Towns — isdolk rakt genom hjärtat på varje offer.</div>
+          </div>
+        </div>
+
+        <div class="tl-event tl-travel">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 8</span>
+              <span class="tl-icon">🏘️</span>
+              <span class="tl-title">Ankomst till Bryn Shander</span>
+            </div>
+            <div class="tl-desc">Sällskapet når <a href="../Platser/Bryn-Shander">Bryn Shander</a> sent på kvällen. Aubrils kvarlåtenskaper levereras till Torg — Zahir förhandlar fram halva betalningen trots dödsfall.</div>
+          </div>
+        </div>
+
+        <div class="tl-event tl-death">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 7</span>
+              <span class="tl-icon">🐺</span>
+              <span class="tl-title">Aubril dödad av vargar</span>
+            </div>
+            <div class="tl-desc">Gruppen vaknar och finner Aubril söndertrasad av vargar. Zahir vill spränga kroppen med magi — Nasher sätter stopp. Sork navigerar fel; gruppen tvingas dubbelbacka och övernatta på samma plats igen.</div>
+          </div>
+        </div>
+
+        <div class="tl-event tl-combat">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 6</span>
+              <span class="tl-icon">⚔️</span>
+              <span class="tl-title">Gränsen till Icewind Dale</span>
+            </div>
+            <div class="tl-desc">Magiskt mörker faller vid gränsen — ljusbesvärjelser slutar fungera. Vargattack under natten. Nasher faller men överlever.</div>
+          </div>
+        </div>
+
+        <div class="tl-event tl-social">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 2–5</span>
+              <span class="tl-icon">👥</span>
+              <span class="tl-title">Aubril anlitar sällskapet</span>
+            </div>
+            <div class="tl-desc">Köpmannen Aubril (Torgs Imports) hyr gruppen för 75 gp att eskortera honom och lasten till <a href="../Platser/Bryn-Shander">Bryn Shander</a>. Rykten om osynliga tjuvar och seriemördare med isdolk.</div>
+          </div>
+        </div>
+
+        <div class="tl-event tl-social">
+          <div class="tl-card">
+            <div class="tl-header">
+              <span class="tl-day">Dag 1</span>
+              <span class="tl-icon">👥</span>
+              <span class="tl-title">Zahirs gäng träffas i Fireshear</span>
+            </div>
+            <div class="tl-desc">Sork, Nasher, Zahir och Borc möts i <a href="../Platser/Fireshear">Fireshear</a>.</div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
