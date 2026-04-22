@@ -1,0 +1,23 @@
+quartz/static/landing.html
+  290154937bb7f6fc 17-116,154,291-426
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "4ccd7b2142c7db699ef4e4299464d6800e48f858",
+  "prompts": {
+    "290154937bb7f6fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1badeb73-4b45-421e-ad00-cba56478b139",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Seyo",
+      "messages": [],
+      "total_additions": 237,
+      "total_deletions": 0,
+      "accepted_lines": 465,
+      "overriden_lines": 0
+    }
+  }
+}
