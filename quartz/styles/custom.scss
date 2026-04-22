@@ -1,4 +1,5 @@
 @use "./base.scss";
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+DW+Pica+SC&family=Cormorant+Unicase:wght@400;500;600&display=swap');
 
 // ── Parchment / Frozen Ice theme for Rime of the Frostmaiden ──────────────────
 
@@ -77,8 +78,8 @@ table {
   width: 100%;
 
   th {
-    font-family: var(--headerFont);
-    letter-spacing: 0.05em;
+    font-family: 'Cormorant Unicase', serif;
+    letter-spacing: 0.12em;
     font-size: 0.85rem;
     text-transform: uppercase;
     background: var(--highlight);
@@ -102,9 +103,9 @@ a {
 // ── Explorer (sidebar file tree) ──────────────────────────────────────────────
 .explorer .folder-title,
 .explorer button.folder-button {
-  font-family: var(--headerFont);
+  font-family: 'Cormorant Unicase', serif;
   font-size: 0.82rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
