@@ -7,7 +7,7 @@ var MAP_PINS = [
   { id: "lonelywood",          type: "town",     name: "Lonelywood",          x: 34.7, y: 43.8, slug: "Platser/Ten-Towns",            blurb: "Nordligast vid Maer Dualdon. Omgiven av den karga skogen." },
   { id: "termalaine",          type: "town",     name: "Termalaine",          x: 36.7, y: 45.9, slug: "Platser/Ten-Towns",            blurb: "Vid Maer Dualdon. En av de tio bosättningarna i Ten-Towns." },
   { id: "easthaven",           type: "town",     name: "Easthaven",           x: 46.8, y: 59.5, slug: "Platser/Easthaven",            blurb: "På The Eastway, vid södra Lac Dinneshere. Halfling-jägare mördad med isdolk." },
-  { id: "caer-dineval",        type: "town",     name: "Caer Dineval",        x: 47.2, y: 51.5, slug: "Platser/Caer-Dineval",         blurb: "Vid Lac Dinneshere. Gruppen passerade under hundkälkeresan, betalade böter, köpte isyxor." },
+  { id: "caer-dineval",        type: "town",     name: "Caer Dineval",        x: 47.2, y: 51.5, slug: "Platser/Caer-Dineval",         blurb: "Vid Lac Dinneshere. Gruppen passerade under hundkälkeresan, betalade böter, köpte spadar." },
   { id: "caer-konig",          type: "town",     name: "Caer Konig",          x: 49.8, y: 46.4, slug: "Platser/Caer-Konig",           blurb: "Liten bosättning vid Lac Dinneshere. Norrsken varje kväll. Mordet på Bronn Bearhammer. The Northern Light." },
   { id: "good-mead",           type: "town",     name: "Good Mead",           x: 39.1, y: 62.7, slug: "Platser/Ten-Towns",            blurb: "Vid Redwaters. Mjödbryggare i Ten-Towns." },
   { id: "dougans-hole",        type: "town",     name: "Dougan's Hole",       x: 35.2, y: 65.6, slug: "Platser/Ten-Towns",            blurb: "Minsta samhället vid Redwaters. Avsides." },

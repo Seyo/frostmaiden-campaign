@@ -35,5 +35,5 @@
 
 **Dag 16 – Resan till Caer Konig:**
 - Hyrde hundkälke med 6 hundar.
-- Våldsam hagelstorm – 2 hundar dog. Stoppade vid [[Caer Dineval]], betalade böter, köpte spadar och isyxor.
+- Våldsam hagelstorm – 2 hundar dog. Stoppade vid [[Caer Dineval]], betalade böter, köpte spadar.
 - Ankomst till [[Caer Konig]] sent på kvällen.
