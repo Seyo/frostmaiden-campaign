@@ -6,14 +6,14 @@
 ---
 
 ## Phase 1 — Fixa Caer-Dineval broken link
-**Status:** `pending`
+**Status:** `completed`
 
 **Problem:** `Platser/Caer-Dineval.md` har bindestreck i filnamnet. Fyra noter länkar till `[[Caer Dineval]]` (utan bindestreck) — Quartz kan aldrig resolva dessa.
 
 **Åtgärd:**
-- [ ] Byt namn på `content/Platser/Caer-Dineval.md` → `content/Platser/Caer Dineval.md`
-- [ ] Verifiera med `link-validator` att alla `[[Caer Dineval]]`-länkar nu resolvar
-- [ ] Kör `git mv` för att behålla historik
+- [x] Byt namn på `content/Platser/Caer-Dineval.md` → `content/Platser/Caer Dineval.md`
+- [x] Verifiera med `link-validator` att alla `[[Caer Dineval]]`-länkar nu resolvar
+- [x] Kör `git mv` för att behålla historik
 
 **Berörda filer att kontrollera:**
 - Alla filer med `[[Caer Dineval]]` (4 stycken enligt rapporten)
