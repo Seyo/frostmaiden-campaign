@@ -21,17 +21,14 @@
 ---
 
 ## Phase 2 — Integrera föräldralösa Händelser-noter
-**Status:** `pending`
+**Status:** `completed`
 
 **Problem:** `Händelser/Dödsloggen.md` har 13 utgående länkar men 0 inkommande. `Fraktioner/Dvärgarna i Dvärgadalen.md` är osynlig eftersom noter länkr till `[[Dvärgadalen]]` istället för `[[Dvärgarna i Dvärgadalen]]`.
 
-**Åtgärd — Dödsloggen:**
-- [ ] Identifiera vilka sessionsfiler eller karaktärssidor där `[[Dödsloggen]]` naturligt hör hemma
-- [ ] Lägg till länk i minst 2–3 relevanta noter
-
-**Åtgärd — Dvärgarna i Dvärgadalen:**
-- [ ] Besluta: byt namn på filen till `Dvärgadalen.md` (matcha befintliga länkar) ELLER lägg till `[[Dvärgarna i Dvärgadalen]]`-länkar i relevanta noter
-- [ ] Rekommendation: byt namn på filen — det är enklare och konsekvent med hur gruppen refererar till platsen
+- [x] Besluta: byt namn på filen till `Dvärgadalen.md` (matcha befintliga länkar) ELLER lägg till `[[Dvärgarna i Dvärgadalen]]`-länkar i relevanta noter
+- [x] Rekommendation: byt namn på filen — det är enklare och konsekvent med hur gruppen refererar till platsen
+- [x] Identifiera vilka sessionsfiler eller karaktärssidor där `[[Dödsloggen]]` naturligt hör hemma
+- [x] Lägg till länk i minst 2–3 relevanta noter
 
 **Övriga föräldralösa att länka in (lägre prioritet):**
 - `Händelser/Sorks fuckup.md` — länka från `Karaktärer/Sork the Shadow.md`
@@ -42,15 +39,15 @@
 ---
 
 ## Phase 3 — Stabilisera Caer Konig-loren
-**Status:** `pending`
+**Status:** `completed`
 
 **Problem:** `Platser/Caer Konig.md` är kampanjens hotspot (score 78). Med 26 inkommande och 15 utgående länkar samt 3 commits är det den fil där ett faktafel sprider sig mest. Informationen kan vara utspridd i sessionsfiler istället för konsoliderad.
 
 **Åtgärd:**
-- [ ] Granska `Platser/Caer Konig.md` — är kärnfakta (geografi, invånare, händelsehistorik) komplett och korrekt?
-- [ ] Jämför mot `Sessions/Session 01` och `Sessions/Session 02` — finns information där som borde lyftas upp till Platser-filen?
-- [ ] Kontrollera att alla NPCer kopplade till Caer Konig (`[[Jarthra]]`, `[[Torg]]`, `[[Hildur Trollbane]]`, etc.) har korrekta `**Fraktion:**`-rader
-- [ ] Lägg till en `## Kända invånare`-sektion i Caer Konig-filen om en saknas
+- [x] Granska `Platser/Caer Konig.md` — är kärnfakta (geografi, invånare, händelsehistorik) komplett och korrekt?
+- [x] Jämför mot `Sessions/Session 01` och `Sessions/Session 02` — finns information där som borde lyftas upp till Platser-filen?
+- [x] Kontrollera att alla NPCer kopplade till Caer Konig (`[[Jarthra]]`, `[[Torg]]`, `[[Hildur Trollbane]]`, etc.) har korrekta `**Fraktion:**`-rader
+- [x] Lägg till en `## Kända invånare`-sektion i Caer Konig-filen om en saknas
 
 ---
 

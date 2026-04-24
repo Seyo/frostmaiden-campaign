@@ -8,3 +8,7 @@
 | Bonus | Sträcka | Källa |
 |-------|---------|-------|
 | +2 Survival (transport) | [[Bryn Shander]] ↔ [[Caer Konig]] | Förtjänad under resan |
+
+## Förluster
+
+Se [[Dödsloggen]] för alla som inte överlevt mötet med gänget.
