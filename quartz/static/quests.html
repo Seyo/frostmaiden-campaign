@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" id="html-root">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -146,96 +146,99 @@
       margin-top: auto;
       font-style: italic;
     }
+
+    /* ── Lang toggle ── */
+    #lang-btn {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: 1px solid #2d4a5e;
+      color: #4a8099;
+      background: transparent;
+      padding: 4px 9px;
+      cursor: pointer;
+      z-index: 50;
+    }
+    #lang-btn:hover { border-color: #7ab8d4; color: #7ab8d4; }
   </style>
 </head>
 <body>
 
-  <h1>Uppdrag &amp; rykten</h1>
+  <h1 id="page-title">Uppdrag &amp; rykten</h1>
 
   <div class="filters">
-    <button class="filter-btn all active"        onclick="filter('all')">Alla</button>
-    <button class="filter-btn aktiv"             onclick="filter('aktiv')">Aktiv</button>
-    <button class="filter-btn oklar"             onclick="filter('oklar')">Oklar</button>
-    <button class="filter-btn klar"              onclick="filter('klar')">Klar</button>
-    <button class="filter-btn misslyckad"        onclick="filter('misslyckad')">Misslyckad</button>
+    <button class="filter-btn all active" onclick="filter('all')"           id="f-all">Alla</button>
+    <button class="filter-btn aktiv"      onclick="filter('aktiv')"         id="f-aktiv">Aktiv</button>
+    <button class="filter-btn oklar"      onclick="filter('oklar')"         id="f-oklar">Oklar</button>
+    <button class="filter-btn klar"       onclick="filter('klar')"          id="f-klar">Klar</button>
+    <button class="filter-btn misslyckad" onclick="filter('misslyckad')"    id="f-misslyckad">Misslyckad</button>
   </div>
 
-  <div class="grid">
+  <div class="grid" id="quest-grid"></div>
 
-    <div class="card status-aktiv" data-status="aktiv">
-      <div class="card-header">
-        <a class="card-title" href="../Uppdrag%20%26%20rykten/Morden-i-Ten-Towns" target="_parent">Morden i Ten-Towns</a>
-        <span class="badge badge-aktiv">Aktiv</span>
-      </div>
-      <div class="card-desc">
-        En seriemördare slår till med isdolk rakt genom hjärtat. Minst 22 offer i Ten-Towns. Offer bekräftade i <a href="../Platser/Easthaven" target="_parent">Easthaven</a> och Targos — fortfarande outredda. Troligen kopplat till <a href="../Fraktioner/Aurils-Rime" target="_parent">Auril</a> eller en kult.
-      </div>
-      <div class="card-meta">Senast: Dag 10–15, Bryn Shander</div>
-    </div>
+  <button id="lang-btn" onclick="toggleLang()">EN</button>
 
-    <div class="card status-aktiv" data-status="aktiv">
-      <div class="card-header">
-        <a class="card-title" href="../Uppdrag%20%26%20rykten/Sunblight-familjen" target="_parent">Sunblight-familjen</a>
-        <span class="badge badge-aktiv">Aktiv</span>
-      </div>
-      <div class="card-desc">
-        <a href="../NPC/Nildar-Sunblight(%E2%80%A0)" target="_parent">Nildar Sunblight</a> besegrad dag 18 — men hans far lever och rider på en drakes rygg. Familjen hävdar att hela Icewind Dale tillhör dem. Det värsta återstår.
-      </div>
-      <div class="card-meta">Senast: Dag 18, Sunblights fästning</div>
-    </div>
-
-    <div class="card status-oklar" data-status="oklar">
-      <div class="card-header">
-        <span class="card-title">Vad hände med Eevie?</span>
-        <span class="badge badge-oklar">Oklar</span>
-      </div>
-      <div class="card-desc">
-        En varelse i cellen — liten, blont hår, vitt nattlinne — matchade beskrivningen av <a href="../NPC/Eevie" target="_parent">Eevie</a>. <a href="../Karaktärer/Nasher" target="_parent">Nasher</a> öppnade cellen; varelsen attackerade och höggs ned i självförsvar. Var det verkligen Eevie?
-      </div>
-      <div class="card-meta">Senast: Dag 18, Kelvins Cairn</div>
-    </div>
-
-    <div class="card status-aktiv" data-status="aktiv">
-      <div class="card-header">
-        <span class="card-title">The Burning Hammers &amp; Keegan Valryn</span>
-        <span class="badge badge-aktiv">Aktiv</span>
-      </div>
-      <div class="card-desc">
-        Tre äventyrare — The Burning Hammers — försvann för 4–5 dagar sedan i riktning mot <a href="../Platser/Kelvins-Cairn" target="_parent">Kelvins Cairn</a>. <a href="../NPC/Keegan-Valryn" target="_parent">Keegan Valryn</a> drog iväg med hundkälke för att söka efter dem och försvann han också.
-      </div>
-      <div class="card-meta">Senast: Dag 17, Caer Konig</div>
-    </div>
-
-    <div class="card status-aktiv" data-status="aktiv">
-      <div class="card-header">
-        <a class="card-title" href="../Uppdrag%20%26%20rykten/Aurils-Rime-(V%C3%A4rldsinfo)" target="_parent">Aurils förbannelse</a>
-        <span class="badge badge-aktiv">Aktiv</span>
-      </div>
-      <div class="card-desc">
-        Gudinnan <a href="../Fraktioner/Tribe-of-the-Owl" target="_parent">Auril</a> har lagt en förbannelse som blockerar solen. Ljusbesvärjelser fungerar inte. Städerna offrar mat och eld för att blidka henne. Ingen vet hur man bryter förbannelsen.
-      </div>
-      <div class="card-meta">Pågående världsplot</div>
-    </div>
-
-    <div class="card status-klar" data-status="klar">
-      <div class="card-header">
-        <span class="card-title">Osynliga tjuvar i Caer Konig</span>
-        <span class="badge badge-klar">Klar</span>
-      </div>
-      <div class="card-desc">
-        Magiska föremål stals i <a href="../Platser/Caer-Konig" target="_parent">Caer Konig</a> — bl.a. lyktan från _The Northern Light_ och <a href="../NPC/Jarthra" target="_parent">Jarthras</a> pärlor. Fotspår ledde till <a href="../NPC/Nildar-Sunblight(%E2%80%A0)" target="_parent">Nildars</a> fästning. Allt återfanns dag 18.
-      </div>
-      <div class="card-meta">Löst: Dag 18, Kelvins Cairn</div>
-    </div>
-
-  </div>
-
+  <script src="i18n.js"></script>
+  <script src="quests-data.js"></script>
   <script>
+    var lang = getLang();
+    document.getElementById('html-root').lang = lang;
+    document.getElementById('lang-btn').textContent    = t('lang_toggle');
+    document.getElementById('page-title').textContent  = t('quests_heading');
+    document.getElementById('f-all').textContent       = t('quest_filter_all');
+    document.getElementById('f-aktiv').textContent     = t('quest_filter_active');
+    document.getElementById('f-oklar').textContent     = t('quest_filter_unclear');
+    document.getElementById('f-klar').textContent      = t('quest_filter_done');
+    document.getElementById('f-misslyckad').textContent = t('quest_filter_failed');
+
+    var BADGE_KEYS = {
+      aktiv:      'quest_filter_active',
+      oklar:      'quest_filter_unclear',
+      klar:       'quest_filter_done',
+      misslyckad: 'quest_filter_failed',
+    };
+
+    var WIKI = lang === 'en' ? '../en/' : '../';
+
+    function processDesc(html) {
+      if (lang === 'en') html = html.replace(/href="\.\.\/(?!en\/)/g, 'href="../en/');
+      return html;
+    }
+
+    var grid = document.getElementById('quest-grid');
+    QUESTS.forEach(function (q) {
+      var title = (lang === 'en' && q.title_en) ? q.title_en : q.title;
+      var desc  = (lang === 'en' && q.desc_en)  ? q.desc_en  : q.desc;
+      var meta  = (lang === 'en' && q.meta_en)  ? q.meta_en  : q.meta;
+      var badge = t(BADGE_KEYS[q.status] || 'quest_filter_active');
+
+      var titleEl = q.slug
+        ? '<a class="card-title" href="' + WIKI + q.slug + '" target="_parent">' + title + '</a>'
+        : '<span class="card-title">' + title + '</span>';
+
+      var card = document.createElement('div');
+      card.className = 'card status-' + q.status;
+      card.dataset.status = q.status;
+      card.innerHTML =
+        '<div class="card-header">' +
+          titleEl +
+          '<span class="badge badge-' + q.status + '">' + badge + '</span>' +
+        '</div>' +
+        '<div class="card-desc">' + processDesc(desc) + '</div>' +
+        '<div class="card-meta">' + meta + '</div>';
+      grid.appendChild(card);
+    });
+
     function filter(status) {
-      document.querySelectorAll('.filter-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.classList.contains(status) || (status === 'all' && btn.classList.contains('all')));
+      document.querySelectorAll('.filter-btn').forEach(function (btn) {
+        btn.classList.toggle('active',
+          btn.classList.contains(status) || (status === 'all' && btn.classList.contains('all')));
       });
-      document.querySelectorAll('.card').forEach(function(card) {
+      document.querySelectorAll('.card').forEach(function (card) {
         card.classList.toggle('hidden', status !== 'all' && card.dataset.status !== status);
       });
     }
