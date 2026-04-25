@@ -3,7 +3,7 @@
 **Dag 16 (forts.) – Ankomst:**
 - Hundkälken lämnades hos [[Keegan Valryn]] (uthyrare). Rekommenderades till _The Northern Light_.
 - Mötte [[Trovus]] (vit drakfödd, berusad) utanför _The Hook, Line and Sinker_. Informerade om:
-  - Mord på [[Bronn Bearhammer]] och försvinnandet av hustrun [[Eevie]] (ej dvärg-glasmästare som Hildur sagt – felaktig information).
+  - Mord på [[Bronn Bearhammer(†)]] och försvinnandet av hustrun [[Eevie]] (ej dvärg-glasmästare som Hildur sagt – felaktig information).
   - Osynliga tjuvar – bl.a. stulit den magiska lyktan från _The Northern Light_.
   - [[The Burning Hammers]] (3 äventyrare) lämnade orten för 4–5 dagar sedan, ej hörda av.
 - Presenterades för [[Cori]] och [[Allie]] på _The Northern Light_. Cori erbjöd fritt husrum mot hjälp.
@@ -13,7 +13,7 @@
 - Besökte [[Foxes in the Snow]]: inbrottsförsök stoppat av hennes fälla natten innan, tjuven (manlig röst) flydde. Inget stulet. Erbjöd sina ugglor för att spåra.
 - Fotspår förde söderut längs sjön [[Lac Dinneshere]] och försvann i dimman utanför byn.
 - Brottsplatsen vid _Snowy Baubles_ (Bronns hem) undersöktes med [[Trovus]]:
-  - [[Bronn Bearhammer]] mördad i sömnen, strupen uppskuren. Vit hårlock (skägg?) vid kroppen.
+  - [[Bronn Bearhammer(†)]] mördad i sömnen, strupen uppskuren. Vit hårlock (skägg?) vid kroppen.
   - Järnkista med trasigt lås – dyrbara ädelstenar (~20 gp) kvar. Saknad scrimshaw-dekoration.
   - Eevies sida av sängen i oordning – troligen kidnappad. Trästatyett av [[Uthgar]] funnen.
 - Besökte [[Jarthra]] (alv, guide, _Frozen Expeditions_):

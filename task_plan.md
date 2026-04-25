@@ -51,6 +51,20 @@
 
 ---
 
+## Phase 4 — Fixa Bronn Bearhammer †-referens i Session 02
+**Status:** `completed`
+
+**Problem:** `Sessions/Session 02 - Caer Konig.md` refererade till `[[Bronn Bearhammer]]` (utan †) på rad 6 och rad 16, trots att han är markerad som död i filnamnet `Bronn Bearhammer(†).md`. Flaggat av `lore-consistency-check` 2026-04-25.
+
+**Åtgärd:**
+- [x] Byt rad 6: `[[Bronn Bearhammer]]` → `[[Bronn Bearhammer(†)]]`
+- [x] Byt rad 16: `[[Bronn Bearhammer]]` → `[[Bronn Bearhammer(†)]]`
+
+**Berörda filer:**
+- `content/Sessions/Session 02 - Caer Konig.md`
+
+---
+
 ## Errors Encountered
 | Fel | Försök | Lösning |
 |-----|--------|---------|
