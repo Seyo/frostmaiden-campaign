@@ -1,0 +1,3 @@
+- **Type:** Enormous mountain peak, dominating the horizon north of [[Caer Konig]].
+- **The Fortress (eastern face):** [[Nildar Sunblight(†)]]'s base, 5 miles (~5 hrs) from Caer Konig. Contained cells with fungus-infected prisoners, an alchemy laboratory, and a separate bunker with grey-dwarf guards. Defeated by [[Zahirs gäng]] on Day 18.
+- A stream flows out of the fortress — may partly function as a dam for a water reservoir inside the mountain.
