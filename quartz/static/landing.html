@@ -583,7 +583,8 @@ var WIKI_SECTIONS = [
     var flipX = cx / pr.width  > 0.6  ? '-100%' : '0%';
     var flipY = cy / pr.height > 0.55 ? '-100%' : '0%';
 
-    var blurb = (lang === 'en' && pin.blurb_en) ? pin.blurb_en : pin.blurb;
+    var pinName = (lang === 'en' && pin.name_en) ? pin.name_en : pin.name;
+    var blurb   = (lang === 'en' && pin.blurb_en) ? pin.blurb_en : pin.blurb;
 
     var tt = document.createElement('div');
     tt.className = 'map-tooltip';
@@ -598,7 +599,7 @@ var WIKI_SECTIONS = [
       '<div class="tooltip-corner tl"></div><div class="tooltip-corner tr"></div>' +
       '<div class="tooltip-corner bl"></div><div class="tooltip-corner br"></div>' +
       '<div class="tt-label">' + t('tooltip_type') + '</div>' +
-      '<div class="tt-title">' + pin.name + '</div>' +
+      '<div class="tt-title">' + pinName + '</div>' +
       '<p class="tt-blurb">' + blurb + '</p>' +
       '<a class="tt-link" href="' + WIKI + pin.slug + '">' + t('tooltip_open') + '</a>';
     portal.appendChild(tt);
@@ -606,14 +607,15 @@ var WIKI_SECTIONS = [
 
   // ── Build pins ──
   MAP_PINS.forEach(function (p) {
+    var pName = (lang === 'en' && p.name_en) ? p.name_en : p.name;
     var btn = document.createElement('button');
     btn.className = 'map-pin';
     btn.setAttribute('data-pin', p.id);
     btn.setAttribute('data-type', p.type || 'town');
-    btn.setAttribute('aria-label', p.name);
+    btn.setAttribute('aria-label', pName);
     btn.style.left = p.x + '%';
     btn.style.top  = p.y + '%';
-    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + p.name + '</span>' : '');
+    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + pName + '</span>' : '');
 
     btn.addEventListener('mouseenter', function () {
       hovered = p.id;
