@@ -93,6 +93,28 @@ var I18N = {
     // ── Footer ────────────────────────────────────────────────────────────────
     footer_day:   "Frost-vellum · Dagkrönika",
     footer_night: "Nattbok · Nordens mörka timmar",
+
+    // ── Chat page ─────────────────────────────────────────────────────────────
+    nav_home:              "Startsida",
+    chat_subtitle:         "Fråga om kampanjen",
+    chat_setup_heading:    "Välj leverantör",
+    chat_setup_desc:       "Anrop görs direkt från din webbläsare. Nyckel och inställningar sparas lokalt och skickas aldrig vidare.",
+    chat_label_provider:   "Leverantör",
+    chat_label_base_url:   "Bas-URL",
+    chat_label_api_key:    "API-nyckel",
+    chat_label_model:      "Modell",
+    chat_label_resp_lang:  "Svarsspråk",
+    chat_save_btn:         "Spara & börja",
+    chat_fetch_btn:        "Hämta",
+    chat_reset_btn:        "Byt inställningar",
+    chat_knowledge_warn:   "⚠ Kampanjdata saknas — kör GitHub Action eller bygg lokalt",
+    chat_placeholder:      "Ställ en fråga om kampanjen…",
+    chat_send_btn:         "Skicka",
+    chat_send_hint:        "Enter skickar · Shift+Enter radbrytning",
+    chat_tokens:           function (n) { return "~" + n + "k tokens i kontext"; },
+    chat_label_you:        "Du",
+    chat_error_prefix:     "Fel: ",
+    chat_network_error:    "Nätverksfel",
   },
 
   en: {
@@ -185,6 +207,28 @@ var I18N = {
     // ── Footer ────────────────────────────────────────────────────────────────
     footer_day:   "Frost-vellum · Daily Chronicle",
     footer_night: "Night-book · The Dark Hours of the North",
+
+    // ── Chat page ─────────────────────────────────────────────────────────────
+    nav_home:              "Home",
+    chat_subtitle:         "Ask about the campaign",
+    chat_setup_heading:    "Choose Provider",
+    chat_setup_desc:       "Calls are made directly from your browser. Your key and settings are stored locally and never transmitted.",
+    chat_label_provider:   "Provider",
+    chat_label_base_url:   "Base URL",
+    chat_label_api_key:    "API Key",
+    chat_label_model:      "Model",
+    chat_label_resp_lang:  "Response Language",
+    chat_save_btn:         "Save & Start",
+    chat_fetch_btn:        "Fetch",
+    chat_reset_btn:        "Change Settings",
+    chat_knowledge_warn:   "⚠ Campaign data missing — run GitHub Action or build locally",
+    chat_placeholder:      "Ask a question about the campaign…",
+    chat_send_btn:         "Send",
+    chat_send_hint:        "Enter sends · Shift+Enter new line",
+    chat_tokens:           function (n) { return "~" + n + "k tokens in context"; },
+    chat_label_you:        "You",
+    chat_error_prefix:     "Error: ",
+    chat_network_error:    "Network error",
   }
 };
 
