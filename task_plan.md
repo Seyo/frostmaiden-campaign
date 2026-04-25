@@ -30,17 +30,32 @@ Phase 5
 - **Status:** complete
 
 ### Phase 4: Skalstrategi & Portabilitet
-- [ ] Dokumentera "full context"-strategin och tröskeln för att byta (~100 noter / ~150k tokens)
-- [ ] Implementera enkel keyword-filtrering som opt-in (top-K relevanta noter)
-- [ ] Säkerställ att chat.html + build-script är fristående och portabla
-- **Status:** pending
+- **Status:** skipped (bordläggs tills wikin växer)
 
 ### Phase 5: Integration & Verifiering
-- [ ] Testa build-script lokalt
-- [ ] Verifiera att deploy.yml genererar JSON korrekt
-- [ ] Testa chat-widget med riktig API-nyckel
-- [ ] Commit & push
-- **Status:** pending
+- [x] Testa build-script lokalt (41 noter, 36 KB)
+- [x] Verifiera att deploy.yml genererar JSON korrekt
+- [x] Testa chat-widget med Ollama lokalt — funkar
+- [x] Commit & push (601c3c5)
+- **Status:** complete
+
+### Phase 6: Språkval
+- [x] Toggle SV/EN i setup-panelen och chat-baren (knapp i model-bar)
+- [x] BASE_SYSTEM → getBaseSystem() — byter instruktion per språk
+- [x] fm_lang i localStorage, systemPrompt byggs om direkt vid toggle
+- **Status:** complete
+
+### Phase 7: Tidsmätning per request
+- [x] Timer startar i sendMessage när request skickas
+- [x] Uppdateras live på varje onChunk-callback (syns under streaming)
+- [x] Visas under assistentbubblan som t.ex. "3.2s" när klar
+- **Status:** complete
+
+## Key Questions
+1. ~~Tema~~ → frost-vellum ✓
+2. ~~Modell~~ → haiku default ✓
+3. ~~Wikilinks~~ → bevaras som text i JSON ✓
+4. **Vad är "en liten indikator"?** Alternativ: (a) knowledge-status ✓/⚠ badge i model-bar, (b) språkbadge som visar aktivt läge (SV/EN), (c) token-räknare per session
 
 ## Key Questions
 1. Ska chat.html matcha frost-vellum.css-temat eller ha eget minimalistiskt utseende?

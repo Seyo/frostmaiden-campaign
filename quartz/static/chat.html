@@ -186,6 +186,29 @@
     }
     .night .model-bar input[type="text"] { border-color: rgba(100,130,160,0.3); color: var(--ink-ghost); }
     .model-bar input[type="text"]:focus { border-color: var(--frost-mid); }
+    .lang-toggle {
+      font-family: var(--font-label);
+      font-size: 0.62em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: 1px solid var(--vellum-edge);
+      color: var(--ink-ghost);
+      background: transparent;
+      padding: 3px 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-toggle:hover { border-color: var(--frost-mid); color: var(--frost-deep); }
+    .night .lang-toggle { border-color: rgba(100,130,160,0.3); }
+    .night .lang-toggle:hover { color: var(--rime); border-color: var(--rime); }
+    .msg-timing {
+      font-family: var(--font-label);
+      font-size: 0.6em;
+      letter-spacing: 0.1em;
+      color: var(--ink-ghost);
+      margin-top: 5px;
+      padding: 0 4px;
+    }
     .btn-save {
       width: 100%;
       background: var(--frost-shadow);
@@ -571,6 +594,12 @@
           </button>
         </div>
 
+        <label for="lang-select-setup">Svarsspråk</label>
+        <select id="lang-select-setup">
+          <option value="sv">Svenska</option>
+          <option value="en">English</option>
+        </select>
+
         <button class="btn-save" onclick="saveSetup()">Spara &amp; börja</button>
       </div>
     </div>
@@ -581,6 +610,7 @@
         <div style="display:flex;gap:8px;align-items:center">
           <span class="provider-badge" id="provider-badge">Anthropic</span>
           <input type="text" id="model-input-chat" value="claude-haiku-4-5-20251001" onchange="saveModel(this.value)" title="Modell">
+          <button class="lang-toggle" id="lang-toggle-chat" onclick="toggleLang()" title="Byt svarsspråk">SV</button>
         </div>
         <button class="btn-reset" onclick="resetKey()">Byt inställningar</button>
       </div>
@@ -617,6 +647,7 @@
   var apiKey    = localStorage.getItem('fm_api_key')    || '';
   var customUrl = localStorage.getItem('fm_custom_url') || 'http://localhost:11434/v1';
   var model     = localStorage.getItem('fm_model')      || 'claude-haiku-4-5-20251001';
+  var lang      = localStorage.getItem('fm_lang')       || 'sv';
   var knowledge = [];
   var wikiMap   = {};
   var systemPrompt = '';
@@ -654,10 +685,11 @@
     updateThemeBtn();
 
     applyProviderUI(provider);
-    document.getElementById('model-input-setup').value = model;
-    document.getElementById('custom-url-input').value  = customUrl;
+    document.getElementById('model-input-setup').value  = model;
+    document.getElementById('custom-url-input').value   = customUrl;
+    document.getElementById('lang-select-setup').value  = lang;
+    updateLangToggle();
 
-    var configured = apiKey || (provider === 'custom' && !PROVIDERS.custom.keyRequired);
     if (localStorage.getItem('fm_configured') === '1') {
       showChat();
       loadKnowledge();
@@ -723,6 +755,7 @@
     var newKey      = keyEl.value.trim();
     var newUrl      = urlEl.value.trim() || 'http://localhost:11434/v1';
     var newModel    = modelEl.value.trim() || PROVIDERS[newProvider].defaultModel;
+    var newLang     = document.getElementById('lang-select-setup').value;
     var p           = PROVIDERS[newProvider] || PROVIDERS.anthropic;
 
     if (p.keyRequired && !newKey) { keyEl.focus(); return; }
@@ -731,11 +764,13 @@
     apiKey    = newKey;
     customUrl = newUrl;
     model     = newModel;
+    lang      = newLang;
 
     localStorage.setItem('fm_provider',    provider);
     localStorage.setItem('fm_api_key',     apiKey);
     localStorage.setItem('fm_custom_url',  customUrl);
     localStorage.setItem('fm_model',       model);
+    localStorage.setItem('fm_lang',        lang);
     localStorage.setItem('fm_configured',  '1');
 
     showChat();
@@ -763,7 +798,22 @@
     document.getElementById('chat-panel').classList.add('visible');
     document.getElementById('model-input-chat').value = model;
     document.getElementById('provider-badge').textContent = (PROVIDERS[provider] || PROVIDERS.anthropic).label;
+    updateLangToggle();
     document.getElementById('user-input').focus();
+  }
+
+  function toggleLang() {
+    lang = lang === 'sv' ? 'en' : 'sv';
+    localStorage.setItem('fm_lang', lang);
+    updateLangToggle();
+    if (knowledge.length) buildSystemPrompt();
+  }
+
+  function updateLangToggle() {
+    var btn = document.getElementById('lang-toggle-chat');
+    if (btn) btn.textContent = lang.toUpperCase();
+    var sel = document.getElementById('lang-select-setup');
+    if (sel) sel.value = lang;
   }
 
   // ─── KNOWLEDGE ───────────────────────────────────────────────────────────
@@ -781,13 +831,20 @@
       })
       .catch(function() {
         document.getElementById('knowledge-warn').style.display = 'block';
-        systemPrompt = BASE_SYSTEM;
+        systemPrompt = getBaseSystem();
       });
   }
 
-  var BASE_SYSTEM = 'Du är en AI-assistent och expert på detta D&D-äventyr. ' +
-    'Du svarar alltid på svenska. Håll svaren kortfattade om inte användaren ber om detaljer. ' +
-    'Använd [[Notnamn]]-syntax när du refererar till specifika karaktärer, platser eller händelser.';
+  function getBaseSystem() {
+    if (lang === 'en') {
+      return 'You are an AI assistant and expert on this D&D campaign. Always answer in English. ' +
+        'Keep answers concise unless the user asks for detail. ' +
+        'Use [[NoteName]] syntax when referring to specific characters, locations, or events.';
+    }
+    return 'Du är en AI-assistent och expert på detta D&D-äventyr. ' +
+      'Du svarar alltid på svenska. Håll svaren kortfattade om inte användaren ber om detaljer. ' +
+      'Använd [[Notnamn]]-syntax när du refererar till specifika karaktärer, platser eller händelser.';
+  }
 
   function buildWikiMap() {
     wikiMap = {};
@@ -816,7 +873,7 @@
     });
 
     var parts = [
-      BASE_SYSTEM,
+      getBaseSystem(),
       '',
       'Kampanj: Rime of the Frostmaiden',
       'Sällskap: Zahirs gäng (Sork the Shadow, Nasher, Zahir, Borc the Orc)',
@@ -872,13 +929,15 @@
     chatHistory.push({ role: 'user', content: text });
     appendMessage('user', text);
 
-    var typingId = appendTyping();
+    var typingId  = appendTyping();
+    var startTime = Date.now();
     streaming = true;
 
     callClaude(chatHistory.slice(), function(chunk) {
-      updateTyping(typingId, chunk);
+      updateTyping(typingId, chunk, startTime);
     }, function(full) {
-      finalizeTyping(typingId, full);
+      var elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+      finalizeTyping(typingId, full, elapsed);
       chatHistory.push({ role: 'assistant', content: full });
       streaming = false;
       document.getElementById('send-btn').disabled = false;
@@ -886,7 +945,7 @@
     }, function(err) {
       removeTyping(typingId);
       appendError(err);
-      chatHistory.pop(); // remove user message on error
+      chatHistory.pop();
       streaming = false;
       document.getElementById('send-btn').disabled = false;
     });
@@ -915,7 +974,7 @@
           model: model,
           max_tokens: 1024,
           stream: true,
-          system: systemPrompt || BASE_SYSTEM,
+          system: systemPrompt || getBaseSystem(),
           messages: messages,
         }),
       });
@@ -944,7 +1003,7 @@
           model: model,
           max_tokens: 1024,
           stream: true,
-          messages: [{ role: 'system', content: systemPrompt || BASE_SYSTEM }].concat(messages),
+          messages: [{ role: 'system', content: systemPrompt || getBaseSystem() }].concat(messages),
         }),
       });
       if (!resp.ok) {
@@ -1002,8 +1061,8 @@
     return wrap;
   }
 
-  function appendTyping(id) {
-    var msgs = document.getElementById('messages');
+  function appendTyping() {
+    var msgs = document.createElement('div'); // dummy, overwritten below
     var wrap = document.createElement('div');
     wrap.className = 'message assistant';
     wrap.id = 'typing-' + Date.now();
@@ -1013,26 +1072,34 @@
     var bubble = document.createElement('div');
     bubble.className = 'msg-bubble typing-bubble';
     bubble.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+    var timing = document.createElement('div');
+    timing.className = 'msg-timing';
+    timing.textContent = '0.0s';
     wrap.appendChild(label);
     wrap.appendChild(bubble);
-    msgs.appendChild(wrap);
+    wrap.appendChild(timing);
+    document.getElementById('messages').appendChild(wrap);
     scrollBottom();
     return wrap.id;
   }
 
-  function updateTyping(id, text) {
+  function updateTyping(id, text, startTime) {
     var el = document.getElementById(id);
     if (!el) return;
-    var bubble = el.querySelector('.msg-bubble');
-    bubble.innerHTML = renderText(text, true);
+    el.querySelector('.msg-bubble').innerHTML = renderText(text, true);
+    if (startTime) {
+      var t = el.querySelector('.msg-timing');
+      if (t) t.textContent = ((Date.now() - startTime) / 1000).toFixed(1) + 's';
+    }
     scrollBottom();
   }
 
-  function finalizeTyping(id, text) {
+  function finalizeTyping(id, text, elapsed) {
     var el = document.getElementById(id);
     if (!el) return;
-    var bubble = el.querySelector('.msg-bubble');
-    bubble.innerHTML = renderText(text, true);
+    el.querySelector('.msg-bubble').innerHTML = renderText(text, true);
+    var t = el.querySelector('.msg-timing');
+    if (t) t.textContent = elapsed ? elapsed + 's' : '';
     scrollBottom();
   }
 
