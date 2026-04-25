@@ -680,8 +680,8 @@
 
   // ─── INIT ────────────────────────────────────────────────────────────────
   (function init() {
-    var saved = localStorage.getItem('fm_night');
-    if (saved === '1') document.body.classList.add('night');
+    var saved = localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (saved === 'dark') document.body.classList.add('night');
     updateThemeBtn();
 
     applyProviderUI(provider);
@@ -1167,7 +1167,7 @@
   // ─── THEME ───────────────────────────────────────────────────────────────
   function toggleTheme() {
     var isNight = document.body.classList.toggle('night');
-    localStorage.setItem('fm_night', isNight ? '1' : '0');
+    localStorage.setItem('theme', isNight ? 'dark' : 'light');
     updateThemeBtn();
   }
   function updateThemeBtn() {
