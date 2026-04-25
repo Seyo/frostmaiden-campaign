@@ -61,6 +61,44 @@ Quartz does **not** auto-generate `landing.html` — it is hand-maintained. When
 
 Always update data files and `landing.html` alongside the relevant content files, then push together.
 
+## Bilingual Architecture (SV + EN)
+
+The site runs two parallel wikis:
+- **Swedish wiki** — `content/` → `public/` (served at `/`)
+- **English wiki** — `content-en/` → `public/en/` (served at `/en/`)
+
+Both share a single `quartz.layout.ts` and all `quartz/static/` pages.
+
+### Content rules
+
+- `content-en/` mirrors the **exact same folder and file names** as `content/` so that links from `quartz/static/` pages resolve correctly in both wikis.
+- Images are copied into `content-en/` alongside their corresponding `.md` files (Quartz vault-scoped resolution).
+- Wikilinks within `content-en/` files use the same Swedish file names (the files keep their Swedish names).
+
+### Static pages (quartz/static/)
+
+- `quartz/static/i18n.js` — single source of truth for all UI strings. `I18N.sv` and `I18N.en`. API: `getLang()`, `setLang()`, `t(key)`, `tf(key, ...args)`, `toggleLang()`.
+- Every data file (`map-data.js`, `timeline-data.js`, `quests-data.js`) carries both-language content using `_en` field convention: `title_en`, `desc_en`, `meta_en`, `blurb_en`, `name_en`, `label_en`.
+- `processDesc(html)` rewrites `href="../` → `href="../en/` when `lang === 'en'`, so wiki links target the EN build without storing duplicate URLs.
+- `var WIKI = lang === 'en' ? '../en/' : '../'` — used wherever a link to the wiki is constructed.
+
+### Wiki sidebar
+
+`quartz/components/LangSwitch.tsx` — renders an EN/SV button next to Darkmode. An `afterDOMLoaded` script computes the equivalent page in the other language by inserting or removing `/en/` in the URL.
+
+### Deploy
+
+`.github/workflows/deploy.yml` runs two sequential Quartz builds before uploading:
+```
+npx quartz build                          # SV → public/
+npx quartz build -d content-en -o public/en  # EN → public/en/
+```
+Both outputs are uploaded together as a single Pages artifact.
+
+### Adding a new wiki note
+
+Add it to **both** `content/` (Swedish) and `content-en/` (English) with the same filename. Copy any images. Update data files if the note is referenced from static pages.
+
 ## Quartz / Tech
 
 - Config: `quartz.config.ts` — colors, fonts (Cinzel headers, EB Garamond body), locale
