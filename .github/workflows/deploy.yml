@@ -26,6 +26,8 @@ jobs:
           node-version: 22
       - name: Install Dependencies
         run: npm ci
+      - name: Build Campaign Knowledge
+        run: python scripts/build-knowledge.py
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact

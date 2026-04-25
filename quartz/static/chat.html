@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spåkvinnan · Frostmaiden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+DW+Pica+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Unicase:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./frost-vellum.css">
+  <link rel="stylesheet" href="./page.css">
+  <style>
+    html, body { height: 100%; }
+
+    .chat-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── HEADER ─── */
+    .chat-header {
+      padding: 48px 0 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .chat-header h1 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      margin: 0 0 6px;
+      color: var(--ink);
+    }
+    .chat-header .subtitle {
+      font-family: var(--font-label);
+      font-size: 0.72em;
+      letter-spacing: 0.22em;
+      color: var(--ink-ghost);
+      text-transform: uppercase;
+    }
+    .ornament-line {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 16px 0;
+      color: var(--ink-faded);
+    }
+    .ornament-line::before, .ornament-line::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--vellum-edge), transparent);
+    }
+    .ornament-line .glyph {
+      font-family: var(--font-display);
+      font-size: 1.1em;
+      opacity: 0.6;
+    }
+
+    /* ─── SETUP CARD ─── */
+    #setup-panel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0 48px;
+    }
+    .setup-card {
+      background: rgba(232, 224, 207, 0.55);
+      border: 1px solid var(--vellum-edge);
+      padding: 36px 40px;
+      max-width: 460px;
+      width: 100%;
+    }
+    .night .setup-card {
+      background: rgba(23, 30, 43, 0.7);
+      border-color: rgba(100, 120, 150, 0.3);
+    }
+    .setup-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin: 0 0 6px;
+      color: var(--ink);
+    }
+    .setup-card p {
+      font-size: 0.88em;
+      color: var(--ink-faded);
+      margin: 0 0 24px;
+      line-height: 1.5;
+    }
+    .setup-card label {
+      display: block;
+      font-family: var(--font-label);
+      font-size: 0.7em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 6px;
+    }
+    .setup-card input[type="password"],
+    .setup-card select {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid var(--vellum-edge);
+      padding: 10px 12px;
+      font-family: var(--font-body);
+      font-size: 0.9em;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .night .setup-card input[type="password"],
+    .night .setup-card select {
+      background: rgba(0, 0, 0, 0.25);
+      border-color: rgba(100, 130, 160, 0.3);
+      color: var(--ink);
+    }
+    .setup-card input:focus, .setup-card select:focus {
+      border-color: var(--frost-mid);
+    }
+    .setup-card input[type="text"] {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid var(--vellum-edge);
+      padding: 10px 12px;
+      font-family: var(--font-body);
+      font-size: 0.9em;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    }
+    .night .setup-card input[type="text"] {
+      background: rgba(0, 0, 0, 0.25);
+      border-color: rgba(100, 130, 160, 0.3);
+      color: var(--ink);
+    }
+    .setup-card input[type="text"]:focus { border-color: var(--frost-mid); }
+    #custom-url-row { display: none; }
+    .setup-hint-inline {
+      font-size: 0.78em;
+      color: var(--ink-ghost);
+      margin: -10px 0 16px;
+      line-height: 1.5;
+    }
+    .setup-hint-inline a { color: var(--frost-deep); }
+    .night .setup-hint-inline a { color: var(--rime); }
+    .setup-hint-inline code {
+      font-family: monospace;
+      font-size: 0.9em;
+      background: rgba(0,0,0,0.07);
+      padding: 1px 4px;
+    }
+    .night .setup-hint-inline code { background: rgba(255,255,255,0.1); }
+    .provider-badge {
+      font-family: var(--font-label);
+      font-size: 0.62em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      border: 1px solid var(--vellum-edge);
+      padding: 3px 8px;
+    }
+    .night .provider-badge { border-color: rgba(100, 130, 160, 0.3); }
+    .model-bar input[type="text"] {
+      background: transparent;
+      border: 1px solid var(--vellum-edge);
+      color: var(--ink-faded);
+      font-family: var(--font-label);
+      font-size: 0.68em;
+      letter-spacing: 0.1em;
+      padding: 4px 8px;
+      outline: none;
+      width: 180px;
+      transition: border-color 0.2s;
+    }
+    .night .model-bar input[type="text"] { border-color: rgba(100,130,160,0.3); color: var(--ink-ghost); }
+    .model-bar input[type="text"]:focus { border-color: var(--frost-mid); }
+    .btn-save {
+      width: 100%;
+      background: var(--frost-shadow);
+      border: none;
+      color: var(--frost-pale);
+      font-family: var(--font-label);
+      font-size: 0.78em;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 13px 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-save:hover { background: var(--frost-deep); }
+    .setup-hint {
+      margin-top: 14px;
+      font-size: 0.78em;
+      color: var(--ink-ghost);
+      text-align: center;
+    }
+    .setup-hint a { color: var(--frost-deep); }
+    .night .setup-hint a { color: var(--rime); }
+
+    /* ─── CHAT INTERFACE ─── */
+    #chat-panel {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      min-height: 0;
+      padding-bottom: 24px;
+    }
+    #chat-panel.visible { display: flex; }
+
+    .model-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0 14px;
+      flex-shrink: 0;
+    }
+    .model-bar select {
+      background: transparent;
+      border: 1px solid var(--vellum-edge);
+      color: var(--ink-faded);
+      font-family: var(--font-label);
+      font-size: 0.68em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      cursor: pointer;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .night .model-bar select {
+      border-color: rgba(100, 130, 160, 0.3);
+      color: var(--ink-ghost);
+    }
+    .btn-reset {
+      background: none;
+      border: none;
+      font-family: var(--font-label);
+      font-size: 0.68em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      cursor: pointer;
+      padding: 4px 0;
+      transition: color 0.2s;
+    }
+    .btn-reset:hover { color: var(--wax); }
+
+    /* ─── MESSAGES ─── */
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      scroll-behavior: smooth;
+    }
+    #messages::-webkit-scrollbar { width: 4px; }
+    #messages::-webkit-scrollbar-track { background: transparent; }
+    #messages::-webkit-scrollbar-thumb { background: var(--vellum-edge); border-radius: 2px; }
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      max-width: 86%;
+    }
+    .message.user { align-self: flex-end; align-items: flex-end; }
+    .message.assistant { align-self: flex-start; align-items: flex-start; }
+
+    .msg-label {
+      font-family: var(--font-label);
+      font-size: 0.62em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      margin-bottom: 4px;
+      padding: 0 4px;
+    }
+    .msg-bubble {
+      padding: 12px 16px;
+      line-height: 1.6;
+      font-size: 0.92em;
+    }
+    .message.user .msg-bubble {
+      background: rgba(199, 221, 232, 0.35);
+      border: 1px solid var(--frost);
+      color: var(--ink-soft);
+    }
+    .night .message.user .msg-bubble {
+      background: rgba(86, 123, 146, 0.2);
+      border-color: rgba(86, 123, 146, 0.4);
+    }
+    .message.assistant .msg-bubble {
+      background: rgba(232, 224, 207, 0.5);
+      border: 1px solid var(--vellum-edge);
+      color: var(--ink);
+    }
+    .night .message.assistant .msg-bubble {
+      background: rgba(23, 30, 43, 0.6);
+      border-color: rgba(100, 120, 150, 0.25);
+    }
+
+    .msg-bubble p { margin: 0 0 0.7em; }
+    .msg-bubble p:last-child { margin-bottom: 0; }
+    .msg-bubble strong { font-weight: 600; }
+    .msg-bubble em { font-style: italic; }
+    .msg-bubble code {
+      font-family: monospace;
+      font-size: 0.88em;
+      background: rgba(0,0,0,0.06);
+      padding: 1px 4px;
+      border-radius: 2px;
+    }
+    .night .msg-bubble code { background: rgba(255,255,255,0.08); }
+    .msg-bubble h3 {
+      font-family: var(--font-display);
+      font-size: 1em;
+      font-weight: 400;
+      margin: 0.8em 0 0.3em;
+    }
+
+    .wikiref {
+      color: var(--frost-deep);
+      text-decoration: none;
+      border-bottom: 1px solid var(--frost-mid);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .wikiref:hover { color: var(--frost-shadow); border-bottom-color: var(--frost-shadow); }
+    .night .wikiref { color: var(--rime); border-bottom-color: rgba(122, 178, 201, 0.5); }
+    .night .wikiref:hover { border-bottom-color: var(--rime); }
+
+    .typing-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--ink-ghost);
+      animation: typing-pulse 1.2s ease-in-out infinite;
+      margin: 0 2px;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing-pulse {
+      0%, 80%, 100% { opacity: 0.2; transform: scale(0.85); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+
+    .error-msg {
+      font-size: 0.82em;
+      color: var(--wax);
+      padding: 10px 14px;
+      border: 1px solid rgba(107, 42, 42, 0.3);
+      background: rgba(107, 42, 42, 0.06);
+    }
+    .night .error-msg { background: rgba(163, 69, 69, 0.1); }
+
+    .knowledge-warn {
+      font-family: var(--font-label);
+      font-size: 0.7em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      text-align: center;
+      padding: 8px;
+      border: 1px solid rgba(154, 123, 58, 0.25);
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ─── INPUT ─── */
+    .input-area {
+      flex-shrink: 0;
+      border-top: 1px solid var(--vellum-edge);
+      padding-top: 14px;
+    }
+    .night .input-area { border-top-color: rgba(100, 120, 150, 0.2); }
+    .input-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+    }
+    #user-input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.35);
+      border: 1px solid var(--vellum-edge);
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: 0.92em;
+      color: var(--ink);
+      outline: none;
+      resize: none;
+      min-height: 44px;
+      max-height: 140px;
+      line-height: 1.5;
+      transition: border-color 0.2s;
+      overflow-y: auto;
+    }
+    .night #user-input {
+      background: rgba(0, 0, 0, 0.25);
+      border-color: rgba(100, 130, 160, 0.3);
+      color: var(--ink);
+    }
+    #user-input:focus { border-color: var(--frost-mid); }
+    #user-input::placeholder { color: var(--ink-ghost); }
+    #send-btn {
+      background: var(--frost-shadow);
+      border: none;
+      color: var(--frost-pale);
+      font-family: var(--font-label);
+      font-size: 0.7em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 11px 18px;
+      cursor: pointer;
+      transition: background 0.2s;
+      align-self: flex-end;
+      white-space: nowrap;
+      height: 44px;
+    }
+    #send-btn:hover:not(:disabled) { background: var(--frost-deep); }
+    #send-btn:disabled { opacity: 0.4; cursor: default; }
+
+    .input-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 0.72em;
+      color: var(--ink-ghost);
+      font-family: var(--font-label);
+      letter-spacing: 0.1em;
+    }
+    .input-footer kbd {
+      font-family: inherit;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    /* ─── TOP BAR (reuse from page.css) ─── */
+    .topbar-chat {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background: rgba(232, 224, 207, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--vellum-edge);
+    }
+    .night .topbar-chat {
+      background: rgba(23, 30, 43, 0.92);
+      border-bottom-color: rgba(100, 120, 150, 0.2);
+    }
+    .topbar-chat .brand {
+      font-size: 0.95rem;
+    }
+    .topbar-chat nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-family: var(--font-label);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.72rem;
+    }
+    .topbar-chat nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .topbar-chat nav a:hover { color: var(--ink); }
+    #chat-theme-btn {
+      background: none;
+      border: 1px solid var(--ink-faded);
+      color: var(--ink-soft);
+      font-family: var(--font-label);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.68rem;
+      padding: 4px 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #chat-theme-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* ─── BODY OFFSET FOR FIXED TOPBAR ─── */
+    .chat-layout { padding-top: 68px; }
+
+    @media (max-width: 600px) {
+      .setup-card { padding: 28px 20px; }
+      .topbar-chat { padding: 14px 20px; }
+      .topbar-chat nav a:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+<body class="parchment parchment-edge">
+
+  <!-- TOP BAR -->
+  <div class="topbar-chat">
+    <a class="brand" href="./landing.html">
+      <div class="brand-mark">❄</div>
+      <span>Frostmaiden · Kampanjkrönika</span>
+    </a>
+    <nav>
+      <a href="./landing.html">Startsida</a>
+      <a href="../Sessions">Sessioner</a>
+      <button id="chat-theme-btn" onclick="toggleTheme()" aria-label="Byt tema">☽ Natt</button>
+    </nav>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="chat-layout">
+
+    <header class="chat-header">
+      <h1>Spåkvinnan</h1>
+      <div class="subtitle">Fråga om kampanjen</div>
+      <div class="ornament-line"><span class="glyph">✦</span></div>
+    </header>
+
+    <!-- SETUP PANEL (shown until configured) -->
+    <div id="setup-panel">
+      <div class="setup-card">
+        <h2>Välj leverantör</h2>
+        <p>
+          Anrop görs direkt från din webbläsare. Nyckel och inställningar
+          sparas lokalt och skickas aldrig vidare.
+        </p>
+
+        <label for="provider-select">Leverantör</label>
+        <select id="provider-select" onchange="onProviderChange(this.value)">
+          <option value="anthropic">Anthropic (Claude)</option>
+          <option value="openai">OpenAI</option>
+          <option value="custom">Custom / Ollama</option>
+        </select>
+
+        <div id="custom-url-row">
+          <label for="custom-url-input">Bas-URL</label>
+          <input type="text" id="custom-url-input" placeholder="http://localhost:11434/v1" value="http://localhost:11434/v1" autocomplete="off" spellcheck="false">
+        </div>
+
+        <label for="api-key-input" id="api-key-label">API-nyckel</label>
+        <input type="password" id="api-key-input" placeholder="sk-ant-…" autocomplete="off" spellcheck="false">
+        <div class="setup-hint-inline" id="api-key-hint"></div>
+
+        <label for="model-input-setup">Modell</label>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:16px">
+          <input type="text" id="model-input-setup" placeholder="claude-haiku-4-5-20251001"
+            autocomplete="off" spellcheck="false" list="model-suggestions"
+            style="flex:1;margin-bottom:0">
+          <datalist id="model-suggestions"></datalist>
+          <button type="button" id="fetch-models-btn" onclick="fetchModels()"
+            style="display:none;white-space:nowrap;padding:10px 14px;background:transparent;
+            border:1px solid var(--vellum-edge);color:var(--ink-faded);font-family:var(--font-label);
+            font-size:0.7em;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;
+            transition:all 0.2s" onmouseover="this.style.borderColor='var(--frost-mid)'"
+            onmouseout="this.style.borderColor='var(--vellum-edge)'">
+            Hämta
+          </button>
+        </div>
+
+        <button class="btn-save" onclick="saveSetup()">Spara &amp; börja</button>
+      </div>
+    </div>
+
+    <!-- CHAT PANEL -->
+    <div id="chat-panel">
+      <div class="model-bar">
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="provider-badge" id="provider-badge">Anthropic</span>
+          <input type="text" id="model-input-chat" value="claude-haiku-4-5-20251001" onchange="saveModel(this.value)" title="Modell">
+        </div>
+        <button class="btn-reset" onclick="resetKey()">Byt inställningar</button>
+      </div>
+
+      <div id="knowledge-warn" class="knowledge-warn" style="display:none">
+        ⚠ Kampanjdata saknas — kör GitHub Action eller bygg lokalt
+      </div>
+
+      <div id="messages"></div>
+
+      <div class="input-area">
+        <div class="input-row">
+          <textarea
+            id="user-input"
+            placeholder="Ställ en fråga om kampanjen…"
+            rows="1"
+            onkeydown="handleKey(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button id="send-btn" onclick="sendMessage()">Skicka</button>
+        </div>
+        <div class="input-footer">
+          <span>Enter skickar · Shift+Enter radbrytning</span>
+          <span id="token-estimate"></span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.chat-layout -->
+
+  <script>
+  // ─── STATE ───────────────────────────────────────────────────────────────
+  var provider  = localStorage.getItem('fm_provider')   || 'anthropic';
+  var apiKey    = localStorage.getItem('fm_api_key')    || '';
+  var customUrl = localStorage.getItem('fm_custom_url') || 'http://localhost:11434/v1';
+  var model     = localStorage.getItem('fm_model')      || 'claude-haiku-4-5-20251001';
+  var knowledge = [];
+  var wikiMap   = {};
+  var systemPrompt = '';
+  var chatHistory = [];
+  var streaming = false;
+
+  var PROVIDERS = {
+    anthropic: {
+      label: 'Anthropic',
+      defaultModel: 'claude-haiku-4-5-20251001',
+      keyPlaceholder: 'sk-ant-…',
+      keyRequired: true,
+      hint: 'Skapa nyckel på <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>',
+    },
+    openai: {
+      label: 'OpenAI',
+      defaultModel: 'gpt-4o-mini',
+      keyPlaceholder: 'sk-…',
+      keyRequired: true,
+      hint: 'Skapa nyckel på <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>',
+    },
+    custom: {
+      label: 'Custom',
+      defaultModel: 'llama3',
+      keyPlaceholder: 'Lämna tomt om ingen auth krävs',
+      keyRequired: false,
+      hint: 'Ollama: starta med <code>OLLAMA_ORIGINS=* ollama serve</code>',
+    },
+  };
+
+  // ─── INIT ────────────────────────────────────────────────────────────────
+  (function init() {
+    var saved = localStorage.getItem('fm_night');
+    if (saved === '1') document.body.classList.add('night');
+    updateThemeBtn();
+
+    applyProviderUI(provider);
+    document.getElementById('model-input-setup').value = model;
+    document.getElementById('custom-url-input').value  = customUrl;
+
+    var configured = apiKey || (provider === 'custom' && !PROVIDERS.custom.keyRequired);
+    if (localStorage.getItem('fm_configured') === '1') {
+      showChat();
+      loadKnowledge();
+    }
+  })();
+
+  // ─── SETUP ───────────────────────────────────────────────────────────────
+  function onProviderChange(val) {
+    applyProviderUI(val);
+    var p = PROVIDERS[val] || PROVIDERS.anthropic;
+    var modelEl = document.getElementById('model-input-setup');
+    modelEl.value = p.defaultModel;
+  }
+
+  function applyProviderUI(val) {
+    var p = PROVIDERS[val] || PROVIDERS.anthropic;
+    document.getElementById('provider-select').value = val;
+    document.getElementById('api-key-input').placeholder = p.keyPlaceholder;
+    document.getElementById('api-key-hint').innerHTML = p.hint;
+    document.getElementById('custom-url-row').style.display = val === 'custom' ? 'block' : 'none';
+    document.getElementById('fetch-models-btn').style.display = val === 'custom' ? 'inline-block' : 'none';
+    document.getElementById('provider-badge').textContent = p.label;
+  }
+
+  async function fetchModels() {
+    var btn = document.getElementById('fetch-models-btn');
+    var urlVal = document.getElementById('custom-url-input').value.trim() || 'http://localhost:11434/v1';
+    var base = urlVal.replace(/\/$/, '');
+    btn.textContent = '…';
+    btn.disabled = true;
+    try {
+      var headers = {};
+      var key = document.getElementById('api-key-input').value.trim();
+      if (key) headers['Authorization'] = 'Bearer ' + key;
+      var resp = await fetch(base + '/models', { headers: headers });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      var data = await resp.json();
+      var ids = (data.data || data.models || []).map(function(m) {
+        return m.id || m.name || String(m);
+      }).filter(Boolean).sort();
+      if (!ids.length) throw new Error('Inga modeller hittades');
+      var dl = document.getElementById('model-suggestions');
+      dl.innerHTML = ids.map(function(id) {
+        return '<option value="' + esc(id) + '">';
+      }).join('');
+      document.getElementById('model-input-setup').value = ids[0];
+      btn.textContent = ids.length + ' st';
+    } catch (e) {
+      btn.textContent = 'Fel';
+      setTimeout(function() { btn.textContent = 'Hämta'; }, 2000);
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  function saveSetup() {
+    var providerEl = document.getElementById('provider-select');
+    var keyEl      = document.getElementById('api-key-input');
+    var urlEl      = document.getElementById('custom-url-input');
+    var modelEl    = document.getElementById('model-input-setup');
+
+    var newProvider = providerEl.value;
+    var newKey      = keyEl.value.trim();
+    var newUrl      = urlEl.value.trim() || 'http://localhost:11434/v1';
+    var newModel    = modelEl.value.trim() || PROVIDERS[newProvider].defaultModel;
+    var p           = PROVIDERS[newProvider] || PROVIDERS.anthropic;
+
+    if (p.keyRequired && !newKey) { keyEl.focus(); return; }
+
+    provider  = newProvider;
+    apiKey    = newKey;
+    customUrl = newUrl;
+    model     = newModel;
+
+    localStorage.setItem('fm_provider',    provider);
+    localStorage.setItem('fm_api_key',     apiKey);
+    localStorage.setItem('fm_custom_url',  customUrl);
+    localStorage.setItem('fm_model',       model);
+    localStorage.setItem('fm_configured',  '1');
+
+    showChat();
+    loadKnowledge();
+  }
+
+  function resetKey() {
+    localStorage.removeItem('fm_configured');
+    apiKey = '';
+    chatHistory = [];
+    document.getElementById('messages').innerHTML = '';
+    document.getElementById('setup-panel').style.display = 'flex';
+    document.getElementById('chat-panel').classList.remove('visible');
+    document.getElementById('api-key-input').value = '';
+  }
+
+  function saveModel(val) {
+    model = val.trim() || model;
+    localStorage.setItem('fm_model', model);
+    document.getElementById('model-input-chat').value = model;
+  }
+
+  function showChat() {
+    document.getElementById('setup-panel').style.display = 'none';
+    document.getElementById('chat-panel').classList.add('visible');
+    document.getElementById('model-input-chat').value = model;
+    document.getElementById('provider-badge').textContent = (PROVIDERS[provider] || PROVIDERS.anthropic).label;
+    document.getElementById('user-input').focus();
+  }
+
+  // ─── KNOWLEDGE ───────────────────────────────────────────────────────────
+  function loadKnowledge() {
+    fetch('./campaign-knowledge.json')
+      .then(function(r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      })
+      .then(function(data) {
+        knowledge = data;
+        buildWikiMap();
+        buildSystemPrompt();
+        updateTokenEstimate();
+      })
+      .catch(function() {
+        document.getElementById('knowledge-warn').style.display = 'block';
+        systemPrompt = BASE_SYSTEM;
+      });
+  }
+
+  var BASE_SYSTEM = 'Du är en AI-assistent och expert på detta D&D-äventyr. ' +
+    'Du svarar alltid på svenska. Håll svaren kortfattade om inte användaren ber om detaljer. ' +
+    'Använd [[Notnamn]]-syntax när du refererar till specifika karaktärer, platser eller händelser.';
+
+  function buildWikiMap() {
+    wikiMap = {};
+    knowledge.forEach(function(e) {
+      var url = '../' + e.path.replace(/\.md$/, '').split('/').map(function(p) {
+        return p.replace(/ /g, '-');
+      }).join('/');
+      wikiMap[e.title] = url;
+      // also map without dagger/parens variants for LLM responses
+      var clean = e.title.replace(/\s*\(†\)\s*$/, '').replace(/\(†\)/, '').trim();
+      if (clean !== e.title) wikiMap[clean] = url;
+    });
+  }
+
+  function buildSystemPrompt() {
+    var TYPE_ORDER = ['session','character','npc','location','faction','quest','event','map','other'];
+    var TYPE_LABELS = {
+      session: 'SESSIONER', character: 'KARAKTÄRER', npc: 'NPC', location: 'PLATSER',
+      faction: 'FRAKTIONER', quest: 'UPPDRAG & RYKTEN', event: 'HÄNDELSER',
+      map: 'KARTOR', other: 'ÖVRIGT'
+    };
+    var groups = {};
+    knowledge.forEach(function(e) {
+      if (!groups[e.type]) groups[e.type] = [];
+      groups[e.type].push(e);
+    });
+
+    var parts = [
+      BASE_SYSTEM,
+      '',
+      'Kampanj: Rime of the Frostmaiden',
+      'Sällskap: Zahirs gäng (Sork the Shadow, Nasher, Zahir, Borc the Orc)',
+      '',
+      '=== KAMPANJDATA ===',
+    ];
+
+    TYPE_ORDER.forEach(function(type) {
+      if (!groups[type] || !groups[type].length) return;
+      parts.push('');
+      parts.push('--- ' + TYPE_LABELS[type] + ' ---');
+      groups[type].forEach(function(e) {
+        parts.push('');
+        parts.push('## ' + e.title);
+        parts.push(e.content.trim());
+      });
+    });
+
+    systemPrompt = parts.join('\n');
+  }
+
+  function updateTokenEstimate() {
+    if (!knowledge.length) return;
+    var chars = systemPrompt.length;
+    var est = Math.round(chars / 4 / 1000);
+    document.getElementById('token-estimate').textContent = '~' + est + 'k tokens i kontext';
+  }
+
+  // ─── CHAT ────────────────────────────────────────────────────────────────
+  function handleKey(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  }
+
+  function autoResize(el) {
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 140) + 'px';
+  }
+
+  function sendMessage() {
+    if (streaming) return;
+    var input = document.getElementById('user-input');
+    var text  = input.value.trim();
+    var needsKey = (PROVIDERS[provider] || PROVIDERS.anthropic).keyRequired;
+    if (!text || (needsKey && !apiKey)) return;
+
+    input.value = '';
+    input.style.height = 'auto';
+    document.getElementById('send-btn').disabled = true;
+
+    chatHistory.push({ role: 'user', content: text });
+    appendMessage('user', text);
+
+    var typingId = appendTyping();
+    streaming = true;
+
+    callClaude(chatHistory.slice(), function(chunk) {
+      updateTyping(typingId, chunk);
+    }, function(full) {
+      finalizeTyping(typingId, full);
+      chatHistory.push({ role: 'assistant', content: full });
+      streaming = false;
+      document.getElementById('send-btn').disabled = false;
+      document.getElementById('user-input').focus();
+    }, function(err) {
+      removeTyping(typingId);
+      appendError(err);
+      chatHistory.pop(); // remove user message on error
+      streaming = false;
+      document.getElementById('send-btn').disabled = false;
+    });
+  }
+
+  async function callClaude(messages, onChunk, onDone, onError) {
+    if (provider === 'anthropic') {
+      await callAnthropic(messages, onChunk, onDone, onError);
+    } else {
+      await callOpenAICompat(messages, onChunk, onDone, onError);
+    }
+  }
+
+  async function callAnthropic(messages, onChunk, onDone, onError) {
+    var accumulated = '';
+    try {
+      var resp = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': apiKey,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true',
+        },
+        body: JSON.stringify({
+          model: model,
+          max_tokens: 1024,
+          stream: true,
+          system: systemPrompt || BASE_SYSTEM,
+          messages: messages,
+        }),
+      });
+      if (!resp.ok) {
+        var eb = await resp.json().catch(function() { return {}; });
+        onError((eb.error && eb.error.message) || 'HTTP ' + resp.status); return;
+      }
+      accumulated = await readSSE(resp, function(evt) {
+        return evt.type === 'content_block_delta' && evt.delta && evt.delta.type === 'text_delta'
+          ? evt.delta.text : null;
+      }, onChunk);
+      onDone(accumulated);
+    } catch (e) { onError(e.message || 'Nätverksfel'); }
+  }
+
+  async function callOpenAICompat(messages, onChunk, onDone, onError) {
+    var accumulated = '';
+    var base = provider === 'custom' ? customUrl.replace(/\/$/, '') : 'https://api.openai.com/v1';
+    var headers = { 'Content-Type': 'application/json' };
+    if (apiKey) headers['Authorization'] = 'Bearer ' + apiKey;
+    try {
+      var resp = await fetch(base + '/chat/completions', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+          model: model,
+          max_tokens: 1024,
+          stream: true,
+          messages: [{ role: 'system', content: systemPrompt || BASE_SYSTEM }].concat(messages),
+        }),
+      });
+      if (!resp.ok) {
+        var eb = await resp.json().catch(function() { return {}; });
+        onError((eb.error && eb.error.message) || 'HTTP ' + resp.status); return;
+      }
+      accumulated = await readSSE(resp, function(evt) {
+        return evt.choices && evt.choices[0] && evt.choices[0].delta
+          ? (evt.choices[0].delta.content || null) : null;
+      }, onChunk);
+      onDone(accumulated);
+    } catch (e) { onError(e.message || 'Nätverksfel'); }
+  }
+
+  async function readSSE(resp, extractor, onChunk) {
+    var accumulated = '';
+    var reader  = resp.body.getReader();
+    var decoder = new TextDecoder();
+    var buf     = '';
+    while (true) {
+      var _r = await reader.read();
+      if (_r.done) break;
+      buf += decoder.decode(_r.value, { stream: true });
+      var lines = buf.split('\n');
+      buf = lines.pop();
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        if (!line.startsWith('data: ')) continue;
+        var json = line.slice(6).trim();
+        if (!json || json === '[DONE]') continue;
+        try {
+          var text = extractor(JSON.parse(json));
+          if (text) { accumulated += text; onChunk(accumulated); }
+        } catch (_) {}
+      }
+    }
+    return accumulated;
+  }
+
+  // ─── RENDER ──────────────────────────────────────────────────────────────
+  function appendMessage(role, text) {
+    var msgs = document.getElementById('messages');
+    var wrap = document.createElement('div');
+    wrap.className = 'message ' + role;
+    var label = document.createElement('div');
+    label.className = 'msg-label';
+    label.textContent = role === 'user' ? 'Du' : 'Spåkvinnan';
+    var bubble = document.createElement('div');
+    bubble.className = 'msg-bubble';
+    bubble.innerHTML = renderText(text, role === 'assistant');
+    wrap.appendChild(label);
+    wrap.appendChild(bubble);
+    msgs.appendChild(wrap);
+    scrollBottom();
+    return wrap;
+  }
+
+  function appendTyping(id) {
+    var msgs = document.getElementById('messages');
+    var wrap = document.createElement('div');
+    wrap.className = 'message assistant';
+    wrap.id = 'typing-' + Date.now();
+    var label = document.createElement('div');
+    label.className = 'msg-label';
+    label.textContent = 'Spåkvinnan';
+    var bubble = document.createElement('div');
+    bubble.className = 'msg-bubble typing-bubble';
+    bubble.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+    wrap.appendChild(label);
+    wrap.appendChild(bubble);
+    msgs.appendChild(wrap);
+    scrollBottom();
+    return wrap.id;
+  }
+
+  function updateTyping(id, text) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var bubble = el.querySelector('.msg-bubble');
+    bubble.innerHTML = renderText(text, true);
+    scrollBottom();
+  }
+
+  function finalizeTyping(id, text) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var bubble = el.querySelector('.msg-bubble');
+    bubble.innerHTML = renderText(text, true);
+    scrollBottom();
+  }
+
+  function removeTyping(id) {
+    var el = document.getElementById(id);
+    if (el) el.remove();
+  }
+
+  function appendError(msg) {
+    var msgs = document.getElementById('messages');
+    var div = document.createElement('div');
+    div.className = 'message assistant';
+    div.innerHTML = '<div class="msg-label">Spåkvinnan</div><div class="error-msg">Fel: ' + esc(msg) + '</div>';
+    msgs.appendChild(div);
+    scrollBottom();
+  }
+
+  function scrollBottom() {
+    var msgs = document.getElementById('messages');
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  // ─── TEXT RENDERING ───────────────────────────────────────────────────────
+  function renderText(text, isAssistant) {
+    if (!isAssistant) return '<p>' + esc(text).replace(/\n\n+/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
+
+    // Escape HTML first, then apply markdown-like transforms
+    var html = esc(text);
+
+    // Wikilinks [[Note]] → clickable links
+    html = html.replace(/\[\[([^\]]+)\]\]/g, function(_, name) {
+      var url = wikiMap[name.trim()];
+      if (url) return '<a href="' + url + '" class="wikiref" target="_parent">' + esc2(name) + '</a>';
+      return '<span class="wikiref" style="cursor:default;border-bottom-style:dashed">' + esc2(name) + '</span>';
+    });
+
+    // Headers ### → h3
+    html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+
+    // Bold **text**
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+
+    // Italic *text* (not already inside **)
+    html = html.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+
+    // Inline code `text`
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+    // Paragraphs
+    html = '<p>' + html.replace(/\n\n+/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
+
+    return html;
+  }
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+  // For content already escaped once (wikilinks inside escaped HTML)
+  function esc2(s) { return s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  // ─── THEME ───────────────────────────────────────────────────────────────
+  function toggleTheme() {
+    var isNight = document.body.classList.toggle('night');
+    localStorage.setItem('fm_night', isNight ? '1' : '0');
+    updateThemeBtn();
+  }
+  function updateThemeBtn() {
+    var btn = document.getElementById('chat-theme-btn');
+    if (btn) btn.textContent = document.body.classList.contains('night') ? '☀ Dag' : '☽ Natt';
+  }
+  </script>
+
+</body>
+</html>

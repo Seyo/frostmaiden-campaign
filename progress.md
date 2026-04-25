@@ -1,46 +1,57 @@
-# Progress Log — Kampanjhälsoåtgärder
+# Progress Log — LLM Chat over Campaign Wiki
 
-## Session 1 — 2026-04-24
+## Session 1 — 2026-04-25
 
-### Utfört
-- Körde `campaign-health-report`-skill och genererade fullständig rapport
-- Identifierade 3 prioriterade åtgärder
-- Skapade `task_plan.md`, `findings.md`, `progress.md`
-- **Genomförde Phase 1: Fixade bruten länk för Caer Dineval genom att byta namn på filen via `git mv`**
+### Phase 1: Utforskning & Analys
+- **Status:** complete
+- Actions taken:
+  - Arkiverade gamla planfiler till `.planning/2026-04-24-kampanjhalsa/`
+  - Kartlade repo-struktur: 42 content/.md-filer, quartz/static/, deploy.yml
+  - Identifierade teknisk approach: Python build-script + standalone chat.html
+  - Estimerade tokenstorlek: ~21k tokens (full kontext ryms i 200k window)
+- Files created/modified:
+  - `task_plan.md` (skapad)
+  - `findings.md` (skapad)
+  - `progress.md` (skapad)
 
-### Status per fas
-| Fas | Status |
-|-----|--------|
-| Phase 1 — Fixa Caer-Dineval broken link | `completed` |
-| Phase 2 — Integrera föräldralösa noter | `pending` |
-| Phase 3 — Stabilisera Caer Konig-loren | `pending` |
+### Phase 2: Knowledge Builder
+- **Status:** complete
+- Actions taken:
+  - Skapade `scripts/build-knowledge.py` (Python, generisk, portabel)
+  - Lade till "Build Campaign Knowledge"-steg i `deploy.yml` (före Quartz build)
+  - Testade lokalt: 41 noter, 36 KB output
+- Files created/modified:
+  - `scripts/build-knowledge.py` (skapad)
+  - `.github/workflows/deploy.yml` (uppdaterad)
+  - `quartz/static/campaign-knowledge.json` (genererad lokalt)
 
-### Nästa steg
-Börja med Phase 2 — Integrera föräldralösa noter för att förbånda graferna.
+### Phase 3: Chat Widget
+- **Status:** complete
+- Actions taken:
+  - Skapade `quartz/static/chat.html` med frost-vellum-tema, fixed topbar, natt-läge
+  - BYOK: API-nyckel + modell sparas i localStorage
+  - SSE-streaming av Claude API direkt från browser
+  - Wikilinks i svar konverteras till klickbara inklink-ankare med wiki-URL-mapping
+  - Lade till nav-länk och hero-knapp i `landing.html`
+- Files created/modified:
+  - `quartz/static/chat.html` (skapad)
+  - `quartz/static/landing.html` (uppdaterad: topnav + hero-actions)
 
----
+## Test Results
+| Test | Input | Expected | Actual | Status |
+|------|-------|----------|--------|--------|
+| — | — | — | — | — |
 
-## Session 2 — 2026-04-24
+## Error Log
+| Timestamp | Error | Attempt | Resolution |
+|-----------|-------|---------|------------|
+| — | — | — | — |
 
-### Utfört
-- Genomförde Phase 2: bytte namn på `Dvärgarna i Dvärgadalen.md` → `Dvärgadalen.md` via git mv
-- Lade till `[[Dödsloggen]]`-länk i `Karaktärer/Zahirs gäng.md` (ny sektion "Förluster"), `NPC/Aubril(†).md` och `NPC/Bronn Bearhammer(†).md`
-- Genomförde Phase 3: omstrukturerade `Platser/Caer Konig.md` — lade till `## Kända invånare`-tabell och `## Händelser`-sektion; alla NPC-fraktionsrader verifierade korrekta
-
-### Filer ändrade
-- `content/Fraktioner/Dvärgadalen.md` (omdöpt från Dvärgarna i Dvärgadalen.md)
-- `content/Karaktärer/Zahirs gäng.md`
-- `content/NPC/Aubril(†).md`
-- `content/NPC/Bronn Bearhammer(†).md`
-- `content/Platser/Caer Konig.md`
-- `task_plan.md`, `progress.md`
-
-### Status per fas
-| Fas | Status |
-|-----|--------|
-| Phase 1 — Fixa Caer-Dineval broken link | `completed` |
-| Phase 2 — Integrera föräldralösa noter | `completed` |
-| Phase 3 — Stabilisera Caer Konig-loren | `completed` |
-
-### Nästa steg
-Alla faser klara. Kör `campaign-health-report` igen efter nästa session för att mäta förbättringen.
+## 5-Question Reboot Check
+| Question | Answer |
+|----------|--------|
+| Where am I? | Phase 2 — Knowledge Builder |
+| Where am I going? | Phase 3 (chat widget), Phase 4 (skala), Phase 5 (test) |
+| What's the goal? | Client-side BYOK-chatt för kampanjwiki, ingen backend |
+| What have I learned? | Se findings.md — schema, storleksestimering, portabilitetsstrategi |
+| What have I done? | Planfiler skapade, repo utforskat, arkitektur beslutad |
