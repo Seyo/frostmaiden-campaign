@@ -23,10 +23,14 @@ LangSwitch.css = `
   text-transform: uppercase;
   color: var(--darkgray);
   border: 1px solid var(--lightgray);
-  padding: 3px 8px;
   border-radius: 2px;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
   transition: color 0.15s, border-color 0.15s;
 }
 .lang-switch:hover {
