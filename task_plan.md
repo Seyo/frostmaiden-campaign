@@ -3,7 +3,7 @@
 **Mål:** Bygg ett client-side chatt-system för frostmaiden-campaign-siten där användare kan ställa frågor om kampanjen med sin egen API-nyckel, med LLM:en som expert på wikis innehåll.
 
 ## Current Phase
-Phase 5
+Komplett ✓
 
 ## Phases
 
@@ -48,6 +48,13 @@ Phase 5
 ### Phase 7: Tidsmätning per request
 - [x] Timer startar i sendMessage när request skickas
 - [x] Uppdateras live på varje onChunk-callback (syns under streaming)
+- [x] Visas som "3.2s" under assistentbubblan när klar
+- **Status:** complete
+
+### Phase 8: Buggfixar & polish
+- [x] `var history` → `var chatHistory` (krock med window.history API)
+- [x] Enhetlig tema-nyckel: alla sidor använder `theme` = `dark`/`light`
+- **Status:** complete
 - [x] Visas under assistentbubblan som t.ex. "3.2s" när klar
 - **Status:** complete
 
