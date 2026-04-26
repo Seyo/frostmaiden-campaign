@@ -8,7 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "← Kampanjsidan": "https://seyo.github.io/frostmaiden-campaign/static/landing.html",
+      "← Campaign": "https://seyo.github.io/frostmaiden-campaign/static/landing.html",
       GitHub: "https://github.com/Seyo/frostmaiden-campaign",
     },
   }),
@@ -36,6 +36,7 @@ export const defaultContentPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
+        { Component: Component.LangSwitch() },
       ],
     }),
     Component.Explorer(),
@@ -60,6 +61,7 @@ export const defaultListPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
+        { Component: Component.LangSwitch() },
       ],
     }),
     Component.Explorer(),

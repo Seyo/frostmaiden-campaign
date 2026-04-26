@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" id="html-root">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +27,19 @@
       transition: opacity 0.3s;
     }
     #shift-hint.hidden { opacity: 0; }
+
+    /* ─── Lang toggle ─── */
+    #lang-btn {
+      position: fixed; bottom: 10px; left: 10px;
+      font-family: var(--font-label); text-transform: uppercase;
+      letter-spacing: 0.15em; font-size: 0.62rem;
+      color: var(--ink-ghost); background: transparent;
+      border: 1px solid var(--vellum-edge);
+      padding: 3px 8px; cursor: pointer; z-index: 50;
+    }
+    #lang-btn:hover { color: var(--ink); border-color: var(--ink-soft); }
+    .night #lang-btn { border-color: rgba(140,197,223,0.25); }
+    .night #lang-btn:hover { color: var(--rime); border-color: var(--rime); }
 
     /* ─── Pin creator panel ─── */
     #pin-creator {
@@ -144,7 +157,7 @@
     <div class="map-frame-inner">
       <div class="map-wrap" id="map-wrap">
         <div id="map-zoom" style="position:absolute;inset:0;transform-origin:0 0;">
-          <img class="map-img" src="./assets/maps/icewind-dale.webp" alt="Karta över Icewind Dale" draggable="false">
+          <img class="map-img" src="./assets/maps/icewind-dale.webp" alt="Karta över Icewind Dale" id="map-img" draggable="false">
           <div class="map-tint" aria-hidden="true"></div>
         </div>
       </div>
@@ -158,20 +171,20 @@
 <div id="pin-creator" role="dialog" aria-label="Skapa ny kartpunkt">
   <div class="pc-inner">
     <div class="pc-head">
-      <span class="pc-title">Ny kartpunkt</span>
+      <span class="pc-title" id="pc-title">Ny kartpunkt</span>
       <button class="pc-close" id="pc-close" aria-label="Stäng">✕</button>
     </div>
     <div class="pc-body">
       <div class="pc-coords" id="pc-coords">x: — y: —</div>
 
       <div class="pc-field">
-        <label class="pc-lbl" for="pc-blurb">Vad hände här?</label>
+        <label class="pc-lbl" for="pc-blurb" id="pc-blurb-lbl">Vad hände här?</label>
         <textarea id="pc-blurb" rows="5" placeholder="Beskriv platsen eller händelsen kortfattat…"></textarea>
       </div>
 
       <div class="pc-field row">
         <input type="checkbox" id="pc-label">
-        <label class="pc-lbl" for="pc-label">Visa textetikett på kartan</label>
+        <label class="pc-lbl" for="pc-label" id="pc-label-lbl">Visa textetikett på kartan</label>
       </div>
     </div>
     <div class="pc-foot">
@@ -181,6 +194,9 @@
   </div>
 </div>
 
+<button id="lang-btn" onclick="toggleLang()">EN</button>
+
+<script src="./i18n.js"></script>
 <script src="./map-data.js"></script>
 <script>
 // ─── THEME ───────────────────────────────────────────────────────────────────
@@ -193,8 +209,24 @@
   }
 })();
 
+// ─── LANG INIT ───────────────────────────────────────────────────────────────
+var lang = getLang();
+document.getElementById('html-root').lang = lang;
+document.title = t('map_title');
+document.getElementById('map-img').alt = t('map_alt');
+document.getElementById('lang-btn').textContent = t('lang_toggle');
+document.getElementById('shift-hint').textContent = t('map_shift_hint');
+document.getElementById('pc-title').textContent = t('pin_creator_title');
+document.getElementById('pc-close').setAttribute('aria-label', t('pin_creator_close'));
+document.getElementById('pc-blurb-lbl').textContent = t('pin_blurb_label');
+document.getElementById('pc-blurb').placeholder = t('pin_blurb_placeholder');
+document.getElementById('pc-label-lbl').textContent = t('pin_label_checkbox');
+document.getElementById('pc-copy-btn').textContent = t('pin_copy_btn');
+document.getElementById('pc-feedback').textContent = t('pin_copied');
+
+var WIKI = lang === 'en' ? '../en/' : '../';
+
 // ─── ZOOM / PAN ───────────────────────────────────────────────────────────────
-var WIKI   = '../';
 var wrap   = document.getElementById('map-wrap');
 var zoomEl = document.getElementById('map-zoom');
 var portal = document.getElementById('map-tooltip-layer');
@@ -262,6 +294,10 @@ function renderTooltip() {
   var cy = br ? (br.top  + br.height / 2 - pr.top)  : (pin.y / 100 * pr.height);
   var flipX = cx / pr.width  > 0.6  ? '-100%' : '0%';
   var flipY = cy / pr.height > 0.55 ? '-100%' : '0%';
+
+  var pinName = (lang === 'en' && pin.name_en) ? pin.name_en : pin.name;
+  var blurb   = (lang === 'en' && pin.blurb_en) ? pin.blurb_en : pin.blurb;
+
   var tt = document.createElement('div');
   tt.className = 'map-tooltip';
   tt.setAttribute('role', 'dialog');
@@ -271,23 +307,24 @@ function renderTooltip() {
   tt.innerHTML =
     '<div class="tooltip-corner tl"></div><div class="tooltip-corner tr"></div>' +
     '<div class="tooltip-corner bl"></div><div class="tooltip-corner br"></div>' +
-    '<div class="tt-label">Plats</div>' +
-    '<div class="tt-title">' + pin.name + '</div>' +
-    '<p class="tt-blurb">' + pin.blurb + '</p>' +
-    '<a class="tt-link" href="' + WIKI + pin.slug + '" target="_parent">Öppna i wikin <span aria-hidden="true">→</span></a>';
+    '<div class="tt-label">' + t('tooltip_type') + '</div>' +
+    '<div class="tt-title">' + pinName + '</div>' +
+    '<p class="tt-blurb">' + blurb + '</p>' +
+    '<a class="tt-link" href="' + WIKI + pin.slug + '" target="_parent">' + t('tooltip_open') + '</a>';
   portal.appendChild(tt);
 }
 
 // ─── PINS ────────────────────────────────────────────────────────────────────
 MAP_PINS.forEach(function (p) {
+  var pName = (lang === 'en' && p.name_en) ? p.name_en : p.name;
   var btn = document.createElement('button');
   btn.className = 'map-pin';
   btn.setAttribute('data-pin', p.id);
   btn.setAttribute('data-type', p.type || 'town');
-  btn.setAttribute('aria-label', p.name);
+  btn.setAttribute('aria-label', pName);
   btn.style.left = p.x + '%';
   btn.style.top  = p.y + '%';
-  btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + p.name + '</span>' : '');
+  btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + pName + '</span>' : '');
   btn.addEventListener('mouseenter', function () { hovered = p.id; if (!pinned) renderTooltip(); });
   btn.addEventListener('mouseleave', function () { hovered = null;  if (!pinned) renderTooltip(); });
   btn.addEventListener('click', function (e) { e.stopPropagation(); pinned = (pinned === p.id) ? null : p.id; renderTooltip(); });
@@ -322,9 +359,32 @@ function generatePrompt() {
   var x      = currentCoords.x.toFixed(1);
   var y      = currentCoords.y.toFixed(1);
 
+  if (lang === 'en') {
+    return [
+      'You are helping with a Quartz v4 Obsidian vault for a D&D campaign (Rime of the Frostmaiden).',
+      'The vault is published to GitHub Pages from the repo Seyo/frostmaiden-campaign.',
+      'The site is bilingual (Swedish + English). English is the source language.',
+      '',
+      'Add a new map pin to `quartz/static/map-data.js` at coordinates x: ' + x + '%, y: ' + y + '%.',
+      '',
+      'Description of the location/event:',
+      blurb || '(no description provided)',
+      '',
+      (hasLbl ? 'The pin should have a visible text label on the map (label: true).' : 'The pin should not have a text label (omit the label field).'),
+      '',
+      'Do the following:',
+      '1. Read the content/ folder to find a relevant wiki page and determine the appropriate name, type (town/mountain/faction/fortress/event), and slug.',
+      '2. Generate an id in kebab-case from the name (Swedish chars → a/o).',
+      '3. Add the pin to MAP_PINS with both blurb (Swedish) and blurb_en (English) filled.',
+      '   If the name is Swedish, also add name_en (English translation of the name).',
+      '4. Commit and push.',
+    ].join('\n');
+  }
+
   return [
     'Du hjälper till med ett Quartz v4-baserat Obsidian-valv för en D&D-kampanj (Rime of the Frostmaiden, på svenska).',
     'Valvet publiceras till GitHub Pages från repot Seyo/frostmaiden-campaign.',
+    'Sajten är tvåspråkig (svenska + engelska). Engelska är källspråket.',
     '',
     'Lägg till en ny kartpunkt i `quartz/static/map-data.js` vid koordinaterna x: ' + x + '%, y: ' + y + '%.',
     '',
@@ -336,7 +396,8 @@ function generatePrompt() {
     'Gör följande:',
     '1. Läs igenom content/-mappen för att hitta relevant wiki-sida och bestämma lämpligt namn, typ (town/mountain/faction/fortress/event) och slug.',
     '2. Generera ett id i kebab-case från namnet (svenska tecken → a/o).',
-    '3. Lägg till pinnen i MAP_PINS-arrayen på en lämplig plats (gruppera med liknande typ).',
+    '3. Lägg till pinnen i MAP_PINS med både blurb (svenska) och blurb_en (engelska) ifyllda.',
+    '   Om namnet är på svenska, lägg även till name_en (engelsk översättning av namnet).',
     '4. Committa och pusha.',
   ].join('\n');
 }
@@ -344,20 +405,24 @@ function generatePrompt() {
 document.getElementById('pc-copy-btn').addEventListener('click', function () {
   var prompt = generatePrompt();
   navigator.clipboard.writeText(prompt).then(function () {
+    feedbackEl.textContent = t('pin_copied');
     feedbackEl.classList.add('show');
     setTimeout(function () { feedbackEl.classList.remove('show'); }, 2200);
   }).catch(function () {
-    feedbackEl.textContent = 'Kopiera manuellt (clipboard ej tillgänglig)';
+    feedbackEl.textContent = t('pin_copy_error');
     feedbackEl.classList.add('show');
-    setTimeout(function () { feedbackEl.classList.remove('show'); feedbackEl.textContent = 'Kopierat till urklipp!'; }, 3000);
+    setTimeout(function () {
+      feedbackEl.classList.remove('show');
+      feedbackEl.textContent = t('pin_copied');
+    }, 3000);
   });
 });
 
 document.getElementById('pc-close').addEventListener('click', closeCreator);
 
 // ─── CLICK HANDLERS ──────────────────────────────────────────────────────────
-var isMapBg = function (t) {
-  return t === wrap || t === zoomEl || t.classList.contains('map-img') || t.classList.contains('map-tint');
+var isMapBg = function (tgt) {
+  return tgt === wrap || tgt === zoomEl || tgt.classList.contains('map-img') || tgt.classList.contains('map-tint');
 };
 
 wrap.addEventListener('click', function (e) {

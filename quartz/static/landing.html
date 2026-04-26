@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" id="html-root">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -145,16 +145,17 @@
   <div class="topbar">
     <a class="brand" href="./landing.html">
       <div class="brand-mark">❄</div>
-      <span>Frostmaiden · Kampanjkrönika</span>
+      <span data-i18n="site_title">Frostmaiden · Kampanjkrönika</span>
     </a>
     <nav class="topnav">
-      <a href="#karta">Kartan</a>
-      <a href="#parti">Partiet</a>
-      <a href="#wiki">Wiki</a>
-      <a href="#tidslinje">Tidslinje</a>
-      <a href="../Sessions">Sessioner</a>
-      <a href="./chat.html">Spåkvinnan</a>
+      <a href="#karta" data-i18n="nav_map">Kartan</a>
+      <a href="#parti" data-i18n="nav_party">Partiet</a>
+      <a href="#wiki" data-i18n="nav_wiki">Wiki</a>
+      <a href="#tidslinje" data-i18n="nav_timeline">Tidslinje</a>
+      <a href="../Sessions" data-i18n="nav_sessions">Sessioner</a>
+      <a href="./chat.html" data-i18n="nav_chat">Saga</a>
       <button id="theme-btn" onclick="toggleTheme()" aria-label="Byt tema">☽ Natt</button>
+      <button id="lang-btn" onclick="toggleLang()" aria-label="Byt språk">EN</button>
     </nav>
   </div>
 
@@ -170,46 +171,37 @@
       <div class="hero-copy">
         <div class="hero-kicker">
           <span class="tick"></span>
-          <span>En kampanjkrönika från Icewind Dale</span>
+          <span data-i18n="hero_kicker">En kampanjkrönika från Icewind Dale</span>
         </div>
         <h1 class="hero-title">
           Rime of the<br>
           <em>Frostmaiden</em>
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub" data-i18n="hero_sub">
           En levande krönika över Zahirs gäng — deras bedrifter och bakslag i
           Aurils frusna vidder. Uppdateras efter varje session.
         </p>
         <div class="hero-actions">
-          <a class="btn primary hero-map-cta" href="#karta">Utforska kartan</a>
-          <a class="btn ghost" href="#wiki">Öppna wikin</a>
-          <a class="btn ghost" href="./chat.html">Fråga Spåkvinnan</a>
+          <a class="btn primary hero-map-cta" href="#karta" data-i18n="hero_cta_map">Utforska kartan</a>
+          <a class="btn ghost" href="#wiki" data-i18n="hero_cta_wiki">Öppna wikin</a>
+          <a class="btn ghost" href="./chat.html" data-i18n="hero_cta_chat">Fråga Saga</a>
         </div>
       </div>
 
       <aside class="status-card" aria-label="Kampanjstatus">
         <div class="status-head">
           <div class="status-day" aria-label="Dag 18">18</div>
-          <div class="status-day-label">Kampanjdag</div>
+          <div class="status-day-label" data-i18n="status_day_label">Kampanjdag</div>
         </div>
         <div class="status-body">
-          <div class="label">Senast i kampanjen</div>
-          <blockquote class="status-quote">
-            "Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns."
-          </blockquote>
-          <div class="status-attr">— Nildar Sunblight, dödsord</div>
-          <ul class="status-open-questions">
-            <li>⚠ Borc är medvetslös — stabiliserad av Zahir, men ej uppvaknad.</li>
-            <li>Var varelsen i cellen verkligen Eevie?</li>
-            <li>Vad har hänt med Keegan Valryn och The Burning Hammers?</li>
-            <li>Jarthras pärlor är ännu inte återlämnade…</li>
-          </ul>
+          <div class="label" data-i18n="status_latest">Senast i kampanjen</div>
+          <div id="status-body-content"></div>
         </div>
       </aside>
     </div>
 
     <div class="scroll-cue" aria-hidden="true">
-      <span>Rulla ned till kartan</span>
+      <span data-i18n="scroll_cue">Rulla ned till kartan</span>
       <div class="scroll-cue-line"></div>
     </div>
   </header>
@@ -219,10 +211,10 @@
     <div class="container">
       <div class="section-head-block">
         <div>
-          <div class="label">Kap. I · Topografi</div>
-          <h2>Icewind Dale</h2>
+          <div class="label" data-i18n="map_chapter">Kap. I · Topografi</div>
+          <h2 data-i18n="map_heading">Icewind Dale</h2>
         </div>
-        <p>
+        <p data-i18n="map_desc">
           Gruppen befinner sig i norr, söder om Sea of Moving Ice.
           Aurils förbannelse har släckt solen. Klicka på en nål för att läsa mer om platsen i wikin.
         </p>
@@ -233,7 +225,7 @@
           <div class="map-wrap" id="map-wrap">
             <div id="map-zoom" style="position:absolute;inset:0;transform-origin:0 0;">
               <img class="map-img" src="./assets/maps/icewind-dale.webp"
-                   alt="Karta över Icewind Dale" draggable="false">
+                   alt="Karta över Icewind Dale" id="map-img" draggable="false">
               <div class="map-tint" aria-hidden="true"></div>
               <!-- Map pins injected by JS -->
             </div>
@@ -241,8 +233,8 @@
           <div id="map-tooltip-layer" style="position:absolute;inset:0;pointer-events:none;"></div>
         </div>
         <div class="map-legend">
-          <span>❄ 14 markörer kartlagda</span>
-          <span>Skala: ~20 miles</span>
+          <span id="map-pins-count">❄ 15 markörer kartlagda</span>
+          <span data-i18n="map_scale">Skala: ~20 miles</span>
         </div>
       </div>
     </div>
@@ -257,10 +249,10 @@
     <div class="container">
       <div class="section-head-block">
         <div>
-          <div class="label">Kap. II · Zahirs gäng</div>
-          <h2>Partiet</h2>
+          <div class="label" data-i18n="party_chapter">Kap. II · Zahirs gäng</div>
+          <h2 data-i18n="party_heading">Partiet</h2>
         </div>
-        <p>
+        <p data-i18n="party_desc">
           Fyra själar bundna av tillfällighet och nödvändighet —
           en paladin, en warlock, en rogue och en barbar.
         </p>
@@ -278,10 +270,10 @@
     <div class="container">
       <div class="section-head-block">
         <div>
-          <div class="label">Kap. III · Krönika</div>
-          <h2>Wikin</h2>
+          <div class="label" data-i18n="wiki_chapter">Kap. III · Krönika</div>
+          <h2 data-i18n="wiki_heading">Wikin</h2>
         </div>
-        <p>
+        <p data-i18n="wiki_desc">
           Hela kampanjens dokumentation: platser, NPC:er, fraktioner,
           uppdrag och händelser. Klicka en sektion för att öppna kapitlet.
         </p>
@@ -299,18 +291,18 @@
     <div class="container">
       <div class="section-head-block">
         <div>
-          <div class="label">Kap. IV · Bedrifter</div>
-          <h2>Tidslinje</h2>
+          <div class="label" data-i18n="timeline_chapter">Kap. IV · Bedrifter</div>
+          <h2 data-i18n="timeline_heading">Tidslinje</h2>
         </div>
-        <p>Kampanjens händelser dag för dag — senaste händelsen högst upp.</p>
+        <p data-i18n="timeline_desc">Kampanjens händelser dag för dag — senaste händelsen högst upp.</p>
       </div>
 
       <div class="tl-legend">
-        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#8e44ad"></div>Socialt</div>
-        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#2980b9"></div>Resa</div>
-        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#27ae60"></div>Utredning</div>
-        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#d4762a"></div>Strid</div>
-        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#c0392b"></div>Dödsfall</div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#8e44ad"></div><span data-i18n="tl_social">Socialt</span></div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#2980b9"></div><span data-i18n="tl_travel">Resa</span></div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#27ae60"></div><span data-i18n="tl_invest">Utredning</span></div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#d4762a"></div><span data-i18n="tl_combat">Strid</span></div>
+        <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#c0392b"></div><span data-i18n="tl_death">Dödsfall</span></div>
       </div>
 
       <div class="timeline-v" id="timeline-v"></div>
@@ -329,46 +321,62 @@
 
 </div><!-- /page -->
 
+<script src="i18n.js"></script>
 <script src="map-data.js"></script>
 <script src="timeline-data.js"></script>
 <script>
-const WIKI = "../";
 
-const CHARACTERS = [
-  { id: "zahir", name: "Zahir", role: "Halfling Warlock",
-    portrait: "./assets/portraits/zahir.png",
-    blurb: "Från Calimport. Hög karisma, vass tunga, moraliskt tvivelaktig. Besegrade Nildar med Tasha's Hideous Laughter.",
-    slug: "Karakt%C3%A4rer/Zahir" },
-  { id: "nasher", name: "Nasher", role: "Alv Paladin · Tyrs orden",
-    portrait: "./assets/portraits/nasher.png",
-    blurb: "Justiciar av Tyr från Neverwinter. Föll två gånger i strid. Bär på skulden för Eevie-varelsen i cellen.",
-    slug: "Karakt%C3%A4rer/Nasher" },
-  { id: "sork", name: "Sork the Shadow", role: "Ork Rogue",
-    portrait: "./assets/portraits/sork.png",
-    blurb: "Avhoppare från Waterdeep via Fireshear. Spanare och bågskytt. Stjäl bara från dem som inte längre behöver det.",
-    slug: "Karakt%C3%A4rer/Sork-the-Shadow" },
-  { id: "borc", name: "Borc the Orc", role: "Goliath Barbar",
-    portrait: "./assets/portraits/borc.png",
-    blurb: "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i spikfällan, stabiliserades av Zahir. Medvetslös.",
-    slug: "Karakt%C3%A4rer/Borc-the-Orc" },
-];
+// ─── LANG INIT ────────────────────────────────────────────────────────────────
+var lang = getLang();
+document.getElementById('html-root').lang = lang;
+document.title = t('site_title');
+document.getElementById('lang-btn').textContent = t('lang_toggle');
+document.getElementById('map-img').alt = t('map_alt');
+document.getElementById('map-pins-count').textContent = '❄ ' + tf('map_pins_count', MAP_PINS.length);
 
-const WIKI_SECTIONS = [
-  { title: "NPC:er",              subtitle: "Levande, döda och försvunna",    count: 13, slug: "NPC",
-    items: ["Jarthra","Trovus","Glenn","Foxes in the Snow","Keegan Valryn","Hildur Trollbane","Torg","Cori & Allie","Eevie (?)","Bronn Bearhammer (†)","Aubril (†)","Nildar Sunblight (†)","Garret (saknad)"] },
-  { title: "Platser",             subtitle: "Städer, ruiner och fästningar",  count: 7,  slug: "Platser",
-    items: ["Icewind Dale","Bryn Shander","Caer Konig","Easthaven","Fireshear","Kelvins Cairn","Dvärgadalen"] },
-  { title: "Fraktioner",          subtitle: "Bundsförvanter, fiender, stammar", count: 5, slug: "Fraktioner",
-    items: ["Zahirs gäng","Tribe of the Owl","Dvärgarna i Dvärgadalen","Ten-Towns","The Burning Hammers"] },
-  { title: "Uppdrag & rykten",    subtitle: "Aktiva trådar i kampanjen",      count: 4,  slug: "Uppdrag%20%26%20rykten",
-    items: ["Morden i Ten-Towns","Sunblight-familjen","Aurils Rime (världsinfo)","Quest tracker"] },
-  { title: "Sessioner",           subtitle: "Dag för dag, session för session", count: 2, slug: "Sessions",
-    items: ["Session 01 — Vägen till Caer Konig","Session 02 — Caer Konig: Fästningen vid Kelvins Cairn"] },
-  { title: "Händelser & tidslinje", subtitle: "18 dagar av bedrifter och misstag", count: 4, slug: "H%C3%A4ndelser",
-    items: ["Tidslinje","Nashers misstag","Sorks fuckup","Dödsloggen"] },
-];
+// Apply all data-i18n text substitutions
+(function () {
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    el.textContent = t(el.getAttribute('data-i18n'));
+  });
+})();
 
-// ─── SNOW ─────────────────────────────────────────────────
+var WIKI = lang === 'en' ? '../en/' : '../';
+
+// ─── STATUS CARD ──────────────────────────────────────────────────────────────
+var STATUS = {
+  sv: {
+    quote: '"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns."',
+    attr:  '— Nildar Sunblight, dödsord',
+    questions: [
+      '⚠ Borc är medvetslös — stabiliserad av Zahir, men ej uppvaknad.',
+      'Var varelsen i cellen verkligen Eevie?',
+      'Vad har hänt med Keegan Valryn och The Burning Hammers?',
+      'Jarthras pärlor är ännu inte återlämnade…',
+    ]
+  },
+  en: {
+    quote: '"My father rides on a dragon\'s back and will destroy all of Ten-Towns."',
+    attr:  '— Nildar Sunblight, dying words',
+    questions: [
+      '⚠ Borc is unconscious — stabilized by Zahir, but not yet awoken.',
+      'Was the creature in the cell really Eevie?',
+      'What happened to Keegan Valryn and The Burning Hammers?',
+      'Jarthra\'s pearls have not yet been returned…',
+    ]
+  }
+};
+
+(function () {
+  var s = STATUS[lang] || STATUS.sv;
+  var qs = s.questions.map(function (q) { return '<li>' + q + '</li>'; }).join('');
+  document.getElementById('status-body-content').innerHTML =
+    '<blockquote class="status-quote">' + s.quote + '</blockquote>' +
+    '<div class="status-attr">' + s.attr + '</div>' +
+    '<ul class="status-open-questions">' + qs + '</ul>';
+})();
+
+// ─── SNOW ─────────────────────────────────────────────────────────────────────
 (function () {
   var container = document.getElementById('snow');
   var frag = document.createDocumentFragment();
@@ -387,7 +395,7 @@ const WIKI_SECTIONS = [
   container.appendChild(frag);
 })();
 
-// ─── SCROLL ───────────────────────────────────────────────
+// ─── SCROLL ───────────────────────────────────────────────────────────────────
 window.addEventListener('scroll', function () {
   var root = document.documentElement;
   var h = root.scrollHeight - root.clientHeight;
@@ -396,10 +404,34 @@ window.addEventListener('scroll', function () {
   document.getElementById('compass').style.setProperty('--compass-rot', (p * 140) + 'deg');
 }, { passive: true });
 
-// ─── PARTY CARDS ──────────────────────────────────────────
+// ─── PARTY CARDS ──────────────────────────────────────────────────────────────
+var CHARACTERS = [
+  { id: "zahir", name: "Zahir", role: "Halfling Warlock",
+    portrait: "./assets/portraits/zahir.png",
+    blurb:    "Från Calimport. Hög karisma, vass tunga, moraliskt tvivelaktig. Besegrade Nildar med Tasha's Hideous Laughter.",
+    blurb_en: "From Calimport. High charisma, sharp tongue, morally questionable. Defeated Nildar with Tasha's Hideous Laughter.",
+    slug: "Karakt%C3%A4rer/Zahir" },
+  { id: "nasher", name: "Nasher", role: "Alv Paladin · Tyrs orden",
+    portrait: "./assets/portraits/nasher.png",
+    blurb:    "Justiciar av Tyr från Neverwinter. Föll två gånger i strid. Bär på skulden för Eevie-varelsen i cellen.",
+    blurb_en: "Justiciar of Tyr from Neverwinter. Fell twice in battle. Carries the guilt for the Eevie-creature in the cell.",
+    slug: "Karakt%C3%A4rer/Nasher" },
+  { id: "sork", name: "Sork the Shadow", role: "Ork Rogue",
+    portrait: "./assets/portraits/sork.png",
+    blurb:    "Avhoppare från Waterdeep via Fireshear. Spanare och bågskytt. Stjäl bara från dem som inte längre behöver det.",
+    blurb_en: "Deserter from Waterdeep via Fireshear. Scout and archer. Only steals from those who no longer need it.",
+    slug: "Karakt%C3%A4rer/Sork-the-Shadow" },
+  { id: "borc", name: "Borc the Orc", role: "Goliath Barbar",
+    portrait: "./assets/portraits/borc.png",
+    blurb:    "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i spikfällan, stabiliserades av Zahir. Medvetslös.",
+    blurb_en: "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in the spike trap, stabilized by Zahir. Unconscious.",
+    slug: "Karakt%C3%A4rer/Borc-the-Orc" },
+];
+
 (function () {
   var grid = document.getElementById('party-grid');
   CHARACTERS.forEach(function (c) {
+    var blurb = (lang === 'en' && c.blurb_en) ? c.blurb_en : c.blurb;
     var a = document.createElement('a');
     a.className = 'char-card';
     a.href = WIKI + c.slug;
@@ -411,35 +443,69 @@ window.addEventListener('scroll', function () {
       '<div class="char-meta">' +
         '<div class="label">' + c.role + '</div>' +
         '<div class="char-name display">' + c.name + '</div>' +
-        '<p class="char-blurb">' + c.blurb + '</p>' +
-        '<div class="char-more">Läs mer <span aria-hidden="true">→</span></div>' +
+        '<p class="char-blurb">' + blurb + '</p>' +
+        '<div class="char-more">' + t('char_read_more') + '</div>' +
       '</div>';
     grid.appendChild(a);
   });
 })();
 
-// ─── WIKI SECTION CARDS ───────────────────────────────────
+// ─── WIKI SECTION CARDS ───────────────────────────────────────────────────────
+var WIKI_SECTIONS = [
+  { title: "NPC:er",
+    subtitle:    "Levande, döda och försvunna",
+    subtitle_en: "Living, dead, and missing",
+    count: 13, slug: "NPC",
+    items: ["Jarthra","Trovus","Glenn","Foxes in the Snow","Keegan Valryn","Hildur Trollbane","Torg","Cori & Allie","Eevie (?)","Bronn Bearhammer (†)","Aubril (†)","Nildar Sunblight (†)","Garret (saknad)"] },
+  { title: "Platser",
+    subtitle:    "Städer, ruiner och fästningar",
+    subtitle_en: "Cities, ruins, and fortresses",
+    count: 7, slug: "Platser",
+    items: ["Icewind Dale","Bryn Shander","Caer Konig","Easthaven","Fireshear","Kelvins Cairn","Dvärgadalen"] },
+  { title: "Fraktioner",
+    subtitle:    "Bundsförvanter, fiender, stammar",
+    subtitle_en: "Allies, enemies, tribes",
+    count: 5, slug: "Fraktioner",
+    items: ["Zahirs gäng","Tribe of the Owl","Dvärgarna i Dvärgadalen","Ten-Towns","The Burning Hammers"] },
+  { title: "Uppdrag & rykten",
+    subtitle:    "Aktiva trådar i kampanjen",
+    subtitle_en: "Active threads in the campaign",
+    count: 4, slug: "Uppdrag%20%26%20rykten",
+    items: ["Morden i Ten-Towns","Sunblight-familjen","Aurils Rime (världsinfo)","Quest tracker"] },
+  { title: "Sessioner",
+    subtitle:    "Dag för dag, session för session",
+    subtitle_en: "Day by day, session by session",
+    count: 2, slug: "Sessions",
+    items: ["Session 01 — Vägen till Caer Konig","Session 02 — Caer Konig: Fästningen vid Kelvins Cairn"] },
+  { title: "Händelser & tidslinje",
+    subtitle:    "18 dagar av bedrifter och misstag",
+    subtitle_en: "18 days of feats and mistakes",
+    count: 4, slug: "H%C3%A4ndelser",
+    items: ["Tidslinje","Nashers misstag","Sorks fuckup","Dödsloggen"] },
+];
+
 (function () {
   var grid = document.getElementById('sections-grid');
   WIKI_SECTIONS.forEach(function (s) {
+    var subtitle = (lang === 'en' && s.subtitle_en) ? s.subtitle_en : s.subtitle;
     var items = s.items.slice(0, 5).map(function (it) { return '<li>' + it + '</li>'; }).join('');
-    if (s.items.length > 5) items += '<li class="muted">+ ' + (s.items.length - 5) + ' fler</li>';
+    if (s.items.length > 5) items += '<li class="muted">' + tf('wiki_more', s.items.length - 5) + '</li>';
     var a = document.createElement('a');
     a.className = 'section-card';
     a.href = WIKI + s.slug;
     a.innerHTML =
       '<div class="section-head">' +
-        '<div class="label">' + s.subtitle + '</div>' +
+        '<div class="label">' + subtitle + '</div>' +
         '<div class="section-count">' + s.count + '</div>' +
       '</div>' +
       '<div class="section-title display">' + s.title + '</div>' +
       '<ul class="section-list">' + items + '</ul>' +
-      '<div class="section-foot"><span>Öppna kapitel</span><span aria-hidden="true">→</span></div>';
+      '<div class="section-foot"><span>' + t('wiki_open') + '</span><span aria-hidden="true">→</span></div>';
     grid.appendChild(a);
   });
 })();
 
-// ─── MAP PINS + ZOOM/PAN ──────────────────────────────────
+// ─── MAP PINS + ZOOM/PAN ──────────────────────────────────────────────────────
 (function () {
   var wrap   = document.getElementById('map-wrap');
   var zoomEl = document.getElementById('map-zoom');
@@ -457,7 +523,7 @@ window.addEventListener('scroll', function () {
   function applyTransform() {
     zoomEl.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
     wrap.classList.toggle('can-pan', s > 1);
-    renderTooltip(); // reposition tooltip after pan/zoom
+    renderTooltip();
   }
 
   wrap.addEventListener('wheel', function (e) {
@@ -509,7 +575,6 @@ window.addEventListener('scroll', function () {
     zoomEl.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
     if (btn) btn.classList.add('is-active');
 
-    // Position relative to portal using actual screen coords
     var pr = portal.getBoundingClientRect();
     var br = btn ? btn.getBoundingClientRect() : null;
     var cx = br ? (br.left + br.width / 2 - pr.left)  : (pin.x / 100 * pr.width);
@@ -517,6 +582,9 @@ window.addEventListener('scroll', function () {
 
     var flipX = cx / pr.width  > 0.6  ? '-100%' : '0%';
     var flipY = cy / pr.height > 0.55 ? '-100%' : '0%';
+
+    var pinName = (lang === 'en' && pin.name_en) ? pin.name_en : pin.name;
+    var blurb   = (lang === 'en' && pin.blurb_en) ? pin.blurb_en : pin.blurb;
 
     var tt = document.createElement('div');
     tt.className = 'map-tooltip';
@@ -530,23 +598,24 @@ window.addEventListener('scroll', function () {
     tt.innerHTML =
       '<div class="tooltip-corner tl"></div><div class="tooltip-corner tr"></div>' +
       '<div class="tooltip-corner bl"></div><div class="tooltip-corner br"></div>' +
-      '<div class="tt-label">Plats</div>' +
-      '<div class="tt-title">' + pin.name + '</div>' +
-      '<p class="tt-blurb">' + pin.blurb + '</p>' +
-      '<a class="tt-link" href="' + WIKI + pin.slug + '">Öppna i wikin <span aria-hidden="true">→</span></a>';
+      '<div class="tt-label">' + t('tooltip_type') + '</div>' +
+      '<div class="tt-title">' + pinName + '</div>' +
+      '<p class="tt-blurb">' + blurb + '</p>' +
+      '<a class="tt-link" href="' + WIKI + pin.slug + '">' + t('tooltip_open') + '</a>';
     portal.appendChild(tt);
   }
 
   // ── Build pins ──
   MAP_PINS.forEach(function (p) {
+    var pName = (lang === 'en' && p.name_en) ? p.name_en : p.name;
     var btn = document.createElement('button');
     btn.className = 'map-pin';
     btn.setAttribute('data-pin', p.id);
     btn.setAttribute('data-type', p.type || 'town');
-    btn.setAttribute('aria-label', p.name);
+    btn.setAttribute('aria-label', pName);
     btn.style.left = p.x + '%';
     btn.style.top  = p.y + '%';
-    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + p.name + '</span>' : '');
+    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + pName + '</span>' : '');
 
     btn.addEventListener('mouseenter', function () {
       hovered = p.id;
@@ -580,7 +649,7 @@ window.addEventListener('scroll', function () {
   });
 })();
 
-// ─── TIMELINE ─────────────────────────────────────────────
+// ─── TIMELINE ─────────────────────────────────────────────────────────────────
 (function () {
   var container = document.getElementById('timeline-v');
   if (!container) return;
@@ -592,12 +661,15 @@ window.addEventListener('scroll', function () {
 
   // Reverse chronological: most recent session first, events within each reversed
   TIMELINE_SESSIONS.slice().reverse().forEach(function(session) {
+    var label = (lang === 'en' && session.label_en) ? session.label_en : session.label;
     var hdr = document.createElement('div');
     hdr.className = 'tl-session';
-    hdr.innerHTML = '<a href="' + WIKI + session.slug + '">' + esc(session.label) + '</a>';
+    hdr.innerHTML = '<a href="' + WIKI + session.slug + '">' + esc(label) + '</a>';
     container.appendChild(hdr);
 
     groups[session.id].slice().reverse().forEach(function(ev) {
+      var title = (lang === 'en' && ev.title_en) ? ev.title_en : ev.title;
+      var desc  = (lang === 'en' && ev.desc_en)  ? ev.desc_en  : ev.desc;
       var item = document.createElement('div');
       item.className = 'tl-event tl-' + ev.type;
       item.innerHTML =
@@ -605,26 +677,25 @@ window.addEventListener('scroll', function () {
           '<div class="tl-header">' +
             '<span class="tl-day">' + ev.day + '</span>' +
             '<span class="tl-icon">' + ev.icon + '</span>' +
-            '<span class="tl-title">' + ev.title + '</span>' +
+            '<span class="tl-title">' + title + '</span>' +
           '</div>' +
-          '<div class="tl-desc">' + ev.desc + '</div>' +
+          '<div class="tl-desc">' + desc + '</div>' +
         '</div>';
       container.appendChild(item);
     });
   });
 })();
 
-// ─── THEME TOGGLE ─────────────────────────────────────────
+// ─── THEME TOGGLE ─────────────────────────────────────────────────────────────
 function toggleTheme() {
   var root = document.getElementById('page-root');
   var btn  = document.getElementById('theme-btn');
   root.classList.toggle('night');
-  // Also on <html> so body { color: var(--ink) } resolves the night variable
   document.documentElement.classList.toggle('night');
   var isNight = root.classList.contains('night');
-  btn.textContent = isNight ? '☀ Dag' : '☽ Natt';
+  btn.textContent = isNight ? t('theme_day') : t('theme_night');
   document.getElementById('footer-variant').textContent =
-    isNight ? 'Nattbok · Nordens mörka timmar' : 'Frost-vellum · Dagkrönika';
+    isNight ? t('footer_night') : t('footer_day');
   localStorage.setItem('theme', isNight ? 'dark' : 'light');
 }
 (function () {

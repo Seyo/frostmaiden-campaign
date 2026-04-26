@@ -77,6 +77,20 @@
 }
 #theme-btn:hover { border-color: var(--ink); color: var(--ink); }
 
+#lang-btn {
+  background: none;
+  border: 1px solid var(--ink-faded);
+  color: var(--ink-soft);
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#lang-btn:hover { border-color: var(--ink); color: var(--ink); }
+
 /* ─── HERO ─── */
 .hero {
   position: relative;

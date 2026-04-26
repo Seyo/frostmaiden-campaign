@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" id="html-root">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -121,26 +121,63 @@
     .type-invest::before     { background: #27ae60; }
     .type-social .event-card { border-left-color: #8e44ad; }
     .type-social::before     { background: #8e44ad; }
+
+    /* ── Lang toggle ── */
+    #lang-btn {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: 1px solid #2d4a5e;
+      color: #4a8099;
+      background: transparent;
+      padding: 4px 9px;
+      cursor: pointer;
+      z-index: 50;
+    }
+    #lang-btn:hover { border-color: #7ab8d4; color: #7ab8d4; }
   </style>
 </head>
 <body>
 
-  <h1>Kampanjens tidslinje</h1>
+  <h1 id="page-title">Kampanjens tidslinje</h1>
 
   <div class="legend">
-    <div class="legend-item"><div class="legend-dot" style="background:#8e44ad"></div>Socialt</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#2980b9"></div>Resa</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#27ae60"></div>Utredning</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div>Strid</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#c0392b"></div>Dödsfall</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8e44ad"></div><span id="leg-social">Socialt</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2980b9"></div><span id="leg-travel">Resa</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#27ae60"></div><span id="leg-invest">Utredning</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div><span id="leg-combat">Strid</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#c0392b"></div><span id="leg-death">Dödsfall</span></div>
   </div>
 
   <div class="timeline" id="timeline"></div>
 
+  <button id="lang-btn" onclick="toggleLang()">EN</button>
+
+  <script src="i18n.js"></script>
   <script src="timeline-data.js"></script>
   <script>
-    function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-    function withParent(html) { return html.replace(/<a /g, '<a target="_parent" '); }
+    var lang = getLang();
+    document.getElementById('html-root').lang = lang;
+    document.getElementById('lang-btn').textContent = t('lang_toggle');
+    document.getElementById('page-title').textContent = t('timeline_title');
+    document.getElementById('leg-social').textContent = t('tl_social');
+    document.getElementById('leg-travel').textContent = t('tl_travel');
+    document.getElementById('leg-invest').textContent = t('tl_invest');
+    document.getElementById('leg-combat').textContent = t('tl_combat');
+    document.getElementById('leg-death').textContent  = t('tl_death');
+
+    var WIKI = lang === 'en' ? '../en/' : '../';
+
+    function processDesc(html) {
+      // Rewrite wiki links for English wiki when lang=en
+      if (lang === 'en') html = html.replace(/href="\.\.\/(?!en\/)/g, 'href="../en/');
+      // Add target="_parent" so links escape the iframe if embedded
+      return html.replace(/<a /g, '<a target="_parent" ');
+    }
 
     var container = document.getElementById('timeline');
     var groups = {};
@@ -148,12 +185,15 @@
     TIMELINE_EVENTS.forEach(function(e) { if (groups[e.session]) groups[e.session].push(e); });
 
     TIMELINE_SESSIONS.forEach(function(session) {
+      var label = (lang === 'en' && session.label_en) ? session.label_en : session.label;
       var hdr = document.createElement('div');
       hdr.className = 'session-header';
-      hdr.innerHTML = '<a href="../' + session.slug + '" target="_parent">' + esc(session.label) + '</a>';
+      hdr.innerHTML = '<a href="' + WIKI + session.slug + '" target="_parent">' + label + '</a>';
       container.appendChild(hdr);
 
       groups[session.id].forEach(function(ev) {
+        var title = (lang === 'en' && ev.title_en) ? ev.title_en : ev.title;
+        var desc  = (lang === 'en' && ev.desc_en)  ? ev.desc_en  : ev.desc;
         var item = document.createElement('div');
         item.className = 'event type-' + ev.type;
         item.innerHTML =
@@ -161,9 +201,9 @@
             '<div class="event-header">' +
               '<span class="event-day">' + ev.day + '</span>' +
               '<span class="event-icon">' + ev.icon + '</span>' +
-              '<span class="event-title">' + ev.title + '</span>' +
+              '<span class="event-title">' + title + '</span>' +
             '</div>' +
-            '<div class="event-desc">' + withParent(ev.desc) + '</div>' +
+            '<div class="event-desc">' + processDesc(desc) + '</div>' +
           '</div>';
         container.appendChild(item);
       });

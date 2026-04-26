@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" id="html-root">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spåkvinnan · Frostmaiden</title>
+  <title>Saga · Frostmaiden</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+DW+Pica+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Unicase:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -470,7 +470,7 @@
       opacity: 0.7;
     }
 
-    /* ─── TOP BAR (reuse from page.css) ─── */
+    /* ─── TOP BAR ─── */
     .topbar-chat {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -487,9 +487,7 @@
       background: rgba(23, 30, 43, 0.92);
       border-bottom-color: rgba(100, 120, 150, 0.2);
     }
-    .topbar-chat .brand {
-      font-size: 0.95rem;
-    }
+    .topbar-chat .brand { font-size: 0.95rem; }
     .topbar-chat nav {
       display: flex;
       gap: 20px;
@@ -518,6 +516,19 @@
       transition: all 0.2s;
     }
     #chat-theme-btn:hover { border-color: var(--ink); color: var(--ink); }
+    #site-lang-btn {
+      background: none;
+      border: 1px solid var(--ink-faded);
+      color: var(--ink-soft);
+      font-family: var(--font-label);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.68rem;
+      padding: 4px 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #site-lang-btn:hover { border-color: var(--ink); color: var(--ink); }
 
     /* ─── BODY OFFSET FOR FIXED TOPBAR ─── */
     .chat-layout { padding-top: 68px; }
@@ -535,12 +546,13 @@
   <div class="topbar-chat">
     <a class="brand" href="./landing.html">
       <div class="brand-mark">❄</div>
-      <span>Frostmaiden · Kampanjkrönika</span>
+      <span id="brand-title">Frostmaiden · Kampanjkrönika</span>
     </a>
     <nav>
-      <a href="./landing.html">Startsida</a>
-      <a href="../Sessions">Sessioner</a>
+      <a href="./landing.html" id="nav-home">Startsida</a>
+      <a href="../Sessions" id="nav-sessions">Sessioner</a>
       <button id="chat-theme-btn" onclick="toggleTheme()" aria-label="Byt tema">☽ Natt</button>
+      <button id="site-lang-btn" onclick="toggleLang()">EN</button>
     </nav>
   </div>
 
@@ -548,21 +560,21 @@
   <div class="chat-layout">
 
     <header class="chat-header">
-      <h1>Spåkvinnan</h1>
-      <div class="subtitle">Fråga om kampanjen</div>
+      <h1>Saga</h1>
+      <div class="subtitle" id="chat-subtitle">Fråga om kampanjen</div>
       <div class="ornament-line"><span class="glyph">✦</span></div>
     </header>
 
     <!-- SETUP PANEL (shown until configured) -->
     <div id="setup-panel">
       <div class="setup-card">
-        <h2>Välj leverantör</h2>
-        <p>
+        <h2 id="setup-heading">Välj leverantör</h2>
+        <p id="setup-desc">
           Anrop görs direkt från din webbläsare. Nyckel och inställningar
           sparas lokalt och skickas aldrig vidare.
         </p>
 
-        <label for="provider-select">Leverantör</label>
+        <label for="provider-select" id="label-provider">Leverantör</label>
         <select id="provider-select" onchange="onProviderChange(this.value)">
           <option value="anthropic">Anthropic (Claude)</option>
           <option value="openai">OpenAI</option>
@@ -570,15 +582,15 @@
         </select>
 
         <div id="custom-url-row">
-          <label for="custom-url-input">Bas-URL</label>
+          <label for="custom-url-input" id="label-base-url">Bas-URL</label>
           <input type="text" id="custom-url-input" placeholder="http://localhost:11434/v1" value="http://localhost:11434/v1" autocomplete="off" spellcheck="false">
         </div>
 
-        <label for="api-key-input" id="api-key-label">API-nyckel</label>
+        <label for="api-key-input" id="label-api-key">API-nyckel</label>
         <input type="password" id="api-key-input" placeholder="sk-ant-…" autocomplete="off" spellcheck="false">
         <div class="setup-hint-inline" id="api-key-hint"></div>
 
-        <label for="model-input-setup">Modell</label>
+        <label for="model-input-setup" id="label-model">Modell</label>
         <div style="display:flex;gap:8px;align-items:center;margin-bottom:16px">
           <input type="text" id="model-input-setup" placeholder="claude-haiku-4-5-20251001"
             autocomplete="off" spellcheck="false" list="model-suggestions"
@@ -594,13 +606,13 @@
           </button>
         </div>
 
-        <label for="lang-select-setup">Svarsspråk</label>
+        <label for="lang-select-setup" id="label-resp-lang">Svarsspråk</label>
         <select id="lang-select-setup">
           <option value="sv">Svenska</option>
           <option value="en">English</option>
         </select>
 
-        <button class="btn-save" onclick="saveSetup()">Spara &amp; börja</button>
+        <button class="btn-save" id="save-btn" onclick="saveSetup()">Spara &amp; börja</button>
       </div>
     </div>
 
@@ -610,9 +622,9 @@
         <div style="display:flex;gap:8px;align-items:center">
           <span class="provider-badge" id="provider-badge">Anthropic</span>
           <input type="text" id="model-input-chat" value="claude-haiku-4-5-20251001" onchange="saveModel(this.value)" title="Modell">
-          <button class="lang-toggle" id="lang-toggle-chat" onclick="toggleLang()" title="Byt svarsspråk">SV</button>
+          <button class="lang-toggle" id="lang-toggle-chat" onclick="toggleChatLang()" title="Byt svarsspråk">SV</button>
         </div>
-        <button class="btn-reset" onclick="resetKey()">Byt inställningar</button>
+        <button class="btn-reset" id="reset-btn" onclick="resetKey()">Byt inställningar</button>
       </div>
 
       <div id="knowledge-warn" class="knowledge-warn" style="display:none">
@@ -633,7 +645,7 @@
           <button id="send-btn" onclick="sendMessage()">Skicka</button>
         </div>
         <div class="input-footer">
-          <span>Enter skickar · Shift+Enter radbrytning</span>
+          <span id="send-hint">Enter skickar · Shift+Enter radbrytning</span>
           <span id="token-estimate"></span>
         </div>
       </div>
@@ -641,13 +653,38 @@
 
   </div><!-- /.chat-layout -->
 
+  <script src="./i18n.js"></script>
   <script>
+  // ─── UI LANG (site lang, separate from Saga's response lang) ─────────────
+  var uiLang = getLang();
+  document.getElementById('html-root').lang = uiLang;
+  document.title = t('chat_title');
+  document.getElementById('brand-title').textContent  = t('site_title');
+  document.getElementById('nav-home').textContent      = t('nav_home');
+  document.getElementById('nav-sessions').textContent  = t('nav_sessions');
+  document.getElementById('site-lang-btn').textContent = t('lang_toggle');
+  document.getElementById('chat-subtitle').textContent = t('chat_subtitle');
+  document.getElementById('setup-heading').textContent = t('chat_setup_heading');
+  document.getElementById('setup-desc').textContent    = t('chat_setup_desc');
+  document.getElementById('label-provider').textContent   = t('chat_label_provider');
+  document.getElementById('label-base-url').textContent   = t('chat_label_base_url');
+  document.getElementById('label-api-key').textContent    = t('chat_label_api_key');
+  document.getElementById('label-model').textContent      = t('chat_label_model');
+  document.getElementById('label-resp-lang').textContent  = t('chat_label_resp_lang');
+  document.getElementById('save-btn').textContent         = t('chat_save_btn');
+  document.getElementById('fetch-models-btn').textContent = t('chat_fetch_btn');
+  document.getElementById('reset-btn').textContent        = t('chat_reset_btn');
+  document.getElementById('knowledge-warn').textContent   = t('chat_knowledge_warn');
+  document.getElementById('user-input').placeholder       = t('chat_placeholder');
+  document.getElementById('send-btn').textContent         = t('chat_send_btn');
+  document.getElementById('send-hint').textContent        = t('chat_send_hint');
+
   // ─── STATE ───────────────────────────────────────────────────────────────
   var provider  = localStorage.getItem('fm_provider')   || 'anthropic';
   var apiKey    = localStorage.getItem('fm_api_key')    || '';
   var customUrl = localStorage.getItem('fm_custom_url') || 'http://localhost:11434/v1';
   var model     = localStorage.getItem('fm_model')      || 'claude-haiku-4-5-20251001';
-  var lang      = localStorage.getItem('fm_lang')       || 'sv';
+  var lang      = localStorage.getItem('fm_lang')       || 'sv';  // Saga's response language
   var knowledge = [];
   var wikiMap   = {};
   var systemPrompt = '';
@@ -658,23 +695,35 @@
     anthropic: {
       label: 'Anthropic',
       defaultModel: 'claude-haiku-4-5-20251001',
-      keyPlaceholder: 'sk-ant-…',
+      keyPlaceholder: { sv: 'sk-ant-…', en: 'sk-ant-…' },
       keyRequired: true,
-      hint: 'Skapa nyckel på <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>',
+      hint: {
+        sv: 'Skapa nyckel på <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>',
+        en: 'Create key at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>',
+      },
     },
     openai: {
       label: 'OpenAI',
       defaultModel: 'gpt-4o-mini',
-      keyPlaceholder: 'sk-…',
+      keyPlaceholder: { sv: 'sk-…', en: 'sk-…' },
       keyRequired: true,
-      hint: 'Skapa nyckel på <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>',
+      hint: {
+        sv: 'Skapa nyckel på <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>',
+        en: 'Create key at <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>',
+      },
     },
     custom: {
       label: 'Custom',
       defaultModel: 'llama3',
-      keyPlaceholder: 'Lämna tomt om ingen auth krävs',
+      keyPlaceholder: {
+        sv: 'Lämna tomt om ingen auth krävs',
+        en: 'Leave empty if no auth required',
+      },
       keyRequired: false,
-      hint: 'Ollama: starta med <code>OLLAMA_ORIGINS=* ollama serve</code>',
+      hint: {
+        sv: 'Ollama: starta med <code>OLLAMA_ORIGINS=* ollama serve</code>',
+        en: 'Ollama: start with <code>OLLAMA_ORIGINS=* ollama serve</code>',
+      },
     },
   };
 
@@ -688,7 +737,7 @@
     document.getElementById('model-input-setup').value  = model;
     document.getElementById('custom-url-input').value   = customUrl;
     document.getElementById('lang-select-setup').value  = lang;
-    updateLangToggle();
+    updateChatLangToggle();
 
     if (localStorage.getItem('fm_configured') === '1') {
       showChat();
@@ -700,15 +749,14 @@
   function onProviderChange(val) {
     applyProviderUI(val);
     var p = PROVIDERS[val] || PROVIDERS.anthropic;
-    var modelEl = document.getElementById('model-input-setup');
-    modelEl.value = p.defaultModel;
+    document.getElementById('model-input-setup').value = p.defaultModel;
   }
 
   function applyProviderUI(val) {
     var p = PROVIDERS[val] || PROVIDERS.anthropic;
     document.getElementById('provider-select').value = val;
-    document.getElementById('api-key-input').placeholder = p.keyPlaceholder;
-    document.getElementById('api-key-hint').innerHTML = p.hint;
+    document.getElementById('api-key-input').placeholder = p.keyPlaceholder[uiLang] || p.keyPlaceholder.sv;
+    document.getElementById('api-key-hint').innerHTML = p.hint[uiLang] || p.hint.sv;
     document.getElementById('custom-url-row').style.display = val === 'custom' ? 'block' : 'none';
     document.getElementById('fetch-models-btn').style.display = val === 'custom' ? 'inline-block' : 'none';
     document.getElementById('provider-badge').textContent = p.label;
@@ -730,16 +778,16 @@
       var ids = (data.data || data.models || []).map(function(m) {
         return m.id || m.name || String(m);
       }).filter(Boolean).sort();
-      if (!ids.length) throw new Error('Inga modeller hittades');
+      if (!ids.length) throw new Error(uiLang === 'en' ? 'No models found' : 'Inga modeller hittades');
       var dl = document.getElementById('model-suggestions');
       dl.innerHTML = ids.map(function(id) {
         return '<option value="' + esc(id) + '">';
       }).join('');
       document.getElementById('model-input-setup').value = ids[0];
-      btn.textContent = ids.length + ' st';
+      btn.textContent = ids.length + (uiLang === 'en' ? ' found' : ' st');
     } catch (e) {
-      btn.textContent = 'Fel';
-      setTimeout(function() { btn.textContent = 'Hämta'; }, 2000);
+      btn.textContent = uiLang === 'en' ? 'Error' : 'Fel';
+      setTimeout(function() { btn.textContent = t('chat_fetch_btn'); }, 2000);
     } finally {
       btn.disabled = false;
     }
@@ -798,18 +846,19 @@
     document.getElementById('chat-panel').classList.add('visible');
     document.getElementById('model-input-chat').value = model;
     document.getElementById('provider-badge').textContent = (PROVIDERS[provider] || PROVIDERS.anthropic).label;
-    updateLangToggle();
+    updateChatLangToggle();
     document.getElementById('user-input').focus();
   }
 
-  function toggleLang() {
+  // toggleChatLang: controls Saga's response language (fm_lang), not the site UI lang
+  function toggleChatLang() {
     lang = lang === 'sv' ? 'en' : 'sv';
     localStorage.setItem('fm_lang', lang);
-    updateLangToggle();
+    updateChatLangToggle();
     if (knowledge.length) buildSystemPrompt();
   }
 
-  function updateLangToggle() {
+  function updateChatLangToggle() {
     var btn = document.getElementById('lang-toggle-chat');
     if (btn) btn.textContent = lang.toUpperCase();
     var sel = document.getElementById('lang-select-setup');
@@ -837,11 +886,11 @@
 
   function getBaseSystem() {
     if (lang === 'en') {
-      return 'You are an AI assistant and expert on this D&D campaign. Always answer in English. ' +
+      return 'You are Saga, an AI assistant and expert on this D&D campaign. Always answer in English. ' +
         'Keep answers concise unless the user asks for detail. ' +
         'Use [[NoteName]] syntax when referring to specific characters, locations, or events.';
     }
-    return 'Du är en AI-assistent och expert på detta D&D-äventyr. ' +
+    return 'Du är Saga, en AI-assistent och expert på detta D&D-äventyr. ' +
       'Du svarar alltid på svenska. Håll svaren kortfattade om inte användaren ber om detaljer. ' +
       'Använd [[Notnamn]]-syntax när du refererar till specifika karaktärer, platser eller händelser.';
   }
@@ -853,7 +902,6 @@
         return p.replace(/ /g, '-');
       }).join('/');
       wikiMap[e.title] = url;
-      // also map without dagger/parens variants for LLM responses
       var clean = e.title.replace(/\s*\(†\)\s*$/, '').replace(/\(†\)/, '').trim();
       if (clean !== e.title) wikiMap[clean] = url;
     });
@@ -899,7 +947,7 @@
     if (!knowledge.length) return;
     var chars = systemPrompt.length;
     var est = Math.round(chars / 4 / 1000);
-    document.getElementById('token-estimate').textContent = '~' + est + 'k tokens i kontext';
+    document.getElementById('token-estimate').textContent = tf('chat_tokens', est);
   }
 
   // ─── CHAT ────────────────────────────────────────────────────────────────
@@ -987,7 +1035,7 @@
           ? evt.delta.text : null;
       }, onChunk);
       onDone(accumulated);
-    } catch (e) { onError(e.message || 'Nätverksfel'); }
+    } catch (e) { onError(e.message || t('chat_network_error')); }
   }
 
   async function callOpenAICompat(messages, onChunk, onDone, onError) {
@@ -1015,7 +1063,7 @@
           ? (evt.choices[0].delta.content || null) : null;
       }, onChunk);
       onDone(accumulated);
-    } catch (e) { onError(e.message || 'Nätverksfel'); }
+    } catch (e) { onError(e.message || t('chat_network_error')); }
   }
 
   async function readSSE(resp, extractor, onChunk) {
@@ -1050,7 +1098,7 @@
     wrap.className = 'message ' + role;
     var label = document.createElement('div');
     label.className = 'msg-label';
-    label.textContent = role === 'user' ? 'Du' : 'Spåkvinnan';
+    label.textContent = role === 'user' ? t('chat_label_you') : 'Saga';
     var bubble = document.createElement('div');
     bubble.className = 'msg-bubble';
     bubble.innerHTML = renderText(text, role === 'assistant');
@@ -1062,13 +1110,12 @@
   }
 
   function appendTyping() {
-    var msgs = document.createElement('div'); // dummy, overwritten below
     var wrap = document.createElement('div');
     wrap.className = 'message assistant';
     wrap.id = 'typing-' + Date.now();
     var label = document.createElement('div');
     label.className = 'msg-label';
-    label.textContent = 'Spåkvinnan';
+    label.textContent = 'Saga';
     var bubble = document.createElement('div');
     bubble.className = 'msg-bubble typing-bubble';
     bubble.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
@@ -1088,8 +1135,8 @@
     if (!el) return;
     el.querySelector('.msg-bubble').innerHTML = renderText(text, true);
     if (startTime) {
-      var t = el.querySelector('.msg-timing');
-      if (t) t.textContent = ((Date.now() - startTime) / 1000).toFixed(1) + 's';
+      var t2 = el.querySelector('.msg-timing');
+      if (t2) t2.textContent = ((Date.now() - startTime) / 1000).toFixed(1) + 's';
     }
     scrollBottom();
   }
@@ -1098,8 +1145,8 @@
     var el = document.getElementById(id);
     if (!el) return;
     el.querySelector('.msg-bubble').innerHTML = renderText(text, true);
-    var t = el.querySelector('.msg-timing');
-    if (t) t.textContent = elapsed ? elapsed + 's' : '';
+    var t2 = el.querySelector('.msg-timing');
+    if (t2) t2.textContent = elapsed ? elapsed + 's' : '';
     scrollBottom();
   }
 
@@ -1112,7 +1159,7 @@
     var msgs = document.getElementById('messages');
     var div = document.createElement('div');
     div.className = 'message assistant';
-    div.innerHTML = '<div class="msg-label">Spåkvinnan</div><div class="error-msg">Fel: ' + esc(msg) + '</div>';
+    div.innerHTML = '<div class="msg-label">Saga</div><div class="error-msg">' + t('chat_error_prefix') + esc(msg) + '</div>';
     msgs.appendChild(div);
     scrollBottom();
   }
@@ -1126,29 +1173,18 @@
   function renderText(text, isAssistant) {
     if (!isAssistant) return '<p>' + esc(text).replace(/\n\n+/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
 
-    // Escape HTML first, then apply markdown-like transforms
     var html = esc(text);
 
-    // Wikilinks [[Note]] → clickable links
     html = html.replace(/\[\[([^\]]+)\]\]/g, function(_, name) {
       var url = wikiMap[name.trim()];
       if (url) return '<a href="' + url + '" class="wikiref" target="_parent">' + esc2(name) + '</a>';
       return '<span class="wikiref" style="cursor:default;border-bottom-style:dashed">' + esc2(name) + '</span>';
     });
 
-    // Headers ### → h3
     html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-
-    // Bold **text**
     html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-
-    // Italic *text* (not already inside **)
     html = html.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
-
-    // Inline code `text`
     html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
-
-    // Paragraphs
     html = '<p>' + html.replace(/\n\n+/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
 
     return html;
@@ -1161,7 +1197,6 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
   }
-  // For content already escaped once (wikilinks inside escaped HTML)
   function esc2(s) { return s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
   // ─── THEME ───────────────────────────────────────────────────────────────
@@ -1172,7 +1207,7 @@
   }
   function updateThemeBtn() {
     var btn = document.getElementById('chat-theme-btn');
-    if (btn) btn.textContent = document.body.classList.contains('night') ? '☀ Dag' : '☽ Natt';
+    if (btn) btn.textContent = document.body.classList.contains('night') ? t('theme_day') : t('theme_night');
   }
   </script>
 
