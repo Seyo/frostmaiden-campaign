@@ -1,0 +1,23 @@
+{
+  "day": 18,
+  "sv": {
+    "quote": "\"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns.\"",
+    "attr": "— Nildar Sunblight, dödsord",
+    "questions": [
+      "⚠ Borc är medvetslös — stabiliserad av Zahir, men ej uppvaknad.",
+      "Var varelsen i cellen verkligen Eevie?",
+      "Vad har hänt med Keegan Valryn och The Burning Hammers?",
+      "Jarthras pärlor är ännu inte återlämnade…"
+    ]
+  },
+  "en": {
+    "quote": "\"My father rides on a dragon's back and will destroy all of Ten-Towns.\"",
+    "attr": "— Nildar Sunblight, dying words",
+    "questions": [
+      "⚠ Borc is unconscious — stabilized by Zahir, but not yet awoken.",
+      "Was the creature in the cell really Eevie?",
+      "What happened to Keegan Valryn and The Burning Hammers?",
+      "Jarthra's pearls have not yet been returned…"
+    ]
+  }
+}

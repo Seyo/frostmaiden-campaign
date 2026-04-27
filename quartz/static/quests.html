@@ -185,6 +185,20 @@
   <script src="i18n.js"></script>
   <script src="quests-data.js"></script>
   <script>
+  // filter() at top-level so onclick="filter(...)" can find it on window.
+  function filter(status) {
+    document.querySelectorAll('.filter-btn').forEach(function (btn) {
+      btn.classList.toggle('active',
+        btn.classList.contains(status) || (status === 'all' && btn.classList.contains('all')));
+    });
+    document.querySelectorAll('.card').forEach(function (card) {
+      card.classList.toggle('hidden', status !== 'all' && card.dataset.status !== status);
+    });
+  }
+
+  (async function () {
+    await Promise.all([I18N_READY, QUESTS_DATA_READY]);
+
     var lang = getLang();
     document.getElementById('html-root').lang = lang;
     document.getElementById('lang-btn').textContent    = t('lang_toggle');
@@ -232,16 +246,7 @@
         '<div class="card-meta">' + meta + '</div>';
       grid.appendChild(card);
     });
-
-    function filter(status) {
-      document.querySelectorAll('.filter-btn').forEach(function (btn) {
-        btn.classList.toggle('active',
-          btn.classList.contains(status) || (status === 'all' && btn.classList.contains('all')));
-      });
-      document.querySelectorAll('.card').forEach(function (card) {
-        card.classList.toggle('hidden', status !== 'all' && card.dataset.status !== status);
-      });
-    }
+  })();
   </script>
 
 </body>

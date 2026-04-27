@@ -160,6 +160,9 @@
   <script src="i18n.js"></script>
   <script src="timeline-data.js"></script>
   <script>
+  (async function () {
+    await Promise.all([I18N_READY, TIMELINE_DATA_READY]);
+
     var lang = getLang();
     document.getElementById('html-root').lang = lang;
     document.getElementById('lang-btn').textContent = t('lang_toggle');
@@ -208,6 +211,7 @@
         container.appendChild(item);
       });
     });
+  })();
   </script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+[
+  {
+    "title": "NPC:er",
+    "title_en": "NPCs",
+    "subtitle": "Levande, döda och försvunna",
+    "subtitle_en": "Living, dead, and missing",
+    "count": 13,
+    "slug": "NPC",
+    "items": [
+      "Jarthra",
+      "Trovus",
+      "Glenn",
+      "Foxes in the Snow",
+      "Keegan Valryn",
+      "Hildur Trollbane",
+      "Torg",
+      "Cori & Allie",
+      "Eevie (?)",
+      "Bronn Bearhammer (†)",
+      "Aubril (†)",
+      "Nildar Sunblight (†)",
+      "Garret (saknad)"
+    ]
+  },
+  {
+    "title": "Platser",
+    "title_en": "Places",
+    "subtitle": "Städer, ruiner och fästningar",
+    "subtitle_en": "Cities, ruins, and fortresses",
+    "count": 7,
+    "slug": "Platser",
+    "items": [
+      "Icewind Dale",
+      "Bryn Shander",
+      "Caer Konig",
+      "Easthaven",
+      "Fireshear",
+      "Kelvins Cairn",
+      "Dvärgadalen"
+    ]
+  },
+  {
+    "title": "Fraktioner",
+    "title_en": "Factions",
+    "subtitle": "Bundsförvanter, fiender, stammar",
+    "subtitle_en": "Allies, enemies, tribes",
+    "count": 5,
+    "slug": "Fraktioner",
+    "items": [
+      "Zahirs gäng",
+      "Tribe of the Owl",
+      "Dvärgarna i Dvärgadalen",
+      "Ten-Towns",
+      "The Burning Hammers"
+    ]
+  },
+  {
+    "title": "Uppdrag & rykten",
+    "title_en": "Quests & Rumors",
+    "subtitle": "Aktiva trådar i kampanjen",
+    "subtitle_en": "Active threads in the campaign",
+    "count": 4,
+    "slug": "Uppdrag%20%26%20rykten",
+    "items": [
+      "Morden i Ten-Towns",
+      "Sunblight-familjen",
+      "Aurils Rime (världsinfo)",
+      "Quest tracker"
+    ]
+  },
+  {
+    "title": "Sessioner",
+    "title_en": "Sessions",
+    "subtitle": "Dag för dag, session för session",
+    "subtitle_en": "Day by day, session by session",
+    "count": 2,
+    "slug": "Sessions",
+    "items": [
+      "Session 01 — Vägen till Caer Konig",
+      "Session 02 — Caer Konig: Fästningen vid Kelvins Cairn"
+    ]
+  },
+  {
+    "title": "Händelser & tidslinje",
+    "title_en": "Events & Timeline",
+    "subtitle": "18 dagar av bedrifter och misstag",
+    "subtitle_en": "18 days of feats and mistakes",
+    "count": 4,
+    "slug": "H%C3%A4ndelser",
+    "items": [
+      "Tidslinje",
+      "Nashers misstag",
+      "Sorks fuckup",
+      "Dödsloggen"
+    ]
+  }
+]

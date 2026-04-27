@@ -1,0 +1,68 @@
+[
+  {
+    "id": "morden-i-ten-towns",
+    "status": "aktiv",
+    "title": "Morden i Ten-Towns",
+    "title_en": "The Ten-Towns Murders",
+    "slug": "Uppdrag%20%26%20rykten/Morden-i-Ten-Towns",
+    "desc": "En seriemördare slår till med isdolk rakt genom hjärtat. Minst 22 offer i Ten-Towns. Offer bekräftade i <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a> och Targos — fortfarande outredda. Troligen kopplat till <a href=\"../Fraktioner/Aurils-Rime\" target=\"_parent\">Auril</a> eller en kult.",
+    "desc_en": "A serial killer strikes with an ice pick straight through the heart. At least 22 victims in Ten-Towns. Victims confirmed in <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a> and Targos — still uninvestigated. Likely connected to <a href=\"../Fraktioner/Aurils-Rime\" target=\"_parent\">Auril</a> or a cult.",
+    "meta": "Senast: Dag 10–15, Bryn Shander",
+    "meta_en": "Last seen: Days 10–15, Bryn Shander"
+  },
+  {
+    "id": "sunblight-familjen",
+    "status": "aktiv",
+    "title": "Sunblight-familjen",
+    "title_en": "The Sunblight Family",
+    "slug": "Uppdrag%20%26%20rykten/Sunblight-familjen",
+    "desc": "<a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildar Sunblight</a> besegrad dag 18 — men hans far lever och rider på en drakes rygg. Familjen hävdar att hela Icewind Dale tillhör dem. Det värsta återstår.",
+    "desc_en": "<a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildar Sunblight</a> defeated on day 18 — but his father lives and rides on a dragon's back. The family claims all of Icewind Dale belongs to them. The worst is yet to come.",
+    "meta": "Senast: Dag 18, Sunblights fästning",
+    "meta_en": "Last seen: Day 18, Sunblight's Fortress"
+  },
+  {
+    "id": "vad-hande-med-eevie",
+    "status": "oklar",
+    "title": "Vad hände med Eevie?",
+    "title_en": "What Happened to Eevie?",
+    "slug": null,
+    "desc": "En varelse i cellen — liten, blont hår, vitt nattlinne — matchade beskrivningen av <a href=\"../NPC/Eevie\" target=\"_parent\">Eevie</a>. <a href=\"../Karakt%C3%A4rer/Nasher\" target=\"_parent\">Nasher</a> öppnade cellen; varelsen attackerade och höggs ned i självförsvar. Var det verkligen Eevie?",
+    "desc_en": "A creature in the cell — small, blonde hair, white nightgown — matched the description of <a href=\"../NPC/Eevie\" target=\"_parent\">Eevie</a>. <a href=\"../Karakt%C3%A4rer/Nasher\" target=\"_parent\">Nasher</a> opened the cell; the creature attacked and was cut down in self-defense. Was it really Eevie?",
+    "meta": "Senast: Dag 18, Kelvins Cairn",
+    "meta_en": "Last seen: Day 18, Kelvins Cairn"
+  },
+  {
+    "id": "burning-hammers",
+    "status": "aktiv",
+    "title": "The Burning Hammers & Keegan Valryn",
+    "title_en": "The Burning Hammers & Keegan Valryn",
+    "slug": null,
+    "desc": "Tre äventyrare — The Burning Hammers — försvann för 4–5 dagar sedan i riktning mot <a href=\"../Platser/Kelvins-Cairn\" target=\"_parent\">Kelvins Cairn</a>. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> drog iväg med hundkälke för att söka efter dem och försvann han också.",
+    "desc_en": "Three adventurers — The Burning Hammers — disappeared 4–5 days ago heading toward <a href=\"../Platser/Kelvins-Cairn\" target=\"_parent\">Kelvins Cairn</a>. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> took a dog sled to search for them and disappeared as well.",
+    "meta": "Senast: Dag 17, Caer Konig",
+    "meta_en": "Last seen: Day 17, Caer Konig"
+  },
+  {
+    "id": "aurils-forbannelse",
+    "status": "aktiv",
+    "title": "Aurils förbannelse",
+    "title_en": "Auril's Curse",
+    "slug": "Uppdrag%20%26%20rykten/Aurils-Rime-(V%C3%A4rldsinfo)",
+    "desc": "Gudinnan <a href=\"../Fraktioner/Tribe-of-the-Owl\" target=\"_parent\">Auril</a> har lagt en förbannelse som blockerar solen. Ljusbesvärjelser fungerar inte. Städerna offrar mat och eld för att blidka henne. Ingen vet hur man bryter förbannelsen.",
+    "desc_en": "The goddess <a href=\"../Fraktioner/Tribe-of-the-Owl\" target=\"_parent\">Auril</a> has placed a curse blocking the sun. Light spells don't work. The towns sacrifice food and fire to appease her. No one knows how to break the curse.",
+    "meta": "Pågående världsplot",
+    "meta_en": "Ongoing world plot"
+  },
+  {
+    "id": "osynliga-tjuvar",
+    "status": "klar",
+    "title": "Osynliga tjuvar i Caer Konig",
+    "title_en": "Invisible Thieves in Caer Konig",
+    "slug": null,
+    "desc": "Magiska föremål stals i <a href=\"../Platser/Caer-Konig\" target=\"_parent\">Caer Konig</a> — bl.a. lyktan från The Northern Light och <a href=\"../NPC/Jarthra\" target=\"_parent\">Jarthras</a> pärlor. Fotspår ledde till <a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildars</a> fästning. Allt återfanns dag 18.",
+    "desc_en": "Magic items were stolen in <a href=\"../Platser/Caer-Konig\" target=\"_parent\">Caer Konig</a> — including the lantern from The Northern Light and <a href=\"../NPC/Jarthra\" target=\"_parent\">Jarthra's</a> pearls. Footprints led to <a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildar's</a> fortress. Everything was recovered on day 18.",
+    "meta": "Löst: Dag 18, Kelvins Cairn",
+    "meta_en": "Resolved: Day 18, Kelvins Cairn"
+  }
+]

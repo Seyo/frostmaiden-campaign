@@ -326,380 +326,330 @@
 <script src="timeline-data.js"></script>
 <script>
 
-// ─── LANG INIT ────────────────────────────────────────────────────────────────
-var lang = getLang();
-document.getElementById('html-root').lang = lang;
-document.title = t('site_title');
-document.getElementById('lang-btn').textContent = t('lang_toggle');
-document.getElementById('map-img').alt = t('map_alt');
-document.getElementById('map-pins-count').textContent = '❄ ' + tf('map_pins_count', MAP_PINS.length);
-
-// Apply all data-i18n text substitutions
-(function () {
-  document.querySelectorAll('[data-i18n]').forEach(function (el) {
-    el.textContent = t(el.getAttribute('data-i18n'));
-  });
-})();
-
-var WIKI = lang === 'en' ? '../en/' : '../';
-
-// ─── STATUS CARD ──────────────────────────────────────────────────────────────
-var STATUS = {
-  sv: {
-    quote: '"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns."',
-    attr:  '— Nildar Sunblight, dödsord',
-    questions: [
-      '⚠ Borc är medvetslös — stabiliserad av Zahir, men ej uppvaknad.',
-      'Var varelsen i cellen verkligen Eevie?',
-      'Vad har hänt med Keegan Valryn och The Burning Hammers?',
-      'Jarthras pärlor är ännu inte återlämnade…',
-    ]
-  },
-  en: {
-    quote: '"My father rides on a dragon\'s back and will destroy all of Ten-Towns."',
-    attr:  '— Nildar Sunblight, dying words',
-    questions: [
-      '⚠ Borc is unconscious — stabilized by Zahir, but not yet awoken.',
-      'Was the creature in the cell really Eevie?',
-      'What happened to Keegan Valryn and The Burning Hammers?',
-      'Jarthra\'s pearls have not yet been returned…',
-    ]
-  }
-};
-
-(function () {
-  var s = STATUS[lang] || STATUS.sv;
-  var qs = s.questions.map(function (q) { return '<li>' + q + '</li>'; }).join('');
-  document.getElementById('status-body-content').innerHTML =
-    '<blockquote class="status-quote">' + s.quote + '</blockquote>' +
-    '<div class="status-attr">' + s.attr + '</div>' +
-    '<ul class="status-open-questions">' + qs + '</ul>';
-})();
-
-// ─── SNOW ─────────────────────────────────────────────────────────────────────
-(function () {
-  var container = document.getElementById('snow');
-  var frag = document.createDocumentFragment();
-  for (var i = 0; i < 60; i++) {
-    var size = 1.5 + Math.random() * 3.5;
-    var el = document.createElement('span');
-    el.style.cssText =
-      'left:' + (Math.random() * 100) + '%;' +
-      'width:' + size + 'px;height:' + size + 'px;' +
-      'animation-duration:' + (10 + Math.random() * 18) + 's;' +
-      'animation-delay:' + (-Math.random() * 20) + 's;' +
-      '--drift:' + ((Math.random() - 0.5) * 220) + 'px;' +
-      'opacity:' + (0.4 + Math.random() * 0.5);
-    frag.appendChild(el);
-  }
-  container.appendChild(frag);
-})();
-
-// ─── SCROLL ───────────────────────────────────────────────────────────────────
-window.addEventListener('scroll', function () {
-  var root = document.documentElement;
-  var h = root.scrollHeight - root.clientHeight;
-  var p = h > 0 ? Math.min(1, root.scrollTop / h) : 0;
-  document.getElementById('page-root').style.setProperty('--scroll-frost', Math.min(0.55, p * 0.9));
-  document.getElementById('compass').style.setProperty('--compass-rot', (p * 140) + 'deg');
-}, { passive: true });
-
-// ─── PARTY CARDS ──────────────────────────────────────────────────────────────
-var CHARACTERS = [
-  { id: "zahir", name: "Zahir", role: "Halfling Warlock",
-    portrait: "./assets/portraits/zahir.png",
-    blurb:    "Från Calimport. Hög karisma, vass tunga, moraliskt tvivelaktig. Besegrade Nildar med Tasha's Hideous Laughter.",
-    blurb_en: "From Calimport. High charisma, sharp tongue, morally questionable. Defeated Nildar with Tasha's Hideous Laughter.",
-    slug: "Karakt%C3%A4rer/Zahir" },
-  { id: "nasher", name: "Nasher", role: "Alv Paladin · Tyrs orden",
-    portrait: "./assets/portraits/nasher.png",
-    blurb:    "Justiciar av Tyr från Neverwinter. Föll två gånger i strid. Bär på skulden för Eevie-varelsen i cellen.",
-    blurb_en: "Justiciar of Tyr from Neverwinter. Fell twice in battle. Carries the guilt for the Eevie-creature in the cell.",
-    slug: "Karakt%C3%A4rer/Nasher" },
-  { id: "sork", name: "Sork the Shadow", role: "Ork Rogue",
-    portrait: "./assets/portraits/sork.png",
-    blurb:    "Avhoppare från Waterdeep via Fireshear. Spanare och bågskytt. Stjäl bara från dem som inte längre behöver det.",
-    blurb_en: "Deserter from Waterdeep via Fireshear. Scout and archer. Only steals from those who no longer need it.",
-    slug: "Karakt%C3%A4rer/Sork-the-Shadow" },
-  { id: "borc", name: "Borc the Orc", role: "Goliath Barbar",
-    portrait: "./assets/portraits/borc.png",
-    blurb:    "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i spikfällan, stabiliserades av Zahir. Medvetslös.",
-    blurb_en: "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in the spike trap, stabilized by Zahir. Unconscious.",
-    slug: "Karakt%C3%A4rer/Borc-the-Orc" },
-];
-
-(function () {
-  var grid = document.getElementById('party-grid');
-  CHARACTERS.forEach(function (c) {
-    var blurb = (lang === 'en' && c.blurb_en) ? c.blurb_en : c.blurb;
-    var a = document.createElement('a');
-    a.className = 'char-card';
-    a.href = WIKI + c.slug;
-    a.innerHTML =
-      '<div class="char-portrait">' +
-        '<img src="' + c.portrait + '" alt="' + c.name + '" loading="lazy">' +
-        '<div class="char-frost" aria-hidden="true"></div>' +
-      '</div>' +
-      '<div class="char-meta">' +
-        '<div class="label">' + c.role + '</div>' +
-        '<div class="char-name display">' + c.name + '</div>' +
-        '<p class="char-blurb">' + blurb + '</p>' +
-        '<div class="char-more">' + t('char_read_more') + '</div>' +
-      '</div>';
-    grid.appendChild(a);
-  });
-})();
-
-// ─── WIKI SECTION CARDS ───────────────────────────────────────────────────────
-var WIKI_SECTIONS = [
-  { title: "NPC:er",
-    subtitle:    "Levande, döda och försvunna",
-    subtitle_en: "Living, dead, and missing",
-    count: 13, slug: "NPC",
-    items: ["Jarthra","Trovus","Glenn","Foxes in the Snow","Keegan Valryn","Hildur Trollbane","Torg","Cori & Allie","Eevie (?)","Bronn Bearhammer (†)","Aubril (†)","Nildar Sunblight (†)","Garret (saknad)"] },
-  { title: "Platser",
-    subtitle:    "Städer, ruiner och fästningar",
-    subtitle_en: "Cities, ruins, and fortresses",
-    count: 7, slug: "Platser",
-    items: ["Icewind Dale","Bryn Shander","Caer Konig","Easthaven","Fireshear","Kelvins Cairn","Dvärgadalen"] },
-  { title: "Fraktioner",
-    subtitle:    "Bundsförvanter, fiender, stammar",
-    subtitle_en: "Allies, enemies, tribes",
-    count: 5, slug: "Fraktioner",
-    items: ["Zahirs gäng","Tribe of the Owl","Dvärgarna i Dvärgadalen","Ten-Towns","The Burning Hammers"] },
-  { title: "Uppdrag & rykten",
-    subtitle:    "Aktiva trådar i kampanjen",
-    subtitle_en: "Active threads in the campaign",
-    count: 4, slug: "Uppdrag%20%26%20rykten",
-    items: ["Morden i Ten-Towns","Sunblight-familjen","Aurils Rime (världsinfo)","Quest tracker"] },
-  { title: "Sessioner",
-    subtitle:    "Dag för dag, session för session",
-    subtitle_en: "Day by day, session by session",
-    count: 2, slug: "Sessions",
-    items: ["Session 01 — Vägen till Caer Konig","Session 02 — Caer Konig: Fästningen vid Kelvins Cairn"] },
-  { title: "Händelser & tidslinje",
-    subtitle:    "18 dagar av bedrifter och misstag",
-    subtitle_en: "18 days of feats and mistakes",
-    count: 4, slug: "H%C3%A4ndelser",
-    items: ["Tidslinje","Nashers misstag","Sorks fuckup","Dödsloggen"] },
-];
-
-(function () {
-  var grid = document.getElementById('sections-grid');
-  WIKI_SECTIONS.forEach(function (s) {
-    var subtitle = (lang === 'en' && s.subtitle_en) ? s.subtitle_en : s.subtitle;
-    var items = s.items.slice(0, 5).map(function (it) { return '<li>' + it + '</li>'; }).join('');
-    if (s.items.length > 5) items += '<li class="muted">' + tf('wiki_more', s.items.length - 5) + '</li>';
-    var a = document.createElement('a');
-    a.className = 'section-card';
-    a.href = WIKI + s.slug;
-    a.innerHTML =
-      '<div class="section-head">' +
-        '<div class="label">' + subtitle + '</div>' +
-        '<div class="section-count">' + s.count + '</div>' +
-      '</div>' +
-      '<div class="section-title display">' + s.title + '</div>' +
-      '<ul class="section-list">' + items + '</ul>' +
-      '<div class="section-foot"><span>' + t('wiki_open') + '</span><span aria-hidden="true">→</span></div>';
-    grid.appendChild(a);
-  });
-})();
-
-// ─── MAP PINS + ZOOM/PAN ──────────────────────────────────────────────────────
-(function () {
-  var wrap   = document.getElementById('map-wrap');
-  var zoomEl = document.getElementById('map-zoom');
-  var portal = document.getElementById('map-tooltip-layer');
-
-  // ── Zoom/pan state ──
-  var s = 1, tx = 0, ty = 0;
-  var dragging = false, dragX, dragY;
-
-  function clamp() {
-    var W = wrap.offsetWidth, H = wrap.offsetHeight;
-    tx = Math.min(0, Math.max(tx, W * (1 - s)));
-    ty = Math.min(0, Math.max(ty, H * (1 - s)));
-  }
-  function applyTransform() {
-    zoomEl.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
-    wrap.classList.toggle('can-pan', s > 1);
-    renderTooltip();
-  }
-
-  wrap.addEventListener('wheel', function (e) {
-    e.preventDefault();
-    var r = wrap.getBoundingClientRect();
-    var mx = e.clientX - r.left, my = e.clientY - r.top;
-    var ns = Math.min(5, Math.max(1, s * (e.deltaY < 0 ? 1.15 : 1 / 1.15)));
-    tx = mx - (mx - tx) * (ns / s);
-    ty = my - (my - ty) * (ns / s);
-    s = ns; clamp(); applyTransform();
-  }, { passive: false });
-
-  wrap.addEventListener('mousedown', function (e) {
-    if (s <= 1) return;
-    if (e.target.closest && e.target.closest('.map-pin')) return;
-    dragging = true; dragX = e.clientX; dragY = e.clientY;
-    wrap.classList.add('panning'); e.preventDefault();
-  });
-  document.addEventListener('mousemove', function (e) {
-    if (!dragging) return;
-    tx += e.clientX - dragX; ty += e.clientY - dragY;
-    dragX = e.clientX; dragY = e.clientY;
-    clamp(); applyTransform();
-  });
-  document.addEventListener('mouseup', function () {
-    if (dragging) { dragging = false; wrap.classList.remove('panning'); }
-  });
-  wrap.addEventListener('dblclick', function (e) {
-    if (e.target.closest && e.target.closest('.map-pin')) return;
-    s = 1; tx = 0; ty = 0; applyTransform();
-  });
-
-  // ── Tooltip (rendered in portal, outside zoom container) ──
-  var pinned  = null;
-  var hovered = null;
-
-  function renderTooltip() {
-    var old = portal.querySelector('.map-tooltip');
-    if (old) old.remove();
-    var shown = pinned || hovered;
-    if (!shown) {
-      zoomEl.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
-      return;
-    }
-    var pin = MAP_PINS.find(function (p) { return p.id === shown; });
-    if (!pin) return;
-
-    var btn = zoomEl.querySelector('[data-pin="' + pin.id + '"]');
-    zoomEl.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
-    if (btn) btn.classList.add('is-active');
-
-    var pr = portal.getBoundingClientRect();
-    var br = btn ? btn.getBoundingClientRect() : null;
-    var cx = br ? (br.left + br.width / 2 - pr.left)  : (pin.x / 100 * pr.width);
-    var cy = br ? (br.top  + br.height / 2 - pr.top)  : (pin.y / 100 * pr.height);
-
-    var flipX = cx / pr.width  > 0.6  ? '-100%' : '0%';
-    var flipY = cy / pr.height > 0.55 ? '-100%' : '0%';
-
-    var pinName = (lang === 'en' && pin.name_en) ? pin.name_en : pin.name;
-    var blurb   = (lang === 'en' && pin.blurb_en) ? pin.blurb_en : pin.blurb;
-
-    var tt = document.createElement('div');
-    tt.className = 'map-tooltip';
-    tt.setAttribute('role', 'dialog');
-    tt.style.position = 'absolute';
-    tt.style.left = cx + 'px';
-    tt.style.top  = cy + 'px';
-    tt.style.setProperty('--flip-x', flipX);
-    tt.style.setProperty('--flip-y', flipY);
-    tt.style.pointerEvents = 'auto';
-    tt.innerHTML =
-      '<div class="tooltip-corner tl"></div><div class="tooltip-corner tr"></div>' +
-      '<div class="tooltip-corner bl"></div><div class="tooltip-corner br"></div>' +
-      '<div class="tt-label">' + t('tooltip_type') + '</div>' +
-      '<div class="tt-title">' + pinName + '</div>' +
-      '<p class="tt-blurb">' + blurb + '</p>' +
-      '<a class="tt-link" href="' + WIKI + pin.slug + '">' + t('tooltip_open') + '</a>';
-    portal.appendChild(tt);
-  }
-
-  // ── Build pins ──
-  MAP_PINS.forEach(function (p) {
-    var pName = (lang === 'en' && p.name_en) ? p.name_en : p.name;
-    var btn = document.createElement('button');
-    btn.className = 'map-pin';
-    btn.setAttribute('data-pin', p.id);
-    btn.setAttribute('data-type', p.type || 'town');
-    btn.setAttribute('aria-label', pName);
-    btn.style.left = p.x + '%';
-    btn.style.top  = p.y + '%';
-    btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + pName + '</span>' : '');
-
-    btn.addEventListener('mouseenter', function () {
-      hovered = p.id;
-      if (!pinned) renderTooltip();
-    });
-    btn.addEventListener('mouseleave', function () {
-      hovered = null;
-      if (!pinned) renderTooltip();
-    });
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      pinned = (pinned === p.id) ? null : p.id;
-      renderTooltip();
-    });
-
-    zoomEl.appendChild(btn);
-  });
-
-  // ── Click on map background: close pinned tooltip ──
-  var isMapBg = function (t) {
-    return t === wrap || t === zoomEl ||
-           t.classList.contains('map-img') || t.classList.contains('map-tint');
-  };
-  wrap.addEventListener('click', function (e) {
-    if (!isMapBg(e.target)) return;
-    pinned = null; hovered = null; renderTooltip();
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { pinned = null; hovered = null; renderTooltip(); }
-  });
-})();
-
-// ─── TIMELINE ─────────────────────────────────────────────────────────────────
-(function () {
-  var container = document.getElementById('timeline-v');
-  if (!container) return;
-  function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-
-  var groups = {};
-  TIMELINE_SESSIONS.forEach(function(s) { groups[s.id] = []; });
-  TIMELINE_EVENTS.forEach(function(e) { if (groups[e.session]) groups[e.session].push(e); });
-
-  // Reverse chronological: most recent session first, events within each reversed
-  TIMELINE_SESSIONS.slice().reverse().forEach(function(session) {
-    var label = (lang === 'en' && session.label_en) ? session.label_en : session.label;
-    var hdr = document.createElement('div');
-    hdr.className = 'tl-session';
-    hdr.innerHTML = '<a href="' + WIKI + session.slug + '">' + esc(label) + '</a>';
-    container.appendChild(hdr);
-
-    groups[session.id].slice().reverse().forEach(function(ev) {
-      var title = (lang === 'en' && ev.title_en) ? ev.title_en : ev.title;
-      var desc  = (lang === 'en' && ev.desc_en)  ? ev.desc_en  : ev.desc;
-      var item = document.createElement('div');
-      item.className = 'tl-event tl-' + ev.type;
-      item.innerHTML =
-        '<div class="tl-card">' +
-          '<div class="tl-header">' +
-            '<span class="tl-day">' + ev.day + '</span>' +
-            '<span class="tl-icon">' + ev.icon + '</span>' +
-            '<span class="tl-title">' + title + '</span>' +
-          '</div>' +
-          '<div class="tl-desc">' + desc + '</div>' +
-        '</div>';
-      container.appendChild(item);
-    });
-  });
-})();
-
-// ─── THEME TOGGLE ─────────────────────────────────────────────────────────────
+// Theme toggle — defined eagerly because it's referenced by onclick="toggleTheme()" in the HTML.
 function toggleTheme() {
   var root = document.getElementById('page-root');
   var btn  = document.getElementById('theme-btn');
   root.classList.toggle('night');
   document.documentElement.classList.toggle('night');
   var isNight = root.classList.contains('night');
-  btn.textContent = isNight ? t('theme_day') : t('theme_night');
-  document.getElementById('footer-variant').textContent =
-    isNight ? t('footer_night') : t('footer_day');
+  if (I18N) {
+    btn.textContent = isNight ? t('theme_day') : t('theme_night');
+    document.getElementById('footer-variant').textContent =
+      isNight ? t('footer_night') : t('footer_day');
+  }
   localStorage.setItem('theme', isNight ? 'dark' : 'light');
 }
+
+// Apply theme class immediately (avoid flash of wrong theme). Labels updated after i18n loads.
 (function () {
-  if ((localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark') toggleTheme();
+  var pref = localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  if (pref === 'dark') {
+    document.getElementById('page-root').classList.add('night');
+    document.documentElement.classList.add('night');
+  }
+})();
+
+(async function init() {
+  // Fetch all data needed by this page in parallel.
+  var results = await Promise.all([
+    I18N_READY,
+    MAP_DATA_READY,
+    TIMELINE_DATA_READY,
+    fetch('./data/status.json').then(function (r) { return r.json(); }),
+    fetch('./data/characters.json').then(function (r) { return r.json(); }),
+    fetch('./data/wiki-sections.json').then(function (r) { return r.json(); }),
+  ]);
+  var STATUS = results[3];
+  var CHARACTERS = results[4];
+  var WIKI_SECTIONS = results[5];
+
+  // ─── LANG INIT ──────────────────────────────────────────────────────────────
+  var lang = getLang();
+  document.getElementById('html-root').lang = lang;
+  document.title = t('site_title');
+  document.getElementById('lang-btn').textContent = t('lang_toggle');
+  document.getElementById('map-img').alt = t('map_alt');
+  document.getElementById('map-pins-count').textContent = '❄ ' + tf('map_pins_count', MAP_PINS.length);
+
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    el.textContent = t(el.getAttribute('data-i18n'));
+  });
+
+  // Theme labels now that i18n is loaded
+  var isNight = document.getElementById('page-root').classList.contains('night');
+  document.getElementById('theme-btn').textContent = isNight ? t('theme_day') : t('theme_night');
+  document.getElementById('footer-variant').textContent = isNight ? t('footer_night') : t('footer_day');
+
+  var WIKI = lang === 'en' ? '../en/' : '../';
+
+  // ─── STATUS CARD ────────────────────────────────────────────────────────────
+  (function () {
+    var s = STATUS[lang] || STATUS.sv;
+    var qs = s.questions.map(function (q) { return '<li>' + q + '</li>'; }).join('');
+    document.getElementById('status-body-content').innerHTML =
+      '<blockquote class="status-quote">' + s.quote + '</blockquote>' +
+      '<div class="status-attr">' + s.attr + '</div>' +
+      '<ul class="status-open-questions">' + qs + '</ul>';
+    var dayEl = document.querySelector('.status-day');
+    if (dayEl && STATUS.day != null) dayEl.textContent = STATUS.day;
+  })();
+
+  // ─── SNOW ───────────────────────────────────────────────────────────────────
+  (function () {
+    var container = document.getElementById('snow');
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < 60; i++) {
+      var size = 1.5 + Math.random() * 3.5;
+      var el = document.createElement('span');
+      el.style.cssText =
+        'left:' + (Math.random() * 100) + '%;' +
+        'width:' + size + 'px;height:' + size + 'px;' +
+        'animation-duration:' + (10 + Math.random() * 18) + 's;' +
+        'animation-delay:' + (-Math.random() * 20) + 's;' +
+        '--drift:' + ((Math.random() - 0.5) * 220) + 'px;' +
+        'opacity:' + (0.4 + Math.random() * 0.5);
+      frag.appendChild(el);
+    }
+    container.appendChild(frag);
+  })();
+
+  // ─── SCROLL ─────────────────────────────────────────────────────────────────
+  window.addEventListener('scroll', function () {
+    var root = document.documentElement;
+    var h = root.scrollHeight - root.clientHeight;
+    var p = h > 0 ? Math.min(1, root.scrollTop / h) : 0;
+    document.getElementById('page-root').style.setProperty('--scroll-frost', Math.min(0.55, p * 0.9));
+    document.getElementById('compass').style.setProperty('--compass-rot', (p * 140) + 'deg');
+  }, { passive: true });
+
+  // ─── PARTY CARDS ────────────────────────────────────────────────────────────
+  (function () {
+    var grid = document.getElementById('party-grid');
+    CHARACTERS.forEach(function (c) {
+      var blurb = (lang === 'en' && c.blurb_en) ? c.blurb_en : c.blurb;
+      var role  = (lang === 'en' && c.role_en)  ? c.role_en  : c.role;
+      var a = document.createElement('a');
+      a.className = 'char-card';
+      a.href = WIKI + c.slug;
+      a.innerHTML =
+        '<div class="char-portrait">' +
+          '<img src="' + c.portrait + '" alt="' + c.name + '" loading="lazy">' +
+          '<div class="char-frost" aria-hidden="true"></div>' +
+        '</div>' +
+        '<div class="char-meta">' +
+          '<div class="label">' + role + '</div>' +
+          '<div class="char-name display">' + c.name + '</div>' +
+          '<p class="char-blurb">' + blurb + '</p>' +
+          '<div class="char-more">' + t('char_read_more') + '</div>' +
+        '</div>';
+      grid.appendChild(a);
+    });
+  })();
+
+  // ─── WIKI SECTION CARDS ─────────────────────────────────────────────────────
+  (function () {
+    var grid = document.getElementById('sections-grid');
+    WIKI_SECTIONS.forEach(function (s) {
+      var subtitle = (lang === 'en' && s.subtitle_en) ? s.subtitle_en : s.subtitle;
+      var title    = (lang === 'en' && s.title_en)    ? s.title_en    : s.title;
+      var items = s.items.slice(0, 5).map(function (it) { return '<li>' + it + '</li>'; }).join('');
+      if (s.items.length > 5) items += '<li class="muted">' + tf('wiki_more', s.items.length - 5) + '</li>';
+      var a = document.createElement('a');
+      a.className = 'section-card';
+      a.href = WIKI + s.slug;
+      a.innerHTML =
+        '<div class="section-head">' +
+          '<div class="label">' + subtitle + '</div>' +
+          '<div class="section-count">' + s.count + '</div>' +
+        '</div>' +
+        '<div class="section-title display">' + title + '</div>' +
+        '<ul class="section-list">' + items + '</ul>' +
+        '<div class="section-foot"><span>' + t('wiki_open') + '</span><span aria-hidden="true">→</span></div>';
+      grid.appendChild(a);
+    });
+  })();
+
+  // ─── MAP PINS + ZOOM/PAN ────────────────────────────────────────────────────
+  (function () {
+    var wrap   = document.getElementById('map-wrap');
+    var zoomEl = document.getElementById('map-zoom');
+    var portal = document.getElementById('map-tooltip-layer');
+
+    // ── Zoom/pan state ──
+    var s = 1, tx = 0, ty = 0;
+    var dragging = false, dragX, dragY;
+
+    function clamp() {
+      var W = wrap.offsetWidth, H = wrap.offsetHeight;
+      tx = Math.min(0, Math.max(tx, W * (1 - s)));
+      ty = Math.min(0, Math.max(ty, H * (1 - s)));
+    }
+    function applyTransform() {
+      zoomEl.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
+      wrap.classList.toggle('can-pan', s > 1);
+      renderTooltip();
+    }
+
+    wrap.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      var r = wrap.getBoundingClientRect();
+      var mx = e.clientX - r.left, my = e.clientY - r.top;
+      var ns = Math.min(5, Math.max(1, s * (e.deltaY < 0 ? 1.15 : 1 / 1.15)));
+      tx = mx - (mx - tx) * (ns / s);
+      ty = my - (my - ty) * (ns / s);
+      s = ns; clamp(); applyTransform();
+    }, { passive: false });
+
+    wrap.addEventListener('mousedown', function (e) {
+      if (s <= 1) return;
+      if (e.target.closest && e.target.closest('.map-pin')) return;
+      dragging = true; dragX = e.clientX; dragY = e.clientY;
+      wrap.classList.add('panning'); e.preventDefault();
+    });
+    document.addEventListener('mousemove', function (e) {
+      if (!dragging) return;
+      tx += e.clientX - dragX; ty += e.clientY - dragY;
+      dragX = e.clientX; dragY = e.clientY;
+      clamp(); applyTransform();
+    });
+    document.addEventListener('mouseup', function () {
+      if (dragging) { dragging = false; wrap.classList.remove('panning'); }
+    });
+    wrap.addEventListener('dblclick', function (e) {
+      if (e.target.closest && e.target.closest('.map-pin')) return;
+      s = 1; tx = 0; ty = 0; applyTransform();
+    });
+
+    // ── Tooltip (rendered in portal, outside zoom container) ──
+    var pinned  = null;
+    var hovered = null;
+
+    function renderTooltip() {
+      var old = portal.querySelector('.map-tooltip');
+      if (old) old.remove();
+      var shown = pinned || hovered;
+      if (!shown) {
+        zoomEl.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
+        return;
+      }
+      var pin = MAP_PINS.find(function (p) { return p.id === shown; });
+      if (!pin) return;
+
+      var btn = zoomEl.querySelector('[data-pin="' + pin.id + '"]');
+      zoomEl.querySelectorAll('.map-pin').forEach(function (b) { b.classList.remove('is-active'); });
+      if (btn) btn.classList.add('is-active');
+
+      var pr = portal.getBoundingClientRect();
+      var br = btn ? btn.getBoundingClientRect() : null;
+      var cx = br ? (br.left + br.width / 2 - pr.left)  : (pin.x / 100 * pr.width);
+      var cy = br ? (br.top  + br.height / 2 - pr.top)  : (pin.y / 100 * pr.height);
+
+      var flipX = cx / pr.width  > 0.6  ? '-100%' : '0%';
+      var flipY = cy / pr.height > 0.55 ? '-100%' : '0%';
+
+      var pinName = (lang === 'en' && pin.name_en) ? pin.name_en : pin.name;
+      var blurb   = (lang === 'en' && pin.blurb_en) ? pin.blurb_en : pin.blurb;
+
+      var tt = document.createElement('div');
+      tt.className = 'map-tooltip';
+      tt.setAttribute('role', 'dialog');
+      tt.style.position = 'absolute';
+      tt.style.left = cx + 'px';
+      tt.style.top  = cy + 'px';
+      tt.style.setProperty('--flip-x', flipX);
+      tt.style.setProperty('--flip-y', flipY);
+      tt.style.pointerEvents = 'auto';
+      tt.innerHTML =
+        '<div class="tooltip-corner tl"></div><div class="tooltip-corner tr"></div>' +
+        '<div class="tooltip-corner bl"></div><div class="tooltip-corner br"></div>' +
+        '<div class="tt-label">' + t('tooltip_type') + '</div>' +
+        '<div class="tt-title">' + pinName + '</div>' +
+        '<p class="tt-blurb">' + blurb + '</p>' +
+        '<a class="tt-link" href="' + WIKI + pin.slug + '">' + t('tooltip_open') + '</a>';
+      portal.appendChild(tt);
+    }
+
+    // ── Build pins ──
+    MAP_PINS.forEach(function (p) {
+      var pName = (lang === 'en' && p.name_en) ? p.name_en : p.name;
+      var btn = document.createElement('button');
+      btn.className = 'map-pin';
+      btn.setAttribute('data-pin', p.id);
+      btn.setAttribute('data-type', p.type || 'town');
+      btn.setAttribute('aria-label', pName);
+      btn.style.left = p.x + '%';
+      btn.style.top  = p.y + '%';
+      btn.innerHTML = '<span class="pin-dot" aria-hidden="true"></span>' + (p.label ? '<span class="pin-label">' + pName + '</span>' : '');
+
+      btn.addEventListener('mouseenter', function () {
+        hovered = p.id;
+        if (!pinned) renderTooltip();
+      });
+      btn.addEventListener('mouseleave', function () {
+        hovered = null;
+        if (!pinned) renderTooltip();
+      });
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        pinned = (pinned === p.id) ? null : p.id;
+        renderTooltip();
+      });
+
+      zoomEl.appendChild(btn);
+    });
+
+    // ── Click on map background: close pinned tooltip ──
+    var isMapBg = function (t) {
+      return t === wrap || t === zoomEl ||
+             t.classList.contains('map-img') || t.classList.contains('map-tint');
+    };
+    wrap.addEventListener('click', function (e) {
+      if (!isMapBg(e.target)) return;
+      pinned = null; hovered = null; renderTooltip();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { pinned = null; hovered = null; renderTooltip(); }
+    });
+  })();
+
+  // ─── TIMELINE ───────────────────────────────────────────────────────────────
+  (function () {
+    var container = document.getElementById('timeline-v');
+    if (!container) return;
+    function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+    var groups = {};
+    TIMELINE_SESSIONS.forEach(function(s) { groups[s.id] = []; });
+    TIMELINE_EVENTS.forEach(function(e) { if (groups[e.session]) groups[e.session].push(e); });
+
+    // Reverse chronological: most recent session first, events within each reversed
+    TIMELINE_SESSIONS.slice().reverse().forEach(function(session) {
+      var label = (lang === 'en' && session.label_en) ? session.label_en : session.label;
+      var hdr = document.createElement('div');
+      hdr.className = 'tl-session';
+      hdr.innerHTML = '<a href="' + WIKI + session.slug + '">' + esc(label) + '</a>';
+      container.appendChild(hdr);
+
+      groups[session.id].slice().reverse().forEach(function(ev) {
+        var title = (lang === 'en' && ev.title_en) ? ev.title_en : ev.title;
+        var desc  = (lang === 'en' && ev.desc_en)  ? ev.desc_en  : ev.desc;
+        var item = document.createElement('div');
+        item.className = 'tl-event tl-' + ev.type;
+        item.innerHTML =
+          '<div class="tl-card">' +
+            '<div class="tl-header">' +
+              '<span class="tl-day">' + ev.day + '</span>' +
+              '<span class="tl-icon">' + ev.icon + '</span>' +
+              '<span class="tl-title">' + title + '</span>' +
+            '</div>' +
+            '<div class="tl-desc">' + desc + '</div>' +
+          '</div>';
+        container.appendChild(item);
+      });
+    });
+  })();
 })();
 </script>
 

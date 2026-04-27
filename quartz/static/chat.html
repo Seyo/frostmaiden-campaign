@@ -655,6 +655,15 @@
 
   <script src="./i18n.js"></script>
   <script>
+  // Eager theme application (avoid flash of wrong theme while i18n loads).
+  (function () {
+    var saved = localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (saved === 'dark') document.body.classList.add('night');
+  })();
+
+  (async function () {
+  await I18N_READY;
+
   // ─── UI LANG (site lang, separate from Saga's response lang) ─────────────
   var uiLang = getLang();
   document.getElementById('html-root').lang = uiLang;
@@ -1209,6 +1218,20 @@
     var btn = document.getElementById('chat-theme-btn');
     if (btn) btn.textContent = document.body.classList.contains('night') ? t('theme_day') : t('theme_night');
   }
+
+  // Expose handlers used by inline onclick/onchange/onkeydown/oninput in the HTML.
+  window.toggleTheme      = toggleTheme;
+  window.fetchModels      = fetchModels;
+  window.saveSetup        = saveSetup;
+  window.toggleChatLang   = toggleChatLang;
+  window.resetKey         = resetKey;
+  window.sendMessage      = sendMessage;
+  window.onProviderChange = onProviderChange;
+  window.saveModel        = saveModel;
+  window.handleKey        = handleKey;
+  window.autoResize       = autoResize;
+
+  })();
   </script>
 
 </body>

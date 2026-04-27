@@ -199,7 +199,7 @@
 <script src="./i18n.js"></script>
 <script src="./map-data.js"></script>
 <script>
-// ─── THEME ───────────────────────────────────────────────────────────────────
+// ─── THEME ─── (eager, no i18n needed)
 (function () {
   var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   if (t === 'dark') {
@@ -208,6 +208,9 @@
     document.getElementById('pin-creator').classList.add('night');
   }
 })();
+
+(async function () {
+  await Promise.all([I18N_READY, MAP_DATA_READY]);
 
 // ─── LANG INIT ───────────────────────────────────────────────────────────────
 var lang = getLang();
@@ -451,6 +454,8 @@ document.addEventListener('keydown', function (e) {
     pinned = null; hovered = null; renderTooltip();
   }
 });
+
+})();
 </script>
 </body>
 </html>

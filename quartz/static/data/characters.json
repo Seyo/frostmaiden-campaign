@@ -1,0 +1,42 @@
+[
+  {
+    "id": "zahir",
+    "name": "Zahir",
+    "role": "Halfling Warlock",
+    "role_en": "Halfling Warlock",
+    "portrait": "./assets/portraits/zahir.png",
+    "blurb": "Från Calimport. Hög karisma, vass tunga, moraliskt tvivelaktig. Besegrade Nildar med Tasha's Hideous Laughter.",
+    "blurb_en": "From Calimport. High charisma, sharp tongue, morally questionable. Defeated Nildar with Tasha's Hideous Laughter.",
+    "slug": "Karakt%C3%A4rer/Zahir"
+  },
+  {
+    "id": "nasher",
+    "name": "Nasher",
+    "role": "Alv Paladin · Tyrs orden",
+    "role_en": "Elf Paladin · Order of Tyr",
+    "portrait": "./assets/portraits/nasher.png",
+    "blurb": "Justiciar av Tyr från Neverwinter. Föll två gånger i strid. Bär på skulden för Eevie-varelsen i cellen.",
+    "blurb_en": "Justiciar of Tyr from Neverwinter. Fell twice in battle. Carries the guilt for the Eevie-creature in the cell.",
+    "slug": "Karakt%C3%A4rer/Nasher"
+  },
+  {
+    "id": "sork",
+    "name": "Sork the Shadow",
+    "role": "Ork Rogue",
+    "role_en": "Orc Rogue",
+    "portrait": "./assets/portraits/sork.png",
+    "blurb": "Avhoppare från Waterdeep via Fireshear. Spanare och bågskytt. Stjäl bara från dem som inte längre behöver det.",
+    "blurb_en": "Deserter from Waterdeep via Fireshear. Scout and archer. Only steals from those who no longer need it.",
+    "slug": "Karakt%C3%A4rer/Sork-the-Shadow"
+  },
+  {
+    "id": "borc",
+    "name": "Borc the Orc",
+    "role": "Goliath Barbar",
+    "role_en": "Goliath Barbarian",
+    "portrait": "./assets/portraits/borc.png",
+    "blurb": "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i spikfällan, stabiliserades av Zahir. Medvetslös.",
+    "blurb_en": "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in the spike trap, stabilized by Zahir. Unconscious.",
+    "slug": "Karakt%C3%A4rer/Borc-the-Orc"
+  }
+]
