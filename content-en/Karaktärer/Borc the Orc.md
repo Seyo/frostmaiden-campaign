@@ -1,3 +1,7 @@
+---
+title: "Borc the Orc"
+---
+
 **Faction:** [[Zahirs gäng]]
 
 <div class="portrait-right">

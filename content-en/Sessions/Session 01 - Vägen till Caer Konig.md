@@ -1,3 +1,7 @@
+---
+title: "Session 1 – The Road to Caer Konig"
+---
+
 # Session 1 – The Road to Caer Konig
 
 **Day 1 – Fireshear:**

@@ -1,3 +1,7 @@
+---
+title: "Death Log"
+---
+
 # Death Log
 
 *Those who did not survive an encounter with [[Zahirs gäng]].*

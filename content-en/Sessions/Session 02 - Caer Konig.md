@@ -1,3 +1,7 @@
+---
+title: "Session 2 – Caer Konig: The Fortress at Kelvin's Cairn"
+---
+
 # Session 2 – Caer Konig: The Fortress at Kelvins Cairn
 
 **Day 16 (cont.) – Arrival:**

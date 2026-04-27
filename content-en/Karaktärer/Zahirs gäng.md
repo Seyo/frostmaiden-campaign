@@ -1,3 +1,7 @@
+---
+title: "Zahir's Gang"
+---
+
 - [[Zahir]] halfling warlock
 - [[Nasher]] elf paladin
 - [[Sork the Shadow]] orc rogue

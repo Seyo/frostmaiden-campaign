@@ -1,3 +1,7 @@
+---
+title: "Nasher"
+---
+
 **Faction:** [[Zahirs gäng]]
 
 <div class="portrait-right">

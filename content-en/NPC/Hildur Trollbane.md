@@ -1,3 +1,7 @@
+---
+title: "Hildur Trollbane"
+---
+
 **Faction:** [[Ten-Towns]] (Bryn Shander)
 
 Scarred dwarf, friend of [[Torg]]. Met the party at a tavern in [[Bryn Shander]] (Days 10–15).

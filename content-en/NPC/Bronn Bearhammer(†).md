@@ -1,3 +1,7 @@
+---
+title: "Bronn Bearhammer†"
+---
+
 **Faction:** [[Tribe of the Owl]], [[Ten-Towns]] (Caer Konig)
 
 Human barbarian from the Tribe of the Owl, settled in [[Caer Konig]] as a blacksmith (*Snowy Baubles*). Married [[Eevie]]. Had a hot temper — only Eevie could calm him.

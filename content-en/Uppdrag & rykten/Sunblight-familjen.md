@@ -1,3 +1,7 @@
+---
+title: "The Sunblight Family"
+---
+
 [[Nildar Sunblight(†)]]'s last words: *"My father rides on a dragon's back and shall destroy all of Ten-Towns."*
 
 - The Sunblight family claims all of Icewind Dale belongs to them.

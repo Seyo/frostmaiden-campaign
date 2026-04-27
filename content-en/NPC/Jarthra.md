@@ -1,3 +1,7 @@
+---
+title: "Jarthra"
+---
+
 **Faction:** [[Ten-Towns]] (Caer Konig)
 
 Elf with dark hair in a simple braid, guide, runs *Frozen-fur Expeditions* in [[Caer Konig]]. Helped [[Bronn Bearhammer(†)]] and [[Eevie]] trade with the dwarves of [[Dvärgadalen]] (~8–10 hrs by dog sled).

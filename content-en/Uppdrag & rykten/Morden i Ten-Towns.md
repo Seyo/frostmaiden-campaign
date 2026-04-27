@@ -1,3 +1,7 @@
+---
+title: "The Ten-Towns Murders"
+---
+
 - **Victims (ice-pick murders):** Halfling hunter (Easthaven), human shipbuilder (Targos), possibly a dwarf (Caer Konig — unconfirmed, see below).
 - **Modus Operandi:** Ice pick through the heart.
 - **Theory:** Connected to [[Auril]] or a cult.

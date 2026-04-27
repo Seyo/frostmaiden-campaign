@@ -1,3 +1,7 @@
+---
+title: "Eevie"
+---
+
 **Faction:** [[Ten-Towns]] (Caer Konig)
 
 [[Bronn Bearhammer(†)]]'s wife. Disappeared the same night he was murdered — likely kidnapped by [[Nildar Sunblight(†)]]'s dwarves.

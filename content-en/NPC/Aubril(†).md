@@ -1,3 +1,7 @@
+---
+title: "Aubril†"
+---
+
 **Faction:** [[Ten-Towns]] (Bryn Shander)
 
 Merchant, employed by *Torg's Imports and Goods*. Hired [[Zahirs gäng]] for 75 gp to escort him and his cargo from [[Fireshear]] to [[Bryn Shander]].

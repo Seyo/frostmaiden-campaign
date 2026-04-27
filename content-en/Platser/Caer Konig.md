@@ -1,3 +1,7 @@
+---
+title: "Caer Konig"
+---
+
 Small settlement (~150 people) on the shore of [[Lac Dinneshere]] (not frozen despite the cold). Ruins of an old castle and fortifications. Banner: white fish on blue. [[Kelvins Cairn]] dominates the horizon. The northern lights dance every evening at exactly the same time — likely magical in nature.
 
 ## Known Residents

@@ -1,3 +1,7 @@
+---
+title: "Trovus"
+---
+
 **Faction:** [[Ten-Towns]] (Caer Konig)
 
 White dragonborn, self-appointed night watchman of [[Caer Konig]]. Drunk and incompetent — seems to cause more harm than good. Background unknown; refuses to talk about where he comes from.

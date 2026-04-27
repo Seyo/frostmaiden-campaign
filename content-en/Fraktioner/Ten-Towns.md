@@ -1,3 +1,7 @@
+---
+title: "Ten-Towns"
+---
+
 The collective name for the ten settlements of Icewind Dale. Each is governed locally with sheriffs, and a council meets in [[Bryn Shander]].
 
 ![[ten-towns.webp]]

@@ -1,3 +1,7 @@
+---
+title: "Icewind Dale"
+---
+
 # Icewind Dale
 
 ![[icewind-dale.webp]]

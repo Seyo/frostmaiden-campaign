@@ -1,3 +1,7 @@
+---
+title: "Foxes in the Snow"
+---
+
 **Faction:** [[Ten-Towns]] (Caer Konig)
 
 Older human woman, runs the alchemy shop *Snow Fox Hideout* in [[Caer Konig]]. Healer, reclusive, dislikes magic and strangers. Keeps two owls as pets and spies.

@@ -1,3 +1,7 @@
+---
+title: "Tribe of the Owl"
+---
+
 Nomadic barbarian tribe active in Icewind Dale. Worship [[Uthgar]], the patron deity of barbarian clans.
 
 - [[Bronn Bearhammer(†)]] belonged to the tribe but settled in [[Caer Konig]] to marry [[Eevie]].

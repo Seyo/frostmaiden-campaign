@@ -1,3 +1,7 @@
+---
+title: "Dwarven Valley"
+---
+
 Isolated dwarf community in [[Dvärgadalen]], ~8–10 hours by dog sled from [[Caer Konig]]. Likely unconnected to the [[Sunblight-familjen]] (different type of dwarf).
 
 - Highly isolated and independent — distrustful of strangers.

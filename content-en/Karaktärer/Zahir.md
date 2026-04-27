@@ -1,3 +1,7 @@
+---
+title: "Zahir"
+---
+
 **Faction:** [[Zahirs gäng]]
 
 <div class="portrait-right">

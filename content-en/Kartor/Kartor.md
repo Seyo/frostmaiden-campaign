@@ -1,3 +1,7 @@
+---
+title: "Maps"
+---
+
 # Maps
 
 → [[Interaktiv karta]] — clickable map of Icewind Dale

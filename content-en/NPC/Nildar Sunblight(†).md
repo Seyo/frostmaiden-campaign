@@ -1,3 +1,7 @@
+---
+title: "Nildar Sunblight†"
+---
+
 **Faction:** [[Sunblight-familjen]]
 
 <div class="portrait-right">
