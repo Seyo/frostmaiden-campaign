@@ -23,14 +23,14 @@
   },
   {
     "id": "vad-hande-med-eevie",
-    "status": "oklar",
+    "status": "klar",
     "title": "Vad hände med Eevie?",
     "title_en": "What Happened to Eevie?",
     "slug": null,
-    "desc": "En varelse i cellen — liten, blont hår, vitt nattlinne — matchade beskrivningen av <a href=\"../NPC/Eevie\" target=\"_parent\">Eevie</a>. <a href=\"../Karakt%C3%A4rer/Nasher\" target=\"_parent\">Nasher</a> öppnade cellen; varelsen attackerade och höggs ned i självförsvar. Var det verkligen Eevie?",
-    "desc_en": "A creature in the cell — small, blonde hair, white nightgown — matched the description of <a href=\"../NPC/Eevie\" target=\"_parent\">Eevie</a>. <a href=\"../Karakt%C3%A4rer/Nasher\" target=\"_parent\">Nasher</a> opened the cell; the creature attacked and was cut down in self-defense. Was it really Eevie?",
-    "meta": "Senast: Dag 18, Kelvins Cairn",
-    "meta_en": "Last seen: Day 18, Kelvins Cairn"
+    "desc": "En varelse i cellen — liten, blont hår, vitt nattlinne — matchade beskrivningen av <a href=\"../NPC/Eevie\" target=\"_parent\">Eevie</a>. <a href=\"../Karakt%C3%A4rer/Nasher\" target=\"_parent\">Nasher</a> öppnade cellen; varelsen attackerade och höggs ned i självförsvar. <strong>Bekräftat:</strong> det var Eevie. Kroppen lämnades till Caer Konigs befolkning dag 19.",
+    "desc_en": "A creature in the cell — small, blonde hair, white nightgown — matched the description of <a href=\"../NPC/Eevie\" target=\"_parent\">Eevie</a>. <a href=\"../Karakt%C3%A4rer/Nasher\" target=\"_parent\">Nasher</a> opened the cell; the creature attacked and was cut down in self-defense. <strong>Confirmed:</strong> it was Eevie. The body was left to the people of Caer Konig on day 19.",
+    "meta": "Löst: Dag 18, Kelvins Cairn",
+    "meta_en": "Resolved: Day 18, Kelvins Cairn"
   },
   {
     "id": "burning-hammers",
