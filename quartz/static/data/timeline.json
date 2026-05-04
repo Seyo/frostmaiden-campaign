@@ -107,8 +107,8 @@
       "icon": "⚔️",
       "title": "Sunblights fästning — Nildar besegrad",
       "title_en": "Sunblight's Fortress — Nildar Defeated",
-      "desc": "Expedition till fästningen vid <a href=\"../Platser/Kelvins-Cairn\">Kelvins Cairn</a>. Nildar Sunblight besegrad — Zahir med Tasha's Hideous Laughter, Sork med pilar. Sista ord: <em>\"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns.\"</em> Nashers misstag: dödade den svampinfekterade varelsen i cellen — möjligen Eevie.",
-      "desc_en": "Expedition to the fortress at <a href=\"../Platser/Kelvins-Cairn\">Kelvins Cairn</a>. Nildar Sunblight defeated — Zahir with Tasha's Hideous Laughter, Sork with arrows. Last words: <em>\"My father rides on a dragon's back and will destroy all of Ten-Towns.\"</em> Nasher's mistake: killed the fungus-infected creature in the cell — possibly Eevie."
+      "desc": "Expedition till fästningen vid <a href=\"../Platser/Kelvins-Cairn\">Kelvins Cairn</a>. Nildar Sunblight besegrad — Zahir med Tasha's Hideous Laughter, Sork med pilar. Sista ord: <em>\"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns.\"</em> Nashers misstag: dödade den svampinfekterade <a href=\"../NPC/Eevie(%E2%80%A0)\">Eevie</a> i cellen i självförsvar.",
+      "desc_en": "Expedition to the fortress at <a href=\"../Platser/Kelvins-Cairn\">Kelvins Cairn</a>. Nildar Sunblight defeated — Zahir with Tasha's Hideous Laughter, Sork with arrows. Last words: <em>\"My father rides on a dragon's back and will destroy all of Ten-Towns.\"</em> Nasher's mistake: killed the fungus-infected <a href=\"../NPC/Eevie(%E2%80%A0)\">Eevie</a> in the cell in self-defense."
     },
     {
       "session": "s03",
@@ -117,8 +117,8 @@
       "icon": "🏠",
       "title": "Återkomst till Caer Konig",
       "title_en": "Return to Caer Konig",
-      "desc": "Gänget anländer extremt tidigt till <a href=\"../Platser/Caer-Konig\">Caer Konig</a> efter Sunblights fästning. Eevies kropp lämnas till befolkningen. <a href=\"../NPC/Jarthra\">Jarthra</a> får tillbaka sina pärlor — belönar gänget med Hood of Water Breathing, värdefullt loot, och utlovad framtida hjälp. Den magiska lyktan återlämnas till The Northern Light — gratis 5 dagars long rest.",
-      "desc_en": "The gang arrives extremely early at <a href=\"../Platser/Caer-Konig\">Caer Konig</a> after Sunblight's fortress. Eevie's body is left to the townsfolk. <a href=\"../NPC/Jarthra\">Jarthra</a> gets her pearls back — rewards the gang with a Hood of Water Breathing, valuable loot, and a promise of future help. The magic lantern is returned to The Northern Light — free 5-day long rest."
+      "desc": "Gänget anländer extremt tidigt till <a href=\"../Platser/Caer-Konig\">Caer Konig</a> efter Sunblights fästning. <a href=\"../NPC/Eevie(%E2%80%A0)\">Eevies</a> kropp lämnas till befolkningen. <a href=\"../NPC/Jarthra\">Jarthra</a> får tillbaka sina pärlor — belönar gänget med Hood of Water Breathing, värdefullt loot, och utlovad framtida hjälp. Den magiska lyktan återlämnas till The Northern Light — gratis 5 dagars long rest.",
+      "desc_en": "The gang arrives extremely early at <a href=\"../Platser/Caer-Konig\">Caer Konig</a> after Sunblight's fortress. <a href=\"../NPC/Eevie(%E2%80%A0)\">Eevie</a>'s body is left to the townsfolk. <a href=\"../NPC/Jarthra\">Jarthra</a> gets her pearls back — rewards the gang with a Hood of Water Breathing, valuable loot, and a promise of future help. The magic lantern is returned to The Northern Light — free 5-day long rest."
     },
     {
       "session": "s03",
@@ -153,7 +153,7 @@
     {
       "session": "s03",
       "day": "Dag 27(?)",
-      "type": "death",
+      "type": "travel",
       "icon": "🏔️",
       "title": "Lavinen — 1000 fot fall",
       "title_en": "The Avalanche — 1000-Foot Fall",

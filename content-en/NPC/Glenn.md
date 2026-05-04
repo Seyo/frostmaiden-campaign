@@ -8,3 +8,4 @@ Half-elf, runs *The Hook, Line and Sinker* in [[Caer Konig]]. Unusually pleasant
 
 - [[The Burning Hammers]] stayed with him one night before they disappeared.
 - Something seems off — nobody is this friendly in this frozen hellhole.
+- **Evidence from the fortress (day 18–19):** [[Nasher]] found a ledger showing that Glenn has been trading ale with the **Sunblight dwarves**, not only with the dwarves of [[Dvärgadalen]]. The books look like ordinary business — the gang did not confront him.

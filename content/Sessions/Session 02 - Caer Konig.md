@@ -3,7 +3,7 @@
 **Dag 16 (forts.) – Ankomst:**
 - Hundkälken lämnades hos [[Keegan Valryn]] (uthyrare). Rekommenderades till _The Northern Light_.
 - Mötte [[Trovus]] (vit drakfödd, berusad) utanför _The Hook, Line and Sinker_. Informerade om:
-  - Mord på [[Bronn Bearhammer(†)]] och försvinnandet av hustrun [[Eevie]] (ej dvärg-glasmästare som Hildur sagt – felaktig information).
+  - Mord på [[Bronn Bearhammer(†)]] och försvinnandet av hustrun [[Eevie(†)]] (ej dvärg-glasmästare som Hildur sagt – felaktig information).
   - Osynliga tjuvar – bl.a. stulit den magiska lyktan från _The Northern Light_.
   - [[The Burning Hammers]] (3 äventyrare) lämnade orten för 4–5 dagar sedan, ej hörda av.
 - Presenterades för [[Cori & Allie]] på _The Northern Light_. Cori erbjöd fritt husrum mot hjälp.
@@ -33,7 +33,7 @@
 - [[Sork the Shadow]] spanade in bunkern: grå-hyddad dvärg, stor vit skägg, armborst, fjällpansar → match med hårlock från Bronns sovrum och de små fotspåren.
 - Smög in i fästningens tunga dubbeldörrar ([[Borc the Orc]] drog upp dem). Innehöll: falllucka, 3 järnburar (stulna getter, odöd varelse, tom).
   - **Södra korridoren:** Dvärg spottade gruppen. Strid – dvärgen förstorade sig magiskt. Besegrad, bunden i bur. Sork skadades av krigsyxa.
-  - **Västra korridoren (celblock):** 4 celler med humanoidvarelser täckta av svamp. En möjlig [[Eevie]] (blont hår, liten, vit nattlinne). [[Nasher]] öppnade cellen – varelsen attackerade – [[Nasher]] högg ned den i självförsvar. Oklart om det var Eevie.
+  - **Västra korridoren (celblock):** 4 celler med humanoidvarelser täckta av svamp. En av dem var [[Eevie(†)]] (blont hår, liten, vit nattlinne). [[Nasher]] öppnade cellen – den infekterade Eevie attackerade – [[Nasher]] högg ned henne i självförsvar.
   - Dvärg försökte öppna alla celler som alarm löstes – [[Borc the Orc]] teleporterade och stoppade honom.
   - **Norra korridoren:** Äldre, bättre rustad dvärg vid spak – [[Nildar Sunblight(†)]]. Talade dvarviska. Hävdade att Icewind Dale tillhör Sunblight-familjen. Erbjöd fred i 15 år om gruppen lämnade.
     - [[Nasher]] vägrade. Strid: [[Sork the Shadow]] prickade med pil. [[Borc the Orc]] teleporterade rakt in i spikfällan (Nildar drog spaken) – gick ned till 0 hp, stabiliserades av [[Zahir]]. Medvetslös i slutet av sessionen. [[Nasher]] slogs medvetslös av ett dimmigt ämne (flaska). [[Zahir]] besegrade [[Nildar Sunblight(†)]] med besvärjelse; [[Sork the Shadow]] fyllde honom med pilar.

@@ -40,14 +40,14 @@
     "blurb_en": "Northernmost on Maer Dualdon. Surrounded by sparse forest."
   },
   {
-    "id": "termalaine",
+    "id": "termalain",
     "type": "town",
-    "name": "Termalaine",
+    "name": "Termalain",
     "x": 36.7,
     "y": 45.9,
-    "slug": "Platser/Ten-Towns",
-    "blurb": "Vid Maer Dualdon. En av de tio bosättningarna i Ten-Towns.",
-    "blurb_en": "On Maer Dualdon. One of the ten settlements of Ten-Towns."
+    "slug": "Platser/Termalain",
+    "blurb": "Vid Maer Dualdon. Mord dag 19–23 — offer märkt med snöflinga (matchar isdolksmördaren).",
+    "blurb_en": "On Maer Dualdon. Murder on day 19–23 — victim marked with a snowflake (matches the ice pick killer)."
   },
   {
     "id": "easthaven",

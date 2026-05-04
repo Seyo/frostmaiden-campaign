@@ -4,8 +4,10 @@ Use these spellings in all new content. Update this list when a new recurring na
 
 ## Platser
 - Icewind Dale (not "Isvindsätten" etc.)
-- Caer-Dineval (hyphenated)
+- Caer Dineval (no hyphen — file is `Platser/Caer Dineval.md`)
+- Caer Konig (no hyphen)
 - Ten-Towns (hyphenated)
+- Termalain (without trailing 'e' — vault uses "Termalain", not the 5e module's "Termalaine")
 
 ## Karaktärer (spelarna)
 - Sork (the Shadow)

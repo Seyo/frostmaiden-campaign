@@ -5,18 +5,18 @@
 - [[Sork the Shadow]] ser **två par osynliga fotspår** försvinna ut ur fästningen — någon (också osynlig) har hjälpt dvärgen att fly. [[Sork the Shadow]] och [[Nasher]] springer efter men kommer inte ifatt.
 - 1 timmes genomsökning av fästningen:
   - Skyltar/märkningar visar att de svampinfekterade humanoiderna varit fångar upp mot **300 dagar**.
-  - [[Borc the Orc]] hittar bl.a. en ask med **pyttesmå kristaller** — misstänkt match till de saknade kristallerna från [[Eevie]]s scrimshaw-hantverk i _Snowy Baubles_ (ej bekräftat).
+  - [[Borc the Orc]] hittar bl.a. en ask med **pyttesmå kristaller** — misstänkt match till de saknade kristallerna från [[Eevie(†)]]s scrimshaw-hantverk i _Snowy Baubles_ (ej bekräftat).
   - [[Zahir]] hittar ett alkemistlaboratorium med en **lysande svamp** i en glasflaska utan lock. Lämnar den orörd — senare bekräftat av [[Foxes in the Snow]] att det var rätt val: sporerna kommer troligen från **Underdark** och är farliga att andas in.
   - [[Nasher]] hittar en **ledger** som bevisar att [[Glenn]] (_The Hook, Line and Sinker_) handlat öl med Sunblight-dvärgarna. Bokföringen ser ut som vanlig affärsverksamhet — varken [[Jarthra]] eller övriga reagerar, så Glenn konfronteras inte.
   - Den **odöda varelsen** i sin bur: [[Sork the Shadow]] uttrycker att han inte gillar att den fortfarande lever — men gänget distraheras och varelsen blir kvar.
   - **Glömda:** getterna i sina burar.
-- [[Eevie]]s kropp (eller den varelse hon var i cellen) lindas in i filt och tas med tillbaka.
+- [[Eevie(†)]]s kropp lindas in i filt och tas med tillbaka.
 - [[Jarthra]] vill hem.
 
 **Dag 19 (tidig morgon) – Hemresan och ankomst till Caer Konig:**
 - Resan tillbaka till Caer Konig går utan incidenter — gruppen tar inte ut en full natts sömn i fästningen, så de anländer extremt tidigt på dagen.
 - Vid ankomsten kommer [[Nasher]] plötsligt på det: *"HELVETE! VI GLÖMDE GETTERNA!"*
-- [[Eevie]]s kropp lämnas till befolkningen för hantering under en long rest.
+- [[Eevie(†)]]s kropp lämnas till befolkningen för hantering under en long rest.
 - [[Jarthra]]s pärlor återlämnas — hon blir överlycklig och ger gänget en generös belöning:
   - **Hood of Water Breathing**
   - Diverse värdefulla föremål värda en hel del guld
@@ -32,7 +32,7 @@
 - **Nytt mord i [[Termalain]]:** ett offer hittat med en **snöflinga inristad i bröstet** — matchar mönstret från isdolksmördaren. [[Garret]] och [[The Burning Hammers]] var på väg mot just Termalain.
 
 **Sent under vistelsen – [[Keegan Valryn]] återvänder:**
-- [[Keegan Valryn]] kommer tillbaka till Caer Konig och ger gänget ett **uppdrag**: hitta hans man [[Garret]] (ledare för [[The Burning Hammers]]).
+- [[Keegan Valryn]] kommer tillbaka till Caer Konig och ger gänget ett **uppdrag**: hitta hans make [[Garret]] (guiden som följde med [[The Burning Hammers]]).
 - Belöning: **50 gp** + gratis lån av hundspann.
 - Förberedelser inför avresa:
   - Säljer av loot från fästningen.

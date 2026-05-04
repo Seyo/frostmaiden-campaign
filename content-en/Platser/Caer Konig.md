@@ -14,9 +14,9 @@ Small settlement (~150 people) on the shore of [[Lac Dinneshere]] (not frozen de
 | [[Keegan Valryn]] | Dog sled rental |
 | [[Foxes in the Snow]] | Alchemist, *Snow Fox Hideout* |
 | [[Bronn Bearhammer(†)]] | Blacksmith, *Snowy Baubles* — murdered |
-| [[Eevie]] | Bronn's wife — missing |
+| [[Eevie(†)]] | Bronn's wife — kidnapped and killed in the fortress |
 
 ## Events
 
-- **Resolved:** The murder of [[Bronn Bearhammer(†)]], the disappearance of [[Eevie]], and the thefts were all orchestrated by [[Nildar Sunblight(†)]]'s dwarves from the fortress at [[Kelvins Cairn]]. The victim was a human barbarian, not a dwarf glassblower as rumour had it.
+- **Resolved:** The murder of [[Bronn Bearhammer(†)]], the kidnapping and death of [[Eevie(†)]], and the thefts were all orchestrated by [[Nildar Sunblight(†)]]'s dwarves from the fortress at [[Kelvins Cairn]]. The victim was a human barbarian, not a dwarf glassblower as rumour had it.
 - **Unresolved:** [[The Burning Hammers]] (3 adventurers) and the guide [[Garret]] are still missing.

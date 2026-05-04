@@ -24,7 +24,17 @@ Merchant from Torg's Imports. Hired the party for 75 gp to escort him to Bryn Sh
 **Perpetrator:** [[Nildar Sunblight(†)]]'s dwarves  
 **Location:** Snowy Baubles, [[Caer Konig]]
 
-Blacksmith and barbarian from [[Tribe of the Owl]], settled in [[Caer Konig]] as a smith. Married [[Eevie]]. Murdered as part of the Sunblight family's campaign against Ten-Towns. Valuable gemstones in the home were left untouched — not a robbery, but a targeted killing.
+Blacksmith and barbarian from [[Tribe of the Owl]], settled in [[Caer Konig]] as a smith. Married [[Eevie(†)]]. Murdered as part of the Sunblight family's campaign against Ten-Towns. Valuable gemstones in the home were left untouched — not a robbery, but a targeted killing.
+
+---
+
+## [[Eevie(†)]] — Day 18
+
+**Cause of death:** Cut down by [[Nasher]] in self-defense — fungus-infected and attacked when the cell was opened.
+**Perpetrator:** [[Nasher]] (in self-defense); responsible: [[Nildar Sunblight(†)]]'s dwarves, who kidnapped and infected her.
+**Location:** Cell block in Sunblight's Fortress, [[Kelvins Cairn]]
+
+[[Bronn Bearhammer(†)]]'s wife. Kidnapped the same night he was murdered and taken to the fortress, where she was infected with fungus as part of the Sunblight alchemical process. When [[Nasher]] opened her cell to save her, the infected Eevie attacked, and he cut her down reflexively. The body was left to the people of Caer Konig on day 19. See [[Nashers misstag]].
 
 ---
 

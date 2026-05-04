@@ -9,18 +9,18 @@ title: "Session 3 – Return to Caer Konig"
 - [[Sork the Shadow]] sees **two pairs of invisible footprints** leaving the fortress — someone (also invisible) has helped the dwarf escape. [[Sork the Shadow]] and [[Nasher]] give chase but cannot catch up.
 - 1 hour searching the fortress:
   - Markings show the fungus-infected humanoids have been captives for up to **300 days**.
-  - [[Borc the Orc]] finds, among other things, a box of **tiny crystals** — a suspected match to the missing crystals from [[Eevie]]'s scrimshaw work at *Snowy Baubles* (unconfirmed).
+  - [[Borc the Orc]] finds, among other things, a box of **tiny crystals** — a suspected match to the missing crystals from [[Eevie(†)]]'s scrimshaw work at *Snowy Baubles* (unconfirmed).
   - [[Zahir]] finds an alchemy lab with a **glowing mushroom** in an open glass jar. Leaves it untouched — later confirmed by [[Foxes in the Snow]] as the right call: the spores likely come from the **Underdark** and are dangerous to inhale.
   - [[Nasher]] finds a **ledger** proving that [[Glenn]] (*The Hook, Line and Sinker*) has been trading ale with the Sunblight dwarves. The bookkeeping looks like ordinary business — neither [[Jarthra]] nor anyone else reacts, so Glenn is not confronted.
   - The **undead creature** in its cage: [[Sork the Shadow]] voices that he doesn't like that it's still alive — but the gang is distracted and the creature is left behind.
   - **Forgotten:** the goats in their cages.
-- [[Eevie]]'s body (or the creature she was in the cell) is wrapped in a blanket and brought back.
+- [[Eevie(†)]]'s body is wrapped in a blanket and brought back.
 - [[Jarthra]] wants to go home.
 
 **Day 19 (early morning) – The journey back and arrival in Caer Konig:**
 - The journey back to Caer Konig is uneventful — the group does not take a full night's sleep at the fortress, so they arrive extremely early in the day.
 - On arrival, [[Nasher]] suddenly realizes: *"DAMMIT! WE FORGOT THE GOATS!"*
-- [[Eevie]]'s body is left to the townsfolk for handling during a long rest.
+- [[Eevie(†)]]'s body is left to the townsfolk for handling during a long rest.
 - [[Jarthra]]'s pearls are returned — she is overjoyed and gives the gang a generous reward:
   - **Hood of Water Breathing**
   - Various valuable items worth a fair amount of gold
@@ -36,7 +36,7 @@ title: "Session 3 – Return to Caer Konig"
 - **New murder in [[Termalain]]:** a victim is found with a **snowflake carved into the chest** — matching the pattern of the ice pick killer. [[Garret]] and [[The Burning Hammers]] were heading toward Termalain.
 
 **Late in the stay – [[Keegan Valryn]] returns:**
-- [[Keegan Valryn]] returns to Caer Konig and gives the gang a **quest**: find his man [[Garret]] (leader of [[The Burning Hammers]]).
+- [[Keegan Valryn]] returns to Caer Konig and gives the gang a **quest**: find his husband [[Garret]] (the guide who went out with [[The Burning Hammers]]).
 - Reward: **50 gp** + free loan of a dog sled.
 - Preparations before departure:
   - Sells off loot from the fortress.

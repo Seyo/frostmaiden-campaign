@@ -13,7 +13,7 @@ title: "Nasher"
 Elf paladin, Order of Tyr (Avenger — show no mercy to the wicked). From Neverwinter. High charisma and a strong moral compass. Speaks Dwarvish. Carries a grappling hook and javelins.
 
 - Fell in battle during the wolf attack (Day 6) and again against [[Nildar Sunblight(†)]] (Day 18).
-- Killed a possible [[Eevie]] in the fortress cell block in self-defense — carries the guilt. See [[Nashers misstag]].
+- Killed [[Eevie(†)]] in the fortress cell block in self-defense (fungus-infected) — carries the guilt. See [[Nashers misstag]].
 - Refuses to let [[Zahir]] desecrate corpses or take shortcuts at the expense of others' dignity. Grudgingly concedes his value when the charm delivers — "He's actually pretty useful sometimes."
 
 ## Background

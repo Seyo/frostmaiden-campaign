@@ -2,8 +2,8 @@
 title: "Nasher's Mistake"
 ---
 
-In the fortress cell block at [[Kelvins Cairn]] the party found humanoid creatures covered in fungus. One of them matched [[Eevie]]'s description (blonde hair, small frame, white nightgown).
+In the fortress cell block at [[Kelvins Cairn]] the party found humanoid creatures covered in fungus. One of them was [[Eevie(†)]] (blonde hair, small frame, white nightgown).
 
-[[Nasher]] opened the cell in an attempt to save her. The creature attacked. [[Nasher]] cut it down reflexively with his sword.
+[[Nasher]] opened the cell in an attempt to save her. The infected Eevie attacked. [[Nasher]] cut her down reflexively with his sword.
 
-It is unclear whether it truly was Eevie, and whether she could have been saved had the fungal infection not progressed too far. [[Nasher]] carries the guilt.
+Whether she could have been saved — whether the fungal infection could have been stopped, whether someone else might have reached her first — remains unclear. [[Nasher]] carries the guilt.

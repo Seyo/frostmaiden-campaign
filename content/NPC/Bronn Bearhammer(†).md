@@ -1,6 +1,6 @@
 **Fraktion:** [[Tribe of the Owl]], [[Ten-Towns]] (Caer Konig)
 
-Mänsklig barbar från Ugglestammen, bosatt i [[Caer Konig]] som smed (_Snowy Baubles_). Gifte sig med [[Eevie]]. Hade ett hett humör – bara Eevie kunde lugna honom.
+Mänsklig barbar från Ugglestammen, bosatt i [[Caer Konig]] som smed (_Snowy Baubles_). Gifte sig med [[Eevie(†)]]. Hade ett hett humör – bara Eevie kunde lugna honom.
 
 - **Mördad** i sömnen (strupen uppskuren) av [[Nildar Sunblight(†)]]s dvärgar. Se [[Dödsloggen]].
 - Brottsplatsen: sovrummet i _Snowy Baubles_. Vit hårlock (troligen gärningsmannens skägg) funnen vid kroppen.

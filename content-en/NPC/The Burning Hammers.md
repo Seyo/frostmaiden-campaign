@@ -4,7 +4,7 @@ title: "The Burning Hammers"
 
 **Faction:** Independent
 
-A group of three adventurers who came to [[Caer Konig]] to investigate the murder of [[Bronn Bearhammer(†)]] and [[Eevie]]'s disappearance. Appeared to be average adventurers.
+A group of three adventurers who came to [[Caer Konig]] to investigate the murder of [[Bronn Bearhammer(†)]] and [[Eevie(†)]]'s disappearance. Appeared to be average adventurers.
 
 - Stayed one night at *The Hook Line and Sinker* ([[Glenn]]).
 - Left town 4–5 days before [[Zahirs gäng]] arrived, guided out by [[Garret]].

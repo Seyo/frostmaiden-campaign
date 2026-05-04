@@ -10,9 +10,9 @@ Liten bosättning (~150 pers) vid sjön [[Lac Dinneshere]] (ej frusen trots kyla
 | [[Keegan Valryn]] | Hundkälkeuthyrning |
 | [[Foxes in the Snow]] | Alkemist, _Snow Fox Hideout_ |
 | [[Bronn Bearhammer(†)]] | Smed, _Snowy Baubles_ — mördad |
-| [[Eevie]] | Bronns fru — försvunnen |
+| [[Eevie(†)]] | Bronns fru — kidnappad och dödad i fästningen |
 
 ## Händelser
 
-- **Löst:** Mord på [[Bronn Bearhammer(†)]], försvinnandet av [[Eevie]] och tjuverierna orkestrerades av [[Nildar Sunblight(†)]]s dvärgar från fästningen vid [[Kelvins Cairn]]. Offret var en mänsklig barbar, inte en dvärg-glasmästare som ryktena sa.
+- **Löst:** Mord på [[Bronn Bearhammer(†)]], kidnappningen och döden av [[Eevie(†)]], samt tjuverierna orkestrerades av [[Nildar Sunblight(†)]]s dvärgar från fästningen vid [[Kelvins Cairn]]. Offret var en mänsklig barbar, inte en dvärg-glasmästare som ryktena sa.
 - **Olöst:** [[The Burning Hammers]] (3 äventyrare) och guiden [[Garret]] fortfarande saknade.
