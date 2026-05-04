@@ -26,7 +26,7 @@ title: "Session 3 – Return to Caer Konig"
   - Various valuable items worth a fair amount of gold
   - **Promise of future help** (used later in the session)
 - [[Jarthra]] asks if the village is safe now. The gang says there are likely **more Sunblights** who could cause trouble, but the immediate threat is over. Nothing is mentioned about Nildar's dying words or the dragon threat.
-- The magic lantern from *The Northern Light* (found in Nildar's quarters during session 2) is returned to [[Cori]] and [[Allie]] — free lodging and a long rest for **5 days**, with time to work and craft.
+- The magic lantern from *The Northern Light* (found in Nildar's quarters during session 2) is returned to [[Cori & Allie]] — free lodging and a long rest for **5 days**, with time to work and craft.
 
 **Day 19–23(?) – Rest and rumors in Caer Konig:**
 - 5 days of rest and crafting at *The Northern Light*.

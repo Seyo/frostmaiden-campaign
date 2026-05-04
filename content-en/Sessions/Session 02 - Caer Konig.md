@@ -10,7 +10,7 @@ title: "Session 2 – Caer Konig: The Fortress at Kelvin's Cairn"
   - Murder of [[Bronn Bearhammer(†)]] and disappearance of his wife [[Eevie]] (not a dwarf glassblower as Hildur had said — incorrect information).
   - Invisible thieves — including the stolen magic lantern from *The Northern Light*.
   - [[The Burning Hammers]] (3 adventurers) left 4–5 days ago, not heard from since.
-- Introduced to [[Cori]] and [[Allie]] at *The Northern Light*. Cori offered free lodging in exchange for help.
+- Introduced to [[Cori & Allie]] at *The Northern Light*. Cori offered free lodging in exchange for help.
 
 **Day 17 – Investigation:**
 - [[Borc the Orc]] heard loud laughter (Tasha's Hideous Laughter) from the south during the night watch, woke [[Zahir]]. Tracked footprints to *Snow Fox Hideout*.

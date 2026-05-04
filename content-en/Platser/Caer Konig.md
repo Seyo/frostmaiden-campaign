@@ -8,7 +8,7 @@ Small settlement (~150 people) on the shore of [[Lac Dinneshere]] (not frozen de
 
 | Person | Role |
 |--------|------|
-| [[Cori]] & [[Allie]] | Innkeepers, *The Northern Light* |
+| [[Cori & Allie]] | Innkeepers, *The Northern Light* |
 | [[Glenn]] | Half-elf, inn *The Hook, Line and Sinker* |
 | [[Jarthra]] | Elf guide, runs *Frozen-fur Expeditions* |
 | [[Keegan Valryn]] | Dog sled rental |

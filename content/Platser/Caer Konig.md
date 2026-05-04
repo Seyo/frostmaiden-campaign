@@ -4,7 +4,7 @@ Liten bosättning (~150 pers) vid sjön [[Lac Dinneshere]] (ej frusen trots kyla
 
 | Person | Roll |
 |--------|------|
-| [[Cori]] & [[Allie]] | Värdshusvärdar, _The Northern Light_ |
+| [[Cori & Allie]] | Värdshusvärdar, _The Northern Light_ |
 | [[Glenn]] | Halvälv, värdshus _The Hook, Line and Sinker_ |
 | [[Jarthra]] | Alv-guide, driver _Frozen-fur Expeditions_ |
 | [[Keegan Valryn]] | Hundkälkeuthyrning |

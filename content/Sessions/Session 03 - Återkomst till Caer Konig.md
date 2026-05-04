@@ -22,7 +22,7 @@
   - Diverse värdefulla föremål värda en hel del guld
   - **Utlovad framtida hjälp** (utnyttjas senare under sessionen)
 - [[Jarthra]] frågar om byn är säker nu. Gänget nämner att det troligen finns **fler Sunblights** som kan ställa till besvär, men att det omedelbara hotet är över. Inget sägs om Nildars dödsord eller hot om en drake.
-- Den magiska lyktan från _The Northern Light_ (funnen i Nildars gemak under session 2) återlämnas till [[Cori]] och [[Allie]] — gratis vistelse och long rest i **5 dagar**, med tid att jobba och pyssla.
+- Den magiska lyktan från _The Northern Light_ (funnen i Nildars gemak under session 2) återlämnas till [[Cori & Allie]] — gratis vistelse och long rest i **5 dagar**, med tid att jobba och pyssla.
 
 **Dag 19–23(?) – Vila och rykten i Caer Konig:**
 - 5 dagars vila och hantverk på _The Northern Light_.

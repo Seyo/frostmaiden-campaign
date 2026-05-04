@@ -27,7 +27,7 @@
     "title_en": "Places",
     "subtitle": "Städer, ruiner och fästningar",
     "subtitle_en": "Cities, ruins, and fortresses",
-    "count": 7,
+    "count": 8,
     "slug": "Platser",
     "items": [
       "Icewind Dale",
@@ -36,7 +36,8 @@
       "Easthaven",
       "Fireshear",
       "Kelvins Cairn",
-      "Dvärgadalen"
+      "Dvärgadalen",
+      "Termalain"
     ]
   },
   {
@@ -44,14 +45,15 @@
     "title_en": "Factions",
     "subtitle": "Bundsförvanter, fiender, stammar",
     "subtitle_en": "Allies, enemies, tribes",
-    "count": 5,
+    "count": 6,
     "slug": "Fraktioner",
     "items": [
       "Zahirs gäng",
       "Tribe of the Owl",
       "Dvärgarna i Dvärgadalen",
       "Ten-Towns",
-      "The Burning Hammers"
+      "The Burning Hammers",
+      "Auril"
     ]
   },
   {

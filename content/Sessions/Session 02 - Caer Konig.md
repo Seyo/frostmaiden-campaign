@@ -6,7 +6,7 @@
   - Mord på [[Bronn Bearhammer(†)]] och försvinnandet av hustrun [[Eevie]] (ej dvärg-glasmästare som Hildur sagt – felaktig information).
   - Osynliga tjuvar – bl.a. stulit den magiska lyktan från _The Northern Light_.
   - [[The Burning Hammers]] (3 äventyrare) lämnade orten för 4–5 dagar sedan, ej hörda av.
-- Presenterades för [[Cori]] och [[Allie]] på _The Northern Light_. Cori erbjöd fritt husrum mot hjälp.
+- Presenterades för [[Cori & Allie]] på _The Northern Light_. Cori erbjöd fritt husrum mot hjälp.
 
 **Dag 17 – Utredning:**
 - [[Borc the Orc]] hörde högt skratt (Tasha's Hideous Laughter) söderifrån under nattpasset, väckte [[Zahir]]. Spårade fotavtryck till _Snow Fox Hideout_.
