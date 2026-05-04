@@ -11,6 +11,12 @@
       "label": "Session 2 — Dag 16–18 — Caer Konig & Kelvins Cairn",
       "label_en": "Session 2 — Days 16–18 — Caer Konig & Kelvins Cairn",
       "slug": "Sessions/Session-02---Caer-Konig"
+    },
+    {
+      "id": "s03",
+      "label": "Session 3 — Dag 18–28(?) — Återkomst till Caer Konig",
+      "label_en": "Session 3 — Days 18–28(?) — Return to Caer Konig",
+      "slug": "Sessions/Session-03---%C3%85terkomst-till-Caer-Konig"
     }
   ],
   "events": [
@@ -103,6 +109,66 @@
       "title_en": "Sunblight's Fortress — Nildar Defeated",
       "desc": "Expedition till fästningen vid <a href=\"../Platser/Kelvins-Cairn\">Kelvins Cairn</a>. Nildar Sunblight besegrad — Zahir med Tasha's Hideous Laughter, Sork med pilar. Sista ord: <em>\"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns.\"</em> Nashers misstag: dödade den svampinfekterade varelsen i cellen — möjligen Eevie.",
       "desc_en": "Expedition to the fortress at <a href=\"../Platser/Kelvins-Cairn\">Kelvins Cairn</a>. Nildar Sunblight defeated — Zahir with Tasha's Hideous Laughter, Sork with arrows. Last words: <em>\"My father rides on a dragon's back and will destroy all of Ten-Towns.\"</em> Nasher's mistake: killed the fungus-infected creature in the cell — possibly Eevie."
+    },
+    {
+      "session": "s03",
+      "day": "Dag 19",
+      "type": "social",
+      "icon": "🏠",
+      "title": "Återkomst till Caer Konig",
+      "title_en": "Return to Caer Konig",
+      "desc": "Gänget anländer extremt tidigt till <a href=\"../Platser/Caer-Konig\">Caer Konig</a> efter Sunblights fästning. Eevies kropp lämnas till befolkningen. <a href=\"../NPC/Jarthra\">Jarthra</a> får tillbaka sina pärlor — belönar gänget med Hood of Water Breathing, värdefullt loot, och utlovad framtida hjälp. Den magiska lyktan återlämnas till The Northern Light — gratis 5 dagars long rest.",
+      "desc_en": "The gang arrives extremely early at <a href=\"../Platser/Caer-Konig\">Caer Konig</a> after Sunblight's fortress. Eevie's body is left to the townsfolk. <a href=\"../NPC/Jarthra\">Jarthra</a> gets her pearls back — rewards the gang with a Hood of Water Breathing, valuable loot, and a promise of future help. The magic lantern is returned to The Northern Light — free 5-day long rest."
+    },
+    {
+      "session": "s03",
+      "day": "Dag 19–23",
+      "type": "invest",
+      "icon": "🩸",
+      "title": "Nytt mord i Termalain",
+      "title_en": "New Murder in Termalain",
+      "desc": "Under vilan rapporteras ett nytt mord i Termalain — offret hittas med en <strong>snöflinga inristad i bröstet</strong>. Mönstret matchar isdolksmördaren. <a href=\"../NPC/Garret\">Garret</a> och <a href=\"../Fraktioner/The-Burning-Hammers\">The Burning Hammers</a> var på väg dit.",
+      "desc_en": "During the rest, a new murder is reported in Termalain — the victim is found with a <strong>snowflake carved into the chest</strong>. The pattern matches the ice pick killer. <a href=\"../NPC/Garret\">Garret</a> and <a href=\"../Fraktioner/The-Burning-Hammers\">The Burning Hammers</a> were heading there."
+    },
+    {
+      "session": "s03",
+      "day": "Dag 23(?)",
+      "type": "social",
+      "icon": "📜",
+      "title": "Keegans uppdrag — rädda Garret",
+      "title_en": "Keegan's Quest — Save Garret",
+      "desc": "<a href=\"../NPC/Keegan-Valryn\">Keegan Valryn</a> återvänder till Caer Konig och ger gänget i uppdrag att rädda <a href=\"../NPC/Garret\">Garret</a> — 50 gp i belöning, gratis hundspann. Gänget anlitar <a href=\"../NPC/Jarthra\">Jarthra</a> som guide.",
+      "desc_en": "<a href=\"../NPC/Keegan-Valryn\">Keegan Valryn</a> returns to Caer Konig and tasks the gang with rescuing <a href=\"../NPC/Garret\">Garret</a> — 50 gp reward, free dog sled. The gang hires <a href=\"../NPC/Jarthra\">Jarthra</a> as guide."
+    },
+    {
+      "session": "s03",
+      "day": "Dag 24–25(?)",
+      "type": "combat",
+      "icon": "🐻‍❄️",
+      "title": "Yeti, goblins och isbjörnar",
+      "title_en": "Yeti, Goblins, and Polar Bears",
+      "desc": "I en grotta norr om <a href=\"../Platser/D%C3%A4rgadalen\">Dvärgadalen</a> möter gänget vänliga dvärgar — en yeti har dödat en av dem och goblins har stulit deras järnmalm. <a href=\"../Karakt%C3%A4rer/Zahir\">Zahir</a> övertalar två förbannade isbjörnar att slåss för gänget (nat 20 på Speak with Animals). Goblinbossen brände vagnen — loot förlorad. Belöning: ~300 gp i juveler, vänskap med dvärgarna.",
+      "desc_en": "In a cave north of <a href=\"../Platser/D%C3%A4rgadalen\">Dvärgadalen</a>, the gang meets friendly dwarves — a yeti has killed one of them and goblins stole their iron ore. <a href=\"../Karakt%C3%A4rer/Zahir\">Zahir</a> persuades two enraged polar bears to fight for the gang (nat 20 on Speak with Animals). The goblin boss burned the wagon — loot lost. Reward: ~300 gp in jewels, friendship with the dwarves."
+    },
+    {
+      "session": "s03",
+      "day": "Dag 27(?)",
+      "type": "death",
+      "icon": "🏔️",
+      "title": "Lavinen — 1000 fot fall",
+      "title_en": "The Avalanche — 1000-Foot Fall",
+      "desc": "På väg upp på berget för att leta <a href=\"../NPC/Garret\">Garret</a> drar en lavin med gänget. Alla athletics checks misslyckas. Gänget faller ~1000 fot. <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a> nästan dödad. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> healar.",
+      "desc_en": "While climbing the mountain to find <a href=\"../NPC/Garret\">Garret</a>, an avalanche carries the gang away. All athletics checks fail. The gang falls ~1000 feet. <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a> nearly killed. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> heals."
+    },
+    {
+      "session": "s03",
+      "day": "Dag 27–28(?)",
+      "type": "combat",
+      "icon": "🐈",
+      "title": "Garret räddad — crag cats",
+      "title_en": "Garret Rescued — Crag Cats",
+      "desc": "Gänget hittar <a href=\"../NPC/Garret\">Garret</a> i snön — vid liv men illa rivad av en yeti. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> healar honom. Två crag cats attackerar — gänget mördar dem utan problem (för en gångs skull tur). <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a> är glad att det inte var en yeti.",
+      "desc_en": "The gang finds <a href=\"../NPC/Garret\">Garret</a> in the snow — alive but badly mauled by a yeti. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> heals him. Two crag cats attack — the gang kills them without trouble (lucky, for once). <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a> is glad it wasn't a yeti."
     }
   ]
 }

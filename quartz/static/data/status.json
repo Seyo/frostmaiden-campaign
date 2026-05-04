@@ -1,23 +1,25 @@
 {
-  "day": 18,
+  "day": 26,
   "sv": {
-    "quote": "\"Min fader rider på en drakes rygg och ska förgöra alla Ten-Towns.\"",
-    "attr": "— Nildar Sunblight, dödsord",
+    "quote": "\"STANNA — VÄNNER — MÖRDA.\"",
+    "attr": "— Zahir, Speak with Animals (nat 20)",
     "questions": [
-      "⚠ Borc är medvetslös — stabiliserad av Zahir, men ej uppvaknad.",
+      "Garret räddad — men hur tar gänget hem honom från berget?",
+      "Vem mördade i Termalain med snöflinga inristad i bröstet?",
+      "Den fångade Sunblight-dvärgen flydde med osynlig medbrottsling — vart?",
       "Var varelsen i cellen verkligen Eevie?",
-      "Vad har hänt med Keegan Valryn och The Burning Hammers?",
-      "Jarthras pärlor är ännu inte återlämnade…"
+      "Sunblights fader på drakrygg — när slår han till?"
     ]
   },
   "en": {
-    "quote": "\"My father rides on a dragon's back and will destroy all of Ten-Towns.\"",
-    "attr": "— Nildar Sunblight, dying words",
+    "quote": "\"STOP — FRIENDS — KILL.\"",
+    "attr": "— Zahir, Speak with Animals (nat 20)",
     "questions": [
-      "⚠ Borc is unconscious — stabilized by Zahir, but not yet awoken.",
+      "Garret rescued — but how does the gang get him home from the mountain?",
+      "Who murdered someone in Termalain with a snowflake carved into the chest?",
+      "The captured Sunblight dwarf escaped with an invisible accomplice — where to?",
       "Was the creature in the cell really Eevie?",
-      "What happened to Keegan Valryn and The Burning Hammers?",
-      "Jarthra's pearls have not yet been returned…"
+      "Sunblight's father on a dragon's back — when does he strike?"
     ]
   }
 }

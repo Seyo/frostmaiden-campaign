@@ -5,10 +5,10 @@
     "title": "Morden i Ten-Towns",
     "title_en": "The Ten-Towns Murders",
     "slug": "Uppdrag%20%26%20rykten/Morden-i-Ten-Towns",
-    "desc": "En seriemördare slår till med isdolk rakt genom hjärtat. Minst 22 offer i Ten-Towns. Offer bekräftade i <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a> och Targos — fortfarande outredda. Troligen kopplat till <a href=\"../Fraktioner/Aurils-Rime\" target=\"_parent\">Auril</a> eller en kult.",
-    "desc_en": "A serial killer strikes with an ice pick straight through the heart. At least 22 victims in Ten-Towns. Victims confirmed in <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a> and Targos — still uninvestigated. Likely connected to <a href=\"../Fraktioner/Aurils-Rime\" target=\"_parent\">Auril</a> or a cult.",
-    "meta": "Senast: Dag 10–15, Bryn Shander",
-    "meta_en": "Last seen: Days 10–15, Bryn Shander"
+    "desc": "En seriemördare slår till med isdolk rakt genom hjärtat. Minst 22 offer i Ten-Towns. Offer bekräftade i <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos och nu <strong>Termalain</strong> (snöflinga inristad i bröstet). Troligen kopplat till <a href=\"../Fraktioner/Aurils-Rime\" target=\"_parent\">Auril</a> eller en kult.",
+    "desc_en": "A serial killer strikes with an ice pick straight through the heart. At least 22 victims in Ten-Towns. Victims confirmed in <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos and now <strong>Termalain</strong> (snowflake carved into the chest). Likely connected to <a href=\"../Fraktioner/Aurils-Rime\" target=\"_parent\">Auril</a> or a cult.",
+    "meta": "Senast: Dag 19–23, Termalain",
+    "meta_en": "Last seen: Days 19–23, Termalain"
   },
   {
     "id": "sunblight-familjen",
@@ -16,10 +16,10 @@
     "title": "Sunblight-familjen",
     "title_en": "The Sunblight Family",
     "slug": "Uppdrag%20%26%20rykten/Sunblight-familjen",
-    "desc": "<a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildar Sunblight</a> besegrad dag 18 — men hans far lever och rider på en drakes rygg. Familjen hävdar att hela Icewind Dale tillhör dem. Det värsta återstår.",
-    "desc_en": "<a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildar Sunblight</a> defeated on day 18 — but his father lives and rides on a dragon's back. The family claims all of Icewind Dale belongs to them. The worst is yet to come.",
-    "meta": "Senast: Dag 18, Sunblights fästning",
-    "meta_en": "Last seen: Day 18, Sunblight's Fortress"
+    "desc": "<a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildar Sunblight</a> besegrad dag 18 — men hans far lever och rider på en drakes rygg. Familjen hävdar att hela Icewind Dale tillhör dem. En fångad Sunblight-dvärg flydde dag 19 ur fästningen med en osynlig medbrottsling. Det värsta återstår.",
+    "desc_en": "<a href=\"../NPC/Nildar-Sunblight(%E2%80%A0)\" target=\"_parent\">Nildar Sunblight</a> defeated on day 18 — but his father lives and rides on a dragon's back. The family claims all of Icewind Dale belongs to them. A captured Sunblight dwarf escaped the fortress on day 19 with an invisible accomplice. The worst is yet to come.",
+    "meta": "Senast: Dag 19, Sunblights fästning",
+    "meta_en": "Last seen: Day 19, Sunblight's Fortress"
   },
   {
     "id": "vad-hande-med-eevie",
@@ -38,10 +38,10 @@
     "title": "The Burning Hammers & Keegan Valryn",
     "title_en": "The Burning Hammers & Keegan Valryn",
     "slug": null,
-    "desc": "Tre äventyrare — The Burning Hammers — försvann för 4–5 dagar sedan i riktning mot <a href=\"../Platser/Kelvins-Cairn\" target=\"_parent\">Kelvins Cairn</a>. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> drog iväg med hundkälke för att söka efter dem och försvann han också.",
-    "desc_en": "Three adventurers — The Burning Hammers — disappeared 4–5 days ago heading toward <a href=\"../Platser/Kelvins-Cairn\" target=\"_parent\">Kelvins Cairn</a>. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> took a dog sled to search for them and disappeared as well.",
-    "meta": "Senast: Dag 17, Caer Konig",
-    "meta_en": "Last seen: Day 17, Caer Konig"
+    "desc": "Tre äventyrare — The Burning Hammers — försvann i riktning mot Termalain. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> återvände till Caer Konig och anlitade gänget. <a href=\"../NPC/Garret\" target=\"_parent\">Garret</a> hittades vid liv på berget — illa rivad av en yeti. De andra två Hammers fortfarande saknade.",
+    "desc_en": "Three adventurers — The Burning Hammers — disappeared heading toward Termalain. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> returned to Caer Konig and hired the gang. <a href=\"../NPC/Garret\" target=\"_parent\">Garret</a> was found alive on the mountain — badly mauled by a yeti. The other two Hammers still missing.",
+    "meta": "Senast: Dag 27–28(?), berget",
+    "meta_en": "Last seen: Days 27–28(?), the mountain"
   },
   {
     "id": "aurils-forbannelse",

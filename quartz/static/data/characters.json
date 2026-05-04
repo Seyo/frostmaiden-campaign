@@ -5,8 +5,8 @@
     "role": "Halfling Warlock",
     "role_en": "Halfling Warlock",
     "portrait": "./assets/portraits/zahir.png",
-    "blurb": "Från Calimport. Hög karisma, vass tunga, moraliskt tvivelaktig. Besegrade Nildar med Tasha's Hideous Laughter.",
-    "blurb_en": "From Calimport. High charisma, sharp tongue, morally questionable. Defeated Nildar with Tasha's Hideous Laughter.",
+    "blurb": "Från Calimport. Hög karisma, vass tunga, moraliskt tvivelaktig. Besegrade Nildar med Tasha's Hideous Laughter. Övertalade två förbannade isbjörnar att slåss för gänget (nat 20 på Speak with Animals).",
+    "blurb_en": "From Calimport. High charisma, sharp tongue, morally questionable. Defeated Nildar with Tasha's Hideous Laughter. Persuaded two enraged polar bears to fight for the gang (nat 20 on Speak with Animals).",
     "slug": "Karakt%C3%A4rer/Zahir"
   },
   {
@@ -25,8 +25,8 @@
     "role": "Ork Rogue",
     "role_en": "Orc Rogue",
     "portrait": "./assets/portraits/sork.png",
-    "blurb": "Avhoppare från Waterdeep via Fireshear. Spanare och bågskytt. Stjäl bara från dem som inte längre behöver det.",
-    "blurb_en": "Deserter from Waterdeep via Fireshear. Scout and archer. Only steals from those who no longer need it.",
+    "blurb": "Avhoppare från Waterdeep via Fireshear. Spanare och bågskytt. Stjäl bara från dem som inte längre behöver det. Föll 1000 fot i lavin och överlevde tack vare Nashers healing.",
+    "blurb_en": "Deserter from Waterdeep via Fireshear. Scout and archer. Only steals from those who no longer need it. Fell 1000 feet in an avalanche and survived thanks to Nasher's healing.",
     "slug": "Karakt%C3%A4rer/Sork-the-Shadow"
   },
   {
@@ -35,8 +35,8 @@
     "role": "Goliath Barbar",
     "role_en": "Goliath Barbarian",
     "portrait": "./assets/portraits/borc.png",
-    "blurb": "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i spikfällan, stabiliserades av Zahir. Medvetslös.",
-    "blurb_en": "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in the spike trap, stabilized by Zahir. Unconscious.",
+    "blurb": "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i Sunblights spikfälla men har återhämtat sig.",
+    "blurb_en": "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in Sunblight's spike trap but has recovered.",
     "slug": "Karakt%C3%A4rer/Borc-the-Orc"
   }
 ]

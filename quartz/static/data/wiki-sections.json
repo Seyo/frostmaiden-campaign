@@ -19,7 +19,7 @@
       "Bronn Bearhammer (†)",
       "Aubril (†)",
       "Nildar Sunblight (†)",
-      "Garret (saknad)"
+      "Garret"
     ]
   },
   {
@@ -73,18 +73,19 @@
     "title_en": "Sessions",
     "subtitle": "Dag för dag, session för session",
     "subtitle_en": "Day by day, session by session",
-    "count": 2,
+    "count": 3,
     "slug": "Sessions",
     "items": [
       "Session 01 — Vägen till Caer Konig",
-      "Session 02 — Caer Konig: Fästningen vid Kelvins Cairn"
+      "Session 02 — Caer Konig: Fästningen vid Kelvins Cairn",
+      "Session 03 — Återkomst till Caer Konig"
     ]
   },
   {
     "title": "Händelser & tidslinje",
     "title_en": "Events & Timeline",
-    "subtitle": "18 dagar av bedrifter och misstag",
-    "subtitle_en": "18 days of feats and mistakes",
+    "subtitle": "26 dagar av bedrifter och misstag",
+    "subtitle_en": "26 days of feats and mistakes",
     "count": 4,
     "slug": "H%C3%A4ndelser",
     "items": [
