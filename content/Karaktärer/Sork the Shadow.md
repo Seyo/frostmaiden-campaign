@@ -12,6 +12,10 @@ Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] sn
 - Spanade in bunkern vid fästningen – identifierade grå-dvärgsvakten och kopplade ihop den vita skägglocket med [[Bronn Bearhammer(†)]]s brottsplats.
 - Fällde [[Nildar Sunblight(†)]] med pilar.
 - Klantade sig under första long rest (stöldförsök, böter 25 gp, hade bara 11 gp). [[Zahir]] betalade halva.
+- Spanade in **två par osynliga fotspår** ut ur Sunblights fästning Dag 19 efter att den fångade dvärgen brutit sig ut – sprang efter med [[Nasher]] men tappade dem.
+- Tjänade **15 gp** hederligt på acrobatics-uppvisning under 5 dagars vila i Caer Konig (Dag 19–23) – första gången han drar in pengar utan att stjäla något.
+- Smög "som en kung" mot goblin-lägret norr om [[Dvärgadalen]] (Dag 24–25) medan [[Zahir]] sumpade stealthen och drog in striden.
+- Föll ~1000 fot i en lavin på vägen upp på berget Dag 27 – nästan dödad, stabiliserad och healad av [[Nasher]].
 
 ## Bakgrund
 
@@ -35,10 +39,11 @@ Blir lätt upphetsad när värdesaker hittas. Efter incidenten i [[Bryn Shander]
 
 I praktiken:
 - Tog ädelstenar (~20 gp) från [[Bronn Bearhammer(†)]]s järnkista – Bronn är död och behöver dem inte.
-- Lät [[Keegan Valryn]] och [[Garret]]s tillhörigheter vara orörda – de kan fortfarande leva.
+- Lät [[Keegan Valryn]] och [[Garret]]s tillhörigheter vara orörda – båda visade sig fortfarande leva ([[Garret]] räddad Dag 27–28). Regeln höll.
+- Återlämnade [[Jarthra]]s pärlor Dag 19 trots värdet (~175 gp). Belöningen: Hood of Water Breathing, värdefullt loot och utlovad framtida hjälp – användes senare för att rädda [[Garret]].
 - Valde att *inte* betala [[Jarthra]] med Bronns ädelstenar – hon kände Bronn och kunde ha känt igen hans egendom.
 - Planerar möjligen att handla med dvärgarna i [[Dvärgadalen]] istället.
 
 ## Olöst
 
-Kluven över [[Jarthra]]s pärlor som återfanns i [[Nildar Sunblight(†)]]s fästning. Tekniskt sett stulet gods som borde återlämnas – men 175 gp är 175 gp...
+Den **osynlige medbrottsling** som hjälpte den fångade Sunblight-dvärgen att fly ur fästningen Dag 19 är fortfarande oidentifierad. Sork såg fotspåren först – det är hans spår att följa upp.
