@@ -15,8 +15,8 @@
     "role": "Alv Paladin · Tyrs orden",
     "role_en": "Elf Paladin · Order of Tyr",
     "portrait": "./assets/portraits/nasher.png",
-    "blurb": "Justiciar av Tyr från Neverwinter. Föll två gånger i strid. Bär på skulden för att ha dödat den svampinfekterade Eevie i cellen.",
-    "blurb_en": "Justiciar of Tyr from Neverwinter. Fell twice in battle. Carries the guilt for killing the fungus-infected Eevie in the cell.",
+    "blurb": "Justiciar av Tyr från Neverwinter. Föll två gånger i strid. Bär på skulden för Eevies död. Healade Sork ur lavinens grepp och räddade Garret ur snön.",
+    "blurb_en": "Justiciar of Tyr from Neverwinter. Fell twice in battle. Carries the guilt for Eevie's death. Healed Sork out of the avalanche's grip and pulled Garret from the snow.",
     "slug": "Karakt%C3%A4rer/Nasher"
   },
   {
@@ -35,8 +35,8 @@
     "role": "Goliath Barbar",
     "role_en": "Goliath Barbarian",
     "portrait": "./assets/portraits/borc.png",
-    "blurb": "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i Sunblights spikfälla men har återhämtat sig.",
-    "blurb_en": "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in Sunblight's spike trap but has recovered.",
+    "blurb": "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i Sunblights spikfälla men återhämtade sig. Hittade en ask med kristaller som kan länka till Eevies scrimshaw.",
+    "blurb_en": "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in Sunblight's spike trap but recovered. Found a box of tiny crystals that may link to Eevie's missing scrimshaw.",
     "slug": "Karakt%C3%A4rer/Borc-the-Orc"
   }
 ]
