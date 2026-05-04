@@ -41,4 +41,4 @@ A single targeted edit to `quartz/static/data/map-pins.json` with the new pin ap
 
 ## References
 
-See `references/pin-template.js` for the canonical pin object shape.
+See `references/pin-template.json` for the canonical pin object shape (note: `name_en` is required only when `name` contains Swedish-specific characters; `label` is optional and defaults to false).

@@ -22,10 +22,11 @@ Transform unstructured session notes (text dump, PDF extraction, or bullet point
 2. Extract all named NPCs, locations, and factions — they become `[[wikilinks]]`.
 3. Flag any lore that may conflict with existing `Sessions/`, `NPC/`, or `Platser/` notes — add a comment for human review.
 4. Derive the session subtitle from the most consequential single event.
-5. Write `Vad hände` as a clean Swedish third-person narrative, not a bullet dump. Target 400–600 words.
-6. Populate `Öppna frågor` with genuine unresolved threads, not summaries.
+5. Structure the session as **day-by-day bullets** under `**Dag X – Phase Title:**` headers, matching the format of Session 02 and Session 03 in the vault. Not a single long prose narrative.
+6. Open threads / cliffhangers belong in `quartz/static/data/status.json` (the "Senast i kampanjen" open questions on the landing page) — not in the session file itself.
+7. The Swedish file has no frontmatter; the English mirror requires a `title:` frontmatter block.
 
-**Reason in English. All output content must be in Swedish.**
+**Reason in English. The Swedish source must be in Swedish; the English mirror must be in English.**
 
 ## Output Format
 

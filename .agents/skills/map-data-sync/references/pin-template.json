@@ -1,0 +1,12 @@
+{
+  "id": "kebab-case-id",
+  "type": "town",
+  "name": "Platsnamn på svenska",
+  "name_en": "English place name",
+  "x": 42.5,
+  "y": 31.0,
+  "slug": "Platser/Platsnamn",
+  "blurb": "Kort beskrivning på svenska. Använd <a href=\"../Platser/Platsnamn\">../Platser/...</a> för wikilänkar.",
+  "blurb_en": "Short English description. Use <a href=\"../Platser/Platsnamn\">../Platser/...</a> for wiki links.",
+  "label": true
+}

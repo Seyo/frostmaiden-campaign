@@ -1,33 +1,59 @@
-# Session NN — [Undertitel från viktigaste händelse]
+<!--
+  CANONICAL SESSION TEMPLATE
+  ==========================
+  Output two files with the SAME Swedish filename:
 
-**Datum:** YYYY-MM-DD
-**Kampanjdag:** Dag X–Y
-**Plats:** [[Platsnamn]]
+    1. content/Sessions/Session NN - <slug>.md     (Swedish source)
+    2. content-en/Sessions/Session NN - <slug>.md  (English mirror)
 
-## Sammanfattning
+  - Filenames stay Swedish in both vaults — only prose is translated.
+  - The Swedish file has NO frontmatter (matches Session 02/03 in the vault).
+  - The English mirror requires a `title:` frontmatter block.
+  - Use day-by-day bullet structure as shown below; this matches the existing
+    sessions and renders cleanly in Quartz.
+  - Wikilink NPCs / places / factions inline. Files keep their Swedish names
+    in both vaults, so [[Sork the Shadow]] works in EN content too.
 
-[2–4 meningar som fångar sessionens övergripande båge. Vad förändrades? Vad är annorlunda nu jämfört med innan sessionen?]
+  After writing the session, also update the relevant data JSON files
+  (see SKILL.md): timeline.json, status.json, wiki-sections.json,
+  characters.json, quests.json, map-pins.json — whichever the new session
+  touches.
+-->
 
-## Vad hände
+# Session N – [Undertitel från viktigaste händelse]
 
-[Tredjepersonsberättelse på svenska, 400–600 ord. Länka NPCer, platser och fraktioner som [[wikilinks]]. Skriv flödande prosa, inte punkter.]
+**Dag X – [Kort fasrubrik]:**
+- [Händelse 1, prosa-ish bullet med [[wikilinks]] till NPCer/platser/fraktioner]
+- [Händelse 2 — formulerad som ett faktum som flyttar handlingen framåt]
+- [Sub-bullet om det finns underhändelser]
+  - [Detalj]
 
-## Viktiga händelser
+**Dag X+1 – [Nästa fas]:**
+- [Händelse]
+- [Händelse]
 
-- [Händelse 1 — formulera som ett faktum som förändrat kampanjen]
-- [Händelse 2]
-- [Händelse 3]
+**Dag X+2 – [Sluthändelse / cliffhanger]:**
+- [Händelse]
+- [Avslutande detalj som leder över i nästa session]
 
-## Öppna frågor
+---
 
-- [Olöst tråd eller cliffhanger som gruppen bär med sig]
-- [Mysterium som fördjupades under sessionen]
+*Sammanfattning baserad på [Nashers in-character-journal / minnesanteckningar / GM-anteckningar]. Fyll på när mer detaljer kommer.*
 
-## XP & loot
+---
 
-| Karaktär | XP | Noterbart loot |
-|----------|----|----------------|
-| [[Sork]]   |    |                |
-| [[Nasher]] |    |                |
-| [[Zahir]]  |    |                |
-| [[Borc]]   |    |                |
+## English mirror frontmatter
+
+The `content-en/Sessions/Session NN - <slug>.md` file MUST start with:
+
+```markdown
+---
+title: "Session N – [English subtitle]"
+---
+
+# Session N – [English subtitle]
+
+...
+```
+
+Translate the prose only. Keep `[[wikilinks]]` pointing at the same Swedish file names.
