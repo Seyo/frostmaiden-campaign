@@ -36,30 +36,36 @@ There are no build/test/lint commands. To preview locally: `npx quartz build --s
 
 ## Data vs Layout — quartz/static/
 
-Campaign data lives in dedicated JS files so HTML files only contain layout and rendering logic. **Never hardcode events, pins, or character data directly in HTML.** When adding new content, only the data file needs changing — both consumers pick it up automatically.
+Campaign data lives in JSON files in `quartz/static/data/` so HTML files only contain layout and rendering logic. The thin `*-data.js` files in `quartz/static/` are just fetchers that load the matching JSON and expose a global variable plus a `*_READY` promise pages must `await` before reading. **Never hardcode events, pins, or character data directly in HTML.** When adding new content, only the JSON file needs changing — all consumers pick it up automatically.
 
-| Data file | Global variable(s) | Consumed by |
-|---|---|---|
-| `quartz/static/map-data.js` | `MAP_PINS` | `landing.html`, `map.html` |
-| `quartz/static/timeline-data.js` | `TIMELINE_SESSIONS`, `TIMELINE_EVENTS` | `landing.html`, `timeline.html` |
+| JSON data file | Consumed by (mechanism) |
+|---|---|
+| `data/map-pins.json` | `landing.html`, `map.html` (via `map-data.js` → `MAP_PINS`) |
+| `data/timeline.json` | `landing.html`, `timeline.html` (via `timeline-data.js` → `TIMELINE_SESSIONS`, `TIMELINE_EVENTS`) |
+| `data/quests.json` | `quests.html` (via `quests-data.js`) |
+| `data/i18n.json` | all pages (via `i18n.js` → `I18N`) |
+| `data/status.json` | `landing.html` — status card (day, quote, open questions) |
+| `data/characters.json` | `landing.html` — CHARACTERS array |
+| `data/wiki-sections.json` | `landing.html` — WIKI_SECTIONS array |
 
-**To add a map pin:** push to `MAP_PINS` in `map-data.js`.  
-**To add a timeline event:** push to `TIMELINE_EVENTS` in `timeline-data.js` (keep chronological order; `landing.html` reverses automatically).  
-**To add a session:** push to `TIMELINE_SESSIONS` in `timeline-data.js`.
+**To add a map pin:** edit `data/map-pins.json`.  
+**To add a timeline event:** edit `data/timeline.json` under `events` (keep chronological order; `landing.html` reverses automatically).  
+**To add a session:** edit `data/timeline.json` under `sessions`.
 
 In `desc` fields, HTML is allowed. Use `../Platser/...` or `../NPC/...` for wiki links — both `/static/` pages resolve `../` to the wiki root. `timeline.html` automatically adds `target="_parent"` since it runs inside an iframe.
 
 ## Landing Page (quartz/static/landing.html)
 
-Quartz does **not** auto-generate `landing.html` — it is hand-maintained. When content changes, keep the landing page in sync:
+Quartz does **not** auto-generate `landing.html` — the layout is hand-maintained, but all data is loaded from `data/*.json`. When content changes, edit the JSON files (the HTML rarely needs touching):
 
-- **`status-card` (Senast i kampanjen):** Update the quote, `status-open-questions`, and campaign day when a new session is added or a cliffhanger changes.
-- **`CHARACTERS` array:** Keep each character's `blurb` current (HP status, key events, etc.).
-- **`MAP_PINS` array:** Edit `map-data.js`, not `landing.html`.
-- **`TIMELINE_EVENTS`/`TIMELINE_SESSIONS`:** Edit `timeline-data.js`, not `landing.html`.
-- **`WIKI_SECTIONS` array:** Update `count` and `items` when new notes are added to a section.
+- **`status-card` (Senast i kampanjen):** Edit `data/status.json` — update `day`, the quote, and the open questions when a new session is added or a cliffhanger changes.
+- **Character blurbs:** Edit `data/characters.json` — keep each character's `blurb` current (HP status, key events, etc.).
+- **Map pins:** Edit `data/map-pins.json`.
+- **Timeline:** Edit `data/timeline.json` (sessions + events).
+- **Wiki sections:** Edit `data/wiki-sections.json` — update `count` and `items` when new notes are added.
+- **Quests:** Edit `data/quests.json`.
 
-Always update data files and `landing.html` alongside the relevant content files, then push together.
+Always update the relevant `data/*.json` files alongside content changes, then push together. `landing.html` itself only needs editing for layout/template changes.
 
 ## Bilingual Architecture (SV + EN)
 
@@ -77,8 +83,8 @@ Both share a single `quartz.layout.ts` and all `quartz/static/` pages.
 
 ### Static pages (quartz/static/)
 
-- `quartz/static/i18n.js` — single source of truth for all UI strings. `I18N.sv` and `I18N.en`. API: `getLang()`, `setLang()`, `t(key)`, `tf(key, ...args)`, `toggleLang()`.
-- Every data file (`map-data.js`, `timeline-data.js`, `quests-data.js`) carries both-language content using `_en` field convention: `title_en`, `desc_en`, `meta_en`, `blurb_en`, `name_en`, `label_en`.
+- `data/i18n.json` — single source of truth for all UI strings (`I18N.sv` and `I18N.en`). Loaded via `i18n.js`, which exposes the API: `getLang()`, `setLang()`, `t(key)`, `tf(key, ...args)`, `toggleLang()`.
+- Most data JSON files (`map-pins.json`, `timeline.json`, `quests.json`, `characters.json`, `wiki-sections.json`) carry both-language content using the `_en` field convention: `title_en`, `desc_en`, `meta_en`, `blurb_en`, `name_en`, `label_en`, `subtitle_en`, `role_en`. `status.json` uses nested `sv`/`en` objects instead.
 - `processDesc(html)` rewrites `href="../` → `href="../en/` when `lang === 'en'`, so wiki links target the EN build without storing duplicate URLs.
 - `var WIKI = lang === 'en' ? '../en/' : '../'` — used wherever a link to the wiki is constructed.
 
