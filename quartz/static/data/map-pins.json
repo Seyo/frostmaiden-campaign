@@ -153,5 +153,16 @@
     "slug": "Sessions/Session-01---V%C3%A4gen-till-Caer-Konig",
     "blurb": "Dag 16 — under hundslädsfärden mot Caer Konig bröt en våldsam hagelstorm ut. Två hundar dog. Gruppen nådde Caer Konig sent på kvällen.",
     "blurb_en": "Day 16 — during the dog sled journey toward Caer Konig, a violent hail storm broke out. Two dogs died. The party reached Caer Konig late in the evening."
+  },
+  {
+    "id": "lavinen-och-garret",
+    "type": "event",
+    "name": "Lavinen och Garret",
+    "name_en": "The Avalanche and Garret",
+    "x": 44.6,
+    "y": 41.9,
+    "slug": "Sessions/Session-03---%C3%85terkomst-till-Caer-Konig",
+    "blurb": "Här mötte gänget vänliga dvärgar, övertalade två förbannade isbjörnar att slåss med dem (Zahirs nat 20), drabbades av en lavin med ~1000 fots fall, och hittade Garret vid liv — illa rivad av en yeti.",
+    "blurb_en": "Here the gang met friendly dwarves, persuaded two enraged polar bears to fight alongside them (Zahir's nat 20), were caught in an avalanche with a ~1000-foot fall, and found Garret alive — badly mauled by a yeti."
   }
 ]
