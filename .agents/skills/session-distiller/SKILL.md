@@ -29,7 +29,11 @@ Transform unstructured session notes (text dump, PDF extraction, or bullet point
 
 ## Output Format
 
-File path: `Sessions/Session-NN.md`
+File path: `content/Sessions/Session-NN - <slug>.md` (Swedish source).
+
+The site is bilingual — also create an English mirror at `content-en/Sessions/Session-NN - <slug>.md` with the **same filename** (file names stay Swedish; only the prose is translated). The English file requires a `title:` frontmatter block. See `Session 02 - Caer Konig.md` and its `content-en/` mirror for the canonical pair.
+
+After distilling a session, update the relevant `quartz/static/data/*.json` files where applicable: `timeline.json` (new session entry + key events with `_en` fields), `status.json` (latest day, quote, open questions), and `wiki-sections.json` (sessions count + items list).
 
 See `references/session-template.md` for a complete worked example.
 

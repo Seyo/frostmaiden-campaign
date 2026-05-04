@@ -152,6 +152,7 @@ See `references/phase-details.md` for the specific file paths and expected chang
 ## Important constraints
 
 - **Reason in English.** Any wiki content you add (prose, headings) must be in **Swedish**.
+- **Bilingual mirror.** Any new wiki note added to `content/` must be mirrored to `content-en/` with the same filename. Update the relevant `quartz/static/data/*.json` files (`timeline.json`, `status.json`, `wiki-sections.json`, etc.) if the new note is referenced from static pages.
 - **Wikilinks must use the exact file name** (case-sensitive on Linux/Quartz). Use `find content -iname "*.md"` to confirm the correct spelling before linking.
-- **Never hardcode data in HTML files.** If a change involves the map or timeline, edit the `.js` data files only (`quartz/static/map-data.js`, `quartz/static/timeline-data.js`).
+- **Never hardcode data in HTML files.** If a change involves the map, timeline, status card, characters, quests, or wiki sections, edit the JSON files in `quartz/static/data/` (e.g. `data/map-pins.json`, `data/timeline.json`). The `*-data.js` files in `quartz/static/` are just fetchers — do not edit them as data sources.
 - **Do not amend commits.** If you commit, create a new commit.

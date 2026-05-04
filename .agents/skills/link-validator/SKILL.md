@@ -10,14 +10,15 @@ Catch broken `[[wikilinks]]` before they reach the published site. A broken link
 ## Inputs
 
 - File path(s) or raw content to scan
-- Vault root directory (default: `content/`)
+- Vault root directory (default: both `content/` (Swedish source) and `content-en/` (English mirror) — both must satisfy the same wikilinks since the site is bilingual)
 
 ## Algorithm
 
 1. Extract all `[[Link]]` and `[[Link|Alias]]` patterns from the input.
 2. Normalize each link: strip alias, trim whitespace.
-3. Search for a matching `.md` file anywhere under `content/` (recursive, case-insensitive, with and without hyphens).
+3. Search for a matching `.md` file anywhere under the vault root(s) (recursive, case-insensitive, with and without hyphens). When validating a `content-en/` file, the link target must exist under `content-en/` (the EN build resolves links scoped to its own root) — same for `content/`.
 4. Classify each as **VALID**, **STUB NEEDED** (doesn't exist but clearly should), **AMBIGUOUS** (multiple matches), or **BROKEN** (no plausible match found).
+5. **Bilingual mirror check:** if a Swedish file has a wikilink that resolves under `content/` but the corresponding English file is missing the equivalent target under `content-en/`, flag as **STUB NEEDED (EN mirror)**.
 
 ## Reasoning Instructions
 
