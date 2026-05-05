@@ -64,16 +64,16 @@ title: "Session 3 – Return to Caer Konig"
   - **3 other goblins** waiting at a **larger wagon**.
   - **2 genuinely furious polar bears** pulling the larger wagon.
 
-**The fight at the goblin camp:**
+**The fight at the wagon:**
 - Plan: [[Sork the Shadow]] and [[Zahir]] sneak forward to **persuade the polar bears** (via *Speak with Animals*) that the gang are friends who will free them if they help.
 - [[Sork the Shadow]] sneaks like a king. [[Zahir]] not so much → the fight breaks out.
 - [[Zahir]] roars via *Speak with Animals*: *"STOP — FRIENDS — KILL"* — a beautifully rolled **nat 20** puts **2 polar bears on the gang's side**.
 - The fight is epic, with plenty of violence and actual tactics.
-- Toward the end, the **goblin boss** sets fire to the larger wagon — the gang stands tearfully watching the dwarves' loot burn up. By the time the gang reaches the boss, he is already **stone dead**.
+- Toward the end, the **goblin boss** sets fire to the larger wagon — the gang hears bottles cracking and realizes potential loot is going up in flames. The gang makes sure the boss goes **stone dead** — the fire takes effect immediately, but he just keeps making it worse as the gang tries to reach him.
 
 **Aftermath — reward and new friends:**
 - [[Zahir]] persuades the polar bears to help haul the **iron ore** back.
-- [[Zahir]] offers the dwarves **two polar bears** as thanks — they politely decline two enormous predators that may or may not eat them.
+- [[Nasher]]'s idea: offer the dwarves **two polar bears** as thanks. [[Sork the Shadow]] thinks it sounds like an inappropriate idea — the dwarves politely decline two enormous predators that may or may not eat them. Sork satisfied that they hauled the ore back regardless.
 - The polar bears are released — they look **very happy**.
 - Reward from the dwarves: **~300 gp in jewels** + Zahir's gang are now **friends with the dwarves**.
 - The gang is bruised and want to take a short rest in the cave — but [[Jarthra]] suggests they sleep with the dwarves instead. *Facepalm.* They do.

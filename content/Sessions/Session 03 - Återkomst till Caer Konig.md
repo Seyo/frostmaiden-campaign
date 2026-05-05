@@ -60,16 +60,16 @@
   - **3 andra goblins** väntar vid en **större vagn**.
   - **2 riktigt förbannade isbjörnar** drar den stora vagnen.
 
-**Striden vid goblinlägret:**
+**Striden vid vagnen:**
 - Plan: [[Sork the Shadow]] och [[Zahir]] ska smyga fram och **övertala isbjörnarna** (via _Speak with Animals_) att gänget är vänner som ska släppa dem fria om de hjälper till.
 - [[Sork the Shadow]] smyger som en kung. [[Zahir]] not so much → striden bryter ut.
 - [[Zahir]] vrålar med _Speak with Animals_: *"STANNA — VÄNNER — MÖRDA"* — en fantastiskt rullad **nat 20** ger gänget **2 isbjörnar på sin sida**.
 - Striden blir episk, med massa våld och faktiskt en del taktik.
-- Mot slutet tänder **goblinbossen** eld på den stora vagnen — gänget står med tårar i ögonen och ser dvärgarnas loot brinna upp. När gänget når bossen ligger han redan **stendöd**.
+- Mot slutet tänder **goblinbossen** eld på den stora vagnen — gänget hör flaskor spricka och inser att potentiell loot just brinner upp. Gänget ser till att bossen blir **stendöd** — skadan tar effekt direkt, men han gör det bara värre och värre medan gänget försöker springa fram.
 
 **Efterspel — belöning och nya vänner:**
 - [[Zahir]] övertalar isbjörnarna att hjälpa till att frakta tillbaka **järnmalmen**.
-- [[Zahir]] erbjuder dvärgarna **två isbjörnar** som tack — de tackar artigt nej till två enorma rovdjur som kanske inte kommer äta upp dem.
+- [[Nasher]]s idé: erbjuda dvärgarna **två isbjörnar** som tack. [[Sork the Shadow]] tycker det låter som en olämplig idé — dvärgarna tackar artigt nej till två enorma rovdjur som kanske inte kommer äta upp dem. Sork nöjd att de ändå drog malmen tillbaka.
 - Isbjörnarna släpps fria — de ser **väldigt glada** ut.
 - Belöning från dvärgarna: **~300 gp i juveler** + Zahirs gäng är nu **vänner med dvärgarna**.
 - Gänget är mörbultade och vill ta short rest i grottan — men [[Jarthra]] föreslår att de ska sova hos dvärgarna istället. *Facepalm.* Det gör de.
