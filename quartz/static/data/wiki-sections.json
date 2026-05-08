@@ -4,7 +4,7 @@
     "title_en": "NPCs",
     "subtitle": "Levande, döda och försvunna",
     "subtitle_en": "Living, dead, and missing",
-    "count": 13,
+    "count": 14,
     "slug": "NPC",
     "items": [
       "Jarthra",
@@ -19,7 +19,8 @@
       "Bronn Bearhammer (†)",
       "Aubril (†)",
       "Nildar Sunblight (†)",
-      "Garret"
+      "Garret",
+      "Boy"
     ]
   },
   {
