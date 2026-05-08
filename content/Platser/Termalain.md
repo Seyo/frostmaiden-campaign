@@ -2,8 +2,8 @@ En av de tio bosättningarna i [[Ten-Towns]], belägen vid den stora sjön Maer 
 
 ## Vad vi vet
 
-- **Mord dag 19–23:** ett offer hittades med en **snöflinga inristad i bröstet**. Mönstret matchar [[Morden i Ten-Towns]] / isdolksmördaren och pekar mot [[Auril]] eller en kult.
-- [[Garret]] och [[The Burning Hammers]] var på väg hit innan de försvann. [[Garret]] räddades senare av Zahirs gäng på berget vid [[Kelvins Cairn]] dag 27–28 — illa rivad av en yeti.
+- **Mord Dag 15:** En mänsklig fiskare hittades med en **snöflinga inristad i bröstet** — mordet skedde dagen innan [[Zahirs gäng]] anlände till Caer Konig, men de fick reda på det under vilan Dag 19–23. Mönstret matchar [[Morden i Ten-Towns]] / isdolksmördaren.
+- [[Garret]] och [[The Burning Hammers]] var på väg hit via vildmarken men attackerades av en yeti vid [[Kelvins Cairn]]. [[Garret]] räddades Dag 26 — de andra Hammers öde okänt. Det är oklart om någon av dem faktiskt nådde Termalain.
 
 ## Olöst
 

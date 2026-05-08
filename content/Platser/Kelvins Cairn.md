@@ -1,3 +1,6 @@
 - **Typ:** Enorm bergstopp, dominerar horisonten norr om [[Caer Konig]].
-- **Fästningen (östra sidan):** [[Nildar Sunblight(†)]]s bas, 5 miles (~5 tim) från Caer Konig. Innehöll celler med svampinfekterade fångar, ett alkemistlaboratorium och en separat bunker med grå-dvärgsvakter. Besegrad av [[Zahirs gäng]] Dag 18.
-- En vattenström rinner ut ur fästningen – kan delvis fungera som damm för ett vattenreserv inuti berget.
+- **Fästningen (östra sidan):** [[Nildar Sunblight(†)]]s bas, 5 miles (~5 tim) från Caer Konig. Innehöll celler med svampinfekterade fångar (upp till 375 dagar), ett alkemistlaboratorium med Underdark-svamp och en separat bunker med ölförvaring. Besegrad av [[Zahirs gäng]] Dag 18.
+- En vattenström rinner ut ur fästningen – kan fungera som damm för ett vattenreserv inuti berget.
+- **Söder om berget (Dag 26):** Övergivet hundspann hittat med levande men magra hundar — [[Garret]]s sled. Ledarhunden [[Boy]] ledde gänget uppför berget.
+- **Uppför berget (Dag 26):** En lavin drog med hela [[Zahirs gäng]] ca 1 000 fot nedför berget. Gänget hittade [[Garret]] i snön — vid liv men illa skadad efter en yeti-attack längre upp. Två crag cats som använt Garret som bete anföll och besegrades.
+- **Yeti:** Fortfarande på fri fot högre upp på berget. [[The Burning Hammers]] öde okänt efter yeti-attacken.

@@ -5,3 +5,4 @@ Vit drakfödd, självutnämnd nattväktare i [[Caer Konig]]. Berusad och inkompe
 - Presenterade gruppen för [[Cori & Allie]] på _The Northern Light_.
 - Gav delvis felaktig information: sa att mordet gällde en dvärg-glasmästare – visade sig vara [[Bronn Bearhammer(†)]].
 - Konfronterad om inkompetensen, hade inga svar.
+- [[Zahir]] drack öl med honom vid ett par tillfällen under vilan i Caer Konig (Dag 19–23).

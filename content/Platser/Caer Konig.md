@@ -14,5 +14,6 @@ Liten bosättning (~150 pers) vid sjön [[Lac Dinneshere]] (ej frusen trots kyla
 
 ## Händelser
 
-- **Löst:** Mord på [[Bronn Bearhammer(†)]], kidnappningen och döden av [[Eevie(†)]], samt tjuverierna orkestrerades av [[Nildar Sunblight(†)]]s dvärgar från fästningen vid [[Kelvins Cairn]]. Offret var en mänsklig barbar, inte en dvärg-glasmästare som ryktena sa.
-- **Olöst:** [[The Burning Hammers]] (3 äventyrare) och guiden [[Garret]] fortfarande saknade.
+- **Löst:** Mord på [[Bronn Bearhammer(†)]], kidnappningen och döden av [[Eevie(†)]], samt tjuverierna orkestrerades av [[Nildar Sunblight(†)]]s Duergar från fästningen vid [[Kelvins Cairn]]. Offret var en mänsklig barbar, inte en dvärg-glasmästare som ryktena sa.
+- **Löst:** [[Garret]] räddad Dag 26 på [[Kelvins Cairn]] — vid liv men illa skadad.
+- **Olöst:** [[The Burning Hammers]] — öde okänt efter yeti-attack på berget.

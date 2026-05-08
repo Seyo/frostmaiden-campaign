@@ -1,4 +1,7 @@
-- **Typ:** Isolerat dvärgsamhälle, ~8–10 timmars resa med hundkälke från [[Caer Konig]].
-- **Karaktär:** Dvärgarna är mycket isolerade och oberoende, ogillar främlingar. Handlar i ädelstenar.
-- **Kontakt:** [[Jarthra]] (guide, _Frozen-fur Expeditions_) hjälpte [[Bronn Bearhammer(†)]] handla med dvärgarna regelbundet.
-- [[Glenn]] på _The Hook Line and Sinker_ i Caer Konig importerar öl härifrån.
+- **Typ:** Dvärgsamhälle insprängt i en ravin, till hälften inskuret i berggrunden. Makalöst ståltig stad med höga stenbyggnader och detaljrik arkitektur. ~8–10 timmars resa med hundkälke från [[Caer Konig]].
+- **Karaktär:** Dvärgarna är isolerade och oberoende. Valutan är **ädelstenar** — inga mynt.
+- **Trading Posten (handelsutposten):** En förstad precis utanför stadsporten. Hit är [[Zahirs gäng]] välkomna att bo och handla sedan Dag 24 — men inte in i själva staden än.
+- **Kända dvärgar:** Hruna, Korux och Storn — transporterade järnmalm mot Brynn Shander, räddade av gänget (Dag 24). Belönade gänget med ädelstenar värda 300 gp.
+- **Värdshuset:** Gänget bodde Dag 24–25. [[Nasher]] frågade värdshusvärdinna om **Dzaan** — hon påstod sig inte veta vem han är men ljög uppenbarligen.
+- **Kontakt:** [[Jarthra]] (guide) hjälpte [[Bronn Bearhammer(†)]] handla med dvärgarna regelbundet.
+- [[Glenn]] på _The Hook Line and Sinker_ i Caer Konig köpte öl från Sunblight-dvärgarna — inte härifrån. [[Jarthra]] slutade leverera öl till Glenn för ca 2 år sedan.

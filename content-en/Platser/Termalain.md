@@ -6,8 +6,8 @@ One of the ten settlements of [[Ten-Towns]], situated on the great lake Maer Dua
 
 ## What we know
 
-- **Murder on days 19–23:** a victim was found with a **snowflake carved into the chest**. The pattern matches [[Morden i Ten-Towns]] / the ice pick killer and points to [[Auril]] or a cult.
-- [[Garret]] and [[The Burning Hammers]] were heading here before they disappeared. [[Garret]] was later rescued by Zahir's gang on the mountain at [[Kelvins Cairn]] on days 27–28 — badly mauled by a yeti.
+- **Murder on Day 15:** A human fisherman was found with a **snowflake carved into his chest** — the murder happened the day before [[Zahirs gäng]] arrived in Caer Konig, but they only learned of it during their rest on Days 19–23. The pattern matches [[Morden i Ten-Towns]] / the ice pick killer.
+- [[Garret]] and [[The Burning Hammers]] were heading here via the wilderness but were attacked by a yeti at [[Kelvins Cairn]]. [[Garret]] was rescued on Day 26 — the other Hammers' fate unknown. It is unclear whether any of them ever reached Termalain.
 
 ## Unresolved
 

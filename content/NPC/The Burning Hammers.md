@@ -4,7 +4,8 @@ Grupp av tre äventyrare som kom till [[Caer Konig]] för att utreda mordet på 
 
 - Bodde en natt på _The Hook Line and Sinker_ ([[Glenn]]).
 - Lämnade byn 4–5 dagar innan [[Zahirs gäng]] anlände, guidade ut av [[Garret]].
-- Ingen har hört av dem sedan dess. [[Keegan Valryn]] gav sig ut för att leta efter dem.
-- **Status:** Okänd. Levande eller döda?
+- [[Keegan Valryn]] anlitade [[Zahirs gäng]] att leta efter dem — 50 gp i belöning.
+- [[Garret]] hittades levande på [[Kelvins Cairn]] (Dag 26) och berättade att han och The Burning Hammers attackerades av en **yeti** högre upp på berget. Garret lyckades fly. The Burning Hammers öde okänt.
+- **Status:** Saknade, förmodligen döda.
 
 > Medlemmarnas namn, raser och klasser okända. Uppdatera vid återfinnande.
