@@ -6,7 +6,7 @@
 
 </div>
 
-Alv paladin, Tyrs orden (Hämndeed – visa ingen nåd mot de onda). Från Neverwinter. Hög karisma och stark moralkompass. Talar dvarviska. Har kläppkrok och kastspjut.
+Alv paladin, Tyrs orden (Oath of Vengeance – visa ingen nåd mot de onda). Från Neverwinter. Hög karisma och stark moralkompass. Talar dvärgiska. Har draggkrok och kastspjut.
 
 - Föll i strid under vargattacken (Dag 6) och igen mot [[Nildar Sunblight(†)]] (Dag 18).
 - Dödade [[Eevie(†)]] i fästningens celblock i självförsvar (svampinfekterad) – bär på skuld. Se [[Nashers misstag]]. Täckte henne med sin filt och bar ut henne med vördnad – fällde en tår, första gången sedan Letharia avrättades.
