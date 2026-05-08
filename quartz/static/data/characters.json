@@ -35,8 +35,8 @@
     "role": "Goliath Barbar",
     "role_en": "Goliath Barbarian",
     "portrait": "./assets/portraits/borc.png",
-    "blurb": "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor — gick ned till 0 hp i Sunblights spikfälla men återhämtade sig. Hittade en ask med kristaller som kan länka till Eevies scrimshaw.",
-    "blurb_en": "Raised among giants on Moonshine Isle. Can teleport short distances — dropped to 0 hp in Sunblight's spike trap but recovered. Found a box of tiny crystals that may link to Eevie's missing scrimshaw.",
+    "blurb": "Uppvuxen bland jättar på Moonshine Isle. Kan teleportera korta sträckor. Skeppsbruten på Sea of Moving Ice för 4–5 månader sedan — söker överlevare från 'The Bad Buoy'. Hittade en ask med kristaller som kan länka till Eevies scrimshaw.",
+    "blurb_en": "Raised among giants on Moonshine Isle. Can teleport short distances. Shipwrecked on the Sea of Moving Ice 4–5 months ago — searching for survivors of 'The Bad Buoy'. Found a box of tiny crystals that may link to Eevie's missing scrimshaw.",
     "slug": "Karakt%C3%A4rer/Borc-the-Orc"
   }
 ]

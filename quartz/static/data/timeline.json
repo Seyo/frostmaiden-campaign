@@ -142,17 +142,27 @@
     },
     {
       "session": "s03",
-      "day": "Dag 24–25(?)",
+      "day": "Dag 24",
       "type": "combat",
       "icon": "🐻‍❄️",
       "title": "Yeti, goblins och isbjörnar",
       "title_en": "Yeti, Goblins, and Polar Bears",
-      "desc": "I en grotta norr om <a href=\"../Platser/D%C3%A4rgadalen\">Dvärgadalen</a> möter gänget vänliga dvärgar — en yeti har dödat en av dem och goblins har stulit deras järnmalm. <a href=\"../Karakt%C3%A4rer/Zahir\">Zahir</a> övertalar två förbannade isbjörnar att slåss för gänget (nat 20 på Speak with Animals). Goblinbossen brände vagnen — loot förlorad. Belöning: ~300 gp i juveler, vänskap med dvärgarna.",
-      "desc_en": "In a cave north of <a href=\"../Platser/D%C3%A4rgadalen\">Dvärgadalen</a>, the gang meets friendly dwarves — a yeti has killed one of them and goblins stole their iron ore. <a href=\"../Karakt%C3%A4rer/Zahir\">Zahir</a> persuades two enraged polar bears to fight for the gang (nat 20 on Speak with Animals). The goblin boss burned the wagon — loot lost. Reward: ~300 gp in jewels, friendship with the dwarves."
+      "desc": "I en grotta norr om <a href=\"../Platser/D%C3%A4rgadalen\">Dvärgadalen</a> möter gänget dvärgarna Hruna, Korux och Storn — en yeti har dödat en av dem och goblins har stulit deras järnmalm. <a href=\"../Karakt%C3%A4rer/Zahir\">Zahir</a> övertalar två förbannade isbjörnar att slåss för gänget (nat 20 på Speak with Animals). Goblinbossen brände vagnen — loot förlorad. Belöning: ~300 gp i juveler, vänskap och tillgång till handelsutposten i Dwarven Valley.",
+      "desc_en": "In a cave north of <a href=\"../Platser/D%C3%A4rgadalen\">Dvärgadalen</a>, the gang meets dwarves Hruna, Korux, and Storn — a yeti has killed one of them and goblins stole their iron ore. <a href=\"../Karakt%C3%A4rer/Zahir\">Zahir</a> persuades two enraged polar bears to fight for the gang (nat 20 on Speak with Animals). The goblin boss burned the wagon — loot lost. Reward: ~300 gp in jewels, friendship and access to the Dwarven Valley trading post."
     },
     {
       "session": "s03",
-      "day": "Dag 27(?)",
+      "day": "Dag 25",
+      "type": "invest",
+      "icon": "🍺",
+      "title": "Borc berättar om skeppsbrottet",
+      "title_en": "Borc Reveals the Shipwreck",
+      "desc": "Under extra natt i Dwarven Valley Trading Post berättar <a href=\"../Karakt%C3%A4rer/Borc-the-Orc\">Borc</a> äntligen om varför han är i Icewind Dale: skeppsbruten på Sea of Moving Ice för 4–5 månader sedan. Båten hette <strong>The Bad Buoy</strong>. Söker rykten om de andra från besättningen. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> frågar värdshusvärdinna om <strong>Dzaan</strong> — hon ljuger om att inte känna till honom.",
+      "desc_en": "During an extra night at the Dwarven Valley Trading Post, <a href=\"../Karakt%C3%A4rer/Borc-the-Orc\">Borc</a> finally reveals why he is in Icewind Dale: shipwrecked on the Sea of Moving Ice 4–5 months ago. The boat was called <strong>The Bad Buoy</strong>. He is looking for rumors about the other crew members. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> asks the innkeeper about <strong>Dzaan</strong> — she lies about not knowing him."
+    },
+    {
+      "session": "s03",
+      "day": "Dag 26",
       "type": "travel",
       "icon": "🏔️",
       "title": "Lavinen — 1000 fot fall",
@@ -162,7 +172,7 @@
     },
     {
       "session": "s03",
-      "day": "Dag 27–28(?)",
+      "day": "Dag 26",
       "type": "combat",
       "icon": "🐈",
       "title": "Garret räddad — crag cats",

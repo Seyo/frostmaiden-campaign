@@ -13,9 +13,9 @@ Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] sn
 - Fällde [[Nildar Sunblight(†)]] med pilar.
 - Klantade sig under första long rest (stöldförsök, böter 25 gp, hade bara 11 gp). [[Zahir]] betalade halva.
 - Spanade in **två par osynliga fotspår** ut ur Sunblights fästning Dag 19 efter att den fångade dvärgen brutit sig ut – sprang efter med [[Nasher]] men tappade dem.
-- Tjänade **15 gp** hederligt på acrobatics-uppvisning under 5 dagars vila i Caer Konig (Dag 19–23) – första gången han drar in pengar utan att stjäla något.
+- Tjänade ihop pengar med [[Borc the Orc]] på hederliga jobb under vilan i Caer Konig (Dag 19–23) – **16,5 gp totalt**. Första gången han drar in pengar utan att stjäla något.
 - Smög "som en kung" mot goblin-lägret norr om [[Dvärgadalen]] (Dag 24–25) medan [[Zahir]] sumpade stealthen och drog in striden.
-- Föll ~1000 fot i en lavin på vägen upp på berget Dag 27 – nästan dödad, stabiliserad och healad av [[Nasher]].
+- Föll ~1000 fot i en lavin på vägen upp på berget Dag 26 – nästan dödad, stabiliserad och healad av [[Nasher]].
 
 ## Bakgrund
 

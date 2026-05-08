@@ -17,9 +17,9 @@ Orc Rogue. Jumped ship in Fireshear, overheard [[Nasher]] and [[Zahir]] talking 
 - Finished off [[Nildar Sunblight(†)]] with arrows.
 - Bungled his first long rest (attempted theft, 25 gp fine, only had 11 gp). [[Zahir]] covered half.
 - Spotted **two pairs of invisible footprints** leaving the Sunblight fortress on Day 19 after the captured dwarf broke free — chased after them with [[Nasher]] but lost them.
-- Earned **15 gp** honestly with an acrobatics street performance during the 5-day rest in Caer Konig (Day 19–23) — the first time he made money without stealing anything.
-- Sneaked "like a king" toward the goblin camp north of [[Dvärgadalen]] (Day 24–25) while [[Zahir]] blew the stealth and triggered the fight.
-- Fell ~1000 feet in an avalanche on the way up the mountain on Day 27 — nearly killed, stabilized and healed by [[Nasher]].
+- Earned honest wages alongside [[Borc the Orc]] during the rest in Caer Konig (Days 19–23) — **16.5 gp combined**. The first time he made money without stealing anything.
+- Sneaked "like a king" toward the goblin camp north of [[Dvärgadalen]] (Day 24) while [[Zahir]] blew the stealth and triggered the fight.
+- Fell ~1000 feet in an avalanche on the way up the mountain on Day 26 — nearly killed, stabilized and healed by [[Nasher]].
 
 ## Background
 
@@ -43,7 +43,7 @@ Easily excited when valuables are found. After the incident in [[Bryn Shander]] 
 
 In practice:
 - Took gems (~20 gp) from [[Bronn Bearhammer(†)]]'s iron chest — Bronn is dead and has no need of them.
-- Left [[Keegan Valryn]] and [[Garret]]'s belongings untouched — both turned out to still be alive ([[Garret]] rescued on Day 27–28). The rule held.
+- Left [[Keegan Valryn]] and [[Garret]]'s belongings untouched — both turned out to still be alive ([[Garret]] rescued on Day 26). The rule held.
 - Returned [[Jarthra]]'s pearls on Day 19 despite their value (~175 gp). Reward: a Hood of Water Breathing, valuable loot, and a promise of future help — later cashed in to rescue [[Garret]].
 - Chose *not* to pay [[Jarthra]] with Bronn's gems — she knew Bronn and might have recognized his property.
 - May trade with the dwarves in [[Dvärgadalen]] instead.
