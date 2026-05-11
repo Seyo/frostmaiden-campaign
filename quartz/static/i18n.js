@@ -1,4 +1,4 @@
-// i18n.js — shared translation strings for all static pages.
+// i18n.js — shared translation strings for all static pages. (#1)
 // Strings live in ./data/i18n.json (single source of truth).
 // Functions like map_pins_count(n) are templates with {n} placeholders.
 // Each page must `await I18N_READY` before calling t() or tf().
