@@ -66,7 +66,7 @@
 - Bork: letade jobb → hög arbetslöshet. Lärde sig om:
   - Ny gruva stängd i 2 veckor – monster kommit upp från underjorden.
   - Speaker sist sedd på **The Blue Clam** – full och försvann sedan dess.
-- Sork: utredde Speakern. **Elka Verryt** (sekreterare) vet möjligtvis var han är. Personal i stängda ny-gruvan: förman **Fronda Harroway** (dvärg), lieutenants **Menka Bladeless** (half-elf) och **Oval Chon** (människa), övriga gruvarbetare **Brin Ruk'Natsk** (ras okänd), **Bezeuth von Deeb** (dvärg), **Mari Flatstream** (gensai), **Sod Suscagan** (half-orc), **Gror Gersk** (ras okänd).
+- Sork: utredde Speakern. **Elka Verryt** (sekreterare) vet möjligtvis var han är. Personal i stängda ny-gruvan: förman **Fronda Harroway** (dvärg), lieutenants **Menka Bladeless** (half-elf) och **Oval Chon** (människa), övriga gruvarbetare **Brin Ruk'Natsk** (ras okänd), **Bezeuth von Deeb** (gnome), **Mari Flatstream** (dvärg), **Sod Suscagan** (gensai), **Gror Gersk** (half-orc).
 - Frondas adopterade son **Arno** – stum, föräldralös (Tribe of the Wolf), befinner sig i stan.
 - Rykte: **Gillian Fieldspar** (dvärgjuvelerare, "Fieldspar", från Dwarven Valley) – affär stängd i 8 dagar.
 - Mord under veckan: gruvarbetare **Fjordis Jewelhand**.
