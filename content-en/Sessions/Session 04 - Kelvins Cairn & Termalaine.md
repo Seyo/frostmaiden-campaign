@@ -70,7 +70,7 @@ title: "Session 4 – Kelvins Cairn & Termalaine"
 - Borc: looked for work → high unemployment. Learned:
   - New mine closed for 2 weeks — monsters came up from underground.
   - Speaker last seen at **The Blue Clam** — got drunk, vanished.
-- Sork: investigated the Speaker. **Elka Verryt** (secretary) may know where he is. Staff trapped in the closed new mine: foreman **Fronda Harroway** (dwarf), lieutenants **Menka Bladeless** (half-elf) and **Oval Chon** (human), other workers **Brin Ruk'Natsk** (race unknown), **Bezeuth von Deeb** (gnome), **Mari Flatstream** (dwarf), **Sod Suscagan** (genasi), **Gror Gersk** (half-orc).
+- Sork: investigated the Speaker. **Elka Verryt** (secretary) may know where he is. Staff trapped in the closed new mine: foreman **Fronda Harroway** (dwarf), lieutenants **Menka Bladeless** (half-elf), **Oval Chon** (human), **Brin Ruk'Natsk** (race unknown), **Bezeuth von Deeb** (gnome), **Mari Flatstream** (dwarf), **Sod Suscagan** (genasi), **Gror Gersk** (half-orc).
 - Fronda's adopted son **Arno** — mute, orphaned (Tribe of the Wolf), somewhere in town.
 - Rumour: **Gillian Fieldspar** (dwarf jeweller, "Fieldspar", from Dwarven Valley) — shop closed for 8 days.
 - Murder during the week: mine worker **Fjordis Jewelhand**.

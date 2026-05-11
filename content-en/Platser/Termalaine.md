@@ -10,7 +10,7 @@ title: "Termalaine"
 - **The East Side Inn:** Interconnected buildings via underground tunnels. Innkeeper [[Martha]], close friend of [[Keegan Valryn]] and [[Garret]]. No open fires allowed in the rooms.
 - **The Blue Clam:** Tavern. Speaker Oarus Matthews was last seen here — got drunk and disappeared.
 - **The Graveyard:** Maintained by **Crank** (gnome). Murder victims are kept here.
-- **New Mine:** Closed for ~2 weeks — monsters came up from underground. Foreman Fronda Harroway (dwarf), lieutenants Menka Bladeless (half-elf) and Oval Chon (human), and remaining staff still inside.
+- **New Mine:** Closed for ~2 weeks — monsters came up from underground. Foreman Fronda Harroway (dwarf), lieutenants and seven lieutenants (Menka Bladeless, Oval Chon, Brin Ruk'Natsk, Bezeuth von Deeb, Mari Flatstream, Sod Suscagan, Gror Gersk) still inside.
 - **Old Mine:** Nearly depleted.
 - **Fieldspar:** Dwarf jewellery shop, owned by Gillian Fieldspar (from Dwarven Valley). Closed since ~Day 26.
 
