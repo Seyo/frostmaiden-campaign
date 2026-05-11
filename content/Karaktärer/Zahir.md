@@ -10,7 +10,7 @@ Halfling warlock, från Calimport i södra Faerûn. Vass tunga, hög karisma, mo
 
 - Kör "föreställningar" för sin "besättning" i städer – oklart exakt vad.
 - Besvärjelse: Tasha's Hideous Laughter (besegrade [[Nildar Sunblight(†)]]).
-- Förhandlade med [[Jarthra]] och [[Torg]] – verkar duktig på att pressa priser.
+- Förhandlade med [[Jarthra]] och [[Throgga Icevein(†)]] – verkar duktig på att pressa priser.
 - Föreslog att spränga [[Aubril(†)]]s kropp med magi – [[Nasher]] satte stopp.
 - Hittade ett alkemistlaboratorium i Sunblights fästning Dag 19 med en **lysande svamp** i en glasflaska utan lock. Lämnade orörd – senare bekräftat av [[Foxes in the Snow]] att sporerna troligen kommer från **Underdark** och är farliga att andas in. Rätt val.
 - Diskuterade med [[Jarthra]] under resan tillbaka om gamla Auril-offringar — verkar genuint intresserad av huruvida livet var bättre när folk offrades till henne (Dag 18–19). [[Nasher]] finner tanken fansklig.
@@ -22,3 +22,7 @@ Halfling warlock, från Calimport i södra Faerûn. Vass tunga, hög karisma, mo
 - Använde _Speak with Animals_ med [[Garret]]s ledarhund vid det övergivna hundspannet – hunden var fixerad på att hitta sin "Husse", vilket bekräftade att [[Garret]] var uppe på berget.
 - Nästan dödad i lavinen Dag 26.
 - Lärde sig vad en **Opportunity Attack** är på hårda vägen mot crag cats Dag 26 – katten missade, så lärdomen blev billig.
+- Misstänkte att [[Asterix(†)]]s läderbundna spellbook var fällbelagd – stoppade den i väskan utan att öppna den. Sålde den i Termalaine för **175 gp** (Dag 29–33).
+- Stabiliserade [[Borc the Orc]] och [[Sork the Shadow]] med Spare the Dying under flykten från yetis (Dag 26). Satte upp alarm spell på berglägret. Kastade Eldritch Blasts mot yetimamman från andra sidan bron.
+- Förstörde av misstag drickorna i brewing kit på berglägret – bidrog till att gänget saknade mat och dricka under extra övernattningen.
+- Försökte med silvertunga rädda situationen när [[Nasher]] konfronterade [[Throgga Icevein(†)]] (Dag 34) – Throgga var opåverkad och attackerade.

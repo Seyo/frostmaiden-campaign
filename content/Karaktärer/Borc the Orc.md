@@ -15,3 +15,6 @@ Goliath barbar, uppvuxen bland jättar på Moonshine Isle som döpte om honom ti
 - Hittade en ask med **pyttesmå kristaller** vid genomsökningen av Sunblights fästning Dag 19 – misstänkt match till de saknade kristallerna från [[Eevie(†)]]s scrimshaw-hantverk i _Snowy Baubles_. Inte bekräftat.
 - Tog [[Nildar Sunblight(†)]]s **bröstplåt** och satte på sig den – passar förvånansvärt bra.
 - Berättade för gänget (Dag 25, Dwarven Valley) att han var ute på **Sea of Moving Ice för 4–5 månader sedan och blev skeppsbruten**. Båten hette **"The Bad Buoy"**. Vet inte hur många av besättningen som överlevde. Söker rykten om dem.
+- Tog dvärgens blå stövlar från platån på [[Kelvins Cairn]] – trodde de kunde vara värda något (Dag 26).
+- Föll på träbron under flykten från yetimamman → [[Nasher]] drog honom. Stabiliserades av [[Zahir]] (Spare the Dying). Var ensam i gruppen som initialt stod emot vålnadens terroriserande blick (Dag 34) – men fälldes sedan av ett enda slag.
+- Letade arbete i Termalaine (Dag 29–33) → hög arbetslöshet, fick inget jobb. Lärde sig om gruvorna och Speakerns försvinnande.

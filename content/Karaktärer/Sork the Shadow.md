@@ -16,6 +16,11 @@ Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] sn
 - Tjänade ihop pengar med [[Borc the Orc]] på hederliga jobb under vilan i Caer Konig (Dag 19–23) – **16,5 gp totalt**. Första gången han drar in pengar utan att stjäla något.
 - Smög "som en kung" mot goblin-lägret norr om [[Dvärgadalen]] (Dag 24–25) medan [[Zahir]] sumpade stealthen och drog in striden.
 - Föll ~1000 fot i en lavin på vägen upp på berget Dag 26 – nästan dödad, stabiliserad och healad av [[Nasher]].
+- Drack [[Asterix(†)]]s invisibility-potion och smög osynlig förbi yetimamman – gav [[Perilou Fishfinger]] en healing potion och smög ut henne ur grottan (Dag 26). Hittade döde [[Mokingo Akannathi(†)]] och ett dvärghuvud på vägen ut.
+- Infryst i isblock av yetimamman under flykten över träbron → tog sig ur isen → slagen av mamman och knockad medvetslös. Räddad av [[Nasher]] som sprang tillbaka över bron.
+- Fällde pappayetin, [[Throgga Icevein(†)]] och vålnaden som steg ur Throggas kropp – alla tre med **Shadow Blades** (Dag 26 resp. Dag 34).
+- Spårade [[Throgga Icevein(†)|Throggas livvakt]] (skallig människa) efter striden i Termalaine (Dag 34) – spåret slutade abrupt, som om han gick upp i rök.
+- Bytte till sig en karta över den stängda nya gruvan i Termalaine.
 
 ## Bakgrund
 

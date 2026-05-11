@@ -22,6 +22,13 @@ Elf paladin, Order of Tyr (Avenger — show no mercy to the wicked). From Neverw
 - Is aware of **Dzaan** — asked the innkeeper at [[Dvärgadalen]] about him (Day 25); she claimed not to know the name, but was obviously lying.
 - Walked straight up to the unknown dwarves (Hruna, Korux, and Storn) in the cave north of [[Dvärgadalen]] (Day 24) and introduced himself — turned out to be friendly, not Duergar.
 - Healed [[Sork the Shadow]] after the avalanche on Day 26 — much appreciated. Also healed [[Garret]] after the gang found him badly wounded in the snow.
+- Nearly killed by the mother yeti's ice block during the bridge retreat (Day 26). Ran back across the bridge under fire anyway to drag the unconscious Sork to safety.
+- Stabilized [[Perilou Fishfinger]] with his medkit during the retreat.
+- Traded his Greatsword for a **Longsword + sturdy shield** in Termalaine (Days 29–33) — painted Tyr's symbol on the shield.
+- Failed to make contacts in Termalaine through carousing (Days 29–33).
+- Cast **Divine Sense** (Day 34) and immediately sensed that [[Throgga Icevein(†)]] was not alive. Confronted Throgga directly: _"You cannot fool a holy paladin of Tyr. I know exactly what you are. Undead. Speak now."_
+- Briefly affected by the wraith's terrifying gaze during the battle, but shook it off. Called on Tyr's healing power to revive the unconscious Sork mid-fight.
+- Estimated that [[Throgga Icevein(†)]] had been **dead for approximately 2.5 years** — exactly since the Rime began. The connection to the murder investigation confirmed. Hildur was right.
 
 ## Background
 

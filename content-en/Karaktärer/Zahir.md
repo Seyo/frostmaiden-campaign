@@ -14,7 +14,7 @@ Halfling warlock, from Calimport in southern Faerûn. Sharp tongue, high charism
 
 - Runs "performances" for his "crew" in towns — exactly what this entails remains unclear.
 - Spell: Tasha's Hideous Laughter (defeated [[Nildar Sunblight(†)]]).
-- Negotiated with [[Jarthra]] and [[Torg]] — seems skilled at driving down prices.
+- Negotiated with [[Jarthra]] and [[Throgga Icevein(†)]] — seems skilled at driving down prices.
 - Proposed blowing up [[Aubril(†)]]'s body with magic — [[Nasher]] put a stop to it.
 - Found an alchemy lab in the Sunblight fortress on Day 19 with a **glowing fungus** in an uncapped glass flask. Left it alone — later confirmed by [[Foxes in the Snow]] that the spores likely come from the **Underdark** and are dangerous to inhale. The right call.
 - Discussed old Auril sacrifices with [[Jarthra]] on the journey back from the fortress — seemed genuinely curious whether life was better when humans were offered up to her (Day 18–19). [[Nasher]] finds the thought horrifying.
@@ -26,3 +26,7 @@ Halfling warlock, from Calimport in southern Faerûn. Sharp tongue, high charism
 - Used _Speak with Animals_ on [[Garret]]'s lead sled dog at the abandoned camp — the dog was fixated on finding its "Master," confirming [[Garret]] was up the mountain.
 - Nearly killed in the avalanche on Day 26.
 - Learned what an **Opportunity Attack** is the hard way against the crag cats on Day 26 — the cat missed, so the lesson came cheap.
+- Suspected [[Asterix(†)]]'s leather-bound spellbook was trapped — pocketed it without opening it. Sold it in Termalaine for **175 gp** (Days 29–33).
+- Stabilized [[Borc the Orc]] and [[Sork the Shadow]] with Spare the Dying during the yeti retreat (Day 26). Set up an alarm spell at the mountain camp. Hurled Eldritch Blasts at the mother yeti from across the bridge gap.
+- Accidentally ruined the drinks in the brewing kit at the mountain camp — contributed to the party running short of food and water during the extra night.
+- Tried to smooth things over with silver-tongued diplomacy when [[Nasher]] confronted [[Throgga Icevein(†)]] (Day 34) — Throgga was unmoved and attacked.

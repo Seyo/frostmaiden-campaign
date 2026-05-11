@@ -20,6 +20,11 @@ Orc Rogue. Jumped ship in Fireshear, overheard [[Nasher]] and [[Zahir]] talking 
 - Earned honest wages alongside [[Borc the Orc]] during the rest in Caer Konig (Days 19–23) — **16.5 gp combined**. The first time he made money without stealing anything.
 - Sneaked "like a king" toward the goblin camp north of [[Dvärgadalen]] (Day 24) while [[Zahir]] blew the stealth and triggered the fight.
 - Fell ~1000 feet in an avalanche on the way up the mountain on Day 26 — nearly killed, stabilized and healed by [[Nasher]].
+- Drank [[Asterix(†)]]'s invisibility potion and crept unseen past the mother yeti — gave [[Perilou Fishfinger]] a healing potion and smuggled her out of the cave (Day 26). Found the dead [[Mokingo Akannathi(†)]] and a dwarf head on the way out.
+- Encased in an ice block by the mother yeti during the retreat over the wooden bridge → broke free → knocked unconscious by the mother. Rescued by [[Nasher]] who ran back across the bridge under fire.
+- Dropped the father yeti, [[Throgga Icevein(†)]], and the wraith that rose from Throgga's body — all three with **Shadow Blades** (Day 26 and Day 34 respectively).
+- Tracked [[Throgga Icevein(†)|Throgga's bodyguard]] (bald man) after the confrontation in Termalaine (Day 34) — the trail vanished abruptly, as if he walked into smoke.
+- Traded for a map of the closed new mine in Termalaine.
 
 ## Background
 
