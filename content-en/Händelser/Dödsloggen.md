@@ -14,7 +14,7 @@ title: "Death Log"
 **Perpetrator:** Wolves  
 **Location:** Camp north of Fireshear
 
-Merchant from Torg's Imports. Hired the party for 75 gp to escort him to Bryn Shander — he never made it. His body was left in pieces. [[Nasher]] stopped [[Zahir]] from blowing up the remains with magic.
+Merchant from Throgga's Import and Goods. Hired the party for 75 gp to escort him to Bryn Shander — he never made it. His body was left in pieces. [[Nasher]] stopped [[Zahir]] from blowing up the remains with magic.
 
 ---
 
@@ -35,6 +35,36 @@ Blacksmith and barbarian from [[Tribe of the Owl]], settled in [[Caer Konig]] as
 **Location:** Cell block in Sunblight's Fortress, [[Kelvins Cairn]]
 
 [[Bronn Bearhammer(†)]]'s wife. Kidnapped the same night he was murdered and taken to the fortress, where she was infected with fungus as part of the Sunblight alchemical process. When [[Nasher]] opened her cell to save her, the infected Eevie attacked, and he cut her down reflexively. The body was left to the people of Caer Konig on day 19. See [[Nashers misstag]].
+
+---
+
+## [[Asterix(†)]] — Day 26
+
+**Cause of death:** Frozen solid in extreme cold on a plateau on [[Kelvins Cairn]].  
+**Perpetrator:** Nature (extreme cold); exact circumstances unknown.  
+**Location:** Plateau on [[Kelvins Cairn]]
+
+Tiefling, one of [[The Burning Hammers]]. Found stone-dead with glassy eyes beside a headless dwarf. The tent at the plateau had been ransacked long ago.
+
+---
+
+## [[Mokingo Akannathi(†)]] — Day 26
+
+**Cause of death:** Killed by a yeti in the cave system on [[Kelvins Cairn]].  
+**Perpetrator:** Yeti  
+**Location:** Yeti cave system, [[Kelvins Cairn]]
+
+Goliath, leader of [[The Burning Hammers]] and husband of [[Perilou Fishfinger]]. Fought the yeti and in doing so saved [[Garret]] during the attack. Found by [[Sork the Shadow]] during the rescue of Perilou.
+
+---
+
+## [[Boy(†)]] — Day 28
+
+**Cause of death:** Frozen to death in a blizzard.  
+**Perpetrator:** Nature; indirectly caused by the party being forced to spend an extra night on the mountain (food and drink destroyed).  
+**Location:** South of [[Kelvins Cairn]]
+
+Lead dog in [[Garret]]'s sled team. Hero without a title — led [[Zahirs gäng]] up the mountain and was reunited with Garret. Left behind during the mountain climb. Found frozen when the party finally descended. [[Garret]] was devastated.
 
 ---
 

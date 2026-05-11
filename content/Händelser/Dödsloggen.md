@@ -10,7 +10,7 @@
 **Gärningsman:** Vargar  
 **Plats:** Läger norr om Fireshear
 
-Köpman från Torgs Imports. Anlitade sällskapet för 75 gp att eskortera honom till Bryn Shander — nådde aldrig fram. Kroppen lämnades söndertrasad. [[Nasher]] hindrade [[Zahir]] från att spränga kvarlevorna med magi.
+Köpman från Throggas Import and Goods. Anlitade sällskapet för 75 gp att eskortera honom till Bryn Shander — nådde aldrig fram. Kroppen lämnades söndertrasad. [[Nasher]] hindrade [[Zahir]] från att spränga kvarlevorna med magi.
 
 ---
 
@@ -31,6 +31,36 @@ Smed och barbar från [[Tribe of the Owl]], gift med [[Eevie(†)]]. Mördad som
 **Plats:** Celblocket i Sunblights fästning, [[Kelvins Cairn]]
 
 [[Bronn Bearhammer(†)]]s fru. Kidnappad samma natt han mördades och fördes till fästningen, där hon infekterades med svamp som en del av Sunblights alkemiska process. När [[Nasher]] öppnade hennes cell för att rädda henne attackerade den infekterade Eevie, och han högg ned henne reflexmässigt. Kroppen lämnades till Caer Konigs befolkning dag 19. Se [[Nashers misstag]].
+
+---
+
+## [[Asterix(†)]] — Dag 26
+
+**Dödsorsak:** Fastfrusen i extremkyla på en platå på [[Kelvins Cairn]].  
+**Gärningsman:** Naturen (extremkyla); exakta omständigheter okända.  
+**Plats:** Platå på [[Kelvins Cairn]]
+
+Tiefling, en av [[The Burning Hammers]]. Hittad stendöd med tomma ögon bredvid en halshuggen dvärg. Tältet vid platån var sedan länge ransackat.
+
+---
+
+## [[Mokingo Akannathi(†)]] — Dag 26
+
+**Dödsorsak:** Dödad av yeti i grottsystemet på [[Kelvins Cairn]].  
+**Gärningsman:** Yeti  
+**Plats:** Yetins grottsystem, [[Kelvins Cairn]]
+
+Goliath, ledare för [[The Burning Hammers]] och make till [[Perilou Fishfinger]]. Slogs mot yetin och räddade därigenom [[Garret]] under attacken. Hittad av [[Sork the Shadow]] under räddningen av Perilou.
+
+---
+
+## [[Boy(†)]] — Dag 28
+
+**Dödsorsak:** Ihjälfryst av snöstorm.  
+**Gärningsman:** Naturen; indirekt följd av att gänget tvingades övernatta extra natt på berget (mat och dricka förstördes).  
+**Plats:** Söder om [[Kelvins Cairn]]
+
+Ledarhund i [[Garret]]s hundspann. Hjälte utan titel — ledde [[Zahirs gäng]] upp på berget och återförenades med Garret. Lämnades kvar under bergsbestigningen. Hittades ihjälfryst av stormen när gänget äntligen kom ner. [[Garret]] förkrossad.
 
 ---
 

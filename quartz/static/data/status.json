@@ -1,27 +1,27 @@
 {
-  "day": 26,
+  "day": 34,
   "sv": {
-    "quote": "\"STANNA — VÄNNER — MÖRDA.\"",
-    "attr": "— Zahir, Speak with Animals (nat 20)",
+    "quote": "\"Du kan inte lura en helig paladin av Tyr. Jag vet precis vad du är. Odöd. Berätta nu.\"",
+    "attr": "— Nasher, Dag 34",
     "questions": [
-      "Garret räddad — men hur tar gänget hem honom från berget?",
-      "Vem mördade i Termalain (Dag 15) med snöflinga inristad i bröstet?",
-      "Den fångade Sunblight-dvärgen flydde med osynlig medbrottsling — vart?",
-      "Vem är Dzaan — och varför ljög värdshusvärdinna i Dwarven Valley?",
-      "Var är The Burning Hammers? Vad hände efter yeti-attacken?",
-      "Sunblights fader på drakrygg — när slår han till?"
+      "Throggas livvakt (skallig människa) flydde och försvann spårlöst — vem är han och var är han nu?",
+      "Magnar, Fanny Chestnut och Sirus — var är Throggas anställda som utförde morden?",
+      "Speaker Oarus Matthews — var är han? Elka Verryt kanske vet.",
+      "Ny gruva stängd av monster från underjorden — vad händer inne?",
+      "Sunblights fader på drakrygg — när slår han till?",
+      "Vem är Dzaan — och varför ljög värdshusvärdinna i Dwarven Valley?"
     ]
   },
   "en": {
-    "quote": "\"STOP — FRIENDS — KILL.\"",
-    "attr": "— Zahir, Speak with Animals (nat 20)",
+    "quote": "\"You cannot fool a holy paladin of Tyr. I know exactly what you are. Undead. Speak now.\"",
+    "attr": "— Nasher, Day 34",
     "questions": [
-      "Garret rescued — but how does the gang get him home from the mountain?",
-      "Who murdered someone in Termalain (Day 15) with a snowflake carved into the chest?",
-      "The captured Sunblight dwarf escaped with an invisible accomplice — where to?",
-      "Who is Dzaan — and why did the Dwarven Valley innkeeper lie about knowing him?",
-      "Where are The Burning Hammers? What happened after the yeti attack?",
-      "Sunblight's father on a dragon's back — when does he strike?"
+      "Throgga's bodyguard (bald man) fled without a trace — who is he and where is he now?",
+      "Magnar, Fanny Chestnut, and Sirus — where are Throgga's employees who committed the murders?",
+      "Speaker Oarus Matthews — where is he? Elka Verryt may know.",
+      "New mine closed by underground monsters — what is happening inside?",
+      "Sunblight's father on a dragon's back — when does he strike?",
+      "Who is Dzaan — and why did the Dwarven Valley innkeeper lie about knowing him?"
     ]
   }
 }

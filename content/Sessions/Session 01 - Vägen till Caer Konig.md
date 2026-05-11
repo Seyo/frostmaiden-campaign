@@ -4,7 +4,7 @@
 - [[Nasher]] anländer till Fireshear. Möter [[Zahir]] (halfling warlock) och [[Sork the Shadow]] (ork) på en taverna. [[Borc the Orc]] (goliath) erbjöd husrum och slog följe norrut.
 
 **Dag 2–5 – Lärdom i Fireshear:**
-- [[Aubril(†)]] (köpman, Torgs Imports) anställde gruppen för 75 gp att eskortera honom och lasten till [[Bryn Shander]].
+- [[Aubril(†)]] (köpman, Throggas Import and Goods) anställde gruppen för 75 gp att eskortera honom och lasten till [[Bryn Shander]].
 - Rykten: Osynliga tjuvar i [[Caer Konig]], kontakten [[Trovus]] kan behöva hjälp där.
 - Rykten: Mördare i Ten-Towns – minst 22 offer totalt, minst 5 bekräftade. Isdolk genom hjärtat.
 - Lärde sig om [[Auril]] och hennes förbannelse över Icewind Dale.
@@ -24,13 +24,13 @@
 - Ankomst till [[Bryn Shander]] sent på kvällen.
 
 **Dag 9:**
-- Besökte [[Torg]] (_Torgs Imports and Goods_). [[Zahir]] förhandlade fram halva betalningen trots Aubrils död. [[Torg]] bad gruppen söka upp [[Hildur Trollbane]].
+- Besökte [[Throgga Icevein(†)]] (_Throggas Import and Goods_). [[Zahir]] förhandlade fram halva betalningen trots Aubrils död. [[Throgga Icevein(†)]] bad gruppen söka upp [[Hildur Trollbane]].
 - [[Nasher]] undersökte rykten, fick veta om _Reindils Emporium_ (halvt-alv, dyrutrustning) och _House of the Triad_ (tempel).
 
 **Dag 10–15 – Vila i Bryn Shander:**
 - Inkvarterade på _The Hooked Knucklehead_. [[Nasher]] etablerade sig som hjälpsam äventyrare.
 - Nya rykten om mord: halfling-jägare i East Haven, mänsklig skeppsbyggare i Targos, dvärg i [[Caer Konig]] – alla med isdolk genom hjärtat.
-- Mötte [[Hildur Trollbane]] (dvärk, ärr i ansiktet, vän till [[Torg]]) på en taverna. Bad gruppen utreda morden, misstänker koppling till [[Auril]] eller kult. Skickade dem till [[Caer Konig]].
+- Mötte [[Hildur Trollbane]] (dvärk, ärr i ansiktet, vän till [[Throgga Icevein(†)]]) på en taverna. Bad gruppen utreda morden, misstänker koppling till [[Auril]] eller kult. Skickade dem till [[Caer Konig]].
 - [[Hildur Trollbane]] påpekade att gruppen har ett dåligt rykte i stan (Sorks klanteri).
 
 **Dag 16 – Resan till Caer Konig:**

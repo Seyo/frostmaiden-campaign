@@ -4,7 +4,7 @@
     "title_en": "NPCs",
     "subtitle": "Levande, döda och försvunna",
     "subtitle_en": "Living, dead, and missing",
-    "count": 14,
+    "count": 18,
     "slug": "NPC",
     "items": [
       "Jarthra",
@@ -13,14 +13,18 @@
       "Foxes in the Snow",
       "Keegan Valryn",
       "Hildur Trollbane",
-      "Torg",
+      "Martha",
+      "Perilou Fishfinger",
       "Cori & Allie",
+      "Garret",
+      "Throgga Icevein (†)",
       "Eevie (†)",
       "Bronn Bearhammer (†)",
       "Aubril (†)",
       "Nildar Sunblight (†)",
-      "Garret",
-      "Boy"
+      "Mokingo Akannathi (†)",
+      "Asterix (†)",
+      "Boy (†)"
     ]
   },
   {
@@ -28,7 +32,7 @@
     "title_en": "Places",
     "subtitle": "Städer, ruiner och fästningar",
     "subtitle_en": "Cities, ruins, and fortresses",
-    "count": 8,
+    "count": 9,
     "slug": "Platser",
     "items": [
       "Icewind Dale",
@@ -38,7 +42,8 @@
       "Fireshear",
       "Kelvins Cairn",
       "Dvärgadalen",
-      "Termalain"
+      "Termalaine",
+      "Maer Dualdon"
     ]
   },
   {
@@ -76,19 +81,20 @@
     "title_en": "Sessions",
     "subtitle": "Dag för dag, session för session",
     "subtitle_en": "Day by day, session by session",
-    "count": 3,
+    "count": 4,
     "slug": "Sessions",
     "items": [
       "Session 01 — Vägen till Caer Konig",
       "Session 02 — Caer Konig: Fästningen vid Kelvins Cairn",
-      "Session 03 — Återkomst till Caer Konig"
+      "Session 03 — Återkomst till Caer Konig",
+      "Session 04 — Kelvins Cairn & Termalaine"
     ]
   },
   {
     "title": "Händelser & tidslinje",
     "title_en": "Events & Timeline",
-    "subtitle": "26 dagar av bedrifter och misstag",
-    "subtitle_en": "26 days of feats and mistakes",
+    "subtitle": "34 dagar av bedrifter och misstag",
+    "subtitle_en": "34 days of feats and mistakes",
     "count": 4,
     "slug": "H%C3%A4ndelser",
     "items": [

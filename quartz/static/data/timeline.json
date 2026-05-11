@@ -17,6 +17,12 @@
       "label": "Session 3 — Dag 18–28(?) — Återkomst till Caer Konig",
       "label_en": "Session 3 — Days 18–28(?) — Return to Caer Konig",
       "slug": "Sessions/Session-03---%C3%85terkomst-till-Caer-Konig"
+    },
+    {
+      "id": "s04",
+      "label": "Session 4 — Dag 26–34 — Kelvins Cairn & Termalaine",
+      "label_en": "Session 4 — Days 26–34 — Kelvins Cairn & Termalaine",
+      "slug": "Sessions/Session-04---Kelvins-Cairn-%26-Termalaine"
     }
   ],
   "events": [
@@ -37,8 +43,8 @@
       "icon": "👥",
       "title": "Aubril anlitar sällskapet",
       "title_en": "Aubril Hires the Party",
-      "desc": "Köpmannen Aubril (Torgs Imports) hyr gruppen för 75 gp att eskortera honom och lasten till <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a>. Rykten om osynliga tjuvar och seriemördare med isdolk.",
-      "desc_en": "The merchant Aubril (Torg's Imports) hires the group for 75 gp to escort him and his cargo to <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a>. Rumors of invisible thieves and a serial killer with an ice pick."
+      "desc": "Köpmannen Aubril (Throggas Import and Goods) hyr gruppen för 75 gp att eskortera honom och lasten till <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a>. Rykten om osynliga tjuvar och seriemördare med isdolk.",
+      "desc_en": "The merchant Aubril (Throgga's Import and Goods) hires the group for 75 gp to escort him and his cargo to <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a>. Rumors of invisible thieves and a serial killer with an ice pick."
     },
     {
       "session": "s01",
@@ -67,8 +73,8 @@
       "icon": "🏘️",
       "title": "Ankomst till Bryn Shander",
       "title_en": "Arrival in Bryn Shander",
-      "desc": "Sällskapet når <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a> sent på kvällen. Aubrils kvarlåtenskaper levereras till Torg — Zahir förhandlar fram halva betalningen trots dödsfall.",
-      "desc_en": "The party reaches <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a> late in the evening. Aubril's belongings are delivered to Torg — Zahir negotiates half the payment despite the death."
+      "desc": "Sällskapet når <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a> sent på kvällen. Aubrils kvarlåtenskaper levereras till Throgga Icevein — Zahir förhandlar fram halva betalningen trots dödsfall.",
+      "desc_en": "The party reaches <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a> late in the evening. Aubril's belongings are delivered to Throgga Icevein — Zahir negotiates half the payment despite the death."
     },
     {
       "session": "s01",
@@ -179,6 +185,46 @@
       "title_en": "Garret Rescued — Crag Cats",
       "desc": "Gänget hittar <a href=\"../NPC/Garret\">Garret</a> i snön — vid liv men illa rivad av en yeti. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> healar honom. Två crag cats attackerar — gänget mördar dem utan problem (för en gångs skull tur). <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a> är glad att det inte var en yeti.",
       "desc_en": "The gang finds <a href=\"../NPC/Garret\">Garret</a> in the snow — alive but badly mauled by a yeti. <a href=\"../Karakt%C3%A4rer/Nasher\">Nasher</a> heals him. Two crag cats attack — the gang kills them without trouble (lucky, for once). <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a> is glad it wasn't a yeti."
+    },
+    {
+      "session": "s04",
+      "day": "Dag 26",
+      "type": "combat",
+      "icon": "⛰️",
+      "title": "Perilou räddad — yetistriden",
+      "title_en": "Perilou Rescued — The Yeti Battle",
+      "desc": "Asterix och Mokingo \"Growling Bear\" Akannathi hittade döda på berget. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> räddas ur yetins grotta av en osynlig <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a>. Sällskapet besegrar pappayetin. Kaotisk flykt över träbron — Bork, Sork och Perilou medvetslösa. Övernattning på platån utan mat.",
+      "desc_en": "Asterix and Mokingo 'Growling Bear' Akannathi found dead on the mountain. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> rescued from the yeti cave by an invisible <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a>. Party defeats father yeti. Chaotic retreat over the bridge — Borc, Sork, and Perilou unconscious. Overnight on the plateau with no food."
+    },
+    {
+      "session": "s04",
+      "day": "Dag 28",
+      "type": "death",
+      "icon": "🐕",
+      "title": "Boy hittad ihjälfryst — ankomst Termalaine",
+      "title_en": "Boy Found Frozen — Arrival in Termalaine",
+      "desc": "<a href=\"../NPC/Boy(%E2%80%A0)\">Boy</a> hittad ihjälfryst av snöstormen. <a href=\"../NPC/Garret\">Garret</a> förkrossad — åker tillbaka till Caer Konig. <a href=\"../NPC/Perilou-Fishfinger\">Perilou</a> avslöjar: alla offer har snöflinga på vänster axel; morden sammanföll med leveranser från Throggas Import & Goods. Sen ankomst till <a href=\"../Platser/Termalaine\">Termalaine</a> — gratis boende av <a href=\"../NPC/Martha\">Martha</a> på The East Side Inn.",
+      "desc_en": "<a href=\"../NPC/Boy(%E2%80%A0)\">Boy</a> found frozen in the blizzard. <a href=\"../NPC/Garret\">Garret</a> devastated — returns to Caer Konig. <a href=\"../NPC/Perilou-Fishfinger\">Perilou</a> reveals: all victims had a snowflake on the left shoulder; murders coincided with deliveries from Throgga's Import & Goods. Late arrival at <a href=\"../Platser/Termalaine\">Termalaine</a> — free lodging from <a href=\"../NPC/Martha\">Martha</a> at The East Side Inn."
+    },
+    {
+      "session": "s04",
+      "day": "Dag 29–33",
+      "type": "invest",
+      "icon": "🔍",
+      "title": "Vila och utredning i Termalaine",
+      "title_en": "Rest and Investigation in Termalaine",
+      "desc": "Zahir säljer Asterix's spellbook — 175 gp. Sork kartlägger stängda gruvan och försvunne Speaker Oarus Matthews. Bork: hög arbetslöshet, ny gruva stängd av monster från underjorden. Mord: gruvarbetare Fjordis Jewelhand. Nasher byter Greatsword mot Longsword + sköld med Tyrs symbol.",
+      "desc_en": "Zahir sells Asterix's spellbook — 175 gp. Sork maps the closed mine and missing Speaker Oarus Matthews. Borc: high unemployment, new mine closed due to underground monsters. Murder: mine worker Fjordis Jewelhand. Nasher trades Greatsword for Longsword + shield bearing Tyr's symbol."
+    },
+    {
+      "session": "s04",
+      "day": "Dag 34",
+      "type": "combat",
+      "icon": "💀",
+      "title": "Throgga Icevein avslöjas — odöd",
+      "title_en": "Throgga Icevein Revealed — Undead",
+      "desc": "<a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\">Throgga Icevein</a> avslöjas som odöd via Nashers Divine Sense — egentligen död i 2,5 år (sedan Rimen startade). Sork fäller Throgga med Shadow Blades; en genomskinlig vålnad stiger ur kroppen. Vålnaden besegras. Throggas livvakt (skallig människa) flyr och försvinner spårlöst. Hildur hade rätt.",
+      "desc_en": "<a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\">Throgga Icevein</a> revealed as undead via Nasher's Divine Sense — actually dead for 2.5 years (since the Rime began). Sork drops Throgga with Shadow Blades; a translucent wraith rises from the body. The wraith is defeated. Throgga's bodyguard (bald man) flees and vanishes. Hildur was right."
     }
   ]
 }
