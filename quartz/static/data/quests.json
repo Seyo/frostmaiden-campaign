@@ -5,10 +5,10 @@
     "title": "Morden i Ten-Towns",
     "title_en": "The Ten-Towns Murders",
     "slug": "Uppdrag%20%26%20rykten/Morden-i-Ten-Towns",
-    "desc": "En seriemördare slår till med isdolk rakt genom hjärtat. Minst 22 offer i Ten-Towns. Offer bekräftade i <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos och nu <strong>Termalain</strong> (snöflinga inristad i bröstet). Troligen kopplat till <a href=\"../Fraktioner/Auril\" target=\"_parent\">Auril</a> eller en kult.",
-    "desc_en": "A serial killer strikes with an ice pick straight through the heart. At least 22 victims in Ten-Towns. Victims confirmed in <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos and now <strong>Termalain</strong> (snowflake carved into the chest). Likely connected to <a href=\"../Fraktioner/Auril\" target=\"_parent\">Auril</a> or a cult.",
-    "meta": "Senast: Dag 19–23, Termalain",
-    "meta_en": "Last seen: Days 19–23, Termalain"
+    "desc": "Alla offer bär en <strong>snöflinga infryst på vänster axel</strong>. Morden sammanföll med leveranser från <a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\" target=\"_parent\">Throggas Import &amp; Goods</a> — Throgga avslöjades som odöd (Dag 34). Misstänkta: Magnar, Fanny Chestnut, Sirus (röd tiefling) och en <strong>skallig människa</strong> (livvakt, flydde spårlöst). Offer i <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos och <a href=\"../Platser/Termalaine\" target=\"_parent\">Termalaine</a> (Bromm Runehand &amp; Fjordis Jewelhand).",
+    "desc_en": "All victims bear a <strong>snowflake frost-burned into the left shoulder</strong>. The murders coincided with deliveries from <a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\" target=\"_parent\">Throgga's Import &amp; Goods</a> — Throgga revealed as undead (Day 34). Suspects: Magnar, Fanny Chestnut, Sirus (red tiefling), and a <strong>bald human</strong> (bodyguard, fled without a trace). Victims in <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos, and <a href=\"../Platser/Termalaine\" target=\"_parent\">Termalaine</a> (Bromm Runehand &amp; Fjordis Jewelhand).",
+    "meta": "Senast: Dag 34, Termalaine",
+    "meta_en": "Last seen: Day 34, Termalaine"
   },
   {
     "id": "sunblight-familjen",
@@ -34,14 +34,14 @@
   },
   {
     "id": "burning-hammers",
-    "status": "aktiv",
+    "status": "klar",
     "title": "The Burning Hammers & Keegan Valryn",
     "title_en": "The Burning Hammers & Keegan Valryn",
     "slug": null,
-    "desc": "Tre äventyrare — The Burning Hammers — försvann i riktning mot Termalain. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> återvände till Caer Konig och anlitade gänget. <a href=\"../NPC/Garret\" target=\"_parent\">Garret</a> hittades vid liv på berget — illa rivad av en yeti. De andra två Hammers fortfarande saknade.",
-    "desc_en": "Three adventurers — The Burning Hammers — disappeared heading toward Termalain. <a href=\"../NPC/Keegan-Valryn\" target=\"_parent\">Keegan Valryn</a> returned to Caer Konig and hired the gang. <a href=\"../NPC/Garret\" target=\"_parent\">Garret</a> was found alive on the mountain — badly mauled by a yeti. The other two Hammers still missing.",
-    "meta": "Senast: Dag 27–28(?), berget",
-    "meta_en": "Last seen: Days 27–28(?), the mountain"
+    "desc": "<a href=\"../NPC/Garret\" target=\"_parent\">Garret</a> räddad och återvände till Caer Konig (Dag 28). <a href=\"../NPC/Perilou-Fishfinger\" target=\"_parent\">Perilou Fishfinger</a> räddad ur yetins grotta av Sork. <a href=\"../NPC/Mokingo-Akannathi(%E2%80%A0)\" target=\"_parent\">Mokingo</a> och <a href=\"../NPC/Asterix(%E2%80%A0)\" target=\"_parent\">Asterix</a> hittade döda på berget.",
+    "desc_en": "<a href=\"../NPC/Garret\" target=\"_parent\">Garret</a> rescued and returned to Caer Konig (Day 28). <a href=\"../NPC/Perilou-Fishfinger\" target=\"_parent\">Perilou Fishfinger</a> rescued from the yeti cave by Sork. <a href=\"../NPC/Mokingo-Akannathi(%E2%80%A0)\" target=\"_parent\">Mokingo</a> and <a href=\"../NPC/Asterix(%E2%80%A0)\" target=\"_parent\">Asterix</a> found dead on the mountain.",
+    "meta": "Löst: Dag 28, Kelvins Cairn",
+    "meta_en": "Resolved: Day 28, Kelvins Cairn"
   },
   {
     "id": "aurils-forbannelse",

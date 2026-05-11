@@ -5,3 +5,4 @@
     - _Reindils Emporium:_ Exklusiv utrustning, drivs av en halv-alv.
     - _Council Hall:_ Plats för sheriffen.
 - Hela [[Zahirs gäng]] är med på offerlistan
+- **Throggas Import and Goods:** [[Throgga Icevein(†)]]s handelsföretag, verksamt härifrån. Throgga avslöjades som odöd i Termalaine Dag 34 – egentligen död i 2,5 år. Företaget användes som täckmantel för mordseriemännen.
