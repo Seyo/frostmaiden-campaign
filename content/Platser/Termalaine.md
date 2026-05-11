@@ -6,7 +6,7 @@
 - **The East Side Inn:** Sammanlänkade hus via underjordiska tunnlar. Värdshusinna [[Martha]], god vän med [[Keegan Valryn]] och [[Garret]]. Ingen öppen eld tillåten på rummen.
 - **The Blue Clam:** Krog. Speaker Oarus Matthews sist sedd här – blivit full och försvann.
 - **Kyrkogården:** Sköts av **Crank** (gnome). Mordoffren förvaras här.
-- **Ny gruva:** Stängd i ~2 veckor – monster kommit upp från underjorden. Förman Fronda Harroway (dvärg) och all personal kvar inne.
+- **Ny gruva:** Stängd i ~2 veckor – monster kommit upp från underjorden. Förman Fronda Harroway (dvärg), lieutenants Oval Chon (half-elf) och Menka Bladeless (människa), och övrig personal kvar inne.
 - **Gammal gruva:** Nästan utgrävd.
 - **Fieldspar:** Dvärgjuvelerarbutik, ägd av Gillian Fieldspar (från Dwarven Valley). Stängd sedan ~Dag 26.
 
