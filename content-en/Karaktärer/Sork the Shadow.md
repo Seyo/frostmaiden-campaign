@@ -10,7 +10,7 @@ title: "Sork the Shadow"
 
 </div>
 
-Orc Rogue. Jumped ship in Fireshear, overheard [[Nasher]] and [[Zahir]] talking about heading north and invited himself along. [[Borc the Orc]] was looking for travel companions north.
+Orc Rogue (Soulknife). Jumped ship in Fireshear, overheard [[Nasher]] and [[Zahir]] talking about heading north and invited himself along. [[Borc the Orc]] was looking for travel companions north.
 
 - Excellent Survival and Perception. Skilled navigator but lost his bearing toward [[Kelvins Cairn]] (~2 extra hours, Day 18).
 - Scouted the bunker at the fortress — identified the grey-dwarf guard and connected the white lock of hair to [[Bronn Bearhammer(†)]]'s crime scene.
@@ -37,6 +37,10 @@ He later made his way to Waterdeep and worked as a bodyguard for the nobleman **
 The confrontation made Sork a hunted man by the city watch and forced him underground into Waterdeep's slums. This is the "bad situation in Waterdeep" that [[Nasher]] has noticed Sork refuses to talk about.
 
 He fled on a merchant ship heading north to escape the gallows. He ended up in [[Fireshear]] by pure chance and desperation — a place where no one knows his face or his past. That is where he ran into [[Nasher]] and [[Zahir]].
+
+## Soulknife
+
+Sork manifests psychic blades out of thin air — but he does not call it magic. To him it is a physical expression of frustration: the cold that never ends, the general wretchedness of everything, and the way he keeps failing to navigate his friends to where they need to go when they trust him.
 
 ## Personality
 

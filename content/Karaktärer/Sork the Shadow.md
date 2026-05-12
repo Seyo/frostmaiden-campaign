@@ -6,7 +6,7 @@
 
 </div>
 
-Ork Rogue. Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] snacka om att röra sig norrut och trängde sig på. [[Borc the Orc]] letade ressällskap norrut.
+Ork Rogue (Soulknife). Avhoppade från skepp i Fireshear, hörde [[Nasher]] och [[Zahir]] snacka om att röra sig norrut och trängde sig på. [[Borc the Orc]] letade ressällskap norrut.
 
 - Utmärkt Survival och Perception. Duktig navigator men tappade kursen mot [[Kelvins Cairn]] (~2 extra timmar, Dag 18).
 - Spanade in bunkern vid fästningen – identifierade grå-dvärgsvakten och kopplade ihop den vita skägglocket med [[Bronn Bearhammer(†)]]s brottsplats.
@@ -33,6 +33,10 @@ Sökte sig sedan till Waterdeep och arbetade som livvakt åt adelsmannen **Lord 
 Konfrontationen gjorde Sork till en jagad man av stadsvakten och tvingade honom under jorden i Waterdeeps slum. Det är det "dåliga läget i Waterdeep" som [[Nasher]] noterat att Sork inte vill prata om.
 
 Flydde hals över huvud på ett handelsfartyg norrut för att undkomma galgen. Hamnade i [[Fireshear]] av ren slump och desperation – en plats där ingen känner till hans ansikte eller hans förflutna. Det var där han stötte på [[Nasher]] och [[Zahir]].
+
+## Soulknife
+
+Sork manifesterar psykiska blad ur ingenstans – men han kallar det inte magi. För honom är det en fysisk yttrings av frustration: över kylan som aldrig tar slut, över hur jävligt allt är, och över hur han gång på gång misslyckas att navigera sina vänner dit de ska när de litar på honom.
 
 ## Personlighet
 
