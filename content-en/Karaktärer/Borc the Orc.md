@@ -22,7 +22,7 @@ Goliath barbarian, raised among giants on Moonshine Isle who renamed him "Borc t
 - Took the dwarf's blue boots from the plateau on [[Kelvins Cairn]] — figured they might be worth something (Day 26).
 - Fell on the wooden bridge during the retreat from the mother yeti → [[Nasher]] dragged him. Stabilized by [[Zahir]] (Spare the Dying). Was the only one in the group to initially resist the wraith's terrifying gaze (Day 34) — but was then dropped by a single blow.
 - Looked for work in Termalaine (Days 29–33) → high unemployment, found nothing. Learned about the mines and the Speaker's disappearance.
-- **Panicked** at the sight of guard captain Morg Ashbone outside Termalaine (Day 34) — calmed by Sork via telepathic link. Why Morg triggers that reaction is unknown.
+- **Panicked** at the sight of guard captain Morg Ashbone outside Termalaine (Day 34) — calmed by Sork via telepathic link. Connection: Borc had dreamed that he committed a murder, but when he looked in a mirror in the dream it was **Sephek Kaltro's** face staring back — not his own. Morg is likely investigating a murder Sephek committed in which Borc is implicated.
 - Kept watch outside Throgga's Import & Goods during the night break-in. Day 35.
 - Went with Nasher to the market in Bryn Shander — bought armour for Sork and Zahir. Day 35.
 - Infected by spores from the second mushroom body — coughing and terrible chest pain — saved by Nasher's last Lay on Hands. Day 38.

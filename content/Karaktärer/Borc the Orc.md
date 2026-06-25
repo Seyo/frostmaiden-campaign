@@ -18,7 +18,7 @@ Goliath barbar, uppvuxen bland jättar på Moonshine Isle som döpte om honom ti
 - Tog dvärgens blå stövlar från platån på [[Kelvins Cairn]] – trodde de kunde vara värda något (Dag 26).
 - Föll på träbron under flykten från yetimamman → [[Nasher]] drog honom. Stabiliserades av [[Zahir]] (Spare the Dying). Var ensam i gruppen som initialt stod emot vålnadens terroriserande blick (Dag 34) – men fälldes sedan av ett enda slag.
 - Letade arbete i Termalaine (Dag 29–33) → hög arbetslöshet, fick inget jobb. Lärde sig om gruvorna och Speakerns försvinnande.
-- **Fick panik** vid åsynen av vaktkaptenen Morg Ashbone utanför Termalaine (Dag 34) – Sork lugnade honom via telepatisk länk. Varför Morg triggar den reaktionen är okänt.
+- **Fick panik** vid åsynen av vaktkaptenen Morg Ashbone utanför Termalaine (Dag 34) – Sork lugnade honom via telepatisk länk. Koppling: Borc hade drömt att han begick ett mord, men när han såg sig i spegeln i drömmen var det **Sephek Kaltros** ansikte som stirrade tillbaka – inte hans eget. Morg utreder troligen ett mord som Sephek begick men där Borc pekas ut.
 - Höll vakt utanför Troggas Import & Goods under nattinbrottet (Dag 35).
 - Gick med Nasher till marknaden i Bryn Shander – köpte rustningar åt Sork och Zahir. Dag 35.
 - Bars tillbaka till baracken vid ny-gruvan av gruppen efter att han räddats ur skogen. Hjälpte att hämta Elka Verryt för att lugna Arno. Dag 37.
