@@ -155,6 +155,17 @@
     "blurb_en": "Day 16 — during the dog sled journey toward Caer Konig, a violent hail storm broke out. Two dogs died. The party reached Caer Konig late in the evening."
   },
   {
+    "id": "ny-gruvan-termalaine",
+    "type": "event",
+    "name": "Ny-gruvan",
+    "name_en": "The New Mine",
+    "x": 36.4,
+    "y": 44.1,
+    "slug": "Sessions/Session-06---Ny-gruvan",
+    "blurb": "Termalaines nya gruva — stängd sedan monster kom upp från Underdark. Källa till en magisk smitta: High Necromancer Cadavix, en 1835 år gammal Netherese nekromancer förseglad i ett blått kristallägg. Cadavix kastad ner i Underdark (Dag 45).",
+    "blurb_en": "Termalaine's new mine — closed after monsters rose from the Underdark. Source of a magical infection: High Necromancer Cadavix, a 1,835-year-old Netherese necromancer sealed inside a blue crystalline egg. Cadavix dropped into the Underdark (Day 45)."
+  },
+  {
     "id": "lavinen-och-garret",
     "type": "event",
     "name": "Lavinen och Garret",
