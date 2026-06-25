@@ -29,6 +29,18 @@
       "label": "Session 5 — Dag 34–37 — Bryn Shander & Termalaine",
       "label_en": "Session 5 — Days 34–37 — Bryn Shander & Termalaine",
       "slug": "Sessions/Session-05---Bryn-Shander-%26-Termalaine"
+    },
+    {
+      "id": "s06",
+      "label": "Session 6 — Dag 38 — Ny-gruvan",
+      "label_en": "Session 6 — Day 38 — The New Mine",
+      "slug": "Sessions/Session-06---Ny-gruvan"
+    },
+    {
+      "id": "s07",
+      "label": "Session 7 — Dag 38–45 — Cadavix",
+      "label_en": "Session 7 — Days 38–45 — Cadavix",
+      "slug": "Sessions/Session-07---Cadavix"
     }
   ],
   "events": [
@@ -271,6 +283,46 @@
       "title_en": "Harroway Found Hanged — Arno Rescued — Oppressive Night",
       "desc": "Förmanshuset vid ny-gruvan: <strong>\"I'm sorry\"</strong> till Arno. Inne: <strong>Fronda Harroway</strong> hängd, dead 4–5 dagar, brända papper, benknota i handen. I skogen: Arno hittad utan puls — räddad av Lay on Hands. <a href=\"../NPC/Elka-Verryt\">Elka</a> tar hand om honom. I mess hall: två axebeaks dödade av <strong>kraftiga slag mot huvudet</strong>. En tredje nedgrävd. Vakterna i skiftet verkade ha <strong>smittats av något och börjat äta sina egna möbler</strong>. Orolig sömn i baracken.",
       "desc_en": "The foreman's house: <strong>\"I'm sorry\"</strong> to Arno. Inside: <strong>Fronda Harroway</strong> found hanged, dead 4–5 days, burned papers, bone knot in hand. In the forest: Arno found pulseless — saved by Lay on Hands. <a href=\"../NPC/Elka-Verryt\">Elka</a> takes him to safety. In the mess hall: two axebeaks killed by <strong>powerful blows to the head</strong>. A third buried outside. The shift workers appear to have been <strong>infected by something and started eating their own furniture</strong>. Restless sleep in the barracks."
+    },
+    {
+      "session": "s06",
+      "day": "Dag 38",
+      "type": "death",
+      "icon": "⛏️",
+      "title": "Ny-gruvan — Gror Gersk, Gillian Fieldspar, svampinfektionen",
+      "title_en": "The New Mine — Gror Gersk, Gillian Fieldspar, the Fungal Infection",
+      "desc": "Gror Gersk (lieutenant, half-orc) hittad krossad av ras — saboterad balk. Nashers <strong>vingar och förvandlade ögon</strong> avslöjas (koboldstrid). Gillian Fieldspar hittad död i hisschaktet — <strong>kött skuret bort från armar och ben post mortem</strong>; 2 diamanter (8 gp/st). Sork börjar höra saker som inte finns. Nasher får syn om sin mor och en bror han inte har. Svampkropp infekterar Nasher — Lay on Hands botar. Gruppen vilse <strong>2,5 timmar</strong> i gruvgångarna.",
+      "desc_en": "Gror Gersk (lieutenant, half-orc) found crushed by a cave-in — sabotaged beam. Nasher's <strong>wings and transformed eyes</strong> revealed to the party (kobold fight). Gillian Fieldspar found dead in the lift shaft — <strong>flesh cut from arms and legs post mortem</strong>; 2 diamonds (8 gp each). Sork begins hearing things that aren't there. Nasher receives a vision of his mother and a brother he doesn't have. Mushroom body infects Nasher — Lay on Hands cures it. Party lost for <strong>2.5 hours</strong> in the tunnels."
+    },
+    {
+      "session": "s07",
+      "day": "Dag 38–39",
+      "type": "combat",
+      "icon": "🍄",
+      "title": "Reträtt — Sork knuffar Bork — House of the Triad",
+      "title_en": "Retreat — Sork Shoves Borc — House of the Triad",
+      "desc": "Andra svampkropp infekterar Bork — Nashers sista Lay on Hands. Gillians kropp bärs ut. Nasher drömde om sin mor och en <strong>vit dödskallesymbol</strong>. Dag 39: Sork <strong>knuffar Bork ner i hisschaktet</strong> i panik. Hela gruppens naglar börjar hårdna. Zahir tvingar in dem i <strong>House of the Triad</strong>. En kvinna i rustning ses i templet.",
+      "desc_en": "Second mushroom body infects Borc — Nasher's last Lay on Hands. Gillian's body carried out. Nasher dreamed of his mother and a <strong>white skull symbol</strong>. Day 39: Sork <strong>shoves Borc into the lift shaft</strong> in a panic. The whole party's fingernails begin to harden. Zahir forces them into <strong>House of the Triad</strong>. A woman in armor is seen in the temple."
+    },
+    {
+      "session": "s07",
+      "day": "Dag 40–44",
+      "type": "social",
+      "icon": "🏛️",
+      "title": "Fem dagars helande — House of the Triad",
+      "title_en": "Five Days of Healing — House of the Triad",
+      "desc": "Hålls i burar i fem dagar medan den magiska åkomman läks bort. Munkarna vet inte vad det var — bara att det var <strong>mäktigt, hemskt och onaturligt</strong>. Nasher erkänner att han lämnade kyrkan i Neverwinter och inte står på templets goda sida.",
+      "desc_en": "Held in cages for five days while the magical affliction is healed away. The monks don't know what it was — only that it was <strong>powerful, terrible, and unnatural</strong>. Nasher admits he left the church in Neverwinter and is not on good terms with the temple."
+    },
+    {
+      "session": "s07",
+      "day": "Dag 45",
+      "type": "invest",
+      "icon": "💎",
+      "title": "Cadavix — Netherese nekromancer 1835 år gammal",
+      "title_en": "Cadavix — Netherese Necromancer 1,835 Years Old",
+      "desc": "Smittan sprider sig mot staden. Hook horror besegrad. Övre våning: liten klovarelse begravde <strong>Zahir under stenras</strong> (1 h att gräva ut). Tentakelmonster smälter sönder Borks breastplate och vapen. Lönnvägg: stark nekrotisk källa. Bork förtrollad av <strong>jättelikt blått kristallägg</strong> — skär av och äter sitt eget kött. <strong>Mari Flatstream</strong> (halvförvandlad lieutenant) i kammaren. Ägget öppnas: <strong>High Necromancer Cadavix</strong> — Netherese nekromancer, −343 DR (1835 år gammal), täckt av diamantstoft. Plaketten på Loross. Bork kastar ner Cadavix i Underdark — aldrig ett ljud.",
+      "desc_en": "Infection spreading toward the city. Hook horror defeated. Upper floor: small clawed creature buries <strong>Zahir under a cave-in</strong> (1 hour to dig out). Tentacle monster melts Borc's breastplate and weapons with acid. Secret door: strong necromantic source. Borc charmed by a <strong>massive blue crystalline egg</strong> — cuts and eats his own flesh. <strong>Mari Flatstream</strong> (half-transformed lieutenant) in the chamber. Egg opened: <strong>High Necromancer Cadavix</strong> — Netherese necromancer, −343 DR (1,835 years old), covered in diamond dust. Plaque in Loross. Borc drops Cadavix into the Underdark — no sound from the bottom, ever."
     }
   ]
 }

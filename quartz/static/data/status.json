@@ -1,27 +1,27 @@
 {
-  "day": 37,
+  "day": 45,
   "sv": {
-    "quote": "\"DU ÄR ARBETSLÖS. DIN CHEF ÄR DÖD.\"",
-    "attr": "— Nasher, Dag 35",
+    "quote": "\"High Necromancer Cadavix / (III) / 3516 NY\"",
+    "attr": "— Granitplaketten runt halsen, −343 DR",
     "questions": [
-      "Vem är Sephek Kaltro — och var är han nu? Varför dök han upp precis när Rimen startade?",
-      "Vad hände med Fronda Harroway? Vad visste hon — och vad brände hon?",
-      "Vad finns i de tre nivåerna av ny-gruvan, och varför larmar det på översta våningen?",
-      "Vem är Jilta Fieldspar — och varför ville Harroway skicka ner just henne?",
-      "Vad är den tryckande känslan som hänger över gruvområdet?",
-      "Sunblights fader på drakrygg — när slår han till?"
+      "Vad händer med Cadavix i Underdark — är han verkligen död?",
+      "Vad är den vita dödskallesymbolen — vilken mörk gud offrade Nashers mor ett barn till?",
+      "Kan Mari Flatstream botas nu när Cadavix är borta?",
+      "Vad satte ägget för tankar i Zahirs huvud?",
+      "Vad var Nashers brott i Bryn Shander — och vad hände i Neverwinter?",
+      "Sephek Kaltro — fortfarande på fri fot"
     ]
   },
   "en": {
-    "quote": "\"YOU'RE UNEMPLOYED. YOUR BOSS IS DEAD.\"",
-    "attr": "— Nasher, Day 35",
+    "quote": "\"High Necromancer Cadavix / (III) / 3516 NY\"",
+    "attr": "— The granite plaque around the neck, −343 DR",
     "questions": [
-      "Who is Sephek Kaltro — and where is he now? Why did he appear precisely when the Rime began?",
-      "What happened to Fronda Harroway? What did she know — and what did she burn?",
-      "What is inside the three levels of the new mine, and why did the alarm sound on the top floor?",
-      "Who is Jilta Fieldspar — and why did Harroway specifically want her sent underground?",
-      "What is the oppressive feeling that hangs over the mine site?",
-      "Sunblight's father on a dragon's back — when does he strike?"
+      "What happens to Cadavix in the Underdark — is he truly dead?",
+      "What is the white skull symbol — to which dark god did Nasher's mother sacrifice a child?",
+      "Can Mari Flatstream be cured now that Cadavix is gone?",
+      "What thoughts did the egg plant in Zahir's head?",
+      "What were Nasher's crimes in Bryn Shander — and what happened in Neverwinter?",
+      "Sephek Kaltro — still at large"
     ]
   }
 }
