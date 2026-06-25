@@ -21,6 +21,21 @@ Ork Rogue (Soulknife). Avhoppade från skepp i Fireshear, hörde [[Nasher]] och 
 - Fällde pappayetin, [[Throgga Icevein(†)]] och vålnaden som steg ur Throggas kropp – alla tre med **Shadow Blades** (Dag 26 resp. Dag 34).
 - Spårade [[Throgga Icevein(†)|Throggas livvakt]] (skallig människa) efter striden i Termalaine (Dag 34) – spåret slutade abrupt, som om han gick upp i rök.
 - Bytte till sig en karta över den stängda nya gruvan i Termalaine.
+- Skapade **telepatisk länk** mellan sig, Nasher och Bork under förhöret med Morg Ashbone (Dag 34) – använde den för att lugna den panikslagna Bork.
+- **Sheriff Markham** i Bryn Shander berättade för gruppen om Sorks **tidigare brott** i staden (Dag 35) – fick Nasher att ge honom och Zahir en rejäl utskällning. Detaljerna är okända, men Zahir hjälpte Sork lämna Bryn Shander under deras första vecka i Icewind Dale.
+- Dyrkade upp låset till Troggas Import & Goods nattetid, sedan kontorets lås – hittade dokument om Sephek Kaltro. Utlöste magisk blixtfälla på kassaskrinet (träffades två gånger) men öppnade det till slut. Dag 35.
+- Tog navigatörsrollen in i ny-gruvan och ritade karta – stämde initialt väl med verkligheten. Dag 38.
+- Hörde **hackljud i sten** längre in i gruvan som ingen annan hörde – tystnaden efteråt var nästan värre. Dag 38.
+- Påstod sig se en **skugga röra sig** vid ingången – ingenting hittades. Senare såg Zahir den med. Dag 38.
+- Began **bete sig paranoid** i gruvan – vägrade fortsätta, hävdade att gruppen pratat om att lämna honom (vilket de aldrig gjort). Gruvan tog sig in i hans huvud. Dag 38.
+- Kartan han ritade under jakten på skuggan var värdelös – gruppen vilse i 2,5 timmar tills han hittade tillbaka till hisschaktet. Dag 38.
+- Skyggade undan för vakten från Targos och ville inte gå in i Town Hall – Zahir antydde att han hjälpt Sork lämna Bryn Shander under deras första vecka. Dag 35.
+- **Puttade Bork rakt ner i hisschaktet** och drog upp repet – skrek att han var rädd att bli lämnad. Smittan hade tagit full kontroll. Dag 39.
+- Hittades i förmanssovrumet utanför gruvan i fullständig panik, storgrät – bands upp i hogtie. Nasher dunkade hans huvud i golvet (två gånger), Bork en gång – bortom hjälp. Dag 39.
+- Spårade den lilla klovanåden ned en våning till markplan. Dag 45.
+- Ryckte tag i Nashers mantel och bröt honom fri från kristalläggets förtrollning – tacklade sedan Bork fri. Dag 45.
+- Identifierade Loross-texten med Draconic (Nasher bidrog med Elvish). Dag 45.
+- Samlade återstående **diamantstoft** från Cadavix. Dag 45.
 
 ## Bakgrund
 

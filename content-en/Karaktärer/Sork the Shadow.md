@@ -25,6 +25,20 @@ Orc Rogue (Soulknife). Jumped ship in Fireshear, overheard [[Nasher]] and [[Zahi
 - Dropped the father yeti, [[Throgga Icevein(†)]], and the wraith that rose from Throgga's body — all three with **Shadow Blades** (Day 26 and Day 34 respectively).
 - Tracked [[Throgga Icevein(†)|Throgga's bodyguard]] (bald man) after the confrontation in Termalaine (Day 34) — the trail vanished abruptly, as if he walked into smoke.
 - Traded for a map of the closed new mine in Termalaine.
+- Created a **telepathic link** between himself, Nasher, and Borc during the interrogation by Morg Ashbone (Day 34) — used it to calm the panicking Borc.
+- **Sheriff Markham** in Bryn Shander told the party about Sork's **prior crimes** in the city (Day 35) — earning him and Zahir a thorough scolding from Nasher. The details are unknown, but Zahir helped Sork leave Bryn Shander during their first week in Icewind Dale.
+- Picked the lock at Throgga's Import & Goods at night, then the office lock — found documents on Sephek Kaltro. Was hit by the magical lightning trap twice at the cash box but opened it on the third attempt. Day 35.
+- Took the navigator role into the new mine and drew a map — initially accurate. Day 38.
+- Heard **chipping sounds in stone** deeper in the mine that no one else heard — the silence afterward felt almost worse than the sound. Day 38.
+- Thought he saw a **shadow move** at the entrance — nothing found. Later, Zahir saw it too. Day 38.
+- **Began acting paranoid** in the mine — refused to continue, claimed the party had been talking about leaving him (which they had not). The mine was getting into his head. Day 38.
+- The map he drew during the shadow chase was useless — party lost for 2.5 hours until he found the way back to the lift shaft. Day 38.
+- **Shoved Borc straight into the lift shaft** and pulled up the rope — screamed that he was afraid of being left behind. The infection had taken full hold. Day 39.
+- Found in the foreman's bedroom in complete panic, sobbing — bound in a hogtie. Nasher banged his head on the floor twice, Borc once — beyond help. Day 39.
+- Tracked the small clawed creature down one floor to the ground level. Day 45.
+- Grabbed Nasher's cloak to break him free from the crystal egg's charm — then tackled Borc out of the charm. Day 45.
+- Identified the Loross text using Draconic (Nasher contributed Elvish). Day 45.
+- Collected the remaining **diamond dust** from Cadavix. Day 45.
 
 ## Background
 
