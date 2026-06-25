@@ -40,14 +40,14 @@
     "blurb_en": "Northernmost on Maer Dualdon. Surrounded by sparse forest."
   },
   {
-    "id": "termalain",
+    "id": "termalaine",
     "type": "town",
-    "name": "Termalain",
+    "name": "Termalaine",
     "x": 36.7,
     "y": 45.9,
-    "slug": "Platser/Termalain",
-    "blurb": "Vid Maer Dualdon. Mord dag 19–23 — offer märkt med snöflinga (matchar isdolksmördaren).",
-    "blurb_en": "On Maer Dualdon. Murder on day 19–23 — victim marked with a snowflake (matches the ice pick killer)."
+    "slug": "Platser/Termalaine",
+    "blurb": "Gruvstad vid Maer Dualdon. Mord på fyra offer, varav ett Dag 15. Throggas Import & Goods kopplat till morden. Ny-gruvan undersökt Dag 37–45.",
+    "blurb_en": "Mining town on Maer Dualdon. Four murders, including one on Day 15. Throgga's Import & Goods linked to the killings. New mine investigated Days 37–45."
   },
   {
     "id": "easthaven",

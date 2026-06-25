@@ -10,3 +10,4 @@ Scarred dwarf, friend of [[Torg]]. Met the party at a tavern in [[Bryn Shander]]
 - Believes the murders may be connected to [[Auril]] or a cult.
 - Sent the party to [[Caer Konig]] to investigate what she believed was the murder of a dwarf glassblower (turned out to be [[Bronn Bearhammer(†)]]).
 - Noted that the party has a bad reputation in [[Bryn Shander]].
+- Had left Bryn Shander 2–3 days before the party returned (Day 35). At Golden Stag's Rest they learned she had headed south. Current whereabouts unknown.

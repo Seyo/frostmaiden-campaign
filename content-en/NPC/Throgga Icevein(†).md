@@ -15,4 +15,4 @@ Apparent owner of *Throgga's Import and Goods* in [[Bryn Shander]]. In reality a
 
 **Connection to the murder investigation:** Deliveries from Throgga's Import and Goods coincided with the serial murders in each town. The killers likely used him as cover for their travels.
 
-**Employees (suspected killers):** Magnar, Fanny Chestnut, Sirus (red tiefling) + a **bald human** (bodyguard who fled during the confrontation in Termalaine and vanished without a trace).
+**Employees (suspected killers):** Magnar, Fanny Chestnut, Sirus (red tiefling) + **[[Sephek Kaltro]]** (bald human, bodyguard, fled during the confrontation in Termalaine). Also **Kendra** (human, 5-year employee at the Bryn Shander office). Sephek hired 3 years ago, extremely well-paid for the past ~2 years and 2 months. The business barely broke even — made no real money.

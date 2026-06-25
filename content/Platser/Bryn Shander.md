@@ -1,8 +1,9 @@
 - **Typ:** Största staden i Ten-Towns, fylld av flyktingar.
 - **Viktiga platser:**
-    - _The Hooked Knucklehead:_ Värdshus där gruppen vilade en vecka.
-    - _House of the Triad:_ Tempel (rekommenderat för Nasher).
+    - _The Hooked Knucklehead:_ Värdshus där gruppen vilade en vecka. [[Hildur Trollbane]] hade lämnat staden vid andra besöket — på Golden Stag's Rest fick gruppen reda på att hon dragit söderut.
+    - _House of the Triad:_ Tempel. Gruppen sattes i burar Dag 39 (Zahir tvingade in dem; Nasher erkände sin lämning av kyrkan). Behandlades i 5 dagar mot nekrotisk smitta (Dag 40–44) — munkarna visste bara att det var mäktigt, hemskt och onaturligt.
     - _Reindils Emporium:_ Exklusiv utrustning, drivs av en halv-alv.
     - _Council Hall:_ Plats för sheriffen.
-- Hela [[Zahirs gäng]] är med på offerlistan
-- **Throggas Import and Goods:** [[Throgga Icevein(†)]]s handelsföretag, verksamt härifrån. Throgga avslöjades som odöd i Termalaine Dag 34 – egentligen död i 2,5 år. Företaget användes som täckmantel för mordseriemännen.
+    - _Sheriff Markham:_ Berättade att [[Sephek Kaltro]] (Throggas livvakt) dykt upp för ~2,5 år sedan och var extremt välbetald sedan 2 år 2 månader tillbaka. Nämnde Sorks brott i Bryn Shander.
+- Hela [[Zahirs gäng]] är med på offerlistan.
+- **Throggas Import and Goods:** [[Throgga Icevein(†)]]s handelsföretag, verksamt härifrån. Throgga avslöjades som odöd i Termalaine Dag 34 — egentligen dead i 2,5 år. Företaget användes som täckmantel för mordseriemännen. Sökt igenom av gruppen (natt, Dag 35): kassaskrin med ädelstenar och en liten vacker påse — Nasher och Sork träffades av magisk fälla. [[Sephek Kaltro]] anställd för 3 år sedan.

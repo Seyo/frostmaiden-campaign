@@ -4,7 +4,7 @@
     "title_en": "NPCs",
     "subtitle": "Levande, döda och försvunna",
     "subtitle_en": "Living, dead, and missing",
-    "count": 18,
+    "count": 27,
     "slug": "NPC",
     "items": [
       "Jarthra",
@@ -14,17 +14,26 @@
       "Keegan Valryn",
       "Hildur Trollbane",
       "Martha",
-      "Perilou Fishfinger",
+      "Perilou Fishfinger (†)",
       "Cori & Allie",
       "Garret",
       "Throgga Icevein (†)",
+      "Sephek Kaltro",
+      "Oarus Matthews",
+      "Elka Verryt",
+      "Morg Ashbone",
+      "Arno",
+      "Mari Flatstream",
       "Eevie (†)",
       "Bronn Bearhammer (†)",
       "Aubril (†)",
       "Nildar Sunblight (†)",
       "Mokingo Akannathi (†)",
       "Asterix (†)",
-      "Boy (†)"
+      "Boy (†)",
+      "Fronda Harroway (†)",
+      "Cadavix (†)",
+      "Gillian Fieldspar (†)"
     ]
   },
   {
@@ -32,7 +41,7 @@
     "title_en": "Places",
     "subtitle": "Städer, ruiner och fästningar",
     "subtitle_en": "Cities, ruins, and fortresses",
-    "count": 9,
+    "count": 8,
     "slug": "Platser",
     "items": [
       "Icewind Dale",
@@ -42,8 +51,7 @@
       "Fireshear",
       "Kelvins Cairn",
       "Dvärgadalen",
-      "Termalaine",
-      "Maer Dualdon"
+      "Termalaine"
     ]
   },
   {

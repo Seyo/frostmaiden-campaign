@@ -11,4 +11,4 @@ Skenbar ägare av _Throggas Import and Goods_ i [[Bryn Shander]]. I själva verk
 
 **Koppling till mordutredningen:** Leveranser från Throggas Import & Goods sammanföll med mordseriemorden i varje stad. Troligen medvetet utnyttjad av mördarna som täckmantel för sina resor.
 
-**Anställda (misstänkta mördare):** Magnar, Fanny Chestnut, Sirus (röd tiefling) + en **skallig människa** (livvakt som flydde under striden i Termalaine och försvann spårlöst).
+**Anställda (misstänkta mördare):** Magnar, Fanny Chestnut, Sirus (röd tiefling) + **[[Sephek Kaltro]]** (skallig människa, livvakt, flydde under striden i Termalaine). Även **Kendra** (människa, 5 år anställd på kontoret i Bryn Shander). Sephek anställd 3 år sedan, extremt välbetald sedan ~2 år 2 månader tillbaka. Verksamheten gick knappt jämnt upp — tjänade inga riktiga pengar.

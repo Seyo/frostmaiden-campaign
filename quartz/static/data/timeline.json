@@ -149,10 +149,10 @@
       "day": "Dag 19–23",
       "type": "invest",
       "icon": "🩸",
-      "title": "Nytt mord i Termalain",
-      "title_en": "New Murder in Termalain",
-      "desc": "Under vilan rapporteras ett nytt mord i Termalain — offret hittas med en <strong>snöflinga inristad i bröstet</strong>. Mönstret matchar isdolksmördaren. <a href=\"../NPC/Garret\">Garret</a> och <a href=\"../Fraktioner/The-Burning-Hammers\">The Burning Hammers</a> var på väg dit.",
-      "desc_en": "During the rest, a new murder is reported in Termalain — the victim is found with a <strong>snowflake carved into the chest</strong>. The pattern matches the ice pick killer. <a href=\"../NPC/Garret\">Garret</a> and <a href=\"../Fraktioner/The-Burning-Hammers\">The Burning Hammers</a> were heading there."
+      "title": "Nytt mord i Termalaine",
+      "title_en": "New Murder in Termalaine",
+      "desc": "Under vilan rapporteras ett nytt mord i Termalaine — offret hittas med en <strong>snöflinga inristad i bröstet</strong>. Mönstret matchar isdolksmördaren. <a href=\"../NPC/Garret\">Garret</a> och <a href=\"../Fraktioner/The-Burning-Hammers\">The Burning Hammers</a> var på väg dit.",
+      "desc_en": "During the rest, a new murder is reported in Termalaine — the victim is found with a <strong>snowflake carved into the chest</strong>. The pattern matches the ice pick killer. <a href=\"../NPC/Garret\">Garret</a> and <a href=\"../Fraktioner/The-Burning-Hammers\">The Burning Hammers</a> were heading there."
     },
     {
       "session": "s03",
@@ -211,8 +211,8 @@
       "icon": "⛰️",
       "title": "Perilou räddad — yetistriden",
       "title_en": "Perilou Rescued — The Yeti Battle",
-      "desc": "Asterix och Mokingo \"Growling Bear\" Akannathi hittade döda på berget. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> räddas ur yetins grotta av en osynlig <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a>. Sällskapet besegrar pappayetin. Kaotisk flykt över träbron — Bork, Sork och Perilou medvetslösa. Övernattning på platån utan mat.",
-      "desc_en": "Asterix and Mokingo 'Growling Bear' Akannathi found dead on the mountain. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> rescued from the yeti cave by an invisible <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a>. Party defeats father yeti. Chaotic retreat over the bridge — Borc, Sork, and Perilou unconscious. Overnight on the plateau with no food."
+      "desc": "Asterix och Mokingo \"Growling Bear\" Akannathi hittade döda på berget. <a href=\"../NPC/Perilou-Fishfinger(%E2%80%A0)\">Perilou Fishfinger</a> räddas ur yetins grotta av en osynlig <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a>. Sällskapet besegrar pappayetin. Kaotisk flykt över träbron — Bork, Sork och Perilou medvetslösa. Övernattning på platån utan mat.",
+      "desc_en": "Asterix and Mokingo 'Growling Bear' Akannathi found dead on the mountain. <a href=\"../NPC/Perilou-Fishfinger(%E2%80%A0)\">Perilou Fishfinger</a> rescued from the yeti cave by an invisible <a href=\"../Karakt%C3%A4rer/Sork-the-Shadow\">Sork</a>. Party defeats father yeti. Chaotic retreat over the bridge — Borc, Sork, and Perilou unconscious. Overnight on the plateau with no food."
     },
     {
       "session": "s04",
@@ -221,8 +221,8 @@
       "icon": "🐕",
       "title": "Boy hittad ihjälfryst — ankomst Termalaine",
       "title_en": "Boy Found Frozen — Arrival in Termalaine",
-      "desc": "<a href=\"../NPC/Boy(%E2%80%A0)\">Boy</a> hittad ihjälfryst av snöstormen. <a href=\"../NPC/Garret\">Garret</a> förkrossad — åker tillbaka till Caer Konig. <a href=\"../NPC/Perilou-Fishfinger\">Perilou</a> avslöjar: alla offer har snöflinga på vänster axel; morden sammanföll med leveranser från Throggas Import & Goods. Sen ankomst till <a href=\"../Platser/Termalaine\">Termalaine</a> — gratis boende av <a href=\"../NPC/Martha\">Martha</a> på The East Side Inn.",
-      "desc_en": "<a href=\"../NPC/Boy(%E2%80%A0)\">Boy</a> found frozen in the blizzard. <a href=\"../NPC/Garret\">Garret</a> devastated — returns to Caer Konig. <a href=\"../NPC/Perilou-Fishfinger\">Perilou</a> reveals: all victims had a snowflake on the left shoulder; murders coincided with deliveries from Throgga's Import & Goods. Late arrival at <a href=\"../Platser/Termalaine\">Termalaine</a> — free lodging from <a href=\"../NPC/Martha\">Martha</a> at The East Side Inn."
+      "desc": "<a href=\"../NPC/Boy(%E2%80%A0)\">Boy</a> hittad ihjälfryst av snöstormen. <a href=\"../NPC/Garret\">Garret</a> förkrossad — åker tillbaka till Caer Konig. <a href=\"../NPC/Perilou-Fishfinger(%E2%80%A0)\">Perilou</a> avslöjar: alla offer har snöflinga på vänster axel; morden sammanföll med leveranser från Throggas Import & Goods. Sen ankomst till <a href=\"../Platser/Termalaine\">Termalaine</a> — gratis boende av <a href=\"../NPC/Martha\">Martha</a> på The East Side Inn.",
+      "desc_en": "<a href=\"../NPC/Boy(%E2%80%A0)\">Boy</a> found frozen in the blizzard. <a href=\"../NPC/Garret\">Garret</a> devastated — returns to Caer Konig. <a href=\"../NPC/Perilou-Fishfinger(%E2%80%A0)\">Perilou</a> reveals: all victims had a snowflake on the left shoulder; murders coincided with deliveries from Throgga's Import & Goods. Late arrival at <a href=\"../Platser/Termalaine\">Termalaine</a> — free lodging from <a href=\"../NPC/Martha\">Martha</a> at The East Side Inn."
     },
     {
       "session": "s04",
@@ -251,8 +251,8 @@
       "icon": "🧊",
       "title": "Perilou mördad — Morg Ashbone förhör gruppen",
       "title_en": "Perilou Murdered — Morg Ashbone Interrogates the Party",
-      "desc": "Mitt i natten eskorteras gruppen ut ur <a href=\"../Platser/Termalaine\">Termalaine</a>. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> hittad halvnaken och död i snön utanför stadsmuren — mördad genom förfrysning, <strong>\"You owe me\"</strong> inristat i bröstet. Bork anklagas. Vaktkaptenen <strong>Morg Ashbone</strong> förhör gruppen — släpps efter förklaring.",
-      "desc_en": "In the middle of the night the party is escorted out of <a href=\"../Platser/Termalaine\">Termalaine</a>. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> found half-naked and dead in the snow outside the city wall — murdered by freezing, <strong>\"You owe me\"</strong> carved into her chest. Borc is accused. Guard captain <strong>Morg Ashbone</strong> interrogates the party — released after explanation."
+      "desc": "Mitt i natten eskorteras gruppen ut ur <a href=\"../Platser/Termalaine\">Termalaine</a>. <a href=\"../NPC/Perilou-Fishfinger(%E2%80%A0)\">Perilou Fishfinger</a> hittad halvnaken och död i snön utanför stadsmuren — mördad genom förfrysning, <strong>\"You owe me\"</strong> inristat i bröstet. Bork anklagas. Vaktkaptenen <strong>Morg Ashbone</strong> förhör gruppen — släpps efter förklaring.",
+      "desc_en": "In the middle of the night the party is escorted out of <a href=\"../Platser/Termalaine\">Termalaine</a>. <a href=\"../NPC/Perilou-Fishfinger(%E2%80%A0)\">Perilou Fishfinger</a> found half-naked and dead in the snow outside the city wall — murdered by freezing, <strong>\"You owe me\"</strong> carved into her chest. Borc is accused. Guard captain <strong>Morg Ashbone</strong> interrogates the party — released after explanation."
     },
     {
       "session": "s05",

@@ -16,14 +16,14 @@ Ork Rogue (Soulknife). Avhoppade från skepp i Fireshear, hörde [[Nasher]] och 
 - Tjänade ihop pengar med [[Borc the Orc]] på hederliga jobb under vilan i Caer Konig (Dag 19–23) – **16,5 gp totalt**. Första gången han drar in pengar utan att stjäla något.
 - Smög "som en kung" mot goblin-lägret norr om [[Dvärgadalen]] (Dag 24–25) medan [[Zahir]] sumpade stealthen och drog in striden.
 - Föll ~1000 fot i en lavin på vägen upp på berget Dag 26 – nästan dödad, stabiliserad och healad av [[Nasher]].
-- Drack [[Asterix(†)]]s invisibility-potion och smög osynlig förbi yetimamman – gav [[Perilou Fishfinger]] en healing potion och smög ut henne ur grottan (Dag 26). Hittade döde [[Mokingo Akannathi(†)]] och ett dvärghuvud på vägen ut.
+- Drack [[Asterix(†)]]s invisibility-potion och smög osynlig förbi yetimamman – gav [[Perilou Fishfinger(†)|Perilou Fishfinger]] en healing potion och smög ut henne ur grottan (Dag 26). Hittade döde [[Mokingo Akannathi(†)]] och ett dvärghuvud på vägen ut.
 - Infryst i isblock av yetimamman under flykten över träbron → tog sig ur isen → slagen av mamman och knockad medvetslös. Räddad av [[Nasher]] som sprang tillbaka över bron.
 - Fällde pappayetin, [[Throgga Icevein(†)]] och vålnaden som steg ur Throggas kropp – alla tre med **Shadow Blades** (Dag 26 resp. Dag 34).
 - Spårade [[Throgga Icevein(†)|Throggas livvakt]] (skallig människa) efter striden i Termalaine (Dag 34) – spåret slutade abrupt, som om han gick upp i rök.
 - Bytte till sig en karta över den stängda nya gruvan i Termalaine.
-- Skapade **telepatisk länk** mellan sig, Nasher och Bork under förhöret med Morg Ashbone (Dag 34) – använde den för att lugna den panikslagna Bork.
+- Skapade **telepatisk länk** mellan sig, Nasher och Bork under förhöret med [[Morg Ashbone]] (Dag 34) – använde den för att lugna den panikslagna Bork.
 - **Sheriff Markham** i Bryn Shander berättade för gruppen om Sorks **tidigare brott** i staden (Dag 35) – fick Nasher att ge honom och Zahir en rejäl utskällning. Detaljerna är okända, men Zahir hjälpte Sork lämna Bryn Shander under deras första vecka i Icewind Dale.
-- Dyrkade upp låset till Troggas Import & Goods nattetid, sedan kontorets lås – hittade dokument om Sephek Kaltro. Utlöste magisk blixtfälla på kassaskrinet (träffades två gånger) men öppnade det till slut. Dag 35.
+- Dyrkade upp låset till Troggas Import & Goods nattetid, sedan kontorets lås – hittade dokument om [[Sephek Kaltro]]. Utlöste magisk blixtfälla på kassaskrinet (träffades två gånger) men öppnade det till slut. Dag 35.
 - Tog navigatörsrollen in i ny-gruvan och ritade karta – stämde initialt väl med verkligheten. Dag 38.
 - Hörde **hackljud i sten** längre in i gruvan som ingen annan hörde – tystnaden efteråt var nästan värre. Dag 38.
 - Påstod sig se en **skugga röra sig** vid ingången – ingenting hittades. Senare såg Zahir den med. Dag 38.
@@ -35,7 +35,7 @@ Ork Rogue (Soulknife). Avhoppade från skepp i Fireshear, hörde [[Nasher]] och 
 - Spårade den lilla klovanåden ned en våning till markplan. Dag 45.
 - Ryckte tag i Nashers mantel och bröt honom fri från kristalläggets förtrollning – tacklade sedan Bork fri. Dag 45.
 - Identifierade Loross-texten med Draconic (Nasher bidrog med Elvish). Dag 45.
-- Samlade återstående **diamantstoft** från Cadavix. Dag 45.
+- Samlade återstående **diamantstoft** från [[Cadavix(†)]]. Dag 45.
 
 ## Bakgrund
 
