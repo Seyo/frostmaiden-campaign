@@ -5,10 +5,21 @@
     "title": "Morden i Ten-Towns",
     "title_en": "The Ten-Towns Murders",
     "slug": "Uppdrag%20%26%20rykten/Morden-i-Ten-Towns",
-    "desc": "Alla offer bär en <strong>snöflinga infryst på vänster axel</strong>. Morden sammanföll med leveranser från <a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\" target=\"_parent\">Throggas Import &amp; Goods</a> — Throgga avslöjades som odöd (Dag 34). Misstänkta: Magnar, Fanny Chestnut, Sirus (röd tiefling) och en <strong>skallig människa</strong> (livvakt, flydde spårlöst). Offer i <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos och <a href=\"../Platser/Termalaine\" target=\"_parent\">Termalaine</a> (Bromm Runehand &amp; Fjordis Jewelhand).",
-    "desc_en": "All victims bear a <strong>snowflake frost-burned into the left shoulder</strong>. The murders coincided with deliveries from <a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\" target=\"_parent\">Throgga's Import &amp; Goods</a> — Throgga revealed as undead (Day 34). Suspects: Magnar, Fanny Chestnut, Sirus (red tiefling), and a <strong>bald human</strong> (bodyguard, fled without a trace). Victims in <a href=\"../Platser/Easthaven\" target=\"_parent\">Easthaven</a>, Targos, and <a href=\"../Platser/Termalaine\" target=\"_parent\">Termalaine</a> (Bromm Runehand &amp; Fjordis Jewelhand).",
-    "meta": "Senast: Dag 34, Termalaine",
-    "meta_en": "Last seen: Day 34, Termalaine"
+    "desc": "Alla offer bär en <strong>snöflinga infryst på vänster axel</strong>. Mördaren är <strong>Sephek Kaltro</strong> — identifierad av Sheriff Markham i Bryn Shander (Dag 35), dök upp för ~2,5 år sedan (Rimens start). Anställd av <a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\" target=\"_parent\">Throggas Import &amp; Goods</a> för 3 år sedan, välbetald sedan ~2,2 år. Senaste offer: <a href=\"../NPC/Perilou-Fishfinger\" target=\"_parent\">Perilou Fishfinger</a> — hittad mördad utanför Termalaine, \"You owe me\" inristat (Dag 34). Övriga misstänkta: Magnar, Fanny Chestnut, Sirus (röd tiefling).",
+    "desc_en": "All victims bear a <strong>snowflake frost-burned into the left shoulder</strong>. The killer is <strong>Sephek Kaltro</strong> — identified by Sheriff Markham in Bryn Shander (Day 35), appeared ~2.5 years ago (start of the Rime). Hired by <a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\" target=\"_parent\">Throgga's Import &amp; Goods</a> 3 years ago, well paid since ~2.2 years back. Latest victim: <a href=\"../NPC/Perilou-Fishfinger\" target=\"_parent\">Perilou Fishfinger</a> — found murdered outside Termalaine, \"You owe me\" carved into her chest (Day 34). Other suspects: Magnar, Fanny Chestnut, Sirus (red tiefling).",
+    "meta": "Senast: Dag 35, Bryn Shander",
+    "meta_en": "Last seen: Day 35, Bryn Shander"
+  },
+  {
+    "id": "ny-gruvan-termalaine",
+    "status": "aktiv",
+    "title": "Ny-gruvan i Termalaine",
+    "title_en": "The New Mine in Termalaine",
+    "slug": null,
+    "desc": "Ny-gruvan stängdes — larmet gick av på <strong>översta</strong> våningen. Förman <strong>Fronda Harroway</strong> hittad hängd (Dag 37) — brände papper, höll en benknota, brev till Speakern sönderfaller till vansinne. Adoptivson <strong>Arno</strong> (stum, Tribe of the Wolf) räddad ur skogen av Nashers Lay on Hands. Skiftvakterna verkar ha <strong>smittats av något — blivit galna och ätit sina egna möbler</strong>. Axebeaks dödade av kraftiga slag; en nedgrävd. Harroway bad att <strong>Jilta Fieldspar</strong> skickas ned i gruvan. Tryckande känsla över området nattetid.",
+    "desc_en": "The new mine was closed — the alarm sounded on the <strong>top</strong> floor. Foreman <strong>Fronda Harroway</strong> found hanged (Day 37) — burned papers, clutched a bone knot, letters to the Speaker deteriorate into madness. Adoptive son <strong>Arno</strong> (mute, Tribe of the Wolf) rescued from the forest by Nasher's Lay on Hands. The shift workers appear to have been <strong>infected by something — driven mad and begun eating their own furniture</strong>. Axebeaks killed by powerful blows; one buried outside. Harroway requested <strong>Jilta Fieldspar</strong> be sent underground. Oppressive feeling over the site at night.",
+    "meta": "Senast: Dag 37, Termalaine",
+    "meta_en": "Last seen: Day 37, Termalaine"
   },
   {
     "id": "sunblight-familjen",

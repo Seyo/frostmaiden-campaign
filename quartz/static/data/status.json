@@ -1,27 +1,27 @@
 {
-  "day": 34,
+  "day": 37,
   "sv": {
-    "quote": "\"Du kan inte lura en helig paladin av Tyr. Jag vet precis vad du är. Odöd. Berätta nu.\"",
-    "attr": "— Nasher, Dag 34",
+    "quote": "\"DU ÄR ARBETSLÖS. DIN CHEF ÄR DÖD.\"",
+    "attr": "— Nasher, Dag 35",
     "questions": [
-      "Throggas livvakt (skallig människa) flydde och försvann spårlöst — vem är han och var är han nu?",
-      "Magnar, Fanny Chestnut och Sirus — var är Throggas anställda som utförde morden?",
-      "Speaker Oarus Matthews — var är han? Elka Verryt kanske vet.",
-      "Ny gruva stängd av monster från underjorden — vad händer inne?",
-      "Sunblights fader på drakrygg — när slår han till?",
-      "Vem är Dzaan — och varför ljög värdshusvärdinna i Dwarven Valley?"
+      "Vem är Sephek Kaltro — och var är han nu? Varför dök han upp precis när Rimen startade?",
+      "Vad hände med Fronda Harroway? Vad visste hon — och vad brände hon?",
+      "Vad finns i de tre nivåerna av ny-gruvan, och varför larmar det på översta våningen?",
+      "Vem är Jilta Fieldspar — och varför ville Harroway skicka ner just henne?",
+      "Vad är den tryckande känslan som hänger över gruvområdet?",
+      "Sunblights fader på drakrygg — när slår han till?"
     ]
   },
   "en": {
-    "quote": "\"You cannot fool a holy paladin of Tyr. I know exactly what you are. Undead. Speak now.\"",
-    "attr": "— Nasher, Day 34",
+    "quote": "\"YOU'RE UNEMPLOYED. YOUR BOSS IS DEAD.\"",
+    "attr": "— Nasher, Day 35",
     "questions": [
-      "Throgga's bodyguard (bald man) fled without a trace — who is he and where is he now?",
-      "Magnar, Fanny Chestnut, and Sirus — where are Throgga's employees who committed the murders?",
-      "Speaker Oarus Matthews — where is he? Elka Verryt may know.",
-      "New mine closed by underground monsters — what is happening inside?",
-      "Sunblight's father on a dragon's back — when does he strike?",
-      "Who is Dzaan — and why did the Dwarven Valley innkeeper lie about knowing him?"
+      "Who is Sephek Kaltro — and where is he now? Why did he appear precisely when the Rime began?",
+      "What happened to Fronda Harroway? What did she know — and what did she burn?",
+      "What is inside the three levels of the new mine, and why did the alarm sound on the top floor?",
+      "Who is Jilta Fieldspar — and why did Harroway specifically want her sent underground?",
+      "What is the oppressive feeling that hangs over the mine site?",
+      "Sunblight's father on a dragon's back — when does he strike?"
     ]
   }
 }

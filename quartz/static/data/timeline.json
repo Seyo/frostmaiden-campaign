@@ -23,6 +23,12 @@
       "label": "Session 4 — Dag 26–34 — Kelvins Cairn & Termalaine",
       "label_en": "Session 4 — Days 26–34 — Kelvins Cairn & Termalaine",
       "slug": "Sessions/Session-04---Kelvins-Cairn-%26-Termalaine"
+    },
+    {
+      "id": "s05",
+      "label": "Session 5 — Dag 34–37 — Bryn Shander & Termalaine",
+      "label_en": "Session 5 — Days 34–37 — Bryn Shander & Termalaine",
+      "slug": "Sessions/Session-05---Bryn-Shander-%26-Termalaine"
     }
   ],
   "events": [
@@ -225,6 +231,46 @@
       "title_en": "Throgga Icevein Revealed — Undead",
       "desc": "<a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\">Throgga Icevein</a> avslöjas som odöd via Nashers Divine Sense — egentligen död i 2,5 år (sedan Rimen startade). Sork fäller Throgga med Shadow Blades; en genomskinlig vålnad stiger ur kroppen. Vålnaden besegras. Throggas livvakt (skallig människa) flyr och försvinner spårlöst. Hildur hade rätt.",
       "desc_en": "<a href=\"../NPC/Throgga-Icevein(%E2%80%A0)\">Throgga Icevein</a> revealed as undead via Nasher's Divine Sense — actually dead for 2.5 years (since the Rime began). Sork drops Throgga with Shadow Blades; a translucent wraith rises from the body. The wraith is defeated. Throgga's bodyguard (bald man) flees and vanishes. Hildur was right."
+    },
+    {
+      "session": "s05",
+      "day": "Dag 34 (forts.)",
+      "type": "death",
+      "icon": "🧊",
+      "title": "Perilou mördad — Morg Ashbone förhör gruppen",
+      "title_en": "Perilou Murdered — Morg Ashbone Interrogates the Party",
+      "desc": "Mitt i natten eskorteras gruppen ut ur <a href=\"../Platser/Termalaine\">Termalaine</a>. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> hittad halvnaken och död i snön utanför stadsmuren — mördad genom förfrysning, <strong>\"You owe me\"</strong> inristat i bröstet. Bork anklagas. Vaktkaptenen <strong>Morg Ashbone</strong> förhör gruppen — släpps efter förklaring.",
+      "desc_en": "In the middle of the night the party is escorted out of <a href=\"../Platser/Termalaine\">Termalaine</a>. <a href=\"../NPC/Perilou-Fishfinger\">Perilou Fishfinger</a> found half-naked and dead in the snow outside the city wall — murdered by freezing, <strong>\"You owe me\"</strong> carved into her chest. Borc is accused. Guard captain <strong>Morg Ashbone</strong> interrogates the party — released after explanation."
+    },
+    {
+      "session": "s05",
+      "day": "Dag 35",
+      "type": "invest",
+      "icon": "🔍",
+      "title": "Sheriff Markham — Sephek identifieras — inbrott på Troggas kontor",
+      "title_en": "Sheriff Markham — Sephek Identified — Break-in at Throgga's Office",
+      "desc": "<strong>Sheriff Markham</strong> i <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a>: livvakten heter <strong>Sephek Kaltro</strong>, dök upp för ~2,5 år sedan. Sheriffen avslöjar också Sorks tidigare brott i staden. Dagsbesök på Troggas Import & Goods — <strong>Kendra</strong> slänger ut gruppen. Nattinbrott: Sephek anställd för 3 år sedan men välbetald sedan ~2,2 år tillbaka. Företaget gick knappt jämnt upp. Nasher och Sork träffas av magisk fälla — kassaskrinet öppnas på tredje försöket. Innehåll: ädelstenar + liten vacker påse.",
+      "desc_en": "<strong>Sheriff Markham</strong> in <a href=\"../Platser/Bryn-Shander\">Bryn Shander</a>: the bodyguard is <strong>Sephek Kaltro</strong>, appeared ~2.5 years ago. The sheriff also reveals Sork's prior crimes in town. Daytime visit to Throgga's — <strong>Kendra</strong> throws them out. Night break-in: Sephek hired 3 years ago but well paid since ~2.2 years back. Business barely broke even. Nasher and Sork both hit by magical trap — cash box opened on the third attempt. Contents: gemstones + small beautiful pouch."
+    },
+    {
+      "session": "s05",
+      "day": "Dag 36",
+      "type": "invest",
+      "icon": "🛁",
+      "title": "Speaker Matthews hittas på Sune's Comfort — Harroways brev",
+      "title_en": "Speaker Matthews Found at Sune's Comfort — Harroway's Letters",
+      "desc": "<a href=\"../NPC/Elka-Verryt\">Elka Verryt</a> berättar att Speakern inte stängde ny-gruvan. <strong>Speaker <a href=\"../NPC/Oarus-Matthews\">Oarus Matthews</a></strong> hittas på badhuset Sune's Comfort. Han visar upp brev från förman Harroway: ett normalt brev som kräver stängning och att <strong>Jilta Fieldspar</strong> skickas ner — och ett andra brev där handstilen sönderfaller som av vansinne. Lösenordet för Sune's: \"Executive Special\".",
+      "desc_en": "<a href=\"../NPC/Elka-Verryt\">Elka Verryt</a> reveals the Speaker did not close the new mine. <strong>Speaker <a href=\"../NPC/Oarus-Matthews\">Oarus Matthews</a></strong> is found at the bathhouse Sune's Comfort. He shows the party letters from foreman Harroway: one normal letter demanding closure and that <strong>Jilta Fieldspar</strong> be sent underground — and a second where the handwriting deteriorates into apparent madness. The password for Sune's: \"Executive Special\"."
+    },
+    {
+      "session": "s05",
+      "day": "Dag 37",
+      "type": "death",
+      "icon": "🪢",
+      "title": "Harroway hängd — Arno räddad — tryckande natt",
+      "title_en": "Harroway Found Hanged — Arno Rescued — Oppressive Night",
+      "desc": "Förmanshuset vid ny-gruvan: <strong>\"I'm sorry\"</strong> till Arno. Inne: <strong>Fronda Harroway</strong> hängd, dead 4–5 dagar, brända papper, benknota i handen. I skogen: Arno hittad utan puls — räddad av Lay on Hands. <a href=\"../NPC/Elka-Verryt\">Elka</a> tar hand om honom. I mess hall: två axebeaks dödade av <strong>kraftiga slag mot huvudet</strong>. En tredje nedgrävd. Vakterna i skiftet verkade ha <strong>smittats av något och börjat äta sina egna möbler</strong>. Orolig sömn i baracken.",
+      "desc_en": "The foreman's house: <strong>\"I'm sorry\"</strong> to Arno. Inside: <strong>Fronda Harroway</strong> found hanged, dead 4–5 days, burned papers, bone knot in hand. In the forest: Arno found pulseless — saved by Lay on Hands. <a href=\"../NPC/Elka-Verryt\">Elka</a> takes him to safety. In the mess hall: two axebeaks killed by <strong>powerful blows to the head</strong>. A third buried outside. The shift workers appear to have been <strong>infected by something and started eating their own furniture</strong>. Restless sleep in the barracks."
     }
   ]
 }
